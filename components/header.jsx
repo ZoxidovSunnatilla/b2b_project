@@ -40,7 +40,7 @@ const header = () => {
                         <div className='flex relative gap-2 items-center'>
                             <div className='relative'>
                                 <img src="/images/envelope.svg" alt="" />
-                                <div className="bg-costum-orange w-auto absolute rounded-full w-5 h-5 justify-center flex items-center -top-3 -right-2.5 text-xs text-white text-costum-text-black font-normal">12</div>
+                                <div className="bg-costum-orange w-auto absolute rounded-full w-4 h-4 justify-center flex items-center -top-2 -right-2 text-xs text-white text-costum-text-black font-normal">12</div>
 
                             </div>
                             <a href='' className=' text-sm text-costum-text-black font-normal '>Message</a>
@@ -69,7 +69,7 @@ const header = () => {
                 <img src="/images/logo_mobile.svg" alt="" />
                 <div className='relative'>
                     <img src="/images/cart.svg" alt="" className='mr-2' />
-                    <div className="bg-costum-orange w-auto absolute rounded-full w-5 h-5 justify-center flex items-center -top-2.5 right-px text-xs text-white  text-costum-text-black font-normal">12</div>
+                    <div className="bg-costum-orange w-auto absolute rounded-full w-4 h-4 justify-center flex items-center -top-1.5 right-1 text-xs text-white  text-costum-text-black font-normal">12</div>
                 </div>
             </div>
             <div className="container px-4 md:px-0 mx-auto bg-costum-gray md:bg-white">
