@@ -18,6 +18,10 @@ module.exports = {
         'costum-text-black': 'rgba(12, 12, 12, 1)',
         'star': 'rgba(230, 239, 251, 1)',
         'costum-green': 'rgba(0, 137, 58, 1)',
+        'costum-silver': 'rgba(115, 123, 125, 1)',
+        'bg-voltiva': '#F8F8F9',
+        'text-color-voltiva': "#03041B",
+        
       },
     },
   },

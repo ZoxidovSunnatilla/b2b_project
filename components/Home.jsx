@@ -219,28 +219,28 @@ const Home = () => {
                             <img src="/images/arrow_forward.svg" alt="" />
                         </div>
                     </div>
-                    <div className="grid grid-cols-2 md:grid-cols-4 w-full  md:gap-5 md:mb-24">
-                        <div className="md:w-auto w-44 md:min-h-72 mb-6 rounded-lg">
+                    <div className="grid grid-cols-2 md:grid-cols-4 w-full gap-3  md:gap-5 md:mb-24">
+                        <div className="md:w-auto w-44 md:min-h-72  rounded-lg">
                             <img src="/images/categorie_img.svg" alt="" className='w-full' />
-                            <div className="w-full bg-costum-blue text-center min-h-16 text-xl text-white font-bold rounded-b-lg flex items-center justify-center">
+                            <div className="w-full bg-costum-blue text-center min-h-16 text-base md:text-xl text-white font-bold rounded-b-lg flex items-center justify-center">
                                 Electronics
                             </div>
                         </div>
                         <div className="md:w-auto w-44 md:min-h-72  rounded-lg">
                             <img src="/images/categorie_img.svg" alt="" className='w-full' />
-                            <div className="w-full bg-costum-blue text-center min-h-16 text-xl text-white font-bold rounded-b-lg flex items-center justify-center">
+                            <div className="w-full bg-costum-blue text-center min-h-16 text-base md:text-xl text-white font-bold rounded-b-lg flex items-center justify-center">
                                 Electronics
                             </div>
                         </div>
                         <div className="md:w-auto w-44 md:min-h-72 rounded-lg">
                             <img src="/images/categorie_img.svg" alt="" className='w-full' />
-                            <div className="w-full bg-costum-blue text-center min-h-16 text-xl text-white font-bold rounded-b-lg flex items-center justify-center">
+                            <div className="w-full bg-costum-blue text-center min-h-16 text-base md:text-xl text-white font-bold rounded-b-lg flex items-center justify-center">
                                 Electronics
                             </div>
                         </div>
-                        <div className="md:w-auto w-44 md:min-h-72 mb-6 rounded-lg">
+                        <div className="md:w-auto w-44 md:min-h-72 mb-5 rounded-lg">
                             <img src="/images/categorie_img.svg" alt="" className='w-full' />
-                            <div className="w-full bg-costum-blue text-center min-h-16 text-xl text-white font-bold rounded-b-lg flex items-center justify-center">
+                            <div className="w-full bg-costum-blue text-center min-h-16 text-base md:text-xl text-white font-bold rounded-b-lg flex items-center justify-center">
                                 Electronics
                             </div>
                         </div>

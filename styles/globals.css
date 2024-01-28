@@ -7,10 +7,10 @@
   font-family: 'Basier Circle';
   src: url('../public/font/BasierCircle-Bold.eot');
   src: local('Basier Circle Bold'), local('BasierCircle-Bold'),
-      url('../public/font/BasierCircle-Bold.eot?#iefix') format('embedded-opentype'),
-      url('../public/font/BasierCircle-Bold.woff2') format('woff2'),
-      url('../public/font/BasierCircle-Bold.woff') format('woff'),
-      url('../public/font/BasierCircle-Bold.ttf') format('truetype');
+    url('../public/font/BasierCircle-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../public/font/BasierCircle-Bold.woff2') format('woff2'),
+    url('../public/font/BasierCircle-Bold.woff') format('woff'),
+    url('../public/font/BasierCircle-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
@@ -19,10 +19,10 @@
   font-family: 'Basier Circle';
   src: url('../public/font/BasierCircle-Medium.eot');
   src: local('Basier Circle Medium'), local('BasierCircle-Medium'),
-      url('../public/font/BasierCircle-Medium.eot?#iefix') format('embedded-opentype'),
-      url('../public/font/BasierCircle-Medium.woff2') format('woff2'),
-      url('../public/font/BasierCircle-Medium.woff') format('woff'),
-      url('../public/font/BasierCircle-Medium.ttf') format('truetype');
+    url('../public/font/BasierCircle-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../public/font/BasierCircle-Medium.woff2') format('woff2'),
+    url('../public/font/BasierCircle-Medium.woff') format('woff'),
+    url('../public/font/BasierCircle-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
@@ -31,10 +31,10 @@
   font-family: 'Basier Circle';
   src: url('../public/font/BasierCircle-Regular.eot');
   src: local('Basier Circle Regular'), local('BasierCircle-Regular'),
-      url('../public/font/BasierCircle-Regular.eot?#iefix') format('embedded-opentype'),
-      url('../public/font/BasierCircle-Regular.woff2') format('woff2'),
-      url('../public/font/BasierCircle-Regular.woff') format('woff'),
-      url('../public/font/BasierCircle-Regular.ttf') format('truetype');
+    url('../public/font/BasierCircle-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../public/font/BasierCircle-Regular.woff2') format('woff2'),
+    url('../public/font/BasierCircle-Regular.woff') format('woff'),
+    url('../public/font/BasierCircle-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -43,10 +43,10 @@
   font-family: 'Basier Square';
   src: url('../public/font/BasierSquare-Medium.eot');
   src: local('Basier Square Medium'), local('BasierSquare-Medium'),
-      url('../public/font/BasierSquare-Medium.eot?#iefix') format('embedded-opentype'),
-      url('../public/font/BasierSquare-Medium.woff2') format('woff2'),
-      url('../public/font/BasierSquare-Medium.woff') format('woff'),
-      url('../public/font/BasierSquare-Medium.ttf') format('truetype');
+    url('../public/font/BasierSquare-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../public/font/BasierSquare-Medium.woff2') format('woff2'),
+    url('../public/font/BasierSquare-Medium.woff') format('woff'),
+    url('../public/font/BasierSquare-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
@@ -55,27 +55,28 @@
   font-family: 'Basier Square';
   src: url('../public/font/BasierSquare-Regular.eot');
   src: local('Basier Square Regular'), local('BasierSquare-Regular'),
-      url('../public/font/BasierSquare-Regular.eot?#iefix') format('embedded-opentype'),
-      url('../public/font/BasierSquare-Regular.woff2') format('woff2'),
-      url('../public/font/BasierSquare-Regular.woff') format('woff'),
-      url('../public/font/BasierSquare-Regular.ttf') format('truetype');
+    url('../public/font/BasierSquare-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../public/font/BasierSquare-Regular.woff2') format('woff2'),
+    url('../public/font/BasierSquare-Regular.woff') format('woff'),
+    url('../public/font/BasierSquare-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Basier Square';
   src: url('../public/font/BasierSquare-Bold.eot');
   src: local('Basier Square Bold'), local('BasierSquare-Bold'),
-      url('../public/font/BasierSquare-Bold.eot?#iefix') format('embedded-opentype'),
-      url('../public/font/BasierSquare-Bold.woff2') format('woff2'),
-      url('../public/font/BasierSquare-Bold.woff') format('woff'),
-      url('../public/font/BasierSquare-Bold.ttf') format('truetype');
+    url('../public/font/BasierSquare-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../public/font/BasierSquare-Bold.woff2') format('woff2'),
+    url('../public/font/BasierSquare-Bold.woff') format('woff'),
+    url('../public/font/BasierSquare-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -88,3 +89,91 @@ body {
   font-family: "Basier Square", "Basier Circle";
 }
 
+@media screen and (max-width:768px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+
+  }
+
+  .m-5df29311 {
+    padding: 0px !important;
+    padding-top: 0px !important;
+  }
+
+  .m-fe19b709 {
+    border-bottom: calc(0.0625rem*var(--mantine-scale)) solid var(--_item-border-color);
+  }
+}
+.m-c3381914 {
+  background-color: #F6F8FB !important;
+}
+.m-c3381914:hover {
+  background-color: #1071FF !important;
+  color: #fff !important;
+}
+.m-c3381914[data-active][data-active] {
+  background-color: #1071FF !important;
+}
+
+#header .select {
+  background-color: transparent !important;
+  border: none !important;
+  
+  width: 70px !important;
+}
+.shadow{
+  box-shadow: 0px 5px 7px 0px #00000024;
+
+}
+
+#wrapper .input {
+  background-color: #F8F8F9 !important;
+  border-radius: 12px !important;
+  padding: 16px !important;
+  font-size: 18px !important;
+  outline: none !important;
+  border:  none !important;
+  height: 56px !important;
+  width: 100%;
+}
+#wrapper .input::placeholder{
+  color:  #081226 !important;
+  font-weight: 400  !important;
+}
+#wrapper .m-26063560 {
+  border-radius: 0px !important;
+}
+#wrapper .card-checkbox{
+  width: 35%;
+  background: #F8F8F9;
+  height: 80px;
+  border: 1px solid #ECECEC; 
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  
+}
+#wrapper .card-checkbox .text_one{
+  font-size: 14px;
+  font-weight: 400;
+  color: #08122699;
+  margin-bottom: 8px;
+}
+#wrapper .card-checkbox .text_two{
+  font-size: 18px; 
+  line-height: 20px;
+  color: #081226;
+  
+
+}
+#wrapper .bgg{
+  background-color: #FBFBFC;
+  border-radius: 12px;
+}
+#wrapper .border-bg{
+  background-color: #ECECEC;
+}
