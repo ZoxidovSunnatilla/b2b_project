@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Breadcrumbs, Checkbox, Accordion, RangeSlider, Drawer, Rating, ColorSwatch, Tabs, Select, Pagination, Menu } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 
-const listing = () => {
+const ListingPage = () => {
   const [opened, { open, close }] = useDisclosure(false);
 
 
@@ -1653,4 +1653,4 @@ const listing = () => {
   )
 }
 
-export default listing
+export default ListingPage

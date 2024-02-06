@@ -2,7 +2,7 @@ import React from 'react';
 import { Breadcrumbs, Table } from '@mantine/core';
 
 
-const favorites = () => {
+const FavoritesPage = () => {
     return (
         <div id="favorites">
             <div className="container mx-auto">
@@ -358,4 +358,4 @@ const favorites = () => {
     )
 }
 
-export default favorites
+export default FavoritesPage

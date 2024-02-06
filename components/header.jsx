@@ -4,7 +4,7 @@ import MenuHeader from "./Menu";
 import SearchMenu from './SearchMenu';
 
 
-const header = () => {
+const Header = () => {
     const [opened, { open, close }] = useDisclosure(false);
     const search_icon = <img src='/images/search.svg' />
 
@@ -605,4 +605,4 @@ const header = () => {
     )
 }
 
-export default header
+export default Header
