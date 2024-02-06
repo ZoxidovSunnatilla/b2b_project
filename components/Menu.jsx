@@ -11,31 +11,31 @@ const menu = () => {
                                 <p className="text-base text-costum-blue font-medium">Kitchen</p>
                             </div>
                             <div className="flex flex-col mb-5">
-                                <a href="" className="text-base text-costum-text-black mb-3">
+                                <a href="" className="text-base text-costumBlack mb-3">
                                     Kitchen, Dining & Bar
                                 </a>
-                                <a href="" className="text-base text-costum-text-black mb-3">
+                                <a href="" className="text-base text-costumBlack mb-3">
                                     Small kitchen Appliances
                                 </a>
-                                <a href="" className="text-base text-costum-text-black mb-3">
+                                <a href="" className="text-base text-costumBlack mb-3">
                                     Kitchen Tools and Gadgets
                                 </a>
-                                <a href="" className="text-base text-costum-text-black mb-3">
+                                <a href="" className="text-base text-costumBlack mb-3">
                                     Cookware
                                 </a>
-                                <a href="" className="text-base text-costum-text-black mb-3">
+                                <a href="" className="text-base text-costumBlack mb-3">
                                     Bakeware
                                 </a>
-                                <a href="" className="text-base text-costum-text-black mb-3">
+                                <a href="" className="text-base text-costumBlack mb-3">
                                     Kitchen Storage
                                 </a>
-                                <a href="" className="text-base text-costum-text-black mb-3">
+                                <a href="" className="text-base text-costumBlack mb-3">
                                     Flatware
                                 </a>
-                                <a href="" className="text-base text-costum-text-black mb-3">
+                                <a href="" className="text-base text-costumBlack mb-3">
                                     Knives and cutlery
                                 </a>
-                                <a href="" className="text-base text-costum-text-black mb-3">
+                                <a href="" className="text-base text-costumBlack mb-3">
                                     Bar accessories
                                 </a>
                             </div>
@@ -52,16 +52,16 @@ const menu = () => {
                                 <p className="text-base text-costum-blue font-medium">Kitchen</p>
                             </div>
                             <div className="flex flex-col mb-10">
-                                <a href="" className="text-base text-costum-text-black mb-3">
+                                <a href="" className="text-base text-costumBlack mb-3">
                                     Kitchen, Dining & Bar
                                 </a>
-                                <a href="" className="text-base text-costum-text-black mb-3">
+                                <a href="" className="text-base text-costumBlack mb-3">
                                     Small kitchen Appliances
                                 </a>
-                                <a href="" className="text-base text-costum-text-black mb-3">
+                                <a href="" className="text-base text-costumBlack mb-3">
                                     Kitchen Tools and Gadgets
                                 </a>
-                                <a href="" className="text-base text-costum-text-black mb-3">
+                                <a href="" className="text-base text-costumBlack mb-3">
                                     Cookware
                                 </a>
                             </div>
@@ -71,13 +71,13 @@ const menu = () => {
                                 <p className="text-base text-costum-blue font-medium">Kitchen</p>
                             </div>
                             <div className="flex flex-col mb-5">
-                                <a href="" className="text-base text-costum-text-black mb-3">
+                                <a href="" className="text-base text-costumBlack mb-3">
                                     Kitchen, Dining & Bar
                                 </a>
-                                <a href="" className="text-base text-costum-text-black mb-3">
+                                <a href="" className="text-base text-costumBlack mb-3">
                                     Small kitchen Appliances
                                 </a>
-                                <a href="" className="text-base text-costum-text-black mb-3">
+                                <a href="" className="text-base text-costumBlack mb-3">
                                     Kitchen Tools and Gadgets
                                 </a>
                             </div>
@@ -88,13 +88,13 @@ const menu = () => {
                                 <p className="text-base text-costum-blue font-medium">Kitchen</p>
                             </div>
                             <div className="flex flex-col mb-10">
-                                <a href="" className="text-base text-costum-text-black mb-3">
+                                <a href="" className="text-base text-costumBlack mb-3">
                                     Kitchen, Dining & Bar
                                 </a>
-                                <a href="" className="text-base text-costum-text-black mb-3">
+                                <a href="" className="text-base text-costumBlack mb-3">
                                     Small kitchen Appliances
                                 </a>
-                                <a href="" className="text-base text-costum-text-black mb-3">
+                                <a href="" className="text-base text-costumBlack mb-3">
                                     Kitchen Tools and Gadgets
                                 </a>
                             </div>
@@ -104,16 +104,16 @@ const menu = () => {
                                 <p className="text-base text-costum-blue font-medium">Kitchen</p>
                             </div>
                             <div className="flex flex-col mb-5">
-                                <a href="" className="text-base text-costum-text-black mb-3">
+                                <a href="" className="text-base text-costumBlack mb-3">
                                     Kitchen, Dining & Bar
                                 </a>
-                                <a href="" className="text-base text-costum-text-black mb-3">
+                                <a href="" className="text-base text-costumBlack mb-3">
                                     Small kitchen Appliances
                                 </a>
-                                <a href="" className="text-base text-costum-text-black mb-3">
+                                <a href="" className="text-base text-costumBlack mb-3">
                                     Kitchen Tools and Gadgets
                                 </a>
-                                <a href="" className="text-base text-costum-text-black mb-3">
+                                <a href="" className="text-base text-costumBlack mb-3">
                                     Cookware
                                 </a>
                             </div>
@@ -121,32 +121,32 @@ const menu = () => {
                         <div className="w-1/4 pr-10 h-96 scroll-smoth overflow-y-auto">
                             <div className="flex flex-wrap justify-between mb-10 gap-3">
                                 <div className="flex justify-center items-center h-14 w-24 rounded-lg bg-star">
-                                    <p className="text-base font-medium text-costum-text-black">
+                                    <p className="text-base font-medium text-costumBlack">
                                         LOGO
                                     </p>
                                 </div>
                                 <div className="flex justify-center items-center h-14 w-24 rounded-lg bg-star">
-                                    <p className="text-base font-medium text-costum-text-black">
+                                    <p className="text-base font-medium text-costumBlack">
                                         LOGO
                                     </p>
                                 </div>
                                 <div className="flex justify-center items-center h-14 w-24 rounded-lg bg-star">
-                                    <p className="text-base font-medium text-costum-text-black">
+                                    <p className="text-base font-medium text-costumBlack">
                                         LOGO
                                     </p>
                                 </div>
                                 <div className="flex justify-center items-center h-14 w-24 rounded-lg bg-star">
-                                    <p className="text-base font-medium text-costum-text-black">
+                                    <p className="text-base font-medium text-costumBlack">
                                         LOGO
                                     </p>
                                 </div>
                                 <div className="flex justify-center items-center h-14 w-24 rounded-lg bg-star">
-                                    <p className="text-base font-medium text-costum-text-black">
+                                    <p className="text-base font-medium text-costumBlack">
                                         LOGO
                                     </p>
                                 </div>
                                 <div className="flex justify-center items-center h-14 w-24 rounded-lg bg-star">
-                                    <p className="text-base font-medium text-costum-text-black">
+                                    <p className="text-base font-medium text-costumBlack">
                                         LOGO
                                     </p>
                                 </div>
@@ -154,7 +154,7 @@ const menu = () => {
                             <div className="cart mb-3">
                                 <div className="flex px-6 py-4 border border-solid gap-2 border-costum-blue rounded-3xl">
                                     <img src="/images/menu_product_img.svg" alt="" />
-                                    <p className="text-base text-costum-text-black">
+                                    <p className="text-base text-costumBlack">
                                         ELECTRICAL Grill Mastergrill <br /> SUP412{" "}
                                         <span className="text-costum-orange text-sm">-30%</span>
                                     </p>
@@ -163,7 +163,7 @@ const menu = () => {
                             <div className="cart mb-3">
                                 <div className="flex px-6 py-4 border border-solid gap-2 border-costum-blue rounded-3xl">
                                     <img src="/images/menu_product_img.svg" alt="" />
-                                    <p className="text-base text-costum-text-black">
+                                    <p className="text-base text-costumBlack">
                                         ELECTRICAL Grill Mastergrill <br /> SUP412{" "}
                                         <span className="text-costum-orange text-sm">-30%</span>
                                     </p>
@@ -172,7 +172,7 @@ const menu = () => {
                             <div className="cart mb-3">
                                 <div className="flex px-6 py-4 border border-solid gap-2 border-costum-blue rounded-3xl">
                                     <img src="/images/menu_product_img.svg" alt="" />
-                                    <p className="text-base text-costum-text-black">
+                                    <p className="text-base text-costumBlack">
                                         ELECTRICAL Grill Mastergrill <br /> SUP412{" "}
                                         <span className="text-costum-orange text-sm">-30%</span>
                                     </p>
@@ -181,7 +181,7 @@ const menu = () => {
                             <div className="cart mb-3">
                                 <div className="flex px-6 py-4 border border-solid gap-2 border-costum-blue rounded-3xl">
                                     <img src="/images/menu_product_img.svg" alt="" />
-                                    <p className="text-base text-costum-text-black">
+                                    <p className="text-base text-costumBlack">
                                         ELECTRICAL Grill Mastergrill <br /> SUP412{" "}
                                         <span className="text-costum-orange text-sm">-30%</span>
                                     </p>
@@ -190,7 +190,7 @@ const menu = () => {
                             <div className="cart mb-3">
                                 <div className="flex px-6 py-4 border border-solid gap-2 border-costum-blue rounded-3xl">
                                     <img src="/images/menu_product_img.svg" alt="" />
-                                    <p className="text-base text-costum-text-black">
+                                    <p className="text-base text-costumBlack">
                                         ELECTRICAL Grill Mastergrill <br /> SUP412{" "}
                                         <span className="text-costum-orange text-sm">-30%</span>
                                     </p>

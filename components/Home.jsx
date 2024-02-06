@@ -6,7 +6,7 @@ const Home = () => {
             <div className="container mx-auto w-full mt-8 md:mt-28">
                 <div id="brands">
                     <div className="flex justify-center md:justify-between mb-8 w-full">
-                        <p className="text-costum-text-black font-bold text-2xl md:text-3xl ">Our Brands</p>
+                        <p className="text-costumBlack font-bold text-2xl md:text-3xl ">Our Brands</p>
                         <div className=" w-49 item-center gap-1 h-6 hidden md:flex">
                             <p className="text-costum-blue text-base font-medium ">Show all brands</p>
                             <img src="/images/arrow_forward.svg" alt="" />
@@ -26,7 +26,7 @@ const Home = () => {
                 </div>
                 <div id="products">
                     <div className="flex justify-center md:justify-between  mb-8 w-full">
-                        <p className="text-costum-text-black font-bold text-2xl md:text-3xl ">Recomended products</p>
+                        <p className="text-costumBlack font-bold text-2xl md:text-3xl ">Recomended products</p>
                         <div className="md:flex hidden w-49 item-center gap-1 h-6">
                             <p className="text-costum-blue text-base font-medium">Show all recomended products</p>
                             <img src="/images/arrow_forward.svg" alt="" />
@@ -48,8 +48,8 @@ const Home = () => {
                             </div>
                             <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
                             <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
-                                <p className="md:text-xl text-base text-costum-text-black font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
-                                <p className="text-costum-text-black text-sm md:text-base mb-3">
+                                <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                                <p className="text-costumBlack text-sm md:text-base mb-3">
                                     Material of execution: brass <br />
                                     Manufacturer’s color: chrome <br />
                                     Guarantee: 5 years
@@ -60,7 +60,7 @@ const Home = () => {
                                 </div>
                                 <div className="flex mb-2 w-full  justify-between">
                                     <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costum-text-black font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
+                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
                                         <option value="value1" selected>items</option>
                                         <option value="value2" >Значение 2</option>
                                         <option value="value3">Значение 3</option>
@@ -88,8 +88,8 @@ const Home = () => {
                             </div>
                             <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
                             <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
-                                <p className="md:text-xl text-base text-costum-text-black font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
-                                <p className="text-costum-text-black text-sm md:text-base mb-3">
+                                <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                                <p className="text-costumBlack text-sm md:text-base mb-3">
                                     Material of execution: brass <br />
                                     Manufacturer’s color: chrome <br />
                                     Guarantee: 5 years
@@ -100,7 +100,7 @@ const Home = () => {
                                 </div>
                                 <div className="flex mb-2 w-full  justify-between">
                                     <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costum-text-black font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
+                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
                                         <option value="value1" selected>items</option>
                                         <option value="value2" >Значение 2</option>
                                         <option value="value3">Значение 3</option>
@@ -113,7 +113,7 @@ const Home = () => {
                                 </button>
                             </div>
                         </div>
-                        <div className="md:w-auto w-44 min-h-72 rounded-lg">
+                        <div className="md:w-auto  w-44 min-h-72 rounded-lg">
                             <div className="relative">
                                 <img src="/images/product_img.svg" alt="" className='w-full' />
                                 <div className="absolute top-5 left-0 bg-costum-orange p-1 text-sm  w-max text-white font-bold">-30%</div>
@@ -128,8 +128,8 @@ const Home = () => {
                             </div>
                             <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
                             <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
-                                <p className="md:text-xl text-base text-costum-text-black font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
-                                <p className="text-costum-text-black text-sm md:text-base mb-3">
+                                <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                                <p className="text-costumBlack text-sm md:text-base mb-3">
                                     Material of execution: brass <br />
                                     Manufacturer’s color: chrome <br />
                                     Guarantee: 5 years
@@ -140,7 +140,7 @@ const Home = () => {
                                 </div>
                                 <div className="flex mb-2 w-full  justify-between">
                                     <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costum-text-black font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
+                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
                                         <option value="value1" selected>items</option>
                                         <option value="value2" >Значение 2</option>
                                         <option value="value3">Значение 3</option>
@@ -153,7 +153,7 @@ const Home = () => {
                                 </button>
                             </div>
                         </div>
-                        <div className="md:w-auto w-44 min-h-72 rounded-lg">
+                        <div className="md:w-auto  w-44 min-h-72 rounded-lg">
                             <div className="relative">
                                 <img src="/images/product_img.svg" alt="" className='w-full' />
                                 <div className="absolute top-5 left-0 bg-costum-orange p-1 text-sm  w-max text-white font-bold">-30%</div>
@@ -168,8 +168,8 @@ const Home = () => {
                             </div>
                             <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
                             <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
-                                <p className="md:text-xl text-base text-costum-text-black font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
-                                <p className="text-costum-text-black text-sm md:text-base mb-3">
+                                <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                                <p className="text-costumBlack text-sm md:text-base mb-3">
                                     Material of execution: brass <br />
                                     Manufacturer’s color: chrome <br />
                                     Guarantee: 5 years
@@ -180,7 +180,7 @@ const Home = () => {
                                 </div>
                                 <div className="flex mb-2 w-full  justify-between">
                                     <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costum-text-black font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
+                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
                                         <option value="value1" selected>items</option>
                                         <option value="value2" >Значение 2</option>
                                         <option value="value3">Значение 3</option>
@@ -213,7 +213,7 @@ const Home = () => {
             <div className="container mx-auto w-full">
                 <div id="categories">
                     <div className="flex justify-center md:justify-between mb-8 w-full">
-                        <p className="text-costum-text-black font-bold   text-2xl md:text-3xl ">Recommended Categories</p>
+                        <p className="text-costumBlack font-bold   text-2xl md:text-3xl ">Recommended Categories</p>
                         <div className=" md:flex hidden w-49 item-center gap-1 h-6">
                             <p className="text-costum-blue text-base font-medium">Show all categories</p>
                             <img src="/images/arrow_forward.svg" alt="" />
@@ -252,7 +252,7 @@ const Home = () => {
                 </div>
                 <div id="hints">
                     <div className="flex justify-center md:justify-between mb-8 w-full">
-                        <p className="text-costum-text-black font-bold md:text-3xl  text-2xl">Hints for you</p>
+                        <p className="text-costumBlack font-bold md:text-3xl  text-2xl">Hints for you</p>
                         <div className="md:flex hidden item-center gap-1 h-6">
                             <p className="text-costum-blue text-base font-medium">Show all hints</p>
                             <img src="/images/arrow_forward.svg" alt="" />
@@ -262,8 +262,8 @@ const Home = () => {
                         <div className="md:w-auto  w-full md:min-h-72 h-auto rounded-lg mb-6">
                             <img src="/images/hints_img.svg" alt="" className='w-full' />
                             <div className="w-full min-h-16  py-3 px-2 rounded-b-lg border-solid border border-costum-gray-500">
-                                <p className="text-xl text-costum-text-black font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
-                                <p className="text-costum-text-black text-base mb-4">Are you standing on the threshold of your own "M", to which you have just picked up the keys, and with the eye...</p>
+                                <p className="text-xl text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                                <p className="text-costumBlack text-base mb-4">Are you standing on the threshold of your own "M", to which you have just picked up the keys, and with the eye...</p>
                                 <div className="flex item-center gap-1 h-6">
                                     <p className="text-costum-blue text-base font-medium">Read more</p>
                                     <img src="/images/arrow_forward.svg" alt="" />
@@ -274,8 +274,8 @@ const Home = () => {
                         <div className="md:w-auto  w-full md:min-h-72 h-auto mb-6 rounded-lg">
                             <img src="/images/hints_img.svg" alt="" className='w-full' />
                             <div className="w-full min-h-16  py-3 px-2 rounded-b-lg border-solid border border-costum-gray-500">
-                                <p className="text-xl text-costum-text-black font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
-                                <p className="text-costum-text-black text-base mb-4">Are you standing on the threshold of your own "M", to which you have just picked up the keys, and with the eye...</p>
+                                <p className="text-xl text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                                <p className="text-costumBlack text-base mb-4">Are you standing on the threshold of your own "M", to which you have just picked up the keys, and with the eye...</p>
                                 <div className="flex item-center gap-1 h-6">
                                     <p className="text-costum-blue text-base font-medium">Read more</p>
                                     <img src="/images/arrow_forward.svg" alt="" />
@@ -286,8 +286,8 @@ const Home = () => {
                         <div className="md:w-auto  w-full md:min-h-72 h-auto mb-6 rounded-lg">
                             <img src="/images/hints_img.svg" alt="" className='w-full' />
                             <div className="w-full min-h-16  py-3 px-2 rounded-b-lg border-solid border border-costum-gray-500">
-                                <p className="text-xl text-costum-text-black font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
-                                <p className="text-costum-text-black text-base mb-4">Are you standing on the threshold of your own "M", to which you have just picked up the keys, and with the eye...</p>
+                                <p className="text-xl text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                                <p className="text-costumBlack text-base mb-4">Are you standing on the threshold of your own "M", to which you have just picked up the keys, and with the eye...</p>
                                 <div className="flex item-center gap-1 h-6">
                                     <p className="text-costum-blue text-base font-medium">Read more</p>
                                     <img src="/images/arrow_forward.svg" alt="" />
@@ -298,8 +298,8 @@ const Home = () => {
                         <div className="md:w-auto  w-full md:min-h-72 h-auto rounded-lg mb-6">
                             <img src="/images/hints_img.svg" alt="" className='w-full' />
                             <div className="w-full min-h-16  py-3 px-2 rounded-b-lg border-solid border border-costum-gray-500">
-                                <p className="text-xl text-costum-text-black font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
-                                <p className="text-costum-text-black text-base mb-4">Are you standing on the threshold of your own "M", to which you have just picked up the keys, and with the eye...</p>
+                                <p className="text-xl text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                                <p className="text-costumBlack text-base mb-4">Are you standing on the threshold of your own "M", to which you have just picked up the keys, and with the eye...</p>
                                 <div className="flex item-center gap-1 h-6">
                                     <p className="text-costum-blue text-base font-medium">Read more</p>
                                     <img src="/images/arrow_forward.svg" alt="" />
@@ -356,10 +356,10 @@ const Home = () => {
                 <div className="container mx-auto">
                     <div className="flex justify-between flex-wrap py-12">
                         <div className="w-full md:w-2/4 md:mb-0 mb-6 text-center md:text-left flex flex-col items-center md:block">
-                            <p className="font-bold text-costum-text-black md:my-10 my-6 text-3xl md:text-4xl">
+                            <p className="font-bold text-costumBlack md:my-10 my-6 text-3xl md:text-4xl">
                                 DPD delivery already available!
                             </p>
-                            <p className="text-base font-medium text-costum-text-black mb-8">
+                            <p className="text-base font-medium text-costumBlack mb-8">
                                 Choose DPD for speed, ease and convenience. <br /> Track your parcel in real time. This will help you plan <br /> your work while waiting for the parcel.
                             </p>
                             <div className="mb-3 md:mb-0 rounded-3xl bg-costum-blue w-36 flex items-center justify-center h-12 text-white font-bold">
@@ -374,7 +374,7 @@ const Home = () => {
             </div>
             <div className="container mx-auto w-full">
                 <div className="flex justify-center md:justify-between mb-8 w-full">
-                    <p className="text-costum-text-black font-bold  text-2xl md:text-3xl ">Events for you</p>
+                    <p className="text-costumBlack font-bold  text-2xl md:text-3xl ">Events for you</p>
                     <div className="md:flex hidden w-49 item-center gap-1 h-6">
                         <p className="text-costum-blue text-base font-medium">Show all events</p>
                         <img src="/images/arrow_forward.svg" alt="" />
@@ -384,9 +384,9 @@ const Home = () => {
                     <div className="md:w-auto md:min-h-72 h-auto mb-6 w-full rounded-lg">
                         <img src="/images/hints_img.svg" alt="" className='w-full' />
                         <div className="w-full min-h-16  py-3 px-2 rounded-b-lg border-solid border border-costum-gray-500">
-                            <p className="text-xl text-costum-text-black font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                            <p className="text-xl text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
                             <p className="text-costum-blue mb-3.5">23.01.2021 | London, Uk</p>
-                            <p className="text-costum-text-black text-base mb-4">Are you standing on the threshold of your own "M", to which you have just picked up the keys, and with the eye...</p>
+                            <p className="text-costumBlack text-base mb-4">Are you standing on the threshold of your own "M", to which you have just picked up the keys, and with the eye...</p>
                             <button className="border border-blue-500 border-2 py-2.5 px-8 rounded-3xl text-costum-blue font-bold">Know more</button>
 
                         </div>
@@ -394,10 +394,10 @@ const Home = () => {
                     <div className="md:w-auto md:min-h-72 h-auto mb-6 w-full rounded-lg">
                         <img src="/images/hints_img.svg" alt="" className='w-full' />
                         <div className="w-full min-h-16  py-3 px-2 rounded-b-lg border-solid border border-costum-gray-500">
-                            <p className="text-xl text-costum-text-black font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                            <p className="text-xl text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
                             <p className="text-costum-blue mb-3.5">23.01.2021 | London, Uk</p>
 
-                            <p className="text-costum-text-black text-base mb-4">Are you standing on the threshold of your own "M", to which you have just picked up the keys, and with the eye...</p>
+                            <p className="text-costumBlack text-base mb-4">Are you standing on the threshold of your own "M", to which you have just picked up the keys, and with the eye...</p>
                             <button className="border border-blue-500 border-2 py-2.5 px-8 rounded-3xl text-costum-blue font-bold">Know more</button>
 
                         </div>
@@ -405,10 +405,10 @@ const Home = () => {
                     <div className="md:w-auto md:min-h-72 h-auto mb-6 w-full rounded-lg">
                         <img src="/images/hints_img.svg" alt="" className='w-full' />
                         <div className="w-full min-h-16  py-3 px-2 rounded-b-lg border-solid border border-costum-gray-500">
-                            <p className="text-xl text-costum-text-black font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                            <p className="text-xl text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
                             <p className="text-costum-blue mb-3.5">23.01.2021 | London, Uk</p>
 
-                            <p className="text-costum-text-black text-base mb-4">Are you standing on the threshold of your own "M", to which you have just picked up the keys, and with the eye...</p>
+                            <p className="text-costumBlack text-base mb-4">Are you standing on the threshold of your own "M", to which you have just picked up the keys, and with the eye...</p>
                             <button className="border border-blue-500 border-2 py-2.5 px-8 rounded-3xl text-costum-blue font-bold">Know more</button>
 
                         </div>
@@ -416,10 +416,10 @@ const Home = () => {
                     <div className="md:w-auto md:min-h-72 h-auto mb-6 w-full rounded-lg">
                         <img src="/images/hints_img.svg" alt="" className='w-full' />
                         <div className="w-full min-h-16  py-3 px-2 rounded-b-lg border-solid border border-costum-gray-500">
-                            <p className="text-xl text-costum-text-black font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                            <p className="text-xl text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
                             <p className="text-costum-blue mb-3.5">23.01.2021 | London, Uk</p>
 
-                            <p className="text-costum-text-black text-base mb-4">Are you standing on the threshold of your own "M", to which you have just picked up the keys, and with the eye...</p>
+                            <p className="text-costumBlack text-base mb-4">Are you standing on the threshold of your own "M", to which you have just picked up the keys, and with the eye...</p>
                             <button className="border border-blue-500 border-2 py-2.5 px-8 rounded-3xl text-costum-blue font-bold">Know more</button>
 
                         </div>

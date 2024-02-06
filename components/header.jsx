@@ -1,41 +1,38 @@
-import { Badge, Menu, Select, Drawer, Accordion, AccordionItem } from '@mantine/core';
+import { Badge, Menu, Select, Input, Drawer, Accordion, AccordionItem } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import MenuHeader from "./Menu";
+import SearchMenu from './SearchMenu';
 
 
 const header = () => {
     const [opened, { open, close }] = useDisclosure(false);
-
+    const search_icon = <img src='/images/search.svg' />
 
 
     return (
+
         <div className="  ">
             <div className=" bg-costum-gray hidden md:flex">
                 <div className=" container mx-auto h-12 flex justify-between items-center ">
                     <div className="w-auto flex  items-center gap-2 ">
                         <div className="flex items-center">
-                            <h1 className="text-sm text-costum-text-black font-normal">
+                            <h1 className="text-sm text-costumBlack font-normal">
                                 Country:
                             </h1>
-                            {/* <select className="text-sm text-costum-text-black font-normal mr-1 bg-transparent outline-none">
+                            <select className="text-sm text-costumBlack font-normal mr-1 bg-transparent outline-none">
                                 <option value="value1" selected>
                                     Uzbekistan
                                 </option>
                                 <option value="value2">Значение 2</option>
                                 <option value="value3">Значение 3</option>
-                            </select> */}
-                            <Select
-                                className="text-sm text-costum-text-black font-normal mr-1 bg-transparent outline-none"
-                                placeholder="Pick value"
-                                variant='unstylled'
-                                data={['React', 'Angular', 'Vue', 'Svelte']}
-                            />
+                            </select>
+
                         </div>
                         <div className="flex">
-                            <h1 className="text-sm text-costum-text-black font-normal">
+                            <h1 className="text-sm text-costumBlack font-normal">
                                 Language:
                             </h1>
-                            <select className="text-sm text-costum-text-black font-normal mr-1 bg-transparent outline-none">
+                            <select className="text-sm text-costumBlack font-normal mr-1 bg-transparent outline-none">
                                 <option value="value1" selected>
                                     English
                                 </option>
@@ -44,13 +41,13 @@ const header = () => {
                             </select>
                         </div>
                         <div className="flex">
-                            <h1 className="text-sm text-costum-text-black font-normal">
+                            <h1 className="text-sm text-costumBlack font-normal">
                                 Currency:
                             </h1>
-                            <select className="text-sm text-costum-text-black font-normal mr-1 bg-transparent outline-none">
+                            <select className="text-sm text-costumBlack font-normal mr-1 bg-transparent outline-none">
                                 <option
                                     value="value1"
-                                    className="text-sm text-costum-text-black font-normal"
+                                    className="text-sm text-costumBlack font-normal"
                                     selected
                                 >
                                     Uzs
@@ -67,7 +64,7 @@ const header = () => {
                                 +998 71 200 00 00
                             </a>
                         </div>
-                        <div className="rotate-60 h-7 bg-costum-text-black w-0.5"></div>
+                        <div className="rotate-60 h-7 bg-costumBlack w-0.5"></div>
                         <div className="flex relative gap-2 items-center">
                             <div className="relative">
                                 <img src="/images/envelope.svg" alt="" />
@@ -79,19 +76,19 @@ const header = () => {
                             </div>
                             <a
                                 href=""
-                                className=" text-sm text-costum-text-black font-normal "
+                                className=" text-sm text-costumBlack font-normal "
                             >
                                 Message
                             </a>
                         </div>
-                        <div className="rotate-60 h-7 bg-costum-text-black w-0.5"></div>
+                        <div className="rotate-60 h-7 bg-costumBlack w-0.5"></div>
 
                         <div className="flex gap-1 items-center">
                             <img src="/images/user.svg" alt="" />
-                            <h1 className="text-sm text-costum-text-black font-normal">
+                            <h1 className="text-sm text-costumBlack font-normal">
                                 Username:
                             </h1>
-                            <select className="text-sm text-costum-text-black font-normal bg-transparent outline-none">
+                            <select className="text-sm text-costumBlack font-normal bg-transparent outline-none">
                                 <option value="value1" selected>
                                     Surname
                                 </option>
@@ -120,15 +117,17 @@ const header = () => {
                 <div className="h-20 flex justify-between  items-center">
                     <img src="/images/ABUsell.svg" alt="" className="hidden md:flex" />
                     <label class="relative block w-full md:w-1/3 ">
-                        <span class="absolute inset-y-0 left-0 flex items-center pl-2">
-                            <img src="/images/search.svg" alt="" />
-                        </span>
-                        <input
-                            class=" block bg-white w-full border  rounded-md h-12 pl-9 pr-3 shadow-sm focus:outline-none sm:text-sm"
-                            placeholder="Search by product or SKU"
-                            type="text"
-                            name="search"
-                        />
+                        <Menu classNames="md:width-[1900px] w-full ">
+                            <Menu.Target>
+                                <Input placeholder="Search by product or SKU" leftSection={search_icon} size='md' radius='md' />
+                            </Menu.Target>
+                            <Menu.Dropdown >
+
+                                <SearchMenu />
+
+                            </Menu.Dropdown>
+                        </Menu>
+
                     </label>
                     <button className="h-12 w-48 bg-costum-blue rounded-3xl text-white text-base hidden md:block">
                         Quick Order Form
@@ -157,7 +156,7 @@ const header = () => {
 
                             <Menu width={1900}>
                                 <Menu.Target>
-                                    <p className="text-costum-text-black uppercase cursor-pointer flex ">
+                                    <p className="text-costumBlack uppercase cursor-pointer flex ">
                                         Motors
                                         <span>
                                             <img src="/images/down_icon.svg" alt="" />
@@ -172,6 +171,19 @@ const header = () => {
                             </Menu>
                             <p className="text-costum--text-black">ELECTRONICS</p>
                             <p className="text-costum--text-black">OFFICE EQUIPMENT</p>
+                        </div>
+                        <div className="flex gap-6">
+                            <div className="w-max-content flex flex-col item-center">
+                                <div className="relative mx-auto">
+                                    <img src="/images/envelope.svg" alt="" />
+
+                                    <Badge size="sm" color='orange' className='absolute -top-2.5 -right-2.5' circle>
+                                        3
+                                    </Badge>
+
+                                </div>
+                                <p className="text-costum-blue text-sm font-bold uppercase mt-2">compare</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -194,16 +206,16 @@ const header = () => {
                                         </Accordion.Control>
                                         <Accordion.Panel>
                                             <div className="flex flex-col ">
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Kitchen, Dining & Bar
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Small kitchen Appliances
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Kitchen Tools and Gadgets
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Cookware
                                                 </a>
                                             </div>
@@ -218,16 +230,16 @@ const header = () => {
                                         </Accordion.Control>
                                         <Accordion.Panel>
                                             <div className="flex flex-col ">
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Kitchen, Dining & Bar
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Small kitchen Appliances
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Kitchen Tools and Gadgets
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Cookware
                                                 </a>
                                             </div>
@@ -242,16 +254,16 @@ const header = () => {
                                         </Accordion.Control>
                                         <Accordion.Panel>
                                             <div className="flex flex-col ">
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Kitchen, Dining & Bar
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Small kitchen Appliances
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Kitchen Tools and Gadgets
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Cookware
                                                 </a>
                                             </div>
@@ -275,16 +287,16 @@ const header = () => {
                                         </Accordion.Control>
                                         <Accordion.Panel>
                                             <div className="flex flex-col ">
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Kitchen, Dining & Bar
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Small kitchen Appliances
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Kitchen Tools and Gadgets
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Cookware
                                                 </a>
                                             </div>
@@ -299,16 +311,16 @@ const header = () => {
                                         </Accordion.Control>
                                         <Accordion.Panel>
                                             <div className="flex flex-col ">
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Kitchen, Dining & Bar
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Small kitchen Appliances
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Kitchen Tools and Gadgets
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Cookware
                                                 </a>
                                             </div>
@@ -323,16 +335,16 @@ const header = () => {
                                         </Accordion.Control>
                                         <Accordion.Panel>
                                             <div className="flex flex-col ">
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Kitchen, Dining & Bar
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Small kitchen Appliances
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Kitchen Tools and Gadgets
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Cookware
                                                 </a>
                                             </div>
@@ -356,16 +368,16 @@ const header = () => {
                                         </Accordion.Control>
                                         <Accordion.Panel>
                                             <div className="flex flex-col ">
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Kitchen, Dining & Bar
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Small kitchen Appliances
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Kitchen Tools and Gadgets
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Cookware
                                                 </a>
                                             </div>
@@ -380,16 +392,16 @@ const header = () => {
                                         </Accordion.Control>
                                         <Accordion.Panel>
                                             <div className="flex flex-col ">
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Kitchen, Dining & Bar
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Small kitchen Appliances
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Kitchen Tools and Gadgets
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Cookware
                                                 </a>
                                             </div>
@@ -404,16 +416,16 @@ const header = () => {
                                         </Accordion.Control>
                                         <Accordion.Panel>
                                             <div className="flex flex-col ">
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Kitchen, Dining & Bar
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Small kitchen Appliances
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Kitchen Tools and Gadgets
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Cookware
                                                 </a>
                                             </div>
@@ -437,16 +449,16 @@ const header = () => {
                                         </Accordion.Control>
                                         <Accordion.Panel>
                                             <div className="flex flex-col ">
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Kitchen, Dining & Bar
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Small kitchen Appliances
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Kitchen Tools and Gadgets
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Cookware
                                                 </a>
                                             </div>
@@ -461,16 +473,16 @@ const header = () => {
                                         </Accordion.Control>
                                         <Accordion.Panel>
                                             <div className="flex flex-col ">
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Kitchen, Dining & Bar
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Small kitchen Appliances
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Kitchen Tools and Gadgets
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Cookware
                                                 </a>
                                             </div>
@@ -485,16 +497,16 @@ const header = () => {
                                         </Accordion.Control>
                                         <Accordion.Panel>
                                             <div className="flex flex-col ">
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Kitchen, Dining & Bar
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Small kitchen Appliances
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Kitchen Tools and Gadgets
                                                 </a>
-                                                <a href="" className="text-base text-costum-text-black mb-3">
+                                                <a href="" className="text-base text-costumBlack mb-3">
                                                     Cookware
                                                 </a>
                                             </div>
@@ -534,10 +546,10 @@ const header = () => {
                         <Accordion.Item value='1_1'>
                             <Accordion.Control>
                                 <div className="flex items-center">
-                                    <h1 className="text-sm text-costum-text-black font-normal">
+                                    <h1 className="text-sm text-costumBlack font-normal">
                                         Country:
                                     </h1>
-                                    <p className="text-sm text-costum-text-black font-normal ml-2 bg-transparent outline-none">
+                                    <p className="text-sm text-costumBlack font-normal ml-2 bg-transparent outline-none">
                                         Uzbekistan
                                     </p>
                                 </div>
@@ -552,10 +564,10 @@ const header = () => {
                         <Accordion.Item value='1_2'>
                             <Accordion.Control>
                                 <div className="flex items-center">
-                                    <h1 className="text-sm text-costum-text-black font-normal">
+                                    <h1 className="text-sm text-costumBlack font-normal">
                                         Language:
                                     </h1>
-                                    <p className="text-sm text-costum-text-black font-normal ml-2 bg-transparent outline-none">
+                                    <p className="text-sm text-costumBlack font-normal ml-2 bg-transparent outline-none">
                                         English
                                     </p>
                                 </div>
@@ -570,10 +582,10 @@ const header = () => {
                         <Accordion.Item value='1_3'>
                             <Accordion.Control>
                                 <div className="flex items-center">
-                                    <h1 className="text-sm text-costum-text-black font-normal">
+                                    <h1 className="text-sm text-costumBlack font-normal">
                                         Country:
                                     </h1>
-                                    <p className="text-sm text-costum-text-black font-normal ml-2 bg-transparent outline-none">$</p>
+                                    <p className="text-sm text-costumBlack font-normal ml-2 bg-transparent outline-none">$</p>
                                 </div>
                             </Accordion.Control>
                             <Accordion.Panel>
@@ -584,7 +596,7 @@ const header = () => {
                             </Accordion.Panel>
                         </Accordion.Item>
                     </Accordion>
-                    
+
                     <button className="bg-costum-blue w-full rounded-3xl text-white h-12 mb-5">Quick Order Form</button>
                 </div>
             </Drawer>

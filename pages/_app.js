@@ -27,7 +27,9 @@ export default function App({ Component, pageProps }) {
       }}
     >
       <div className="mx-auto min-h-screen">
+        <Header/>
         <Component {...pageProps} />
+        <Footer/>
       </div>
     </MantineProvider>
   )

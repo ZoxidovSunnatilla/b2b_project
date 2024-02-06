@@ -83,10 +83,74 @@
   font-family: "Basier Square", "Basier Circle";
 }
 
+#cart .m-4ba554d4 {
+  padding: 0px !important;
+  padding-top: 0px !important;
+}
+
 
 
 body {
   font-family: "Basier Square", "Basier Circle";
+}
+
+.breadcumbs_mobile {
+  display: none !important;
+}
+
+#gift .m-8fb7ebe7 {
+  background-color: #fff !important;
+  border: 1px solid var(--Light-Colors-Platinum, #EAECEE) !important;
+  border-radius: 8px !important;
+  width: 408px !important;
+  height: 48px !important;
+}
+
+.card_category {
+  width: 301px;
+}
+
+.textt {
+  width: 59%;
+}
+
+#filter .m-4ba585b8 {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+#filter .m-fe19b709 {
+  border-bottom: 0px !important;
+}
+
+#filter .m-4ba554d4 {
+  padding: 0px !important;
+}
+
+#listing .m-c3381914 {
+  border-radius: 8px !important;
+  border: 1px solid #1071FF !important;
+}
+
+#listing .m-c3381914:hover {
+  background: #E6EFFB !important;
+}
+
+#listing .m-c3381914[data-active][data-active] {
+  background: #E6EFFB !important;
+}
+
+#listing .tabss {
+  justify-content: space-between !important;
+  align-items: center !important;
+  flex-wrap: nowrap;
+  margin-bottom: 24px !important;
+}
+
+@media screen and (min-width: 1440px) and (max-width:1440px) {
+  .container {
+    max-width: 1264px !important;
+  }
 }
 
 @media screen and (max-width:768px) {
@@ -96,22 +160,85 @@ body {
 
   }
 
+  #drawer .m-4ba585b8 {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+
+  #drawer .m-4ba554d4 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .card_category {
+    width: 100%;
+  }
+
+  .textt {
+    width: 100%;
+  }
+
+  #listing .filter_tabs {
+    display: none !important;
+  }
+
   .m-5df29311 {
     padding: 0px !important;
     padding-top: 0px !important;
   }
 
+  .breadcumbs {
+    display: none !important;
+  }
+
+  .breadcumbs_mobile {
+    display: flex !important;
+  }
+
   .m-fe19b709 {
     border-bottom: calc(0.0625rem*var(--mantine-scale)) solid var(--_item-border-color);
   }
+
+  #tabs_mobile .m-4ba585b8[data-active] {
+    background-color: #1071FF;
+    color: #fff !important;
+
+  }
+
+
+
+  #tabs_mobile #accordion_mobile .m-4ba585b8[data-active] {
+    background-color: rgba(246, 248, 251, 1);
+
+  }
+
+  #tabs_mobile #accordion_mobile .m-4ba585b8[data-active] {
+    background-color: rgba(246, 248, 251, 1);
+
+  }
+
+  #gift .m-8fb7ebe7 {
+    background-color: #fff !important;
+    border: 1px solid var(--Light-Colors-Platinum, #EAECEE) !important;
+    border-radius: 8px !important;
+    width: 194px !important;
+    height: 48px !important;
+  }
 }
+
+#favorites .m-b242d975 {
+  position: static !important;
+}
+
 .m-c3381914 {
   background-color: #F6F8FB !important;
 }
+
 .m-c3381914:hover {
   background-color: #1071FF !important;
   color: #fff !important;
 }
+
 .m-c3381914[data-active][data-active] {
   background-color: #1071FF !important;
 }
@@ -119,10 +246,11 @@ body {
 #header .select {
   background-color: transparent !important;
   border: none !important;
-  
+
   width: 70px !important;
 }
-.shadow{
+
+.shadow {
   box-shadow: 0px 5px 7px 0px #00000024;
 
 }
@@ -133,47 +261,61 @@ body {
   padding: 16px !important;
   font-size: 18px !important;
   outline: none !important;
-  border:  none !important;
+  border: none !important;
   height: 56px !important;
   width: 100%;
 }
-#wrapper .input::placeholder{
-  color:  #081226 !important;
-  font-weight: 400  !important;
+
+#wrapper .input::placeholder {
+  color: #081226 !important;
+  font-weight: 400 !important;
 }
+
 #wrapper .m-26063560 {
   border-radius: 0px !important;
 }
-#wrapper .card-checkbox{
-  width: 35%;
-  background: #F8F8F9;
-  height: 80px;
-  border: 1px solid #ECECEC; 
-  border-radius: 12px;
+
+.login {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  position: relative;
-  
+  height: 100vh;
+  width: 100%;
 }
-#wrapper .card-checkbox .text_one{
-  font-size: 14px;
-  font-weight: 400;
-  color: #08122699;
-  margin-bottom: 8px;
-}
-#wrapper .card-checkbox .text_two{
-  font-size: 18px; 
-  line-height: 20px;
-  color: #081226;
-  
+  #wrapper .card-checkbox {
+    width: 35%;
+    background: #F8F8F9;
+    height: 80px;
+    border: 1px solid #ECECEC;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
 
-}
-#wrapper .bgg{
-  background-color: #FBFBFC;
-  border-radius: 12px;
-}
-#wrapper .border-bg{
-  background-color: #ECECEC;
-}
+  }
+
+  #wrapper .card-checkbox .text_one {
+    font-size: 14px;
+    font-weight: 400;
+    color: #08122699;
+    margin-bottom: 8px;
+  }
+
+  #wrapper .card-checkbox .text_two {
+    font-size: 18px;
+    line-height: 20px;
+    color: #081226;
+
+
+  }
+
+  #wrapper .bgg {
+    background-color: #FBFBFC;
+    border-radius: 12px;
+  }
+
+  #wrapper .border-bg {
+    background-color: #ECECEC;
+  }
