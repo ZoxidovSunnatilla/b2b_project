@@ -2,63 +2,59 @@ import { Badge, Menu, Select, Input, Drawer, Accordion, AccordionItem } from '@m
 import { useDisclosure } from '@mantine/hooks';
 import MenuHeader from "./Menu";
 import SearchMenu from './SearchMenu';
+import Link from 'next/link'
 
 
 const header = () => {
     const [opened, { open, close }] = useDisclosure(false);
     const search_icon = <img src='/images/search.svg' />
+    const icon = <img src='/images/down_icon_select.svg' alt='' />
 
 
     return (
 
-        <div className="  ">
+        <div className="  " >
             <div className=" bg-costum-gray hidden md:flex">
-                <div className=" container mx-auto h-12 flex justify-between items-center ">
-                    <div className="w-auto flex  items-center gap-2 ">
+                <div id="header" className=" container mx-auto h-12 flex justify-between  items-center ">
+                    <div className="w-auto flex  items-center gap-4 ">
                         <div className="flex items-center">
                             <h1 className="text-sm text-costumBlack font-normal">
                                 Country:
                             </h1>
-                            <select className="text-sm text-costumBlack font-normal mr-1 bg-transparent outline-none">
-                                <option value="value1" selected>
-                                    Uzbekistan
-                                </option>
-                                <option value="value2">Значение 2</option>
-                                <option value="value3">Значение 3</option>
-                            </select>
+
+                            <Select
+                                placeholder="Uzbekistan"
+                                rightSection={icon}
+                                data={['Russia', 'Uzbekistan', 'Angliya']}
+
+                            />
 
                         </div>
-                        <div className="flex">
+                        <div className="flex items-center">
                             <h1 className="text-sm text-costumBlack font-normal">
                                 Language:
                             </h1>
-                            <select className="text-sm text-costumBlack font-normal mr-1 bg-transparent outline-none">
-                                <option value="value1" selected>
-                                    English
-                                </option>
-                                <option value="value2">Russian</option>
-                                <option value="value3">Uzbek</option>
-                            </select>
+                            <Select
+                                placeholder="English"
+                                rightSection={icon}
+                                data={['Russia', 'Uzbek', 'English']}
+
+                            />
                         </div>
-                        <div className="flex">
+                        <div className="flex items-center">
                             <h1 className="text-sm text-costumBlack font-normal">
                                 Currency:
                             </h1>
-                            <select className="text-sm text-costumBlack font-normal mr-1 bg-transparent outline-none">
-                                <option
-                                    value="value1"
-                                    className="text-sm text-costumBlack font-normal"
-                                    selected
-                                >
-                                    Uzs
-                                </option>
-                                <option value="value2">RUB</option>
-                                <option value="value3">TRY</option>
-                            </select>
+                            <Select
+                                placeholder="Rubl"
+                                rightSection={icon}
+                                data={['Rubl', '$', 'Som']}
+
+                            />
                         </div>
                     </div>
-                    <div className="w-auto flex relative space-between gap-3 ">
-                        <div className="flex items-center gap-1">
+                    <div className="w-auto flex relative space-between gap-4 items-center ">
+                        <div className="flex items-center gap-2">
                             <img src="/images/phone.svg" alt="" />
                             <a href="" className=" text-sm text-costum-blue font-normal ">
                                 +998 71 200 00 00
@@ -88,22 +84,23 @@ const header = () => {
                             <h1 className="text-sm text-costumBlack font-normal">
                                 Username:
                             </h1>
-                            <select className="text-sm text-costumBlack font-normal bg-transparent outline-none">
-                                <option value="value1" selected>
-                                    Surname
-                                </option>
-                                <option value="value2">Russian</option>
-                                <option value="value3">Uzbek</option>
-                            </select>
+                            <Select
+                                placeholder="Surname"
+                                rightSection={icon}
+                                data={['Surname', 'LastName', 'SurName']}
+
+                            />
                         </div>
                     </div>
                 </div>
             </div>
             <div className="container mx-auto py-5 md:hidden flex justify-between">
 
-                <div className="nav" onClick={open}>
-                    <img src="/images/navbar.svg" alt="" />
-                </div>
+                <Link href="/">
+                    <div className="nav" onClick={open}>
+                        <img src="/images/navbar.svg" alt="" />
+                    </div>
+                </Link>
                 <img src="/images/logo_mobile.svg" alt="" />
                 <div className="relative">
                     <img src="/images/cart.svg" alt="" className="mr-2" />
@@ -115,9 +112,11 @@ const header = () => {
             </div>
             <div className="container px-4 md:px-0 mx-auto bg-costum-gray md:bg-white">
                 <div className="h-20 flex justify-between  items-center">
-                    <img src="/images/ABUsell.svg" alt="" className="hidden md:flex" />
+                    <Link href="/">
+                        <img src="/images/ABUsell.svg" alt="" className="hidden md:flex" />
+                    </Link>
                     <label class="relative block w-full md:w-1/3 ">
-                        <Menu classNames="md:width-[1900px] w-full ">
+                        <Menu classNames="md:width-[1900px] w-full " >
                             <Menu.Target>
                                 <Input placeholder="Search by product or SKU" leftSection={search_icon} size='md' radius='md' />
                             </Menu.Target>
@@ -129,7 +128,7 @@ const header = () => {
                         </Menu>
 
                     </label>
-                    <button className="h-12 w-48 bg-costum-blue rounded-3xl text-white text-base hidden md:block">
+                    <button className="h-12 w-[198px] bg-costum-blue rounded-full text-white text-base hidden md:block">
                         Quick Order Form
                     </button>
                 </div>
@@ -137,7 +136,7 @@ const header = () => {
             <div className="bg-costum-gray hidden md:flex h-20">
                 <div className="container mx-auto ">
                     <div className="flex items-center h-20  justify-between">
-                        <div className="flex gap-10">
+                        <div className="flex gap-16">
                             <Menu width={1900}>
                                 <Menu.Target>
                                     <p className="text-custum--text-black uppercase cursor-pointer flex">
@@ -172,18 +171,46 @@ const header = () => {
                             <p className="text-costum--text-black">ELECTRONICS</p>
                             <p className="text-costum--text-black">OFFICE EQUIPMENT</p>
                         </div>
-                        <div className="flex gap-6">
-                            <div className="w-max-content flex flex-col item-center">
-                                <div className="relative mx-auto">
-                                    <img src="/images/envelope.svg" alt="" />
+                        <div className="flex gap-8">
+                            <Link href="/">
+                                <div className="w-max-content flex flex-col item-center">
+                                    <div className="relative mx-auto">
+                                        <img src="/images/compare_icon.svg" alt="" />
 
-                                    <Badge size="sm" color='orange' className='absolute -top-2.5 -right-2.5' circle>
-                                        3
-                                    </Badge>
+                                        <Badge size="sm" color='orange' className='absolute -top-2.5 -right-2.5' circle>
+                                            3
+                                        </Badge>
 
+                                    </div>
+                                    <p className="text-costum-blue text-sm font-bold uppercase mt-2">compare</p>
                                 </div>
-                                <p className="text-costum-blue text-sm font-bold uppercase mt-2">compare</p>
-                            </div>
+                            </Link>
+                            <Link href="/favorites">
+                                <div className="w-max-content flex flex-col item-center">
+                                    <div className="relative mx-auto">
+                                        <img src="/images/star_icon.svg" alt="" />
+
+                                        <Badge size="sm" color='orange' className='absolute -top-2.5 -right-2.5' circle>
+                                            12
+                                        </Badge>
+
+                                    </div>
+                                    <p className="text-costum-blue text-sm font-bold uppercase mt-2">favorites</p>
+                                </div>
+                            </Link>
+                            <Link href="/cart">
+                                <div className="w-max-content flex flex-col item-center">
+                                    <div className="relative mx-auto">
+                                        <img src="/images/cart_icon.svg" alt="" />
+
+                                        <Badge size="sm" color='orange' className='absolute -top-2.5 -right-2.5' circle>
+                                            12
+                                        </Badge>
+
+                                    </div>
+                                    <p className="text-costum-blue text-sm font-bold uppercase mt-2">cart</p>
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 </div>

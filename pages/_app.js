@@ -4,6 +4,7 @@ import "@mantine/dates/styles.css"
 import { MantineProvider } from "@mantine/core"
 import Footer from "../components/footer"
 import Header from "../components/header"
+import Test from "../components/test"
 
 export default function App({ Component, pageProps }) {
   return (

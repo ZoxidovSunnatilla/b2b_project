@@ -94,6 +94,77 @@ body {
   font-family: "Basier Square", "Basier Circle";
 }
 
+#products .m-6c018570 {
+  background: #fff !important;
+  height: 48px !important;
+  width: 171px !important;
+  border-radius: 8px;
+  border: 1px solid #EAECEE !important;
+  display: flex;
+  align-items: center;
+}
+#products .m-8fb7ebe7{
+  background: #fff !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 8px;
+  border: none !important;
+  display: flex;
+  align-items: center;
+}
+#products .m-8fb7ebe7::placeholder {
+  color: #0C0C0C !important;
+}
+#cart .m-6c018570 {
+  background: #fff !important;
+  height: 48px !important;
+  width: 195px !important;
+  border-radius: 8px;
+  border: 1px solid #EAECEE !important;
+  display: flex;
+  align-items: center;
+}
+#cart .m-8fb7ebe7{
+  background: #fff !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 8px;
+  border: none !important;
+  display: flex;
+  align-items: center;
+}
+#cart .m-8fb7ebe7::placeholder {
+  color: #0C0C0C !important;
+}
+#tabs .m-6c018570 {
+  background: #fff !important;
+  height: 48px !important;
+  width: 150px !important;
+  border-radius: 8px;
+  border: 1px solid #EAECEE !important;
+  display: flex;
+  align-items: center;
+}
+.favorites_table .m-46b77525 {
+  width: 149px !important;
+  height: 48px !important;
+  outline: none !important;
+  
+}
+.favorites_table .m-8fb7ebe7{
+  width: 100% !important;
+  height: 100% !important;
+  outline: none !important;
+}
+.favorites_table .m-8fb7ebe7::placeholder{
+  color: #0C0C0C !important;
+}
+.favorites_table .m-6c018570{
+  height: 100% !important;
+  outline: none !important;
+  
+}
+
 .breadcumbs_mobile {
   display: none !important;
 }
@@ -158,6 +229,25 @@ body {
     padding-left: 10px;
     padding-right: 10px;
 
+  }
+  .favorites_table .m-46b77525 {
+    width: 250px !important;
+    height: 48px !important;
+    outline: none !important;
+    border-radius: 8px !important;
+    
+  }
+  #tabs_mobile .m-6c018570 {
+    background: #fff !important;
+    height: 48px !important;
+    width: 150px !important;
+    border-radius: 8px;
+    border: 1px solid #EAECEE !important;
+    display: flex;
+    align-items: center;
+  }
+  #products .m-6c018570 {
+    width: 97px !important;
   }
 
   #drawer .m-4ba585b8 {
@@ -282,40 +372,79 @@ body {
   height: 100vh;
   width: 100%;
 }
-  #wrapper .card-checkbox {
-    width: 35%;
-    background: #F8F8F9;
-    height: 80px;
-    border: 1px solid #ECECEC;
-    border-radius: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    position: relative;
 
+#wrapper .card-checkbox {
+  width: 35%;
+  background: #F8F8F9;
+  height: 80px;
+  border: 1px solid #ECECEC;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+
+}
+
+#header .m-8fb7ebe7 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent !important;
+  border: 0px !important;
+  font-size: 14px !important;
+  line-height: 170% !important;
+  transition: border-color .1s ease;
+  width: 100px !important;
+  padding: 0px !important;
+  margin-left: 4px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+#header .m-8fb7ebe7::placeholder {
+  color: #0C0C0C;
+}
+
+#wrapper .card-checkbox .text_one {
+  font-size: 14px;
+  font-weight: 400;
+  color: #08122699;
+  margin-bottom: 8px;
+}
+
+#wrapper .card-checkbox .text_two {
+  font-size: 18px;
+  line-height: 20px;
+  color: #081226;
+
+
+}
+
+#wrapper .bgg {
+  background-color: #FBFBFC;
+  border-radius: 12px;
+}
+
+#wrapper .border-bg {
+  background-color: #ECECEC;
+}
+
+@media screen and (min-width: 1500px) and (max-width: 1920px) {
+  #menu {
+    width: 1893px !important;
+    margin: 0px auto;
   }
+}
 
-  #wrapper .card-checkbox .text_one {
-    font-size: 14px;
-    font-weight: 400;
-    color: #08122699;
-    margin-bottom: 8px;
+@media screen and (min-width: 1440px) and (max-width: 1440px) {
+  #menu {
+    width: 1413px !important;
+    margin: 0px auto;
   }
+}
 
-  #wrapper .card-checkbox .text_two {
-    font-size: 18px;
-    line-height: 20px;
-    color: #081226;
-
-
-  }
-
-  #wrapper .bgg {
-    background-color: #FBFBFC;
-    border-radius: 12px;
-  }
-
-  #wrapper .border-bg {
-    background-color: #ECECEC;
-  }

@@ -1,7 +1,9 @@
 import React from 'react'
-import { Breadcrumbs, Tabs, List, Checkbox, Input, Accordion, Rating } from '@mantine/core';
+import { Breadcrumbs, Tabs, List, Checkbox, Input, Accordion, Rating, Select } from '@mantine/core';
 
 const ProductPage = () => {
+  const icon = <img src='/images/down_icon_select.svg' alt='' />
+  
   return (
     <div>
       <div className='container mx-auto mb-20'>
@@ -29,7 +31,7 @@ const ProductPage = () => {
               </p>
               <p className="text-lg text-costum-silver mb-4">Omnires | Part No. 2123532</p>
               <div className="flex gap-2 mb-4 h-6 items-center">
-              <Rating defaultValue={2} />
+                <Rating defaultValue={2} />
                 <div className="flex gap-1">
                   <p className="text-costum-text-black font-semibold">5.0</p>
                   <p className="text-costum-text-black">(24)</p>
@@ -420,7 +422,7 @@ const ProductPage = () => {
                           <div className="flex justify-between mb-2">
                             <p className="text-costum-text-black font-bold">User 1</p>
                             <div className="flex gap-1 items-center">
-                            <Rating defaultValue={2} />
+                              <Rating defaultValue={2} />
                               <p className="text-sm font-bold">5.0</p>
                             </div>
                           </div>
@@ -452,7 +454,7 @@ const ProductPage = () => {
                           <div className="flex justify-between mb-2">
                             <p className="text-costum-text-black font-bold">User 1</p>
                             <div className="flex gap-1 items-center">
-                            <Rating defaultValue={2} />
+                              <Rating defaultValue={2} />
                               <p className="text-sm font-bold">5.0</p>
                             </div>
                           </div>
@@ -484,7 +486,7 @@ const ProductPage = () => {
                           <div className="flex justify-between mb-2">
                             <p className="text-costum-text-black font-bold">User 1</p>
                             <div className="flex gap-1 items-center">
-                            <Rating defaultValue={2} />
+                              <Rating defaultValue={2} />
                               <p className="text-sm font-bold">5.0</p>
                             </div>
                           </div>
@@ -516,7 +518,7 @@ const ProductPage = () => {
                           <div className="flex justify-between mb-2">
                             <p className="text-costum-text-black font-bold">User 1</p>
                             <div className="flex gap-1 items-center">
-                            <Rating defaultValue={2} />
+                              <Rating defaultValue={2} />
                               <p className="text-sm font-bold">5.0</p>
                             </div>
                           </div>
@@ -548,7 +550,7 @@ const ProductPage = () => {
                           <div className="flex justify-between mb-2">
                             <p className="text-costum-text-black font-bold">User 1</p>
                             <div className="flex gap-1 items-center">
-                            <Rating defaultValue={2} />
+                              <Rating defaultValue={2} />
                               <p className="text-sm font-bold">5.0</p>
                             </div>
                           </div>
@@ -584,7 +586,7 @@ const ProductPage = () => {
                       <Rating defaultValue={2} />
                       <p className="text-sm font-bold">5.0</p>
                     </div>
-                  
+
                   </div>
                 </div>
               </Tabs.Panel>
@@ -798,7 +800,7 @@ const ProductPage = () => {
                       <p className="text-costum-text-black font-bold text-2xl mb-3">Options (18)</p>
                       <p className="text-costum-text-black mb-1 font-medium">Overall rating</p>
                       <div className="flex gap-1 items-center mb-3">
-                      <Rating defaultValue={2} />
+                        <Rating defaultValue={2} />
                         <p className="text-sm font-bold">5.0</p>
                       </div>
                       <div className="flex flex-col mb-5 md:mb-0 gap-2 w-full h-auto ">
@@ -807,7 +809,7 @@ const ProductPage = () => {
                             <div className="flex justify-between mb-2">
                               <p className="text-costum-text-black font-bold">User 1</p>
                               <div className="flex gap-1 items-center">
-                              <Rating defaultValue={2} />
+                                <Rating defaultValue={2} />
                                 <p className="text-sm font-bold">5.0</p>
                               </div>
                             </div>
@@ -839,7 +841,7 @@ const ProductPage = () => {
                             <div className="flex justify-between mb-2">
                               <p className="text-costum-text-black font-bold">User 1</p>
                               <div className="flex gap-1 items-center">
-                              <Rating defaultValue={2} />
+                                <Rating defaultValue={2} />
                                 <p className="text-sm font-bold">5.0</p>
                               </div>
                             </div>
@@ -871,7 +873,7 @@ const ProductPage = () => {
                             <div className="flex justify-between mb-2">
                               <p className="text-costum-text-black font-bold">User 1</p>
                               <div className="flex gap-1 items-center">
-                              <Rating defaultValue={2} />
+                                <Rating defaultValue={2} />
                                 <p className="text-sm font-bold">5.0</p>
                               </div>
                             </div>
@@ -904,7 +906,7 @@ const ProductPage = () => {
                     <div className="w-full md:w-2/5">
                       <p className="text-costum-text-black font-bold text-2xl mb-3">Rate us</p>
                       <div className="flex gap-1 items-center mb-3">
-                      <Rating defaultValue={2} />
+                        <Rating defaultValue={2} />
                         <p className="text-sm font-bold">5.0</p>
                       </div>
 
@@ -931,7 +933,7 @@ const ProductPage = () => {
 
       </div >
       <div id="gift" className="bg-costum-blue py-8 mb-20"  >
-        <div className="container mx-auto flex-wrap flex gap-4 ">
+        <div className="container mx-auto md:flex-nowrap flex-wrap flex gap-4 ">
           <div className="flex flex-wrap w-full justify-center md:jusctify-start md:w-2/4">
             <img src="/images/gift.svg" alt="" />
             <div className="block mt-3 md:mt-0 md:ml-16">
@@ -948,13 +950,13 @@ const ProductPage = () => {
       <div className="container mx-auto">
         <div id="products" className='mb-20'>
           <div className="flex justify-center md:justify-between  mb-8 w-full">
-            <p className="text-costum-text-black font-bold text-2xl md:text-3xl ">Recomended products</p>
+            <p className="text-costumBlack font-bold text-2xl md:text-[28px] ">Recomended products</p>
             <div className="md:flex hidden w-49 item-center gap-1 h-6">
               <p className="text-costum-blue text-base font-medium">Show all recomended products</p>
               <img src="/images/arrow_forward.svg" alt="" />
             </div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 w-full md:gap-5  gap-1 mb-4 flex-wrap">
+          <div className="grid grid-cols-2 md:grid-cols-4 w-full md:gap-5  gap-1  flex-wrap">
             <div className="md:w-auto w-44 min-h-72 rounded-lg">
               <div className="relative">
                 <img src="/images/product_img.svg" alt="" className='w-full' />
@@ -970,8 +972,8 @@ const ProductPage = () => {
               </div>
               <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
               <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
-                <p className="md:text-xl text-base text-costum-text-black font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
-                <p className="text-costum-text-black text-sm md:text-base mb-3">
+                <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                <p className="text-costumBlack text-sm md:text-base mb-3">
                   Material of execution: brass <br />
                   Manufacturer’s color: chrome <br />
                   Guarantee: 5 years
@@ -981,12 +983,14 @@ const ProductPage = () => {
                   <p className="text-costum-orange text-sm md:text-base line-through">$55.00 net</p>
                 </div>
                 <div className="flex mb-2 w-full  justify-between">
-                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costum-text-black font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                    <option value="value1" selected>items</option>
-                    <option value="value2" >Значение 2</option>
-                    <option value="value3">Значение 3</option>
-                  </select>
+                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-[#EAECEE] placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+
+                  <Select
+                    placeholder="Item 1"
+                    className='Select_product'
+                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                    rightSection={icon}
+                  />
                 </div>
 
                 <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
@@ -1010,8 +1014,8 @@ const ProductPage = () => {
               </div>
               <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
               <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
-                <p className="md:text-xl text-base text-costum-text-black font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
-                <p className="text-costum-text-black text-sm md:text-base mb-3">
+                <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                <p className="text-costumBlack text-sm md:text-base mb-3">
                   Material of execution: brass <br />
                   Manufacturer’s color: chrome <br />
                   Guarantee: 5 years
@@ -1021,12 +1025,14 @@ const ProductPage = () => {
                   <p className="text-costum-orange text-sm md:text-base line-through">$55.00 net</p>
                 </div>
                 <div className="flex mb-2 w-full  justify-between">
-                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costum-text-black font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                    <option value="value1" selected>items</option>
-                    <option value="value2" >Значение 2</option>
-                    <option value="value3">Значение 3</option>
-                  </select>
+                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-[#EAECEE] placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+
+                  <Select
+                    placeholder="Item 1"
+                    className='Select_product'
+                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                    rightSection={icon}
+                  />
                 </div>
 
                 <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
@@ -1035,7 +1041,7 @@ const ProductPage = () => {
                 </button>
               </div>
             </div>
-            <div className="md:w-auto w-44 min-h-72 rounded-lg">
+            <div className="md:w-auto w-44 min-h-72 md:block hidden rounded-lg">
               <div className="relative">
                 <img src="/images/product_img.svg" alt="" className='w-full' />
                 <div className="absolute top-5 left-0 bg-costum-orange p-1 text-sm  w-max text-white font-bold">-30%</div>
@@ -1050,8 +1056,8 @@ const ProductPage = () => {
               </div>
               <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
               <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
-                <p className="md:text-xl text-base text-costum-text-black font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
-                <p className="text-costum-text-black text-sm md:text-base mb-3">
+                <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                <p className="text-costumBlack text-sm md:text-base mb-3">
                   Material of execution: brass <br />
                   Manufacturer’s color: chrome <br />
                   Guarantee: 5 years
@@ -1061,12 +1067,14 @@ const ProductPage = () => {
                   <p className="text-costum-orange text-sm md:text-base line-through">$55.00 net</p>
                 </div>
                 <div className="flex mb-2 w-full  justify-between">
-                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costum-text-black font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                    <option value="value1" selected>items</option>
-                    <option value="value2" >Значение 2</option>
-                    <option value="value3">Значение 3</option>
-                  </select>
+                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-[#EAECEE] placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+
+                  <Select
+                    placeholder="Item 1"
+                    className='Select_product'
+                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                    rightSection={icon}
+                  />
                 </div>
 
                 <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
@@ -1075,7 +1083,7 @@ const ProductPage = () => {
                 </button>
               </div>
             </div>
-            <div className="md:w-auto w-44 min-h-72 rounded-lg">
+            <div className="md:w-auto w-44 min-h-72 md:block hidden rounded-lg">
               <div className="relative">
                 <img src="/images/product_img.svg" alt="" className='w-full' />
                 <div className="absolute top-5 left-0 bg-costum-orange p-1 text-sm  w-max text-white font-bold">-30%</div>
@@ -1090,8 +1098,8 @@ const ProductPage = () => {
               </div>
               <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
               <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
-                <p className="md:text-xl text-base text-costum-text-black font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
-                <p className="text-costum-text-black text-sm md:text-base mb-3">
+                <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                <p className="text-costumBlack text-sm md:text-base mb-3">
                   Material of execution: brass <br />
                   Manufacturer’s color: chrome <br />
                   Guarantee: 5 years
@@ -1101,12 +1109,14 @@ const ProductPage = () => {
                   <p className="text-costum-orange text-sm md:text-base line-through">$55.00 net</p>
                 </div>
                 <div className="flex mb-2 w-full  justify-between">
-                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costum-text-black font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                    <option value="value1" selected>items</option>
-                    <option value="value2" >Значение 2</option>
-                    <option value="value3">Значение 3</option>
-                  </select>
+                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-[#EAECEE] placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+
+                  <Select
+                    placeholder="Item 1"
+                    className='Select_product'
+                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                    rightSection={icon}
+                  />
                 </div>
 
                 <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
@@ -1123,13 +1133,13 @@ const ProductPage = () => {
         </div>
         <div id="products" className='mb-20'>
           <div className="flex justify-center md:justify-between  mb-8 w-full">
-            <p className="text-costum-text-black font-bold text-2xl md:text-3xl ">Recomended products</p>
+            <p className="text-costumBlack font-bold text-2xl md:text-[28px] ">Recomended products</p>
             <div className="md:flex hidden w-49 item-center gap-1 h-6">
               <p className="text-costum-blue text-base font-medium">Show all recomended products</p>
               <img src="/images/arrow_forward.svg" alt="" />
             </div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 w-full md:gap-5  gap-1 mb-4 flex-wrap">
+          <div className="grid grid-cols-2 md:grid-cols-4 w-full md:gap-5  gap-1  flex-wrap">
             <div className="md:w-auto w-44 min-h-72 rounded-lg">
               <div className="relative">
                 <img src="/images/product_img.svg" alt="" className='w-full' />
@@ -1145,8 +1155,8 @@ const ProductPage = () => {
               </div>
               <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
               <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
-                <p className="md:text-xl text-base text-costum-text-black font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
-                <p className="text-costum-text-black text-sm md:text-base mb-3">
+                <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                <p className="text-costumBlack text-sm md:text-base mb-3">
                   Material of execution: brass <br />
                   Manufacturer’s color: chrome <br />
                   Guarantee: 5 years
@@ -1156,12 +1166,14 @@ const ProductPage = () => {
                   <p className="text-costum-orange text-sm md:text-base line-through">$55.00 net</p>
                 </div>
                 <div className="flex mb-2 w-full  justify-between">
-                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costum-text-black font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                    <option value="value1" selected>items</option>
-                    <option value="value2" >Значение 2</option>
-                    <option value="value3">Значение 3</option>
-                  </select>
+                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-[#EAECEE] placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+
+                  <Select
+                    placeholder="Item 1"
+                    className='Select_product'
+                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                    rightSection={icon}
+                  />
                 </div>
 
                 <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
@@ -1185,8 +1197,8 @@ const ProductPage = () => {
               </div>
               <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
               <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
-                <p className="md:text-xl text-base text-costum-text-black font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
-                <p className="text-costum-text-black text-sm md:text-base mb-3">
+                <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                <p className="text-costumBlack text-sm md:text-base mb-3">
                   Material of execution: brass <br />
                   Manufacturer’s color: chrome <br />
                   Guarantee: 5 years
@@ -1196,12 +1208,14 @@ const ProductPage = () => {
                   <p className="text-costum-orange text-sm md:text-base line-through">$55.00 net</p>
                 </div>
                 <div className="flex mb-2 w-full  justify-between">
-                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costum-text-black font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                    <option value="value1" selected>items</option>
-                    <option value="value2" >Значение 2</option>
-                    <option value="value3">Значение 3</option>
-                  </select>
+                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-[#EAECEE] placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+
+                  <Select
+                    placeholder="Item 1"
+                    className='Select_product'
+                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                    rightSection={icon}
+                  />
                 </div>
 
                 <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
@@ -1210,7 +1224,7 @@ const ProductPage = () => {
                 </button>
               </div>
             </div>
-            <div className="md:w-auto w-44 min-h-72 rounded-lg">
+            <div className="md:w-auto w-44 min-h-72 md:block hidden rounded-lg">
               <div className="relative">
                 <img src="/images/product_img.svg" alt="" className='w-full' />
                 <div className="absolute top-5 left-0 bg-costum-orange p-1 text-sm  w-max text-white font-bold">-30%</div>
@@ -1225,8 +1239,8 @@ const ProductPage = () => {
               </div>
               <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
               <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
-                <p className="md:text-xl text-base text-costum-text-black font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
-                <p className="text-costum-text-black text-sm md:text-base mb-3">
+                <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                <p className="text-costumBlack text-sm md:text-base mb-3">
                   Material of execution: brass <br />
                   Manufacturer’s color: chrome <br />
                   Guarantee: 5 years
@@ -1236,12 +1250,14 @@ const ProductPage = () => {
                   <p className="text-costum-orange text-sm md:text-base line-through">$55.00 net</p>
                 </div>
                 <div className="flex mb-2 w-full  justify-between">
-                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costum-text-black font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                    <option value="value1" selected>items</option>
-                    <option value="value2" >Значение 2</option>
-                    <option value="value3">Значение 3</option>
-                  </select>
+                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-[#EAECEE] placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+
+                  <Select
+                    placeholder="Item 1"
+                    className='Select_product'
+                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                    rightSection={icon}
+                  />
                 </div>
 
                 <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
@@ -1250,7 +1266,7 @@ const ProductPage = () => {
                 </button>
               </div>
             </div>
-            <div className="md:w-auto w-44 min-h-72 rounded-lg">
+            <div className="md:w-auto w-44 min-h-72 md:block hidden rounded-lg">
               <div className="relative">
                 <img src="/images/product_img.svg" alt="" className='w-full' />
                 <div className="absolute top-5 left-0 bg-costum-orange p-1 text-sm  w-max text-white font-bold">-30%</div>
@@ -1265,8 +1281,8 @@ const ProductPage = () => {
               </div>
               <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
               <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
-                <p className="md:text-xl text-base text-costum-text-black font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
-                <p className="text-costum-text-black text-sm md:text-base mb-3">
+                <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                <p className="text-costumBlack text-sm md:text-base mb-3">
                   Material of execution: brass <br />
                   Manufacturer’s color: chrome <br />
                   Guarantee: 5 years
@@ -1276,12 +1292,14 @@ const ProductPage = () => {
                   <p className="text-costum-orange text-sm md:text-base line-through">$55.00 net</p>
                 </div>
                 <div className="flex mb-2 w-full  justify-between">
-                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costum-text-black font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                    <option value="value1" selected>items</option>
-                    <option value="value2" >Значение 2</option>
-                    <option value="value3">Значение 3</option>
-                  </select>
+                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-[#EAECEE] placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+
+                  <Select
+                    placeholder="Item 1"
+                    className='Select_product'
+                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                    rightSection={icon}
+                  />
                 </div>
 
                 <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
@@ -1298,13 +1316,13 @@ const ProductPage = () => {
         </div>
         <div id="products" className='mb-20'>
           <div className="flex justify-center md:justify-between  mb-8 w-full">
-            <p className="text-costum-text-black font-bold text-2xl md:text-3xl ">Recomended products</p>
+            <p className="text-costumBlack font-bold text-2xl md:text-[28px] ">Recomended products</p>
             <div className="md:flex hidden w-49 item-center gap-1 h-6">
               <p className="text-costum-blue text-base font-medium">Show all recomended products</p>
               <img src="/images/arrow_forward.svg" alt="" />
             </div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 w-full md:gap-5  gap-1 mb-4 flex-wrap">
+          <div className="grid grid-cols-2 md:grid-cols-4 w-full md:gap-5  gap-1  flex-wrap">
             <div className="md:w-auto w-44 min-h-72 rounded-lg">
               <div className="relative">
                 <img src="/images/product_img.svg" alt="" className='w-full' />
@@ -1320,8 +1338,8 @@ const ProductPage = () => {
               </div>
               <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
               <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
-                <p className="md:text-xl text-base text-costum-text-black font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
-                <p className="text-costum-text-black text-sm md:text-base mb-3">
+                <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                <p className="text-costumBlack text-sm md:text-base mb-3">
                   Material of execution: brass <br />
                   Manufacturer’s color: chrome <br />
                   Guarantee: 5 years
@@ -1331,12 +1349,14 @@ const ProductPage = () => {
                   <p className="text-costum-orange text-sm md:text-base line-through">$55.00 net</p>
                 </div>
                 <div className="flex mb-2 w-full  justify-between">
-                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costum-text-black font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                    <option value="value1" selected>items</option>
-                    <option value="value2" >Значение 2</option>
-                    <option value="value3">Значение 3</option>
-                  </select>
+                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-[#EAECEE] placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+
+                  <Select
+                    placeholder="Item 1"
+                    className='Select_product'
+                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                    rightSection={icon}
+                  />
                 </div>
 
                 <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
@@ -1360,8 +1380,8 @@ const ProductPage = () => {
               </div>
               <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
               <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
-                <p className="md:text-xl text-base text-costum-text-black font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
-                <p className="text-costum-text-black text-sm md:text-base mb-3">
+                <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                <p className="text-costumBlack text-sm md:text-base mb-3">
                   Material of execution: brass <br />
                   Manufacturer’s color: chrome <br />
                   Guarantee: 5 years
@@ -1371,12 +1391,14 @@ const ProductPage = () => {
                   <p className="text-costum-orange text-sm md:text-base line-through">$55.00 net</p>
                 </div>
                 <div className="flex mb-2 w-full  justify-between">
-                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costum-text-black font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                    <option value="value1" selected>items</option>
-                    <option value="value2" >Значение 2</option>
-                    <option value="value3">Значение 3</option>
-                  </select>
+                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-[#EAECEE] placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+
+                  <Select
+                    placeholder="Item 1"
+                    className='Select_product'
+                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                    rightSection={icon}
+                  />
                 </div>
 
                 <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
@@ -1385,7 +1407,7 @@ const ProductPage = () => {
                 </button>
               </div>
             </div>
-            <div className="md:w-auto w-44 min-h-72 rounded-lg">
+            <div className="md:w-auto w-44 min-h-72 md:block hidden rounded-lg">
               <div className="relative">
                 <img src="/images/product_img.svg" alt="" className='w-full' />
                 <div className="absolute top-5 left-0 bg-costum-orange p-1 text-sm  w-max text-white font-bold">-30%</div>
@@ -1400,8 +1422,8 @@ const ProductPage = () => {
               </div>
               <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
               <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
-                <p className="md:text-xl text-base text-costum-text-black font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
-                <p className="text-costum-text-black text-sm md:text-base mb-3">
+                <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                <p className="text-costumBlack text-sm md:text-base mb-3">
                   Material of execution: brass <br />
                   Manufacturer’s color: chrome <br />
                   Guarantee: 5 years
@@ -1411,12 +1433,14 @@ const ProductPage = () => {
                   <p className="text-costum-orange text-sm md:text-base line-through">$55.00 net</p>
                 </div>
                 <div className="flex mb-2 w-full  justify-between">
-                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costum-text-black font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                    <option value="value1" selected>items</option>
-                    <option value="value2" >Значение 2</option>
-                    <option value="value3">Значение 3</option>
-                  </select>
+                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-[#EAECEE] placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+
+                  <Select
+                    placeholder="Item 1"
+                    className='Select_product'
+                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                    rightSection={icon}
+                  />
                 </div>
 
                 <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
@@ -1425,7 +1449,7 @@ const ProductPage = () => {
                 </button>
               </div>
             </div>
-            <div className="md:w-auto w-44 min-h-72 rounded-lg">
+            <div className="md:w-auto w-44 min-h-72 md:block hidden rounded-lg">
               <div className="relative">
                 <img src="/images/product_img.svg" alt="" className='w-full' />
                 <div className="absolute top-5 left-0 bg-costum-orange p-1 text-sm  w-max text-white font-bold">-30%</div>
@@ -1440,8 +1464,8 @@ const ProductPage = () => {
               </div>
               <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
               <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
-                <p className="md:text-xl text-base text-costum-text-black font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
-                <p className="text-costum-text-black text-sm md:text-base mb-3">
+                <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                <p className="text-costumBlack text-sm md:text-base mb-3">
                   Material of execution: brass <br />
                   Manufacturer’s color: chrome <br />
                   Guarantee: 5 years
@@ -1451,12 +1475,14 @@ const ProductPage = () => {
                   <p className="text-costum-orange text-sm md:text-base line-through">$55.00 net</p>
                 </div>
                 <div className="flex mb-2 w-full  justify-between">
-                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costum-text-black font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                    <option value="value1" selected>items</option>
-                    <option value="value2" >Значение 2</option>
-                    <option value="value3">Значение 3</option>
-                  </select>
+                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-[#EAECEE] placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+
+                  <Select
+                    placeholder="Item 1"
+                    className='Select_product'
+                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                    rightSection={icon}
+                  />
                 </div>
 
                 <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
@@ -1473,13 +1499,13 @@ const ProductPage = () => {
         </div>
         <div id="products" className='mb-20'>
           <div className="flex justify-center md:justify-between  mb-8 w-full">
-            <p className="text-costum-text-black font-bold text-2xl md:text-3xl ">Recomended products</p>
+            <p className="text-costumBlack font-bold text-2xl md:text-[28px] ">Recomended products</p>
             <div className="md:flex hidden w-49 item-center gap-1 h-6">
               <p className="text-costum-blue text-base font-medium">Show all recomended products</p>
               <img src="/images/arrow_forward.svg" alt="" />
             </div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 w-full md:gap-5  gap-1 mb-4 flex-wrap">
+          <div className="grid grid-cols-2 md:grid-cols-4 w-full md:gap-5  gap-1  flex-wrap">
             <div className="md:w-auto w-44 min-h-72 rounded-lg">
               <div className="relative">
                 <img src="/images/product_img.svg" alt="" className='w-full' />
@@ -1495,8 +1521,8 @@ const ProductPage = () => {
               </div>
               <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
               <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
-                <p className="md:text-xl text-base text-costum-text-black font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
-                <p className="text-costum-text-black text-sm md:text-base mb-3">
+                <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                <p className="text-costumBlack text-sm md:text-base mb-3">
                   Material of execution: brass <br />
                   Manufacturer’s color: chrome <br />
                   Guarantee: 5 years
@@ -1506,12 +1532,14 @@ const ProductPage = () => {
                   <p className="text-costum-orange text-sm md:text-base line-through">$55.00 net</p>
                 </div>
                 <div className="flex mb-2 w-full  justify-between">
-                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costum-text-black font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                    <option value="value1" selected>items</option>
-                    <option value="value2" >Значение 2</option>
-                    <option value="value3">Значение 3</option>
-                  </select>
+                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-[#EAECEE] placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+
+                  <Select
+                    placeholder="Item 1"
+                    className='Select_product'
+                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                    rightSection={icon}
+                  />
                 </div>
 
                 <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
@@ -1535,8 +1563,8 @@ const ProductPage = () => {
               </div>
               <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
               <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
-                <p className="md:text-xl text-base text-costum-text-black font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
-                <p className="text-costum-text-black text-sm md:text-base mb-3">
+                <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                <p className="text-costumBlack text-sm md:text-base mb-3">
                   Material of execution: brass <br />
                   Manufacturer’s color: chrome <br />
                   Guarantee: 5 years
@@ -1546,12 +1574,14 @@ const ProductPage = () => {
                   <p className="text-costum-orange text-sm md:text-base line-through">$55.00 net</p>
                 </div>
                 <div className="flex mb-2 w-full  justify-between">
-                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costum-text-black font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                    <option value="value1" selected>items</option>
-                    <option value="value2" >Значение 2</option>
-                    <option value="value3">Значение 3</option>
-                  </select>
+                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-[#EAECEE] placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+
+                  <Select
+                    placeholder="Item 1"
+                    className='Select_product'
+                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                    rightSection={icon}
+                  />
                 </div>
 
                 <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
@@ -1560,7 +1590,7 @@ const ProductPage = () => {
                 </button>
               </div>
             </div>
-            <div className="md:w-auto w-44 min-h-72 rounded-lg">
+            <div className="md:w-auto w-44 min-h-72 md:block hidden rounded-lg">
               <div className="relative">
                 <img src="/images/product_img.svg" alt="" className='w-full' />
                 <div className="absolute top-5 left-0 bg-costum-orange p-1 text-sm  w-max text-white font-bold">-30%</div>
@@ -1575,8 +1605,8 @@ const ProductPage = () => {
               </div>
               <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
               <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
-                <p className="md:text-xl text-base text-costum-text-black font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
-                <p className="text-costum-text-black text-sm md:text-base mb-3">
+                <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                <p className="text-costumBlack text-sm md:text-base mb-3">
                   Material of execution: brass <br />
                   Manufacturer’s color: chrome <br />
                   Guarantee: 5 years
@@ -1586,12 +1616,14 @@ const ProductPage = () => {
                   <p className="text-costum-orange text-sm md:text-base line-through">$55.00 net</p>
                 </div>
                 <div className="flex mb-2 w-full  justify-between">
-                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costum-text-black font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                    <option value="value1" selected>items</option>
-                    <option value="value2" >Значение 2</option>
-                    <option value="value3">Значение 3</option>
-                  </select>
+                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-[#EAECEE] placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+
+                  <Select
+                    placeholder="Item 1"
+                    className='Select_product'
+                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                    rightSection={icon}
+                  />
                 </div>
 
                 <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
@@ -1600,7 +1632,7 @@ const ProductPage = () => {
                 </button>
               </div>
             </div>
-            <div className="md:w-auto w-44 min-h-72 rounded-lg">
+            <div className="md:w-auto w-44 min-h-72 md:block hidden rounded-lg">
               <div className="relative">
                 <img src="/images/product_img.svg" alt="" className='w-full' />
                 <div className="absolute top-5 left-0 bg-costum-orange p-1 text-sm  w-max text-white font-bold">-30%</div>
@@ -1615,8 +1647,8 @@ const ProductPage = () => {
               </div>
               <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
               <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
-                <p className="md:text-xl text-base text-costum-text-black font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
-                <p className="text-costum-text-black text-sm md:text-base mb-3">
+                <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                <p className="text-costumBlack text-sm md:text-base mb-3">
                   Material of execution: brass <br />
                   Manufacturer’s color: chrome <br />
                   Guarantee: 5 years
@@ -1626,12 +1658,14 @@ const ProductPage = () => {
                   <p className="text-costum-orange text-sm md:text-base line-through">$55.00 net</p>
                 </div>
                 <div className="flex mb-2 w-full  justify-between">
-                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costum-text-black font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                    <option value="value1" selected>items</option>
-                    <option value="value2" >Значение 2</option>
-                    <option value="value3">Значение 3</option>
-                  </select>
+                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-[#EAECEE] placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+
+                  <Select
+                    placeholder="Item 1"
+                    className='Select_product'
+                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                    rightSection={icon}
+                  />
                 </div>
 
                 <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
@@ -1648,13 +1682,13 @@ const ProductPage = () => {
         </div>
         <div id="products" className='mb-20'>
           <div className="flex justify-center md:justify-between  mb-8 w-full">
-            <p className="text-costum-text-black font-bold text-2xl md:text-3xl ">Recomended products</p>
+            <p className="text-costumBlack font-bold text-2xl md:text-[28px] ">Recomended products</p>
             <div className="md:flex hidden w-49 item-center gap-1 h-6">
               <p className="text-costum-blue text-base font-medium">Show all recomended products</p>
               <img src="/images/arrow_forward.svg" alt="" />
             </div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 w-full md:gap-5  gap-1 mb-4 flex-wrap">
+          <div className="grid grid-cols-2 md:grid-cols-4 w-full md:gap-5  gap-1  flex-wrap">
             <div className="md:w-auto w-44 min-h-72 rounded-lg">
               <div className="relative">
                 <img src="/images/product_img.svg" alt="" className='w-full' />
@@ -1670,8 +1704,8 @@ const ProductPage = () => {
               </div>
               <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
               <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
-                <p className="md:text-xl text-base text-costum-text-black font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
-                <p className="text-costum-text-black text-sm md:text-base mb-3">
+                <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                <p className="text-costumBlack text-sm md:text-base mb-3">
                   Material of execution: brass <br />
                   Manufacturer’s color: chrome <br />
                   Guarantee: 5 years
@@ -1681,12 +1715,14 @@ const ProductPage = () => {
                   <p className="text-costum-orange text-sm md:text-base line-through">$55.00 net</p>
                 </div>
                 <div className="flex mb-2 w-full  justify-between">
-                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costum-text-black font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                    <option value="value1" selected>items</option>
-                    <option value="value2" >Значение 2</option>
-                    <option value="value3">Значение 3</option>
-                  </select>
+                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-[#EAECEE] placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+
+                  <Select
+                    placeholder="Item 1"
+                    className='Select_product'
+                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                    rightSection={icon}
+                  />
                 </div>
 
                 <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
@@ -1710,8 +1746,8 @@ const ProductPage = () => {
               </div>
               <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
               <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
-                <p className="md:text-xl text-base text-costum-text-black font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
-                <p className="text-costum-text-black text-sm md:text-base mb-3">
+                <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                <p className="text-costumBlack text-sm md:text-base mb-3">
                   Material of execution: brass <br />
                   Manufacturer’s color: chrome <br />
                   Guarantee: 5 years
@@ -1721,12 +1757,14 @@ const ProductPage = () => {
                   <p className="text-costum-orange text-sm md:text-base line-through">$55.00 net</p>
                 </div>
                 <div className="flex mb-2 w-full  justify-between">
-                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costum-text-black font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                    <option value="value1" selected>items</option>
-                    <option value="value2" >Значение 2</option>
-                    <option value="value3">Значение 3</option>
-                  </select>
+                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-[#EAECEE] placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+
+                  <Select
+                    placeholder="Item 1"
+                    className='Select_product'
+                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                    rightSection={icon}
+                  />
                 </div>
 
                 <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
@@ -1735,7 +1773,7 @@ const ProductPage = () => {
                 </button>
               </div>
             </div>
-            <div className="md:w-auto w-44 min-h-72 rounded-lg">
+            <div className="md:w-auto w-44 min-h-72 md:block hidden rounded-lg">
               <div className="relative">
                 <img src="/images/product_img.svg" alt="" className='w-full' />
                 <div className="absolute top-5 left-0 bg-costum-orange p-1 text-sm  w-max text-white font-bold">-30%</div>
@@ -1750,8 +1788,8 @@ const ProductPage = () => {
               </div>
               <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
               <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
-                <p className="md:text-xl text-base text-costum-text-black font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
-                <p className="text-costum-text-black text-sm md:text-base mb-3">
+                <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                <p className="text-costumBlack text-sm md:text-base mb-3">
                   Material of execution: brass <br />
                   Manufacturer’s color: chrome <br />
                   Guarantee: 5 years
@@ -1761,12 +1799,14 @@ const ProductPage = () => {
                   <p className="text-costum-orange text-sm md:text-base line-through">$55.00 net</p>
                 </div>
                 <div className="flex mb-2 w-full  justify-between">
-                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costum-text-black font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                    <option value="value1" selected>items</option>
-                    <option value="value2" >Значение 2</option>
-                    <option value="value3">Значение 3</option>
-                  </select>
+                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-[#EAECEE] placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+
+                  <Select
+                    placeholder="Item 1"
+                    className='Select_product'
+                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                    rightSection={icon}
+                  />
                 </div>
 
                 <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
@@ -1775,7 +1815,7 @@ const ProductPage = () => {
                 </button>
               </div>
             </div>
-            <div className="md:w-auto w-44 min-h-72 rounded-lg">
+            <div className="md:w-auto w-44 min-h-72 md:block hidden rounded-lg">
               <div className="relative">
                 <img src="/images/product_img.svg" alt="" className='w-full' />
                 <div className="absolute top-5 left-0 bg-costum-orange p-1 text-sm  w-max text-white font-bold">-30%</div>
@@ -1790,8 +1830,8 @@ const ProductPage = () => {
               </div>
               <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
               <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
-                <p className="md:text-xl text-base text-costum-text-black font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
-                <p className="text-costum-text-black text-sm md:text-base mb-3">
+                <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                <p className="text-costumBlack text-sm md:text-base mb-3">
                   Material of execution: brass <br />
                   Manufacturer’s color: chrome <br />
                   Guarantee: 5 years
@@ -1801,12 +1841,14 @@ const ProductPage = () => {
                   <p className="text-costum-orange text-sm md:text-base line-through">$55.00 net</p>
                 </div>
                 <div className="flex mb-2 w-full  justify-between">
-                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costum-text-black font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                    <option value="value1" selected>items</option>
-                    <option value="value2" >Значение 2</option>
-                    <option value="value3">Значение 3</option>
-                  </select>
+                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-[#EAECEE] placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+
+                  <Select
+                    placeholder="Item 1"
+                    className='Select_product'
+                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                    rightSection={icon}
+                  />
                 </div>
 
                 <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">

@@ -1,53 +1,44 @@
 import React, { useState } from 'react';
-import { Accordion, Kbd , Radio } from '@mantine/core';
-
-const groceries = [
-  {
-    emoji: '🍎',
-    value: 'Apples',
-    description:
-      'Crisp and refreshing fruit. Apples are known for their versatility and nutritional benefits. They come in a variety of flavors and are great for snacking, baking, or adding to salads.',
-  },
-  {
-    emoji: '🍌',
-    value: 'Bananas',
-    description:
-      'Naturally sweet and potassium-rich fruit. Bananas are a popular choice for their energy-boosting properties and can be enjoyed as a quick snack, added to smoothies, or used in baking.',
-  },
-  {
-    emoji: '🥦',
-    value: 'Broccoli',
-    description:
-      'Nutrient-packed green vegetable. Broccoli is packed with vitamins, minerals, and fiber. It has a distinct flavor and can be enjoyed steamed, roasted, or added to stir-fries.',
-  },
-];
+import "react-responsive-carousel/lib/styles/carousel.min.css"; 
+import { Carousel } from 'react-responsive-carousel';
 
 
 
 
 const test = () => {
-  const items = groceries.map((item) => (
-    <Accordion.Item key={item.value} value={item.value}>
-      <Accordion.Control icon={item.emoji}>{item.value}</Accordion.Control>
-      <Accordion.Panel>{item.description}</Accordion.Panel>
-    </Accordion.Item>
-  ));
+ 
 
   return (
-    <div>
-      <Accordion defaultValue="Apples">
-        {items}
-      </Accordion>
-      <div dir="ltr">
-        <Kbd>⌘</Kbd> + <Kbd>Shift</Kbd> + <Kbd>M</Kbd>
-      </div>
-      <Radio
-        labelPosition="right"
-        label="I cannot be unchecked"
-        size="xs"
-        variant="outline"
-      />
-    </div>
+    <div> 
+    <h2>NextJs Carousel - GeeksforGeeks</h2> 
+    <Carousel className='flex order-1'> 
+        <div> 
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20211213172224/1.png" alt="image1"/> 
+            <p className="legend">Image 1</p> 
+
+        </div> 
+        <div> 
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20211213172225/2.png" alt="image2" /> 
+            <p className="legend">Image 2</p> 
+
+        </div> 
+        <div> 
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20211213172226/3.png" alt="image3"/> 
+            <p className="legend">Image 3</p> 
+
+        </div> 
+        <div> 
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20211213172227/4.png" alt="image4"/> 
+            <p className="legend">Image 4</p> 
+
+        </div> 
+        <div> 
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20211213172229/5.png" alt="image5"/> 
+            <p className="legend">Image 5</p> 
+
+        </div> 
+    </Carousel> 
+  </div> 
   )
 }
 

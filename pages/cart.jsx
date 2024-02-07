@@ -1,8 +1,10 @@
 import React from 'react';
-import { Breadcrumbs, Tabs, List, Checkbox, Input, Accordion, Rating } from '@mantine/core';
+import { Breadcrumbs, Tabs, List, Checkbox, Input, Accordion, Rating, Select } from '@mantine/core';
 
 
 const cart = () => {
+  const icon = <img src='/images/down_icon_select.svg' alt='' />
+
   return (
     <div id="cart">
       <div className="container mx-auto">
@@ -20,22 +22,24 @@ const cart = () => {
           <a href="" className="text-costum-text-black text-sm">Link 10</a>
         </Breadcrumbs>
 
-        <div className="flex gap-5 flex-wrap md:flex-nowrap">
+        <div className="flex gap-5 flex-wrap md:flex-nowrap" >
           <div className="md:w-5/6 w-full">
             <div className="w-full bg-bg-voltiva rounded-lg p-5 w-full mb-5">
               <p className="md:text-xl text-base mb-2 font-bold">Search by product or part number</p>
-              <div className="flex w-full justify-between gap-3 md:gap-0 flex-wrap md:flex-row ">
+              <div className="flex w-full justify-between gap-3 md:gap-0 flex-wrap md:flex-row " id="cart">
                 <input
                   class=" block bg-white w-full md:w-2/4 border  rounded-md h-12 pl-5 pr-3 shadow-sm focus:outline-none sm:text-sm"
                   placeholder="Search by product or SKU"
                   type="text"
                   name="search"
                 />
-                <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costum-text-black font-normal w-full md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                  <option value="value1" selected>Text input</option>
-                  <option value="value2" >Значение 2</option>
-                  <option value="value3">Значение 3</option>
-                </select>
+
+                <Select
+                  placeholder="Text Input"
+                  className='Select_product'
+                  data={['React', 'Angular', 'Vue', 'Svelte']}
+                  rightSection={icon}
+                />
                 <button className="bg-costum-silver rounded-3xl h-12 w-full md:w-48 text-white">Add item</button>
               </div>
             </div>
@@ -99,12 +103,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -130,43 +135,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div className="flex flex-col justify-between items-end w-auto">
-                                <div className="text-end">
-                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
-                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
-                                </div>
-                                <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
-                                  <p className="text-base text-[#434447]">Remove Product</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="bg-white w-full flex px-4 mb-2 py-3 rounded-lg">
-                            <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
-                            </div>
-                            <div className="flex justify-between w-10/12">
-                              <div className="block ml-1 mt-2">
-                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-                                <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -192,12 +167,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -223,43 +199,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div className="flex flex-col justify-between items-end w-auto">
-                                <div className="text-end">
-                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
-                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
-                                </div>
-                                <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
-                                  <p className="text-base text-[#434447]">Remove Product</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="bg-white w-full flex px-4 mb-2 py-3 rounded-lg">
-                            <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
-                            </div>
-                            <div className="flex justify-between w-10/12">
-                              <div className="block ml-1 mt-2">
-                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-                                <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -285,12 +231,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -316,12 +263,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -336,7 +284,7 @@ const cart = () => {
                               </div>
                             </div>
                           </div>
-                          <div className="bg-white w-full flex px-4 mb-2 py-3 rounded-lg">
+                          <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
                               <img src="/images/cart_img.svg" alt="" />
                               <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
@@ -347,12 +295,77 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
+                                </div>
+                              </div>
+                              <div className="flex flex-col justify-between items-end w-auto">
+                                <div className="text-end">
+                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
+                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
+                                </div>
+                                <div className="flex items-center">
+                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <p className="text-base text-[#434447]">Remove Product</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
+                            <div className="relative w-2/12">
+                              <img src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                            </div>
+                            <div className="flex justify-between w-10/12">
+                              <div className="block ml-1 mt-2">
+                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
+                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
+                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
+                                <div className="flex  mt-4 gap-3 w-full  ">
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
+                                </div>
+                              </div>
+                              <div className="flex flex-col justify-between items-end w-auto">
+                                <div className="text-end">
+                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
+                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
+                                </div>
+                                <div className="flex items-center">
+                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <p className="text-base text-[#434447]">Remove Product</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
+                            <div className="relative w-2/12">
+                              <img src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                            </div>
+                            <div className="flex justify-between w-10/12">
+                              <div className="block ml-1 mt-2">
+                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
+                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
+                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
+                                <div className="flex  mt-4 gap-3 w-full  ">
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -392,12 +405,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -423,43 +437,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div className="flex flex-col justify-between items-end w-auto">
-                                <div className="text-end">
-                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
-                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
-                                </div>
-                                <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
-                                  <p className="text-base text-[#434447]">Remove Product</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="bg-white w-full flex px-4 mb-2 py-3 rounded-lg">
-                            <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
-                            </div>
-                            <div className="flex justify-between w-10/12">
-                              <div className="block ml-1 mt-2">
-                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-                                <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -485,12 +469,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -516,43 +501,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div className="flex flex-col justify-between items-end w-auto">
-                                <div className="text-end">
-                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
-                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
-                                </div>
-                                <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
-                                  <p className="text-base text-[#434447]">Remove Product</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="bg-white w-full flex px-4 mb-2 py-3 rounded-lg">
-                            <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
-                            </div>
-                            <div className="flex justify-between w-10/12">
-                              <div className="block ml-1 mt-2">
-                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-                                <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -578,12 +533,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -609,12 +565,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -629,7 +586,7 @@ const cart = () => {
                               </div>
                             </div>
                           </div>
-                          <div className="bg-white w-full flex px-4 mb-2 py-3 rounded-lg">
+                          <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
                               <img src="/images/cart_img.svg" alt="" />
                               <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
@@ -640,12 +597,77 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
+                                </div>
+                              </div>
+                              <div className="flex flex-col justify-between items-end w-auto">
+                                <div className="text-end">
+                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
+                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
+                                </div>
+                                <div className="flex items-center">
+                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <p className="text-base text-[#434447]">Remove Product</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
+                            <div className="relative w-2/12">
+                              <img src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                            </div>
+                            <div className="flex justify-between w-10/12">
+                              <div className="block ml-1 mt-2">
+                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
+                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
+                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
+                                <div className="flex  mt-4 gap-3 w-full  ">
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
+                                </div>
+                              </div>
+                              <div className="flex flex-col justify-between items-end w-auto">
+                                <div className="text-end">
+                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
+                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
+                                </div>
+                                <div className="flex items-center">
+                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <p className="text-base text-[#434447]">Remove Product</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
+                            <div className="relative w-2/12">
+                              <img src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                            </div>
+                            <div className="flex justify-between w-10/12">
+                              <div className="block ml-1 mt-2">
+                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
+                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
+                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
+                                <div className="flex  mt-4 gap-3 w-full  ">
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -686,7 +708,7 @@ const cart = () => {
                           <p className="text-base text-[#434447]">Remove Product</p>
                         </div>
                       </div>
-                      <div className="w-2/5">
+                      <div className="w-2/4">
                         <div className="w-full flex justify-between">
                           <p className="text-base font-bold text-left w-2/4 justify-between text-costumBlack">Price net: </p>
                           <p className="text-base font-bold text-right w-1/4 justify-between text-costumBlack">$910.00 </p>
@@ -736,12 +758,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -767,43 +790,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div className="flex flex-col justify-between items-end w-auto">
-                                <div className="text-end">
-                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
-                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
-                                </div>
-                                <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
-                                  <p className="text-base text-[#434447]">Remove Product</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="bg-white w-full flex px-4 mb-2 py-3 rounded-lg">
-                            <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
-                            </div>
-                            <div className="flex justify-between w-10/12">
-                              <div className="block ml-1 mt-2">
-                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-                                <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -829,12 +822,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -860,43 +854,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div className="flex flex-col justify-between items-end w-auto">
-                                <div className="text-end">
-                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
-                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
-                                </div>
-                                <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
-                                  <p className="text-base text-[#434447]">Remove Product</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="bg-white w-full flex px-4 mb-2 py-3 rounded-lg">
-                            <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
-                            </div>
-                            <div className="flex justify-between w-10/12">
-                              <div className="block ml-1 mt-2">
-                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-                                <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -922,12 +886,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -953,12 +918,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -973,7 +939,7 @@ const cart = () => {
                               </div>
                             </div>
                           </div>
-                          <div className="bg-white w-full flex px-4 mb-2 py-3 rounded-lg">
+                          <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
                               <img src="/images/cart_img.svg" alt="" />
                               <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
@@ -984,12 +950,77 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
+                                </div>
+                              </div>
+                              <div className="flex flex-col justify-between items-end w-auto">
+                                <div className="text-end">
+                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
+                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
+                                </div>
+                                <div className="flex items-center">
+                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <p className="text-base text-[#434447]">Remove Product</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
+                            <div className="relative w-2/12">
+                              <img src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                            </div>
+                            <div className="flex justify-between w-10/12">
+                              <div className="block ml-1 mt-2">
+                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
+                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
+                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
+                                <div className="flex  mt-4 gap-3 w-full  ">
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
+                                </div>
+                              </div>
+                              <div className="flex flex-col justify-between items-end w-auto">
+                                <div className="text-end">
+                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
+                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
+                                </div>
+                                <div className="flex items-center">
+                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <p className="text-base text-[#434447]">Remove Product</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
+                            <div className="relative w-2/12">
+                              <img src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                            </div>
+                            <div className="flex justify-between w-10/12">
+                              <div className="block ml-1 mt-2">
+                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
+                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
+                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
+                                <div className="flex  mt-4 gap-3 w-full  ">
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -1029,12 +1060,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -1060,43 +1092,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div className="flex flex-col justify-between items-end w-auto">
-                                <div className="text-end">
-                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
-                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
-                                </div>
-                                <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
-                                  <p className="text-base text-[#434447]">Remove Product</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="bg-white w-full flex px-4 mb-2 py-3 rounded-lg">
-                            <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
-                            </div>
-                            <div className="flex justify-between w-10/12">
-                              <div className="block ml-1 mt-2">
-                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-                                <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -1122,12 +1124,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -1153,43 +1156,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div className="flex flex-col justify-between items-end w-auto">
-                                <div className="text-end">
-                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
-                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
-                                </div>
-                                <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
-                                  <p className="text-base text-[#434447]">Remove Product</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="bg-white w-full flex px-4 mb-2 py-3 rounded-lg">
-                            <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
-                            </div>
-                            <div className="flex justify-between w-10/12">
-                              <div className="block ml-1 mt-2">
-                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-                                <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -1215,12 +1188,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -1246,12 +1220,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -1266,7 +1241,7 @@ const cart = () => {
                               </div>
                             </div>
                           </div>
-                          <div className="bg-white w-full flex px-4 mb-2 py-3 rounded-lg">
+                          <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
                               <img src="/images/cart_img.svg" alt="" />
                               <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
@@ -1277,12 +1252,77 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
+                                </div>
+                              </div>
+                              <div className="flex flex-col justify-between items-end w-auto">
+                                <div className="text-end">
+                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
+                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
+                                </div>
+                                <div className="flex items-center">
+                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <p className="text-base text-[#434447]">Remove Product</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
+                            <div className="relative w-2/12">
+                              <img src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                            </div>
+                            <div className="flex justify-between w-10/12">
+                              <div className="block ml-1 mt-2">
+                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
+                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
+                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
+                                <div className="flex  mt-4 gap-3 w-full  ">
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
+                                </div>
+                              </div>
+                              <div className="flex flex-col justify-between items-end w-auto">
+                                <div className="text-end">
+                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
+                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
+                                </div>
+                                <div className="flex items-center">
+                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <p className="text-base text-[#434447]">Remove Product</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
+                            <div className="relative w-2/12">
+                              <img src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                            </div>
+                            <div className="flex justify-between w-10/12">
+                              <div className="block ml-1 mt-2">
+                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
+                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
+                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
+                                <div className="flex  mt-4 gap-3 w-full  ">
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -1324,7 +1364,7 @@ const cart = () => {
                           <p className="text-base text-[#434447]">Remove Product</p>
                         </div>
                       </div>
-                      <div className="w-2/5">
+                      <div className="w-2/4">
                         <div className="w-full flex justify-between">
                           <p className="text-base font-bold text-left w-2/4 justify-between text-costumBlack">Price net: </p>
                           <p className="text-base font-bold text-right w-1/4 justify-between text-costumBlack">$910.00 </p>
@@ -1374,12 +1414,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -1405,43 +1446,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div className="flex flex-col justify-between items-end w-auto">
-                                <div className="text-end">
-                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
-                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
-                                </div>
-                                <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
-                                  <p className="text-base text-[#434447]">Remove Product</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="bg-white w-full flex px-4 mb-2 py-3 rounded-lg">
-                            <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
-                            </div>
-                            <div className="flex justify-between w-10/12">
-                              <div className="block ml-1 mt-2">
-                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-                                <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -1467,12 +1478,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -1498,43 +1510,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div className="flex flex-col justify-between items-end w-auto">
-                                <div className="text-end">
-                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
-                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
-                                </div>
-                                <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
-                                  <p className="text-base text-[#434447]">Remove Product</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="bg-white w-full flex px-4 mb-2 py-3 rounded-lg">
-                            <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
-                            </div>
-                            <div className="flex justify-between w-10/12">
-                              <div className="block ml-1 mt-2">
-                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-                                <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -1560,12 +1542,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -1591,12 +1574,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -1611,7 +1595,7 @@ const cart = () => {
                               </div>
                             </div>
                           </div>
-                          <div className="bg-white w-full flex px-4 mb-2 py-3 rounded-lg">
+                          <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
                               <img src="/images/cart_img.svg" alt="" />
                               <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
@@ -1622,12 +1606,77 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
+                                </div>
+                              </div>
+                              <div className="flex flex-col justify-between items-end w-auto">
+                                <div className="text-end">
+                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
+                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
+                                </div>
+                                <div className="flex items-center">
+                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <p className="text-base text-[#434447]">Remove Product</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
+                            <div className="relative w-2/12">
+                              <img src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                            </div>
+                            <div className="flex justify-between w-10/12">
+                              <div className="block ml-1 mt-2">
+                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
+                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
+                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
+                                <div className="flex  mt-4 gap-3 w-full  ">
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
+                                </div>
+                              </div>
+                              <div className="flex flex-col justify-between items-end w-auto">
+                                <div className="text-end">
+                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
+                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
+                                </div>
+                                <div className="flex items-center">
+                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <p className="text-base text-[#434447]">Remove Product</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
+                            <div className="relative w-2/12">
+                              <img src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                            </div>
+                            <div className="flex justify-between w-10/12">
+                              <div className="block ml-1 mt-2">
+                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
+                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
+                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
+                                <div className="flex  mt-4 gap-3 w-full  ">
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -1667,12 +1716,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -1698,43 +1748,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div className="flex flex-col justify-between items-end w-auto">
-                                <div className="text-end">
-                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
-                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
-                                </div>
-                                <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
-                                  <p className="text-base text-[#434447]">Remove Product</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="bg-white w-full flex px-4 mb-2 py-3 rounded-lg">
-                            <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
-                            </div>
-                            <div className="flex justify-between w-10/12">
-                              <div className="block ml-1 mt-2">
-                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-                                <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -1760,12 +1780,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -1791,43 +1812,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div className="flex flex-col justify-between items-end w-auto">
-                                <div className="text-end">
-                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
-                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
-                                </div>
-                                <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
-                                  <p className="text-base text-[#434447]">Remove Product</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="bg-white w-full flex px-4 mb-2 py-3 rounded-lg">
-                            <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
-                            </div>
-                            <div className="flex justify-between w-10/12">
-                              <div className="block ml-1 mt-2">
-                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-                                <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -1853,12 +1844,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -1884,12 +1876,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -1904,7 +1897,7 @@ const cart = () => {
                               </div>
                             </div>
                           </div>
-                          <div className="bg-white w-full flex px-4 mb-2 py-3 rounded-lg">
+                          <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
                               <img src="/images/cart_img.svg" alt="" />
                               <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
@@ -1915,12 +1908,77 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
+                                </div>
+                              </div>
+                              <div className="flex flex-col justify-between items-end w-auto">
+                                <div className="text-end">
+                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
+                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
+                                </div>
+                                <div className="flex items-center">
+                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <p className="text-base text-[#434447]">Remove Product</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
+                            <div className="relative w-2/12">
+                              <img src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                            </div>
+                            <div className="flex justify-between w-10/12">
+                              <div className="block ml-1 mt-2">
+                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
+                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
+                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
+                                <div className="flex  mt-4 gap-3 w-full  ">
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
+                                </div>
+                              </div>
+                              <div className="flex flex-col justify-between items-end w-auto">
+                                <div className="text-end">
+                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
+                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
+                                </div>
+                                <div className="flex items-center">
+                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <p className="text-base text-[#434447]">Remove Product</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
+                            <div className="relative w-2/12">
+                              <img src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                            </div>
+                            <div className="flex justify-between w-10/12">
+                              <div className="block ml-1 mt-2">
+                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
+                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
+                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
+                                <div className="flex  mt-4 gap-3 w-full  ">
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -1961,7 +2019,7 @@ const cart = () => {
                           <p className="text-base text-[#434447]">Remove Product</p>
                         </div>
                       </div>
-                      <div className="w-2/5">
+                      <div className="w-2/4">
                         <div className="w-full flex justify-between">
                           <p className="text-base font-bold text-left w-2/4 justify-between text-costumBlack">Price net: </p>
                           <p className="text-base font-bold text-right w-1/4 justify-between text-costumBlack">$910.00 </p>
@@ -2012,12 +2070,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -2043,43 +2102,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div className="flex flex-col justify-between items-end w-auto">
-                                <div className="text-end">
-                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
-                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
-                                </div>
-                                <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
-                                  <p className="text-base text-[#434447]">Remove Product</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="bg-white w-full flex px-4 mb-2 py-3 rounded-lg">
-                            <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
-                            </div>
-                            <div className="flex justify-between w-10/12">
-                              <div className="block ml-1 mt-2">
-                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-                                <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -2105,12 +2134,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -2136,43 +2166,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div className="flex flex-col justify-between items-end w-auto">
-                                <div className="text-end">
-                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
-                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
-                                </div>
-                                <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
-                                  <p className="text-base text-[#434447]">Remove Product</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="bg-white w-full flex px-4 mb-2 py-3 rounded-lg">
-                            <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
-                            </div>
-                            <div className="flex justify-between w-10/12">
-                              <div className="block ml-1 mt-2">
-                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-                                <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -2198,12 +2198,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -2229,12 +2230,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -2249,7 +2251,7 @@ const cart = () => {
                               </div>
                             </div>
                           </div>
-                          <div className="bg-white w-full flex px-4 mb-2 py-3 rounded-lg">
+                          <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
                               <img src="/images/cart_img.svg" alt="" />
                               <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
@@ -2260,12 +2262,77 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
+                                </div>
+                              </div>
+                              <div className="flex flex-col justify-between items-end w-auto">
+                                <div className="text-end">
+                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
+                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
+                                </div>
+                                <div className="flex items-center">
+                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <p className="text-base text-[#434447]">Remove Product</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
+                            <div className="relative w-2/12">
+                              <img src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                            </div>
+                            <div className="flex justify-between w-10/12">
+                              <div className="block ml-1 mt-2">
+                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
+                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
+                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
+                                <div className="flex  mt-4 gap-3 w-full  ">
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
+                                </div>
+                              </div>
+                              <div className="flex flex-col justify-between items-end w-auto">
+                                <div className="text-end">
+                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
+                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
+                                </div>
+                                <div className="flex items-center">
+                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <p className="text-base text-[#434447]">Remove Product</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
+                            <div className="relative w-2/12">
+                              <img src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                            </div>
+                            <div className="flex justify-between w-10/12">
+                              <div className="block ml-1 mt-2">
+                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
+                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
+                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
+                                <div className="flex  mt-4 gap-3 w-full  ">
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -2305,12 +2372,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -2336,43 +2404,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div className="flex flex-col justify-between items-end w-auto">
-                                <div className="text-end">
-                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
-                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
-                                </div>
-                                <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
-                                  <p className="text-base text-[#434447]">Remove Product</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="bg-white w-full flex px-4 mb-2 py-3 rounded-lg">
-                            <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
-                            </div>
-                            <div className="flex justify-between w-10/12">
-                              <div className="block ml-1 mt-2">
-                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-                                <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -2398,12 +2436,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -2429,43 +2468,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div className="flex flex-col justify-between items-end w-auto">
-                                <div className="text-end">
-                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
-                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
-                                </div>
-                                <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
-                                  <p className="text-base text-[#434447]">Remove Product</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="bg-white w-full flex px-4 mb-2 py-3 rounded-lg">
-                            <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
-                            </div>
-                            <div className="flex justify-between w-10/12">
-                              <div className="block ml-1 mt-2">
-                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-                                <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -2491,12 +2500,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -2522,12 +2532,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -2542,7 +2553,7 @@ const cart = () => {
                               </div>
                             </div>
                           </div>
-                          <div className="bg-white w-full flex px-4 mb-2 py-3 rounded-lg">
+                          <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
                               <img src="/images/cart_img.svg" alt="" />
                               <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
@@ -2553,12 +2564,77 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
+                                </div>
+                              </div>
+                              <div className="flex flex-col justify-between items-end w-auto">
+                                <div className="text-end">
+                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
+                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
+                                </div>
+                                <div className="flex items-center">
+                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <p className="text-base text-[#434447]">Remove Product</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
+                            <div className="relative w-2/12">
+                              <img src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                            </div>
+                            <div className="flex justify-between w-10/12">
+                              <div className="block ml-1 mt-2">
+                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
+                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
+                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
+                                <div className="flex  mt-4 gap-3 w-full  ">
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
+                                </div>
+                              </div>
+                              <div className="flex flex-col justify-between items-end w-auto">
+                                <div className="text-end">
+                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
+                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
+                                </div>
+                                <div className="flex items-center">
+                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <p className="text-base text-[#434447]">Remove Product</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
+                            <div className="relative w-2/12">
+                              <img src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                            </div>
+                            <div className="flex justify-between w-10/12">
+                              <div className="block ml-1 mt-2">
+                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
+                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
+                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
+                                <div className="flex  mt-4 gap-3 w-full  ">
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -2599,7 +2675,7 @@ const cart = () => {
                           <p className="text-base text-[#434447]">Remove Product</p>
                         </div>
                       </div>
-                      <div className="w-2/5">
+                      <div className="w-2/4">
                         <div className="w-full flex justify-between">
                           <p className="text-base font-bold text-left w-2/4 justify-between text-costumBlack">Price net: </p>
                           <p className="text-base font-bold text-right w-1/4 justify-between text-costumBlack">$910.00 </p>
@@ -2649,12 +2725,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -2680,43 +2757,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div className="flex flex-col justify-between items-end w-auto">
-                                <div className="text-end">
-                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
-                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
-                                </div>
-                                <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
-                                  <p className="text-base text-[#434447]">Remove Product</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="bg-white w-full flex px-4 mb-2 py-3 rounded-lg">
-                            <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
-                            </div>
-                            <div className="flex justify-between w-10/12">
-                              <div className="block ml-1 mt-2">
-                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-                                <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -2742,12 +2789,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -2773,43 +2821,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div className="flex flex-col justify-between items-end w-auto">
-                                <div className="text-end">
-                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
-                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
-                                </div>
-                                <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
-                                  <p className="text-base text-[#434447]">Remove Product</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="bg-white w-full flex px-4 mb-2 py-3 rounded-lg">
-                            <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
-                            </div>
-                            <div className="flex justify-between w-10/12">
-                              <div className="block ml-1 mt-2">
-                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-                                <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -2835,12 +2853,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -2866,12 +2885,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -2886,7 +2906,7 @@ const cart = () => {
                               </div>
                             </div>
                           </div>
-                          <div className="bg-white w-full flex px-4 mb-2 py-3 rounded-lg">
+                          <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
                               <img src="/images/cart_img.svg" alt="" />
                               <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
@@ -2897,12 +2917,77 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
+                                </div>
+                              </div>
+                              <div className="flex flex-col justify-between items-end w-auto">
+                                <div className="text-end">
+                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
+                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
+                                </div>
+                                <div className="flex items-center">
+                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <p className="text-base text-[#434447]">Remove Product</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
+                            <div className="relative w-2/12">
+                              <img src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                            </div>
+                            <div className="flex justify-between w-10/12">
+                              <div className="block ml-1 mt-2">
+                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
+                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
+                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
+                                <div className="flex  mt-4 gap-3 w-full  ">
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
+                                </div>
+                              </div>
+                              <div className="flex flex-col justify-between items-end w-auto">
+                                <div className="text-end">
+                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
+                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
+                                </div>
+                                <div className="flex items-center">
+                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <p className="text-base text-[#434447]">Remove Product</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
+                            <div className="relative w-2/12">
+                              <img src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                            </div>
+                            <div className="flex justify-between w-10/12">
+                              <div className="block ml-1 mt-2">
+                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
+                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
+                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
+                                <div className="flex  mt-4 gap-3 w-full  ">
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -2942,12 +3027,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -2973,43 +3059,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div className="flex flex-col justify-between items-end w-auto">
-                                <div className="text-end">
-                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
-                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
-                                </div>
-                                <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
-                                  <p className="text-base text-[#434447]">Remove Product</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="bg-white w-full flex px-4 mb-2 py-3 rounded-lg">
-                            <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
-                            </div>
-                            <div className="flex justify-between w-10/12">
-                              <div className="block ml-1 mt-2">
-                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-                                <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -3035,12 +3091,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -3066,43 +3123,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div className="flex flex-col justify-between items-end w-auto">
-                                <div className="text-end">
-                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
-                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
-                                </div>
-                                <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
-                                  <p className="text-base text-[#434447]">Remove Product</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="bg-white w-full flex px-4 mb-2 py-3 rounded-lg">
-                            <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
-                            </div>
-                            <div className="flex justify-between w-10/12">
-                              <div className="block ml-1 mt-2">
-                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-                                <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -3128,12 +3155,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -3159,12 +3187,13 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -3179,7 +3208,7 @@ const cart = () => {
                               </div>
                             </div>
                           </div>
-                          <div className="bg-white w-full flex px-4 mb-2 py-3 rounded-lg">
+                          <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
                               <img src="/images/cart_img.svg" alt="" />
                               <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
@@ -3190,12 +3219,77 @@ const cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                  <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                    <option value="value1" selected>items</option>
-                                    <option value="value2" >Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                  </select>
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
+                                </div>
+                              </div>
+                              <div className="flex flex-col justify-between items-end w-auto">
+                                <div className="text-end">
+                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
+                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
+                                </div>
+                                <div className="flex items-center">
+                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <p className="text-base text-[#434447]">Remove Product</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
+                            <div className="relative w-2/12">
+                              <img src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                            </div>
+                            <div className="flex justify-between w-10/12">
+                              <div className="block ml-1 mt-2">
+                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
+                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
+                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
+                                <div className="flex  mt-4 gap-3 w-full  ">
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
+                                </div>
+                              </div>
+                              <div className="flex flex-col justify-between items-end w-auto">
+                                <div className="text-end">
+                                  <p className="text-base mb-3 text-costumBlack">$70.00 net</p>
+                                  <p className="text-2xl text-costum-blue font-semibold">$120.00 gross</p>
+                                </div>
+                                <div className="flex items-center">
+                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <p className="text-base text-[#434447]">Remove Product</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
+                            <div className="relative w-2/12">
+                              <img src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                            </div>
+                            <div className="flex justify-between w-10/12">
+                              <div className="block ml-1 mt-2">
+                                <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
+                                <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
+                                <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
+                                <div className="flex  mt-4 gap-3 w-full  ">
+                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <Select
+                                    placeholder="Item"
+                                    className='Select_product'
+                                    data={['React', 'Angular', 'Vue', 'Svelte']}
+                                    rightSection={icon}
+                                  />
                                 </div>
                               </div>
                               <div className="flex flex-col justify-between items-end w-auto">
@@ -3236,7 +3330,7 @@ const cart = () => {
                           <p className="text-base text-[#434447]">Remove Product</p>
                         </div>
                       </div>
-                      <div className="w-2/5">
+                      <div className="w-2/4">
                         <div className="w-full flex justify-between">
                           <p className="text-base font-bold text-left w-2/4 justify-between text-costumBlack">Price net: </p>
                           <p className="text-base font-bold text-right w-1/4 justify-between text-costumBlack">$910.00 </p>
@@ -3384,12 +3478,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -3415,12 +3510,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -3446,12 +3542,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -3477,12 +3574,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -3508,12 +3606,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -3539,74 +3638,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
-                                  </div>
-                                  <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
-                                    <p className="text-base text-[#434447]">Remove Product</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
-                              <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
-                              </div>
-                              <div className="flex justify-between flex-col   w-full">
-                                <div className="block ml-1 mt-2">
-                                  <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                  <p className="text-base text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                  <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-
-                                </div>
-                                <div className="flex flex-col justify-between  w-full">
-                                  <div className="">
-                                    <p className="text-base mb-1 text-costumBlack">$70.00 net</p>
-                                    <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
-                                  </div>
-                                  <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
-                                  </div>
-                                  <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
-                                    <p className="text-base text-[#434447]">Remove Product</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
-                              <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
-                              </div>
-                              <div className="flex justify-between flex-col   w-full">
-                                <div className="block ml-1 mt-2">
-                                  <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                  <p className="text-base text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                  <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-
-                                </div>
-                                <div className="flex flex-col justify-between  w-full">
-                                  <div className="">
-                                    <p className="text-base mb-1 text-costumBlack">$70.00 net</p>
-                                    <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
-                                  </div>
-                                  <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -3628,7 +3666,7 @@ const cart = () => {
                           </div>
                         </Accordion.Control>
                         <Accordion.Panel>
-                          <div className="bg-star p-2 h-[530px] overflow-y-scroll">
+                        <div className="bg-star p-2 h-[530px] overflow-y-scroll">
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
                                 <img src="/images/cart_img.svg" alt="" />
@@ -3646,12 +3684,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -3677,12 +3716,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -3708,12 +3748,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -3739,12 +3780,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -3770,12 +3812,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -3801,74 +3844,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
-                                  </div>
-                                  <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
-                                    <p className="text-base text-[#434447]">Remove Product</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
-                              <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
-                              </div>
-                              <div className="flex justify-between flex-col   w-full">
-                                <div className="block ml-1 mt-2">
-                                  <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                  <p className="text-base text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                  <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-
-                                </div>
-                                <div className="flex flex-col justify-between  w-full">
-                                  <div className="">
-                                    <p className="text-base mb-1 text-costumBlack">$70.00 net</p>
-                                    <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
-                                  </div>
-                                  <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
-                                  </div>
-                                  <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
-                                    <p className="text-base text-[#434447]">Remove Product</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
-                              <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
-                              </div>
-                              <div className="flex justify-between flex-col   w-full">
-                                <div className="block ml-1 mt-2">
-                                  <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                  <p className="text-base text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                  <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-
-                                </div>
-                                <div className="flex flex-col justify-between  w-full">
-                                  <div className="">
-                                    <p className="text-base mb-1 text-costumBlack">$70.00 net</p>
-                                    <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
-                                  </div>
-                                  <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -3948,7 +3930,7 @@ const cart = () => {
                           </div>
                         </Accordion.Control>
                         <Accordion.Panel>
-                          <div className="bg-star p-2 h-[530px] overflow-y-scroll">
+                        <div className="bg-star p-2 h-[530px] overflow-y-scroll">
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
                                 <img src="/images/cart_img.svg" alt="" />
@@ -3966,12 +3948,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -3997,12 +3980,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -4028,12 +4012,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -4059,12 +4044,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -4090,12 +4076,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -4121,74 +4108,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
-                                  </div>
-                                  <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
-                                    <p className="text-base text-[#434447]">Remove Product</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
-                              <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
-                              </div>
-                              <div className="flex justify-between flex-col   w-full">
-                                <div className="block ml-1 mt-2">
-                                  <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                  <p className="text-base text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                  <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-
-                                </div>
-                                <div className="flex flex-col justify-between  w-full">
-                                  <div className="">
-                                    <p className="text-base mb-1 text-costumBlack">$70.00 net</p>
-                                    <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
-                                  </div>
-                                  <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
-                                  </div>
-                                  <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
-                                    <p className="text-base text-[#434447]">Remove Product</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
-                              <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
-                              </div>
-                              <div className="flex justify-between flex-col   w-full">
-                                <div className="block ml-1 mt-2">
-                                  <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                  <p className="text-base text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                  <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-
-                                </div>
-                                <div className="flex flex-col justify-between  w-full">
-                                  <div className="">
-                                    <p className="text-base mb-1 text-costumBlack">$70.00 net</p>
-                                    <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
-                                  </div>
-                                  <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -4210,7 +4136,7 @@ const cart = () => {
                           </div>
                         </Accordion.Control>
                         <Accordion.Panel>
-                          <div className="bg-star p-2 h-[530px] overflow-y-scroll">
+                        <div className="bg-star p-2 h-[530px] overflow-y-scroll">
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
                                 <img src="/images/cart_img.svg" alt="" />
@@ -4228,12 +4154,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -4259,12 +4186,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -4290,12 +4218,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -4321,12 +4250,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -4352,12 +4282,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -4383,74 +4314,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
-                                  </div>
-                                  <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
-                                    <p className="text-base text-[#434447]">Remove Product</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
-                              <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
-                              </div>
-                              <div className="flex justify-between flex-col   w-full">
-                                <div className="block ml-1 mt-2">
-                                  <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                  <p className="text-base text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                  <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-
-                                </div>
-                                <div className="flex flex-col justify-between  w-full">
-                                  <div className="">
-                                    <p className="text-base mb-1 text-costumBlack">$70.00 net</p>
-                                    <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
-                                  </div>
-                                  <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
-                                  </div>
-                                  <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
-                                    <p className="text-base text-[#434447]">Remove Product</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
-                              <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
-                              </div>
-                              <div className="flex justify-between flex-col   w-full">
-                                <div className="block ml-1 mt-2">
-                                  <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                  <p className="text-base text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                  <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-
-                                </div>
-                                <div className="flex flex-col justify-between  w-full">
-                                  <div className="">
-                                    <p className="text-base mb-1 text-costumBlack">$70.00 net</p>
-                                    <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
-                                  </div>
-                                  <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -4531,7 +4401,7 @@ const cart = () => {
                           </div>
                         </Accordion.Control>
                         <Accordion.Panel>
-                          <div className="bg-star p-2 h-[530px] overflow-y-scroll">
+                        <div className="bg-star p-2 h-[530px] overflow-y-scroll">
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
                                 <img src="/images/cart_img.svg" alt="" />
@@ -4549,12 +4419,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -4580,12 +4451,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -4611,12 +4483,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -4642,12 +4515,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -4673,12 +4547,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -4704,74 +4579,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
-                                  </div>
-                                  <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
-                                    <p className="text-base text-[#434447]">Remove Product</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
-                              <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
-                              </div>
-                              <div className="flex justify-between flex-col   w-full">
-                                <div className="block ml-1 mt-2">
-                                  <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                  <p className="text-base text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                  <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-
-                                </div>
-                                <div className="flex flex-col justify-between  w-full">
-                                  <div className="">
-                                    <p className="text-base mb-1 text-costumBlack">$70.00 net</p>
-                                    <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
-                                  </div>
-                                  <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
-                                  </div>
-                                  <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
-                                    <p className="text-base text-[#434447]">Remove Product</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
-                              <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
-                              </div>
-                              <div className="flex justify-between flex-col   w-full">
-                                <div className="block ml-1 mt-2">
-                                  <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                  <p className="text-base text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                  <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-
-                                </div>
-                                <div className="flex flex-col justify-between  w-full">
-                                  <div className="">
-                                    <p className="text-base mb-1 text-costumBlack">$70.00 net</p>
-                                    <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
-                                  </div>
-                                  <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -4793,7 +4607,7 @@ const cart = () => {
                           </div>
                         </Accordion.Control>
                         <Accordion.Panel>
-                          <div className="bg-star p-2 h-[530px] overflow-y-scroll">
+                        <div className="bg-star p-2 h-[530px] overflow-y-scroll">
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
                                 <img src="/images/cart_img.svg" alt="" />
@@ -4811,12 +4625,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -4842,12 +4657,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -4873,12 +4689,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -4904,12 +4721,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -4935,12 +4753,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -4966,74 +4785,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
-                                  </div>
-                                  <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
-                                    <p className="text-base text-[#434447]">Remove Product</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
-                              <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
-                              </div>
-                              <div className="flex justify-between flex-col   w-full">
-                                <div className="block ml-1 mt-2">
-                                  <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                  <p className="text-base text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                  <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-
-                                </div>
-                                <div className="flex flex-col justify-between  w-full">
-                                  <div className="">
-                                    <p className="text-base mb-1 text-costumBlack">$70.00 net</p>
-                                    <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
-                                  </div>
-                                  <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
-                                  </div>
-                                  <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
-                                    <p className="text-base text-[#434447]">Remove Product</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
-                              <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
-                              </div>
-                              <div className="flex justify-between flex-col   w-full">
-                                <div className="block ml-1 mt-2">
-                                  <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                  <p className="text-base text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                  <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-
-                                </div>
-                                <div className="flex flex-col justify-between  w-full">
-                                  <div className="">
-                                    <p className="text-base mb-1 text-costumBlack">$70.00 net</p>
-                                    <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
-                                  </div>
-                                  <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -5114,7 +4872,7 @@ const cart = () => {
                           </div>
                         </Accordion.Control>
                         <Accordion.Panel>
-                          <div className="bg-star p-2 h-[530px] overflow-y-scroll">
+                        <div className="bg-star p-2 h-[530px] overflow-y-scroll">
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
                                 <img src="/images/cart_img.svg" alt="" />
@@ -5132,12 +4890,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -5163,12 +4922,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -5194,12 +4954,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -5225,12 +4986,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -5256,12 +5018,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -5287,74 +5050,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
-                                  </div>
-                                  <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
-                                    <p className="text-base text-[#434447]">Remove Product</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
-                              <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
-                              </div>
-                              <div className="flex justify-between flex-col   w-full">
-                                <div className="block ml-1 mt-2">
-                                  <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                  <p className="text-base text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                  <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-
-                                </div>
-                                <div className="flex flex-col justify-between  w-full">
-                                  <div className="">
-                                    <p className="text-base mb-1 text-costumBlack">$70.00 net</p>
-                                    <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
-                                  </div>
-                                  <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
-                                  </div>
-                                  <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
-                                    <p className="text-base text-[#434447]">Remove Product</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
-                              <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
-                              </div>
-                              <div className="flex justify-between flex-col   w-full">
-                                <div className="block ml-1 mt-2">
-                                  <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                  <p className="text-base text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                  <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-
-                                </div>
-                                <div className="flex flex-col justify-between  w-full">
-                                  <div className="">
-                                    <p className="text-base mb-1 text-costumBlack">$70.00 net</p>
-                                    <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
-                                  </div>
-                                  <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -5376,7 +5078,7 @@ const cart = () => {
                           </div>
                         </Accordion.Control>
                         <Accordion.Panel>
-                          <div className="bg-star p-2 h-[530px] overflow-y-scroll">
+                        <div className="bg-star p-2 h-[530px] overflow-y-scroll">
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
                                 <img src="/images/cart_img.svg" alt="" />
@@ -5394,12 +5096,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -5425,12 +5128,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -5456,12 +5160,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -5487,12 +5192,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -5518,12 +5224,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -5549,74 +5256,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
-                                  </div>
-                                  <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
-                                    <p className="text-base text-[#434447]">Remove Product</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
-                              <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
-                              </div>
-                              <div className="flex justify-between flex-col   w-full">
-                                <div className="block ml-1 mt-2">
-                                  <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                  <p className="text-base text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                  <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-
-                                </div>
-                                <div className="flex flex-col justify-between  w-full">
-                                  <div className="">
-                                    <p className="text-base mb-1 text-costumBlack">$70.00 net</p>
-                                    <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
-                                  </div>
-                                  <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
-                                  </div>
-                                  <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
-                                    <p className="text-base text-[#434447]">Remove Product</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
-                              <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
-                              </div>
-                              <div className="flex justify-between flex-col   w-full">
-                                <div className="block ml-1 mt-2">
-                                  <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                  <p className="text-base text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                  <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-
-                                </div>
-                                <div className="flex flex-col justify-between  w-full">
-                                  <div className="">
-                                    <p className="text-base mb-1 text-costumBlack">$70.00 net</p>
-                                    <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
-                                  </div>
-                                  <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -5697,7 +5343,7 @@ const cart = () => {
                           </div>
                         </Accordion.Control>
                         <Accordion.Panel>
-                          <div className="bg-star p-2 h-[530px] overflow-y-scroll">
+                        <div className="bg-star p-2 h-[530px] overflow-y-scroll">
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
                                 <img src="/images/cart_img.svg" alt="" />
@@ -5715,12 +5361,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -5746,12 +5393,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -5777,12 +5425,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -5808,12 +5457,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -5839,12 +5489,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -5870,74 +5521,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
-                                  </div>
-                                  <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
-                                    <p className="text-base text-[#434447]">Remove Product</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
-                              <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
-                              </div>
-                              <div className="flex justify-between flex-col   w-full">
-                                <div className="block ml-1 mt-2">
-                                  <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                  <p className="text-base text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                  <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-
-                                </div>
-                                <div className="flex flex-col justify-between  w-full">
-                                  <div className="">
-                                    <p className="text-base mb-1 text-costumBlack">$70.00 net</p>
-                                    <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
-                                  </div>
-                                  <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
-                                  </div>
-                                  <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
-                                    <p className="text-base text-[#434447]">Remove Product</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
-                              <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
-                              </div>
-                              <div className="flex justify-between flex-col   w-full">
-                                <div className="block ml-1 mt-2">
-                                  <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                  <p className="text-base text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                  <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-
-                                </div>
-                                <div className="flex flex-col justify-between  w-full">
-                                  <div className="">
-                                    <p className="text-base mb-1 text-costumBlack">$70.00 net</p>
-                                    <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
-                                  </div>
-                                  <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -5959,7 +5549,7 @@ const cart = () => {
                           </div>
                         </Accordion.Control>
                         <Accordion.Panel>
-                          <div className="bg-star p-2 h-[530px] overflow-y-scroll">
+                        <div className="bg-star p-2 h-[530px] overflow-y-scroll">
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
                                 <img src="/images/cart_img.svg" alt="" />
@@ -5977,12 +5567,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -6008,12 +5599,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -6039,12 +5631,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -6070,12 +5663,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -6101,12 +5695,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -6132,74 +5727,13 @@ const cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
-                                  </div>
-                                  <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
-                                    <p className="text-base text-[#434447]">Remove Product</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
-                              <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
-                              </div>
-                              <div className="flex justify-between flex-col   w-full">
-                                <div className="block ml-1 mt-2">
-                                  <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                  <p className="text-base text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                  <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-
-                                </div>
-                                <div className="flex flex-col justify-between  w-full">
-                                  <div className="">
-                                    <p className="text-base mb-1 text-costumBlack">$70.00 net</p>
-                                    <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
-                                  </div>
-                                  <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
-                                  </div>
-                                  <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
-                                    <p className="text-base text-[#434447]">Remove Product</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
-                              <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
-                              </div>
-                              <div className="flex justify-between flex-col   w-full">
-                                <div className="block ml-1 mt-2">
-                                  <p className="text-sm text-costum-silver mb-3">Brand Name | Part No. 234565</p>
-                                  <p className="text-base text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
-                                  <p className="text-sm text-[#3DB62A]">Delivery date: April 4th</p>
-
-                                </div>
-                                <div className="flex flex-col justify-between  w-full">
-                                  <div className="">
-                                    <p className="text-base mb-1 text-costumBlack">$70.00 net</p>
-                                    <p className="text-xl  text-costum-blue font-semibold">$120.00 gross</p>
-                                  </div>
-                                  <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                    <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costumBlack font-normal w-3/4 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                      <option value="value1" selected>items</option>
-                                      <option value="value2" >Значение 2</option>
-                                      <option value="value3">Значение 3</option>
-                                    </select>
+                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <Select
+                                      placeholder="Item"
+                                      className='Select_product'
+                                      data={['React', 'Angular', 'Vue', 'Svelte']}
+                                      rightSection={icon}
+                                    />
                                   </div>
                                   <div className="flex items-center">
                                     <img src="/images/cart_delete_icon.svg" alt="" />
@@ -6254,84 +5788,84 @@ const cart = () => {
                     <p className="text-sm text-costum-text-black font-normal ml-2 bg-transparent outline-none">Cart 6 (0)</p>
                   </Accordion.Control>
                   <Accordion.Panel>
-                  <div className="w-full bg-costum-blue flex justify-between  p-4 items-center">
-                    <div className="flex">
+                    <div className="w-full bg-costum-blue flex justify-between  p-4 items-center">
+                      <div className="flex">
+                        <div className="flex gap-2">
+                          <p className="text-white font-bold text-base">Cart 6</p>
+                          <img src="/images/edit_icon.svg" alt="" />
+                        </div>
+                        <p className="text-xs text-white ml-8 items-center flex font-medium">items: 0</p>
+                      </div>
                       <div className="flex gap-2">
-                        <p className="text-white font-bold text-base">Cart 6</p>
-                        <img src="/images/edit_icon.svg" alt="" />
-                      </div>
-                      <p className="text-xs text-white ml-8 items-center flex font-medium">items: 0</p>
-                    </div>
-                    <div className="flex gap-2">
-                      <img src="/images/star_white.svg" alt="" />
-                      <div className="text-white">Save cart</div>
-                    </div>
-                  </div>
-                  <div className="bg-bg-voltiva p-5 rounded-b-lg mb-10">
-                    <p className="text-base text-costumBlack font-bold mb-3">Your shopping cart is empty</p>
-                    <p className="text-base text-costumBlack">Save time, you can place your last unfinished and saved carts or search by product and part number.</p>
-                  </div>
-                  <p className="text-2xl font-bold mb-4">Abandoned carts</p>
-                  <div className="block bg-star w-full  rounded-lg mb-5 items-cetner p-5">
-                    <div className="flex justify-between mb-2 flex-wrap w-full">
-                      <div className="flex items-center  gap-2">
-                        <img src="/images/shopping_cart.svg" alt="" />
-                        <p className="text-base text-costum-blue font-bold">Private Card</p>
-                      </div>
-                      <p className="text-sm text-costumBlack ml-10 ">items:20</p>
-                    </div>
-                    <div className="flex gap-5 mb-3 w-full justify-between ">
-                      <div className="text">
-                        <p className="text-sm text-costumBlack font-semibold mb-1 text-right">Total net:</p>
-                        <p className="text-sm text-costum-blue  font-semibold text-right">Total net:</p>
-                      </div>
-                      <div className="text">
-                        <p className="text-sm text-costumBlack font-semibold mb-1 text-right">$270.00 net </p>
-                        <p className="text-sm text-costum-blue font-semibold text-right">$320.00 grass</p>
+                        <img src="/images/star_white.svg" alt="" />
+                        <div className="text-white">Save cart</div>
                       </div>
                     </div>
-                    <button className="bg-costum-blue h-12 w-full rounded-full text-white w-48 ">Restore cart</button>
-                  </div>
-                  <div className="block bg-star w-full  rounded-lg mb-5 items-cetner p-5">
-                    <div className="flex justify-between mb-2 flex-wrap w-full">
-                      <div className="flex items-center  gap-2">
-                        <img src="/images/shopping_cart.svg" alt="" />
-                        <p className="text-base text-costum-blue font-bold">Private Card</p>
-                      </div>
-                      <p className="text-sm text-costumBlack ml-10 ">items:20</p>
+                    <div className="bg-bg-voltiva p-5 rounded-b-lg mb-10">
+                      <p className="text-base text-costumBlack font-bold mb-3">Your shopping cart is empty</p>
+                      <p className="text-base text-costumBlack">Save time, you can place your last unfinished and saved carts or search by product and part number.</p>
                     </div>
-                    <div className="flex gap-5 mb-3 w-full justify-between ">
-                      <div className="text">
-                        <p className="text-sm text-costumBlack font-semibold mb-1 text-right">Total net:</p>
-                        <p className="text-sm text-costum-blue  font-semibold text-right">Total net:</p>
+                    <p className="text-2xl font-bold mb-4">Abandoned carts</p>
+                    <div className="block bg-star w-full  rounded-lg mb-5 items-cetner p-5">
+                      <div className="flex justify-between mb-2 flex-wrap w-full">
+                        <div className="flex items-center  gap-2">
+                          <img src="/images/shopping_cart.svg" alt="" />
+                          <p className="text-base text-costum-blue font-bold">Private Card</p>
+                        </div>
+                        <p className="text-sm text-costumBlack ml-10 ">items:20</p>
                       </div>
-                      <div className="text">
-                        <p className="text-sm text-costumBlack font-semibold mb-1 text-right">$270.00 net </p>
-                        <p className="text-sm text-costum-blue font-semibold text-right">$320.00 grass</p>
+                      <div className="flex gap-5 mb-3 w-full justify-between ">
+                        <div className="text">
+                          <p className="text-sm text-costumBlack font-semibold mb-1 text-right">Total net:</p>
+                          <p className="text-sm text-costum-blue  font-semibold text-right">Total net:</p>
+                        </div>
+                        <div className="text">
+                          <p className="text-sm text-costumBlack font-semibold mb-1 text-right">$270.00 net </p>
+                          <p className="text-sm text-costum-blue font-semibold text-right">$320.00 grass</p>
+                        </div>
                       </div>
+                      <button className="bg-costum-blue h-12 w-full rounded-full text-white w-48 ">Restore cart</button>
                     </div>
-                    <button className="bg-costum-blue h-12 w-full rounded-full text-white w-48 ">Restore cart</button>
-                  </div>
-                  <div className="block bg-star w-full  rounded-lg mb-5 items-cetner p-5">
-                    <div className="flex justify-between mb-2 flex-wrap w-full">
-                      <div className="flex items-center  gap-2">
-                        <img src="/images/shopping_cart.svg" alt="" />
-                        <p className="text-base text-costum-blue font-bold">Private Card</p>
+                    <div className="block bg-star w-full  rounded-lg mb-5 items-cetner p-5">
+                      <div className="flex justify-between mb-2 flex-wrap w-full">
+                        <div className="flex items-center  gap-2">
+                          <img src="/images/shopping_cart.svg" alt="" />
+                          <p className="text-base text-costum-blue font-bold">Private Card</p>
+                        </div>
+                        <p className="text-sm text-costumBlack ml-10 ">items:20</p>
                       </div>
-                      <p className="text-sm text-costumBlack ml-10 ">items:20</p>
+                      <div className="flex gap-5 mb-3 w-full justify-between ">
+                        <div className="text">
+                          <p className="text-sm text-costumBlack font-semibold mb-1 text-right">Total net:</p>
+                          <p className="text-sm text-costum-blue  font-semibold text-right">Total net:</p>
+                        </div>
+                        <div className="text">
+                          <p className="text-sm text-costumBlack font-semibold mb-1 text-right">$270.00 net </p>
+                          <p className="text-sm text-costum-blue font-semibold text-right">$320.00 grass</p>
+                        </div>
+                      </div>
+                      <button className="bg-costum-blue h-12 w-full rounded-full text-white w-48 ">Restore cart</button>
                     </div>
-                    <div className="flex gap-5 mb-3 w-full justify-between ">
-                      <div className="text">
-                        <p className="text-sm text-costumBlack font-semibold mb-1 text-right">Total net:</p>
-                        <p className="text-sm text-costum-blue  font-semibold text-right">Total net:</p>
+                    <div className="block bg-star w-full  rounded-lg mb-5 items-cetner p-5">
+                      <div className="flex justify-between mb-2 flex-wrap w-full">
+                        <div className="flex items-center  gap-2">
+                          <img src="/images/shopping_cart.svg" alt="" />
+                          <p className="text-base text-costum-blue font-bold">Private Card</p>
+                        </div>
+                        <p className="text-sm text-costumBlack ml-10 ">items:20</p>
                       </div>
-                      <div className="text">
-                        <p className="text-sm text-costumBlack font-semibold mb-1 text-right">$270.00 net </p>
-                        <p className="text-sm text-costum-blue font-semibold text-right">$320.00 grass</p>
+                      <div className="flex gap-5 mb-3 w-full justify-between ">
+                        <div className="text">
+                          <p className="text-sm text-costumBlack font-semibold mb-1 text-right">Total net:</p>
+                          <p className="text-sm text-costum-blue  font-semibold text-right">Total net:</p>
+                        </div>
+                        <div className="text">
+                          <p className="text-sm text-costumBlack font-semibold mb-1 text-right">$270.00 net </p>
+                          <p className="text-sm text-costum-blue font-semibold text-right">$320.00 grass</p>
+                        </div>
                       </div>
+                      <button className="bg-costum-blue h-12 w-full rounded-full text-white w-48 ">Restore cart</button>
                     </div>
-                    <button className="bg-costum-blue h-12 w-full rounded-full text-white w-48 ">Restore cart</button>
-                  </div>
                   </Accordion.Panel>
                 </Accordion.Item>
               </Accordion>

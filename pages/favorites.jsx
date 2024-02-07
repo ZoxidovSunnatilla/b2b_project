@@ -1,8 +1,10 @@
 import React from 'react';
-import { Breadcrumbs, Table } from '@mantine/core';
+import { Breadcrumbs, Table, Select } from '@mantine/core';
 
 
 const favorites = () => {
+    const icon = <img src='/images/down_icon_select.svg' alt='' />
+
     return (
         <div id="favorites">
             <div className="container mx-auto">
@@ -40,7 +42,7 @@ const favorites = () => {
 
                     </div>
                 </div>
-                <div id="table" className='md:block hidden'>
+                <div id="table " className='md:block hidden mb-20 favorites_table'>
                     <Table stickyHeader stickyHeaderOffset={60}>
                         <Table.Thead>
                             <Table.Tr>
@@ -79,12 +81,13 @@ const favorites = () => {
                                 </Table.Td>
                                 <Table.Td>
                                     <div className="flex  gap-3 items-center w-max-content ">
-                                        <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                        <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costum-text-black font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                            <option value="value1" selected>items</option>
-                                            <option value="value2" >Значение 2</option>
-                                            <option value="value3">Значение 3</option>
-                                        </select>
+                                        <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                        <Select
+                                            placeholder="Item 1"
+                                            className=''
+                                            data={['React', 'Angular', 'Vue', 'Svelte']}
+                                            rightSection={icon}
+                                        />
                                     </div>
                                 </Table.Td>
                                 <Table.Td>
@@ -122,12 +125,14 @@ const favorites = () => {
                                 </Table.Td>
                                 <Table.Td>
                                     <div className="flex  gap-3 items-center w-max-content ">
-                                        <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                        <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costum-text-black font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                            <option value="value1" selected>items</option>
-                                            <option value="value2" >Значение 2</option>
-                                            <option value="value3">Значение 3</option>
-                                        </select>
+                                        <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+
+                                        <Select
+                                            placeholder="Item 1"
+                                            className=''
+                                            data={['React', 'Angular', 'Vue', 'Svelte']}
+                                            rightSection={icon}
+                                        />
                                     </div>
                                 </Table.Td>
                                 <Table.Td>
@@ -165,12 +170,13 @@ const favorites = () => {
                                 </Table.Td>
                                 <Table.Td>
                                     <div className="flex  gap-3 items-center w-max-content ">
-                                        <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                        <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costum-text-black font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                            <option value="value1" selected>items</option>
-                                            <option value="value2" >Значение 2</option>
-                                            <option value="value3">Значение 3</option>
-                                        </select>
+                                        <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                        <Select
+                                            placeholder="Item 1"
+                                            className=''
+                                            data={['React', 'Angular', 'Vue', 'Svelte']}
+                                            rightSection={icon}
+                                        />
                                     </div>
                                 </Table.Td>
                                 <Table.Td>
@@ -208,12 +214,13 @@ const favorites = () => {
                                 </Table.Td>
                                 <Table.Td>
                                     <div className="flex  gap-3 items-center w-max-content ">
-                                        <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                                        <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costum-text-black font-normal w-24 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                            <option value="value1" selected>items</option>
-                                            <option value="value2" >Значение 2</option>
-                                            <option value="value3">Значение 3</option>
-                                        </select>
+                                        <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                        <Select
+                                            placeholder="Item 1"
+                                            className=''
+                                            data={['React', 'Angular', 'Vue', 'Svelte']}
+                                            rightSection={icon}
+                                        />
                                     </div>
                                 </Table.Td>
                                 <Table.Td>
@@ -242,7 +249,7 @@ const favorites = () => {
                         </Table.Tbody>
                     </Table>
                 </div>
-                <div id="table_mobile" className='md:hidden block'>
+                <div id="table_mobile" className='md:hidden block favorites_table'>
                     <div className="block w-full py-6 px-4 bg-star mb-2">
                         <div className="flex gap-2 mb-3">
                             <img src="/images/favorites_img1.svg" alt="" />
@@ -260,11 +267,12 @@ const favorites = () => {
                         </div>
                         <div className="flex  gap-3 items-center mb-4 w-full ">
                             <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-24 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-                            <select className='text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costum-text-black font-normal w-52 md:w-40 mr-1 bg-transparent py-2 px-3 outline-none' >
-                                <option value="value1" selected>items</option>
-                                <option value="value2" >Значение 2</option>
-                                <option value="value3">Значение 3</option>
-                            </select>
+                            <Select
+                                placeholder="Item 1"
+                                className=''
+                                data={['React', 'Angular', 'Vue', 'Svelte']}
+                                rightSection={icon}
+                            />
                         </div>
                         <div className="flex w-full justify-center">
                             <p className="text-sm font-medium text-costum-silver underline">delete item</p>
