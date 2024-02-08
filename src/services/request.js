@@ -3,7 +3,7 @@ import axios from "axios"
 import { base_url } from "../constants"
 import { getCookie } from "cookies-next"
 // API constants
-const APIUrl = `${base_url}/api`
+const APIUrl = `https://c4be8f8c-2b98-48bc-a342-b360cb4afb06.mock.pstmn.io`
 
 export let request = axios.create({
   baseURL: APIUrl,
@@ -50,28 +50,31 @@ request.interceptors.response.use(
 
 export const requests = {
   auth: {
-    signUp: (data) => request.post(`/public/auth/register`, data),
-    sendSMS: () => request.post(`/user/verify/send`),
-    checkSMS: (data) => request.post(`/user/verify/check`, data),
     login: (data) => request.post(`/public/auth/login`, data),
     me: () => request.get(`/user/me`),
-    get: () => request.get(`/get`),
-    review: (data) => request.post(`/user/review`, data),
   },
-  EcoObject: {
-    getIndex: (id) => request.get(`/public/public/eco-objects/${id}`),
-    getList: (path) => request.get(`/public${path}`),
-    getAreaType: () => request.get(`/public/list/area-types`),
-    getSeasons: () => request.get(`/public/list/seasons`),
-    getSpecialFilter: () => request.get(`/public/list/special-filters`),
-    getActivities: () => request.get(`/public/list/activities`),
-    getRegions: () => request.get(`/public/list/regions`),
-    getCategories: () => request.get(`/public/list/categories`),
-    getForestries: () => request.get(`/public/list/forestries`),
+  Country: {
+    getList: (page, limit) =>
+      request.get(`/countries?page=${page}&limit=${limit}`),
   },
-  Tour: {
-    getIndex: (id) => request.get(`/public/public/tours/${id}`),
-    getList: (path) => request.get(`/public${path}`),
-    getCategories: () => request.get(`/public/tours/categories`),
+  Language: {
+    getList: (page, limit) =>
+      request.get(`/languages?page=${page}&limit=${limit}`),
+  },
+  Currency: {
+    getList: (page, limit) =>
+      request.get(`/currencies?page=${page}&limit=${limit}`),
+  },
+  Category: {
+    getList: (page, limit) =>
+      request.get(`/categories?page=${page}&limit=${limit}`),
+    brands: (page, limit) =>
+      request.get(`/categories/brands?page=${page}&limit=${limit}`),
+    brands: (page, limit) =>
+      request.get(`/categories/brands?page=${page}&limit=${limit}`),
+  },
+  Product: {
+    recommended: (page, limit) =>
+      request.get(`/products/recommended?page=${page}&limit=${limit}`),
   },
 }

@@ -1,23 +1,23 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 
-import {
-  Badge,
-  Menu,
-  Select,
-  Input,
-  Drawer,
-  Accordion,
-  AccordionItem,
-} from "@mantine/core"
+import { Badge, Menu, Input, Drawer, Accordion } from "@mantine/core"
 import { useDisclosure } from "@mantine/hooks"
 import MenuHeader from "./Menu"
 import SearchMenu from "./SearchMenu"
 import Link from "next/link"
+import { requests } from "@/src/services/request"
 
 const Header = () => {
   const [opened, { open, close }] = useDisclosure(false)
   const search_icon = <img src="/images/search.svg" />
-
+  const [data, setData] = useState([])
+  useEffect(() => {
+    getData()
+  }, [])
+  const getData = async () => {
+    const res = await requests.Country.getList(1, 10)
+    setData(res?.data)
+  }
   return (
     <div className="  ">
       <div className=" bg-costum-gray hidden md:flex">
