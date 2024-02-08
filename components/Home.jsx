@@ -3,27 +3,83 @@ import { Carousel } from '@mantine/carousel';
 
 
 const Home = () => {
+  const brand_next_icon = <div className="w-14 flex items-center justify-center h-14 bg-[#E6EFFB] border-[#F6F8FB] rounded-lg">
+    <img src="/images/brand_carousel_right.svg" />
+  </div>
+  const brand_prev_icon = <div className="w-14 flex items-center justify-center h-14 bg-[#E6EFFB] border-[#F6F8FB] rounded-lg">
+    <img src="/images/brand_carousel_left.svg" />
+  </div>
   return (
     <div>
-      <div className="container mx-auto w-full mt-8 md:mt-28">
+      <div className="container mx-auto w-full mt-8 md:mt-20">
         <div id="brands">
           <div className="flex justify-center md:justify-between mb-8 w-full">
-            <p className="text-costumBlack font-bold text-2xl md:text-3xl ">
-              Our Brands
-            </p>
+            <p className="text-costumBlack font-bold text-2xl md:text-[28px] ">Our Brands</p>
             <div className=" w-49 item-center gap-1 h-6 hidden md:flex">
-              <p className="text-costum-blue text-base font-medium ">
-                Show all brands
-              </p>
+              <p className="text-costum-blue text-base font-medium ">Show all brands</p>
               <img src="/images/arrow_forward.svg" alt="" />
             </div>
           </div>
-          <div className=" mb-4  md:mb-28 gap-2">
-            <Carousel withIndicators slidesToScroll={4} height={200} className="grid grid-cols-2 md:grid-cols-4">
-              <Carousel.Slide><img src="/images/brand_img1.svg" alt="" /></Carousel.Slide>
-              <Carousel.Slide><img src="/images/brand_img2.svg" alt="" /></Carousel.Slide>
-              <Carousel.Slide><img src="/images/brand_img3.svg" alt="" /></Carousel.Slide>
-              <Carousel.Slide><img src="/images/brand_img4.svg" alt="" /></Carousel.Slide>
+          <div className="w-full mb-4  md:mb-28 gap-2">
+            <Carousel
+              withIndicators
+              height={88}
+              slideSize="25%"
+              slideGap="md"
+              loop
+              align="start"
+              nextControlIcon={brand_next_icon}
+              previousControlIcon={brand_prev_icon}
+              slidesToScroll={3}
+            >
+              <Carousel.Slide>
+                <img src="/images/brand_img1.svg" alt="" />
+
+              </Carousel.Slide>
+              <Carousel.Slide>
+                <img src="/images/brand_img2.svg" alt="" />
+
+              </Carousel.Slide>
+              <Carousel.Slide>
+                <img src="/images/brand_img3.svg" alt="" />
+
+              </Carousel.Slide>
+              <Carousel.Slide>
+                <img src="/images/brand_img4.svg" alt="" />
+
+              </Carousel.Slide>
+              <Carousel.Slide>
+                <img src="/images/brand_img1.svg" alt="" />
+
+              </Carousel.Slide>
+              <Carousel.Slide>
+                <img src="/images/brand_img2.svg" alt="" />
+
+              </Carousel.Slide>
+              <Carousel.Slide>
+                <img src="/images/brand_img3.svg" alt="" />
+
+              </Carousel.Slide>
+              <Carousel.Slide>
+                <img src="/images/brand_img4.svg" alt="" />
+
+              </Carousel.Slide>
+              <Carousel.Slide>
+                <img src="/images/brand_img1.svg" alt="" />
+
+              </Carousel.Slide>
+              <Carousel.Slide>
+                <img src="/images/brand_img2.svg" alt="" />
+
+              </Carousel.Slide>
+              <Carousel.Slide>
+                <img src="/images/brand_img3.svg" alt="" />
+
+              </Carousel.Slide>
+              <Carousel.Slide>
+                <img src="/images/brand_img4.svg" alt="" />
+
+              </Carousel.Slide>
             </Carousel>
           </div>
           <div className="flex w-49 item-center gap-1 w-full mb-8  justify-center h-6 md:hidden mx-auto ">
@@ -35,13 +91,9 @@ const Home = () => {
         </div>
         <div id="products">
           <div className="flex justify-center md:justify-between  mb-8 w-full">
-            <p className="text-costumBlack font-bold text-2xl md:text-3xl ">
-              Recomended products
-            </p>
+            <p className="text-costumBlack font-bold text-2xl md:text-[28px] ">Recomended products</p>
             <div className="md:flex hidden w-49 item-center gap-1 h-6">
-              <p className="text-costum-blue text-base font-medium">
-                Show all recomended products
-              </p>
+              <p className="text-costum-blue text-base font-medium">Show all recomended products</p>
               <img src="/images/arrow_forward.svg" alt="" />
             </div>
           </div>
