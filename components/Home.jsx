@@ -1,4 +1,6 @@
-import React from "react"
+import React from "react";
+import { Carousel } from '@mantine/carousel';
+
 
 const Home = () => {
   return (
@@ -16,11 +18,13 @@ const Home = () => {
               <img src="/images/arrow_forward.svg" alt="" />
             </div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 mb-4  md:mb-28 gap-2">
-            <img src="/images/brand_img1.svg" alt="" />
-            <img src="/images/brand_img2.svg" alt="" />
-            <img src="/images/brand_img3.svg" alt="" />
-            <img src="/images/brand_img4.svg" alt="" />
+          <div className=" mb-4  md:mb-28 gap-2">
+            <Carousel withIndicators slidesToScroll={4} height={200} className="grid grid-cols-2 md:grid-cols-4">
+              <Carousel.Slide><img src="/images/brand_img1.svg" alt="" /></Carousel.Slide>
+              <Carousel.Slide><img src="/images/brand_img2.svg" alt="" /></Carousel.Slide>
+              <Carousel.Slide><img src="/images/brand_img3.svg" alt="" /></Carousel.Slide>
+              <Carousel.Slide><img src="/images/brand_img4.svg" alt="" /></Carousel.Slide>
+            </Carousel>
           </div>
           <div className="flex w-49 item-center gap-1 w-full mb-8  justify-center h-6 md:hidden mx-auto ">
             <p className="text-costum-blue text-base font-medium ">
