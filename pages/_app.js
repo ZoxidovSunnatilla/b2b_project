@@ -3,7 +3,6 @@ import "@mantine/core/styles.css"
 import "@mantine/dates/styles.css"
 import { MantineProvider } from "@mantine/core"
 import Footer from "../components/footer"
-import Test from "../components/test"
 
 import Header from "../components/header"
 import "@mantine/carousel/styles.css"
