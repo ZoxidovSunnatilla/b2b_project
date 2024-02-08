@@ -2,13 +2,9 @@ import React from 'react';
 import { Breadcrumbs, Table, Select } from '@mantine/core';
 
 
-<<<<<<< HEAD
-const favorites = () => {
+const FavoritesPage = () => {
     const icon = <img src='/images/down_icon_select.svg' alt='' />
 
-=======
-const FavoritesPage = () => {
->>>>>>> 066a0891250e98e9a515652317627605fd12b58b
     return (
         <div id="favorites">
             <div className="container mx-auto">
