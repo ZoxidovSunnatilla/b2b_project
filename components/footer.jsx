@@ -1,7 +1,7 @@
 import React from 'react';
 import { Accordion } from '@mantine/core';
 
-const footer = () => {
+const Footer = () => {
     return (
         <div className='bg-costum-gray  w-full'>
             <div className="container mx-auto">
@@ -159,4 +159,4 @@ const footer = () => {
     )
 }
 
-export default footer
+export default Footer

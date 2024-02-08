@@ -2,7 +2,7 @@ import React from 'react'
 
 const menu = () => {
   return (
-    <div>
+    <div className='menu'>
          <div id="menu" className={`min-h-7 py-12 z-50 fixed w-full shadow-gray-500  relative shadow-lg shadow-black-500/50   bg-white `}>
                     <div className="container mx-auto flex justify-between">
                         <div className="w-auto">
@@ -118,7 +118,7 @@ const menu = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="w-1/4 pr-10 h-96 scroll-smoth overflow-y-auto">
+                        <div className="w-[30%] pr-10 h-96 scroll-smoth overflow-y-auto">
                             <div className="flex flex-wrap justify-between mb-10 gap-3">
                                 <div className="flex justify-center items-center h-14 w-24 rounded-lg bg-star">
                                     <p className="text-base font-medium text-costumBlack">
