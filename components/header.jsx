@@ -1,15 +1,24 @@
-import { Badge, Menu, Select, Input, Drawer, Accordion, AccordionItem } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
-import MenuHeader from "./Menu";
-import SearchMenu from './SearchMenu';
-import Link from 'next/link'
-
+import React, { useEffect, useState } from "react"
+import { Badge, Menu, Input, Drawer, Accordion, Select } from "@mantine/core"
+import { useDisclosure } from "@mantine/hooks"
+import MenuHeader from "./Menu"
+import SearchMenu from "./SearchMenu"
+import Link from "next/link"
+import { requests } from "@/src/services/request"
 
 const Header = () => {
-    const [opened, { open, close }] = useDisclosure(false);
-    const search_icon = <img src='/images/search.svg' />
-    const icon = <img src='/images/down_icon_select.svg' alt='' />
-
+  const [opened, { open, close }] = useDisclosure(false)
+  const search_icon = <img src="/images/search.svg" />
+  const icon = <img src='/images/down_icon_select.svg' alt='' />
+  const [data, setData] = useState([])
+  useEffect(() => {
+    getData()
+  }, [])
+  const getData = async () => {
+    const res = await requests.Country.getList(1, 10)
+    setData(res?.data)
+  }
+  
 
     return (
 
