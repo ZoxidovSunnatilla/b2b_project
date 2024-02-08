@@ -9,10 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mantine/carousel": "^7.5.1",
     "@mantine/core": "^7.4.2",
     "@mantine/dates": "^7.5.0",
     "@mantine/hooks": "^7.4.2",
     "dayjs": "^1.11.10",
+    "embla-carousel-react": "^7.1.0",
     "next": "^13.4.16",
     "react": "^18",
     "react-dom": "^18",
