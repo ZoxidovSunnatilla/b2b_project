@@ -93,6 +93,27 @@
 body {
   font-family: "Basier Square", "Basier Circle";
 }
+#tabs .m-c3381914 {
+  border-radius: 8px 8px 0px 0px !important;
+}
+#wrapper .m-6c018570 {
+  background: #fff !important;
+  border-radius: 8px;
+  border: 1px solid #EAECEE !important;
+  display: flex;
+  height: 48px !important;
+  align-items: center;
+}
+#wrapper .m-8fb7ebe7{
+  background: #fff !important;
+  border-radius: 8px;
+  border: none !important;
+  display: flex;
+  align-items: center;
+}
+#wrapper .m-8fb7ebe7::placeholder {
+  color: #0C0C0C !important;
+}
 
 #products .m-6c018570 {
   background: #fff !important;

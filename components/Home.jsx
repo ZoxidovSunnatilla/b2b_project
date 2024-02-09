@@ -7,10 +7,10 @@ import Link from 'next/link';
 
 const Home = () => {
   const icon = <img src='/images/down_icon_select.svg' alt='' />
-  const brand_next_icon = <div className="w-14 flex items-center justify-center h-14 bg-[#E6EFFB] border-[#F6F8FB] rounded-lg">
+  const brand_next_icon = <div className="w-10 md:w-14 flex items-center justify-center h-10 md:h-14 bg-[#E6EFFB] border-[#F6F8FB] rounded-lg">
     <img src="/images/brand_carousel_right.svg" />
   </div>
-  const brand_prev_icon = <div className="w-14 flex items-center justify-center h-14 bg-[#E6EFFB] border-[#F6F8FB] rounded-lg">
+  const brand_prev_icon = <div className="w-10 md:w-14 flex items-center justify-center h-10 md:h-14 bg-[#E6EFFB] border-[#F6F8FB] rounded-lg">
     <img src="/images/brand_carousel_left.svg" />
   </div>
   return (
@@ -28,7 +28,7 @@ const Home = () => {
             <Carousel
               withIndicators
               height={88}
-              slideSize="25%"
+              slideSize={{ base: '60%',  md: '25%' }}
               slideGap="md"
               loop
               align="start"
@@ -99,179 +99,385 @@ const Home = () => {
               <img src="/images/arrow_forward.svg" alt="" />
             </div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 w-full md:gap-5  gap-1  flex-wrap">
-            <Link href='/product/2'>
-              <div className="md:w-auto w-44 min-h-72 rounded-lg">
-                <div className="relative">
-                  <img src="/images/product_img.svg" alt="" className='w-full' />
-                  <div className="absolute top-5 left-0 bg-costum-orange p-1 text-sm  w-max text-white font-bold">-30%</div>
-                  <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
-                  <div className="absolute bottom-2 right-3"><img src="/images/share.svg" alt="" /></div>
-                  <div className="absolute bottom-10 right-3"><img src="/images/compare.svg" alt="" /></div>
-                  <div className="absolute bottom-2 left-2 flex gap-1 border border-solid border-costum-gray-300 p-1.5 rounded">
-                    <img src="/images/check.svg" alt="" />
-                    <p className="text-costum-green">in stock</p>
+          <Carousel
+            nextControlIcon={<img src='/images/productCarouselRight.svg'/>}
+            previousControlIcon=""
+            height={612}
+            slideSize={{ base: '50%',  md: '308px' }}
+            slideGap={{ base: 0, sm: 'md' }}
+            loop
+            align="start"
+          >
+            <Carousel.Slide>
+              <Link href='/product'>
+                <div className="md:w-auto w-44 min-h-72 rounded-lg">
+                  <div className="relative">
+                    <img src="/images/product_img.svg" alt="" className='w-full' />
+                    <div className="absolute top-5 left-0 bg-costum-orange p-1 text-sm  w-max text-white font-bold">-30%</div>
+                    <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                    <div className="absolute bottom-2 right-3"><img src="/images/share.svg" alt="" /></div>
+                    <div className="absolute bottom-10 right-3"><img src="/images/compare.svg" alt="" /></div>
+                    <div className="absolute bottom-2 left-2 flex gap-1 border border-solid border-costum-gray-300 p-1.5 rounded">
+                      <img src="/images/check.svg" alt="" />
+                      <p className="text-costum-green">in stock</p>
+                    </div>
+
                   </div>
+                  <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
+                  <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
+                    <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                    <p className="text-costumBlack text-sm md:text-base mb-3">
+                      Material of execution: brass <br />
+                      Manufacturer’s color: chrome <br />
+                      Guarantee: 5 years
+                    </p>
+                    <div className="md:flex block w-full md:items-center gap-2 mb-3">
+                      <p className="text-costum-blue font-bold text-sm md:text-base">your price <span className='text-2xl mx-1 font-bold'>$45.00</span>net</p>
+                      <p className="text-costum-orange text-sm md:text-base line-through">$55.00 net</p>
+                    </div>
+                    <div className="flex mb-2 w-full  justify-between">
+                      <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-[#EAECEE] placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
 
-                </div>
-                <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
-                <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
-                  <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
-                  <p className="text-costumBlack text-sm md:text-base mb-3">
-                    Material of execution: brass <br />
-                    Manufacturer’s color: chrome <br />
-                    Guarantee: 5 years
-                  </p>
-                  <div className="md:flex block w-full md:items-center gap-2 mb-3">
-                    <p className="text-costum-blue font-bold text-sm md:text-base">your price <span className='text-2xl mx-1 font-bold'>$45.00</span>net</p>
-                    <p className="text-costum-orange text-sm md:text-base line-through">$55.00 net</p>
+                      <Select
+                        placeholder="Item 1"
+                        className='Select_product'
+                        data={['React', 'Angular', 'Vue', 'Svelte']}
+                        rightSection={icon}
+                      />
+                    </div>
+
+                    <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
+                      Add to cart
+                      <img src="/images/down-icon.svg" alt="" />
+                    </button>
                   </div>
-                  <div className="flex mb-2 w-full  justify-between">
-                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-[#EAECEE] placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                </div>
+              </Link>
+            </Carousel.Slide>
+            <Carousel.Slide>
+              <Link href='/product'>
+                <div className="md:w-auto w-44 min-h-72 rounded-lg">
+                  <div className="relative">
+                    <img src="/images/product_img.svg" alt="" className='w-full' />
+                    <div className="absolute top-5 left-0 bg-costum-orange p-1 text-sm  w-max text-white font-bold">-30%</div>
+                    <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                    <div className="absolute bottom-2 right-3"><img src="/images/share.svg" alt="" /></div>
+                    <div className="absolute bottom-10 right-3"><img src="/images/compare.svg" alt="" /></div>
+                    <div className="absolute bottom-2 left-2 flex gap-1 border border-solid border-costum-gray-300 p-1.5 rounded">
+                      <img src="/images/check.svg" alt="" />
+                      <p className="text-costum-green">in stock</p>
+                    </div>
 
-                    <Select
-                      placeholder="Item 1"
-                      className='Select_product'
-                      data={['React', 'Angular', 'Vue', 'Svelte']}
-                      rightSection={icon}
-                    />
                   </div>
+                  <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
+                  <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
+                    <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                    <p className="text-costumBlack text-sm md:text-base mb-3">
+                      Material of execution: brass <br />
+                      Manufacturer’s color: chrome <br />
+                      Guarantee: 5 years
+                    </p>
+                    <div className="md:flex block w-full md:items-center gap-2 mb-3">
+                      <p className="text-costum-blue font-bold text-sm md:text-base">your price <span className='text-2xl mx-1 font-bold'>$45.00</span>net</p>
+                      <p className="text-costum-orange text-sm md:text-base line-through">$55.00 net</p>
+                    </div>
+                    <div className="flex mb-2 w-full  justify-between">
+                      <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-[#EAECEE] placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
 
-                  <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
-                    Add to cart
-                    <img src="/images/down-icon.svg" alt="" />
-                  </button>
+                      <Select
+                        placeholder="Item 1"
+                        className='Select_product'
+                        data={['React', 'Angular', 'Vue', 'Svelte']}
+                        rightSection={icon}
+                      />
+                    </div>
+
+                    <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
+                      Add to cart
+                      <img src="/images/down-icon.svg" alt="" />
+                    </button>
+                  </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </Carousel.Slide>
+            <Carousel.Slide>
+              <Link href='/product'>
+                <div className="md:w-auto w-44 min-h-72 rounded-lg">
+                  <div className="relative">
+                    <img src="/images/product_img.svg" alt="" className='w-full' />
+                    <div className="absolute top-5 left-0 bg-costum-orange p-1 text-sm  w-max text-white font-bold">-30%</div>
+                    <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                    <div className="absolute bottom-2 right-3"><img src="/images/share.svg" alt="" /></div>
+                    <div className="absolute bottom-10 right-3"><img src="/images/compare.svg" alt="" /></div>
+                    <div className="absolute bottom-2 left-2 flex gap-1 border border-solid border-costum-gray-300 p-1.5 rounded">
+                      <img src="/images/check.svg" alt="" />
+                      <p className="text-costum-green">in stock</p>
+                    </div>
 
-            <div className="md:w-auto w-44 min-h-72 rounded-lg">
-              <div className="relative">
-                <img src="/images/product_img.svg" alt="" className='w-full' />
-                <div className="absolute top-5 left-0 bg-costum-orange p-1 text-sm  w-max text-white font-bold">-30%</div>
-                <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
-                <div className="absolute bottom-2 right-3"><img src="/images/share.svg" alt="" /></div>
-                <div className="absolute bottom-10 right-3"><img src="/images/compare.svg" alt="" /></div>
-                <div className="absolute bottom-2 left-2 flex gap-1 border border-solid border-costum-gray-300 p-1.5 rounded">
-                  <img src="/images/check.svg" alt="" />
-                  <p className="text-costum-green">in stock</p>
+                  </div>
+                  <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
+                  <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
+                    <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                    <p className="text-costumBlack text-sm md:text-base mb-3">
+                      Material of execution: brass <br />
+                      Manufacturer’s color: chrome <br />
+                      Guarantee: 5 years
+                    </p>
+                    <div className="md:flex block w-full md:items-center gap-2 mb-3">
+                      <p className="text-costum-blue font-bold text-sm md:text-base">your price <span className='text-2xl mx-1 font-bold'>$45.00</span>net</p>
+                      <p className="text-costum-orange text-sm md:text-base line-through">$55.00 net</p>
+                    </div>
+                    <div className="flex mb-2 w-full  justify-between">
+                      <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-[#EAECEE] placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+
+                      <Select
+                        placeholder="Item 1"
+                        className='Select_product'
+                        data={['React', 'Angular', 'Vue', 'Svelte']}
+                        rightSection={icon}
+                      />
+                    </div>
+
+                    <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
+                      Add to cart
+                      <img src="/images/down-icon.svg" alt="" />
+                    </button>
+                  </div>
                 </div>
+              </Link>
+            </Carousel.Slide>
+            <Carousel.Slide>
+              <Link href='/product'>
+                <div className="md:w-auto w-44 min-h-72 rounded-lg">
+                  <div className="relative">
+                    <img src="/images/product_img.svg" alt="" className='w-full' />
+                    <div className="absolute top-5 left-0 bg-costum-orange p-1 text-sm  w-max text-white font-bold">-30%</div>
+                    <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                    <div className="absolute bottom-2 right-3"><img src="/images/share.svg" alt="" /></div>
+                    <div className="absolute bottom-10 right-3"><img src="/images/compare.svg" alt="" /></div>
+                    <div className="absolute bottom-2 left-2 flex gap-1 border border-solid border-costum-gray-300 p-1.5 rounded">
+                      <img src="/images/check.svg" alt="" />
+                      <p className="text-costum-green">in stock</p>
+                    </div>
 
-              </div>
-              <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
-              <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
-                <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
-                <p className="text-costumBlack text-sm md:text-base mb-3">
-                  Material of execution: brass <br />
-                  Manufacturer’s color: chrome <br />
-                  Guarantee: 5 years
-                </p>
-                <div className="md:flex block w-full md:items-center gap-2 mb-3">
-                  <p className="text-costum-blue font-bold text-sm md:text-base">your price <span className='text-2xl mx-1 font-bold'>$45.00</span>net</p>
-                  <p className="text-costum-orange text-sm md:text-base line-through">$55.00 net</p>
+                  </div>
+                  <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
+                  <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
+                    <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                    <p className="text-costumBlack text-sm md:text-base mb-3">
+                      Material of execution: brass <br />
+                      Manufacturer’s color: chrome <br />
+                      Guarantee: 5 years
+                    </p>
+                    <div className="md:flex block w-full md:items-center gap-2 mb-3">
+                      <p className="text-costum-blue font-bold text-sm md:text-base">your price <span className='text-2xl mx-1 font-bold'>$45.00</span>net</p>
+                      <p className="text-costum-orange text-sm md:text-base line-through">$55.00 net</p>
+                    </div>
+                    <div className="flex mb-2 w-full  justify-between">
+                      <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-[#EAECEE] placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+
+                      <Select
+                        placeholder="Item 1"
+                        className='Select_product'
+                        data={['React', 'Angular', 'Vue', 'Svelte']}
+                        rightSection={icon}
+                      />
+                    </div>
+
+                    <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
+                      Add to cart
+                      <img src="/images/down-icon.svg" alt="" />
+                    </button>
+                  </div>
                 </div>
-                <div className="flex mb-2 w-full  justify-between">
-                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-[#EAECEE] placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+              </Link>
+            </Carousel.Slide>
+            <Carousel.Slide>
+              <Link href='/product'>
+                <div className="md:w-auto w-44 min-h-72 rounded-lg">
+                  <div className="relative">
+                    <img src="/images/product_img.svg" alt="" className='w-full' />
+                    <div className="absolute top-5 left-0 bg-costum-orange p-1 text-sm  w-max text-white font-bold">-30%</div>
+                    <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                    <div className="absolute bottom-2 right-3"><img src="/images/share.svg" alt="" /></div>
+                    <div className="absolute bottom-10 right-3"><img src="/images/compare.svg" alt="" /></div>
+                    <div className="absolute bottom-2 left-2 flex gap-1 border border-solid border-costum-gray-300 p-1.5 rounded">
+                      <img src="/images/check.svg" alt="" />
+                      <p className="text-costum-green">in stock</p>
+                    </div>
 
-                  <Select
-                    placeholder="Item 1"
-                    className='Select_product'
-                    data={['React', 'Angular', 'Vue', 'Svelte']}
-                    rightSection={icon}
-                  />
+                  </div>
+                  <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
+                  <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
+                    <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                    <p className="text-costumBlack text-sm md:text-base mb-3">
+                      Material of execution: brass <br />
+                      Manufacturer’s color: chrome <br />
+                      Guarantee: 5 years
+                    </p>
+                    <div className="md:flex block w-full md:items-center gap-2 mb-3">
+                      <p className="text-costum-blue font-bold text-sm md:text-base">your price <span className='text-2xl mx-1 font-bold'>$45.00</span>net</p>
+                      <p className="text-costum-orange text-sm md:text-base line-through">$55.00 net</p>
+                    </div>
+                    <div className="flex mb-2 w-full  justify-between">
+                      <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-[#EAECEE] placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+
+                      <Select
+                        placeholder="Item 1"
+                        className='Select_product'
+                        data={['React', 'Angular', 'Vue', 'Svelte']}
+                        rightSection={icon}
+                      />
+                    </div>
+
+                    <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
+                      Add to cart
+                      <img src="/images/down-icon.svg" alt="" />
+                    </button>
+                  </div>
                 </div>
+              </Link>
+            </Carousel.Slide>
+            <Carousel.Slide>
+              <Link href='/product'>
+                <div className="md:w-auto w-44 min-h-72 rounded-lg">
+                  <div className="relative">
+                    <img src="/images/product_img.svg" alt="" className='w-full' />
+                    <div className="absolute top-5 left-0 bg-costum-orange p-1 text-sm  w-max text-white font-bold">-30%</div>
+                    <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                    <div className="absolute bottom-2 right-3"><img src="/images/share.svg" alt="" /></div>
+                    <div className="absolute bottom-10 right-3"><img src="/images/compare.svg" alt="" /></div>
+                    <div className="absolute bottom-2 left-2 flex gap-1 border border-solid border-costum-gray-300 p-1.5 rounded">
+                      <img src="/images/check.svg" alt="" />
+                      <p className="text-costum-green">in stock</p>
+                    </div>
 
-                <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
-                  Add to cart
-                  <img src="/images/down-icon.svg" alt="" />
-                </button>
-              </div>
-            </div>
-            <div className="md:w-auto w-44 min-h-72 md:block hidden rounded-lg">
-              <div className="relative">
-                <img src="/images/product_img.svg" alt="" className='w-full' />
-                <div className="absolute top-5 left-0 bg-costum-orange p-1 text-sm  w-max text-white font-bold">-30%</div>
-                <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
-                <div className="absolute bottom-2 right-3"><img src="/images/share.svg" alt="" /></div>
-                <div className="absolute bottom-10 right-3"><img src="/images/compare.svg" alt="" /></div>
-                <div className="absolute bottom-2 left-2 flex gap-1 border border-solid border-costum-gray-300 p-1.5 rounded">
-                  <img src="/images/check.svg" alt="" />
-                  <p className="text-costum-green">in stock</p>
+                  </div>
+                  <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
+                  <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
+                    <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                    <p className="text-costumBlack text-sm md:text-base mb-3">
+                      Material of execution: brass <br />
+                      Manufacturer’s color: chrome <br />
+                      Guarantee: 5 years
+                    </p>
+                    <div className="md:flex block w-full md:items-center gap-2 mb-3">
+                      <p className="text-costum-blue font-bold text-sm md:text-base">your price <span className='text-2xl mx-1 font-bold'>$45.00</span>net</p>
+                      <p className="text-costum-orange text-sm md:text-base line-through">$55.00 net</p>
+                    </div>
+                    <div className="flex mb-2 w-full  justify-between">
+                      <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-[#EAECEE] placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+
+                      <Select
+                        placeholder="Item 1"
+                        className='Select_product'
+                        data={['React', 'Angular', 'Vue', 'Svelte']}
+                        rightSection={icon}
+                      />
+                    </div>
+
+                    <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
+                      Add to cart
+                      <img src="/images/down-icon.svg" alt="" />
+                    </button>
+                  </div>
                 </div>
+              </Link>
+            </Carousel.Slide>
+            <Carousel.Slide>
+              <Link href='/product'>
+                <div className="md:w-auto w-44 min-h-72 rounded-lg">
+                  <div className="relative">
+                    <img src="/images/product_img.svg" alt="" className='w-full' />
+                    <div className="absolute top-5 left-0 bg-costum-orange p-1 text-sm  w-max text-white font-bold">-30%</div>
+                    <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                    <div className="absolute bottom-2 right-3"><img src="/images/share.svg" alt="" /></div>
+                    <div className="absolute bottom-10 right-3"><img src="/images/compare.svg" alt="" /></div>
+                    <div className="absolute bottom-2 left-2 flex gap-1 border border-solid border-costum-gray-300 p-1.5 rounded">
+                      <img src="/images/check.svg" alt="" />
+                      <p className="text-costum-green">in stock</p>
+                    </div>
 
-              </div>
-              <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
-              <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
-                <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
-                <p className="text-costumBlack text-sm md:text-base mb-3">
-                  Material of execution: brass <br />
-                  Manufacturer’s color: chrome <br />
-                  Guarantee: 5 years
-                </p>
-                <div className="md:flex block w-full md:items-center gap-2 mb-3">
-                  <p className="text-costum-blue font-bold text-sm md:text-base">your price <span className='text-2xl mx-1 font-bold'>$45.00</span>net</p>
-                  <p className="text-costum-orange text-sm md:text-base line-through">$55.00 net</p>
+                  </div>
+                  <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
+                  <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
+                    <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                    <p className="text-costumBlack text-sm md:text-base mb-3">
+                      Material of execution: brass <br />
+                      Manufacturer’s color: chrome <br />
+                      Guarantee: 5 years
+                    </p>
+                    <div className="md:flex block w-full md:items-center gap-2 mb-3">
+                      <p className="text-costum-blue font-bold text-sm md:text-base">your price <span className='text-2xl mx-1 font-bold'>$45.00</span>net</p>
+                      <p className="text-costum-orange text-sm md:text-base line-through">$55.00 net</p>
+                    </div>
+                    <div className="flex mb-2 w-full  justify-between">
+                      <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-[#EAECEE] placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+
+                      <Select
+                        placeholder="Item 1"
+                        className='Select_product'
+                        data={['React', 'Angular', 'Vue', 'Svelte']}
+                        rightSection={icon}
+                      />
+                    </div>
+
+                    <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
+                      Add to cart
+                      <img src="/images/down-icon.svg" alt="" />
+                    </button>
+                  </div>
                 </div>
-                <div className="flex mb-2 w-full  justify-between">
-                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-[#EAECEE] placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+              </Link>
+            </Carousel.Slide>
+            <Carousel.Slide>
+              <Link href='/product'>
+                <div className="md:w-auto w-44 min-h-72 rounded-lg">
+                  <div className="relative">
+                    <img src="/images/product_img.svg" alt="" className='w-full' />
+                    <div className="absolute top-5 left-0 bg-costum-orange p-1 text-sm  w-max text-white font-bold">-30%</div>
+                    <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                    <div className="absolute bottom-2 right-3"><img src="/images/share.svg" alt="" /></div>
+                    <div className="absolute bottom-10 right-3"><img src="/images/compare.svg" alt="" /></div>
+                    <div className="absolute bottom-2 left-2 flex gap-1 border border-solid border-costum-gray-300 p-1.5 rounded">
+                      <img src="/images/check.svg" alt="" />
+                      <p className="text-costum-green">in stock</p>
+                    </div>
 
-                  <Select
-                    placeholder="Item 1"
-                    className='Select_product'
-                    data={['React', 'Angular', 'Vue', 'Svelte']}
-                    rightSection={icon}
-                  />
+                  </div>
+                  <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
+                  <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
+                    <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
+                    <p className="text-costumBlack text-sm md:text-base mb-3">
+                      Material of execution: brass <br />
+                      Manufacturer’s color: chrome <br />
+                      Guarantee: 5 years
+                    </p>
+                    <div className="md:flex block w-full md:items-center gap-2 mb-3">
+                      <p className="text-costum-blue font-bold text-sm md:text-base">your price <span className='text-2xl mx-1 font-bold'>$45.00</span>net</p>
+                      <p className="text-costum-orange text-sm md:text-base line-through">$55.00 net</p>
+                    </div>
+                    <div className="flex mb-2 w-full  justify-between">
+                      <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-[#EAECEE] placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+
+                      <Select
+                        placeholder="Item 1"
+                        className='Select_product'
+                        data={['React', 'Angular', 'Vue', 'Svelte']}
+                        rightSection={icon}
+                      />
+                    </div>
+
+                    <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
+                      Add to cart
+                      <img src="/images/down-icon.svg" alt="" />
+                    </button>
+                  </div>
                 </div>
-
-                <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
-                  Add to cart
-                  <img src="/images/down-icon.svg" alt="" />
-                </button>
-              </div>
-            </div>
-            <div className="md:w-auto w-44 min-h-72 md:block hidden rounded-lg">
-              <div className="relative">
-                <img src="/images/product_img.svg" alt="" className='w-full' />
-                <div className="absolute top-5 left-0 bg-costum-orange p-1 text-sm  w-max text-white font-bold">-30%</div>
-                <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
-                <div className="absolute bottom-2 right-3"><img src="/images/share.svg" alt="" /></div>
-                <div className="absolute bottom-10 right-3"><img src="/images/compare.svg" alt="" /></div>
-                <div className="absolute bottom-2 left-2 flex gap-1 border border-solid border-costum-gray-300 p-1.5 rounded">
-                  <img src="/images/check.svg" alt="" />
-                  <p className="text-costum-green">in stock</p>
-                </div>
-
-              </div>
-              <p className="text-silver text-sm md:text-base pt-2 px-2">Omnires | Part No. 2123532</p>
-              <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
-                <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">How much does it cost to <br /> finish an apartment?</p>
-                <p className="text-costumBlack text-sm md:text-base mb-3">
-                  Material of execution: brass <br />
-                  Manufacturer’s color: chrome <br />
-                  Guarantee: 5 years
-                </p>
-                <div className="md:flex block w-full md:items-center gap-2 mb-3">
-                  <p className="text-costum-blue font-bold text-sm md:text-base">your price <span className='text-2xl mx-1 font-bold'>$45.00</span>net</p>
-                  <p className="text-costum-orange text-sm md:text-base line-through">$55.00 net</p>
-                </div>
-                <div className="flex mb-2 w-full  justify-between">
-                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-[#EAECEE] placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
-
-                  <Select
-                    placeholder="Item 1"
-                    className='Select_product'
-                    data={['React', 'Angular', 'Vue', 'Svelte']}
-                    rightSection={icon}
-                  />
-                </div>
-
-                <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
-                  Add to cart
-                  <img src="/images/down-icon.svg" alt="" />
-                </button>
-              </div>
-            </div>
-          </div>
+              </Link>
+            </Carousel.Slide>
+          </Carousel>
+         
           <div className="flex w-49 item-center gap-1 w-full mb-8  justify-center h-6 md:hidden mx-auto ">
             <p className="text-costum-blue text-base font-medium ">Show all recomended products</p>
             <img src="/images/arrow_forward.svg" alt="" />

@@ -9,6 +9,7 @@ import {
   Rating,
   Select,
 } from "@mantine/core"
+import { Carousel } from '@mantine/carousel';
 
 const ProductPage = () => {
   const icon = <img src="/images/down_icon_select.svg" alt="" />
@@ -49,8 +50,26 @@ const ProductPage = () => {
         </Breadcrumbs>
         <div id="wrapper">
           <div className="grid w-full grid-cols-1 md:grid-cols-2 mb-8 gap-5 md:gap-3">
-            <div className="w-auto">
-              <img src="/images/product_img.png" alt="" />
+            <div className="w-auto flex flex-wrap md:flex-nowrap md:gap-5 gap-2 h-auto md:h-[563px]">
+              <div className="flex md:flex-col md:order-1 order-2  overflow-x-scroll md:overflow-y-scroll gap-10 snap-none md:h-full">
+                <img src="/images/productCarousel.svg" className="w-[64px] md:w-[87px]"/>
+                <img src="/images/productCarousel.svg" className="w-[64px] md:w-[87px]"/>
+                <img src="/images/productCarousel.svg" className="w-[64px] md:w-[87px]"/>
+                <img src="/images/productCarousel.svg" className="w-[64px] md:w-[87px]"/>
+                <img src="/images/productCarousel.svg" className="w-[64px] md:w-[87px]"/>
+                <img src="/images/productCarousel.svg" className="w-[64px] md:w-[87px]"/>
+                <img src="/images/productCarousel.svg" className="w-[64px] md:w-[87px]"/>
+                <img src="/images/productCarousel.svg" className="w-[64px] md:w-[87px]"/>
+                <img src="/images/productCarousel.svg" className="w-[64px] md:w-[87px]"/>
+                <img src="/images/productCarousel.svg" className="w-[64px] md:w-[87px]"/>
+                <img src="/images/productCarousel.svg" className="w-[64px] md:w-[87px]"/>
+                <img src="/images/productCarousel.svg" className="w-[64px] md:w-[87px]"/>
+              </div>
+              <div className="relative h-[375px] md:h-full order-1 mb-4 md:mb-0">
+                <img src="/images/productImg.svg"/>
+                <div className="absolute top-5 left-0 bg-costum-orange p-1 text-sm  w-max text-white font-bold">-30%</div>
+                <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+              </div>
             </div>
             <div className="w-auto">
               <p className="text-2xl md:text-3xl text-costum-text-black font-bold mb-5">
@@ -112,28 +131,24 @@ const ProductPage = () => {
 
               <div className="flex gap-3 justify-between md:flex-nowrap flex-wrap mb-2">
                 <div className="w-full md:w-2/4">
-                  <select className="text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costum-text-black font-normal w-full  mr-1 bg-transparent py-2 px-4 outline-none">
-                    <option value="value1" selected>
-                      Choose variant
-                    </option>
-                    <option value="value2">Значение 2</option>
-                    <option value="value3">Значение 3</option>
-                  </select>
+                <Select
+                  placeholder="Uzbekistan"
+                  rightSection={icon}
+                  data={['Russia', 'Uzbekistan', 'Angliya']}
+                />
                 </div>
                 <div className="flex mb-2 w-full md:w-2/4 gap-3  justify-between">
                   <input
                     type="text"
                     name="number"
-                    class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-1/3  block  rounded-md sm:text-sm "
+                    class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-[#EAECEE] placeholder-[#0C0C0C] outline-none w-1/3  block  rounded-md sm:text-sm "
                     placeholder="1"
                   />
-                  <select className="text-sm bg-white border shadow-sm h-12 border-slate-300 rounded-md text-costum-text-black font-normal w-2/3  mr-1 bg-transparent py-2 px-3 outline-none">
-                    <option value="value1" selected>
-                      items
-                    </option>
-                    <option value="value2">Значение 2</option>
-                    <option value="value3">Значение 3</option>
-                  </select>
+                   <Select
+                  placeholder="Uzbekistan"
+                  rightSection={icon}
+                  data={['Russia', 'Uzbekistan', 'Angliya']}
+                />
                 </div>
               </div>
 
