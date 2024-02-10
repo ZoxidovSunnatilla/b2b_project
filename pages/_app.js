@@ -3,7 +3,7 @@ import "@mantine/core/styles.css"
 import "@mantine/dates/styles.css"
 import { MantineProvider } from "@mantine/core"
 import Footer from "../components/footer"
-
+import ProductSkeleton from "@/components/Skeleton/productSkeleton"
 import Header from "../components/header"
 import "@mantine/carousel/styles.css"
 
@@ -30,7 +30,8 @@ export default function App({ Component, pageProps }) {
     >
       <div className="mx-auto min-h-screen">
         <Header />
-        <Component {...pageProps} />
+        {/* <Component {...pageProps} /> */}
+        <ProductSkeleton/>
         <Footer />
       </div>
     </MantineProvider>
