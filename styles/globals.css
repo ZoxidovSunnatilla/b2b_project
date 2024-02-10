@@ -93,6 +93,17 @@
 body {
   font-family: "Basier Square", "Basier Circle";
 }
+  /* Hide scrollbar for Chrome, Safari, and Opera */
+  .no_scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  /* Hide scrollbar for IE, Edge, and Firefox */
+  .no_scroll {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 #tabs .m-c3381914 {
   border-radius: 8px 8px 0px 0px !important;
 }

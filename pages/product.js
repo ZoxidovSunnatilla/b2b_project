@@ -51,7 +51,7 @@ const ProductPage = () => {
         <div id="wrapper">
           <div className="grid w-full grid-cols-1 md:grid-cols-2 mb-8 gap-5 md:gap-3">
             <div className="w-auto flex flex-wrap md:flex-nowrap md:gap-5 gap-2 h-auto md:h-[563px]">
-              <div className="flex md:flex-col md:order-1 order-2  overflow-x-scroll md:overflow-y-scroll gap-10 snap-none md:h-full">
+              <div className="flex md:flex-col md:order-1 order-2  overflow-x-scroll no_scroll md:overflow-y-scroll gap-10 snap-none md:h-full">
                 <img src="/images/productCarousel.svg" className="w-[64px] md:w-[87px]"/>
                 <img src="/images/productCarousel.svg" className="w-[64px] md:w-[87px]"/>
                 <img src="/images/productCarousel.svg" className="w-[64px] md:w-[87px]"/>

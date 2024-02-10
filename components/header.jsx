@@ -18,6 +18,7 @@ const Header = () => {
     const res = await requests.Country.getList(1, 10)
     setData(res?.data)
   }
+  console.log(data);
   
 
     return (
