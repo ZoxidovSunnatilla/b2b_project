@@ -9,32 +9,62 @@ import { requests } from "@/src/services/request"
 const Header = () => {
   const [opened, { open, close }] = useDisclosure(false)
   const search_icon = <img src="/images/search.svg" />
-  const icon = <img src="/images/down_icon_select.svg" alt="" />
-  //   const [data, setData] = useState([])
-  //   useEffect(() => {
-  //     getData()
-  //   }, [])
-  //   const getData = async () => {
-  //     const res = await requests.Country.getList(1, 10)
-  //     setData(res?.data)
-  //   }
+  const icon = <img src='/images/down_icon_select.svg' alt='' />
+  const [country, setCounty] = useState([])
+  const [language, setLanguage] = useState([])
+  const [currency, setCurrency] = useState([])
+  const [category, setCategory] = useState([])
 
+
+
+  useEffect(() => {
+    getData()
+  }, [])
+  const getData = async () => {
+    const res = await requests.Country.getList(1, 10)
+    const res2 = await requests.Language.getList(1, 10)
+    const res3 = await requests.Currency.getList(1, 10)
+    const res4 = await requests.Category.getList(1, 10)
+
+    setCurrency(res3?.data)
+    setLanguage(res2?.data)
+    setCounty(res?.data)
+    setCategory(res4?.data)
+  }
+  const handleChangeCountry = (value) => {
+    setCounty(value);
+  };
+  const handleChangeLanguage = (value) => {
+    setLanguage(value);
+  };
+  const handleChangeCurrency = (value) => {
+    setCurrency(value);
+  };
   return (
-    <div className="  ">
+
+    <div className="  " >
       <div className=" bg-costum-gray hidden md:flex">
-        <div
-          id="header"
-          className=" container mx-auto h-12 flex justify-between  items-center "
-        >
+        <div id="header" className=" container mx-auto h-12 flex justify-between  items-center ">
           <div className="w-auto flex  items-center gap-4 ">
             <div className="flex items-center">
-              <h1 className="text-sm text-costumBlack font-normal">Country:</h1>
+              <h1 className="text-sm text-costumBlack font-normal">
+                Country:
+              </h1>
+
 
               <Select
                 placeholder="Uzbekistan"
+                onChange={(e) => handleChangeCountry(country)}
+                nothingFound="No options"
                 rightSection={icon}
-                data={["Russia", "Uzbekistan", "Angliya"]}
+                data={country?.map((item) => ({
+                  value: String(item.id),
+                  label: String(item.name),
+                }))}
               />
+
+
+
             </div>
             <div className="flex items-center">
               <h1 className="text-sm text-costumBlack font-normal">
@@ -42,18 +72,29 @@ const Header = () => {
               </h1>
               <Select
                 placeholder="English"
+                onChange={(e) => handleChangeLanguage(language)}
+                nothingFound="No options"
                 rightSection={icon}
-                data={["Russia", "Uzbek", "English"]}
+                data={language?.map((item) => ({
+                  value: String(item.id),
+                  label: String(item.name),
+                }))}
               />
+
             </div>
             <div className="flex items-center">
               <h1 className="text-sm text-costumBlack font-normal">
                 Currency:
               </h1>
               <Select
-                placeholder="Rubl"
+                placeholder="Dollar"
+                onChange={(e) => handleChangeCurrency(currency)}
+                nothingFound="No options"
                 rightSection={icon}
-                data={["Rubl", "$", "Som"]}
+                data={currency?.map((item) => ({
+                  value: String(item.id),
+                  label: String(item.name),
+                }))}
               />
             </div>
           </div>
@@ -69,16 +110,15 @@ const Header = () => {
               <div className="relative">
                 <img src="/images/envelope.svg" alt="" />
 
-                <Badge
-                  size="sm"
-                  color="orange"
-                  className="absolute -top-2.5 -right-2.5"
-                  circle
-                >
+                <Badge size="sm" color='orange' className='absolute -top-2.5 -right-2.5' circle>
                   12
                 </Badge>
+
               </div>
-              <a href="" className=" text-sm text-costumBlack font-normal ">
+              <a
+                href=""
+                className=" text-sm text-costumBlack font-normal "
+              >
                 Message
               </a>
             </div>
@@ -92,13 +132,15 @@ const Header = () => {
               <Select
                 placeholder="Surname"
                 rightSection={icon}
-                data={["Surname", "LastName", "SurName"]}
+                data={['Surname', 'LastName', 'SurName']}
+
               />
             </div>
           </div>
         </div>
       </div>
       <div className="container mx-auto py-5 md:hidden flex justify-between">
+
         <Link href="/">
           <div className="nav" onClick={open}>
             <img src="/images/navbar.svg" alt="" />
@@ -108,12 +150,7 @@ const Header = () => {
         <div className="relative">
           <img src="/images/cart.svg" alt="" className="mr-2" />
 
-          <Badge
-            size="sm"
-            color="orange"
-            className="absolute -top-2 right-0.5"
-            circle
-          >
+          <Badge size="sm" color='orange' className='absolute -top-2 right-0.5' circle>
             12
           </Badge>
         </div>
@@ -123,20 +160,18 @@ const Header = () => {
           <Link href="/">
             <img src="/images/ABUsell.svg" alt="" className="hidden md:flex" />
           </Link>
-          <label className="relative block w-full md:w-1/3 menu">
-            <Menu classNames=" w-full ">
+          <label class="relative block w-full md:w-1/3 menu">
+            <Menu classNames=" w-full " >
               <Menu.Target>
-                <Input
-                  placeholder="Search by product or SKU"
-                  leftSection={search_icon}
-                  size="md"
-                  radius="md"
-                />
+                <Input placeholder="Search by product or SKU" leftSection={search_icon} size='md' radius='md' />
               </Menu.Target>
-              <Menu.Dropdown>
+              <Menu.Dropdown >
+
                 <SearchMenu />
+
               </Menu.Dropdown>
             </Menu>
+
           </label>
           <button className="h-12 w-[198px] bg-costum-blue rounded-full text-white text-base hidden md:block">
             Quick Order Form
@@ -146,36 +181,29 @@ const Header = () => {
       <div className="bg-costum-gray hidden md:flex h-20 ">
         <div className="container mx-auto ">
           <div className="flex items-center h-20  justify-between">
-            <div className="flex gap-16 menu">
-              <Menu>
-                <Menu.Target>
-                  <p className="text-custum--text-black uppercase cursor-pointer flex">
-                    Home & Garden
-                    <span>
-                      <img src="/images/down_icon.svg" alt="" />
-                    </span>
-                  </p>
-                </Menu.Target>
-                <Menu.Dropdown>
-                  <MenuHeader />
-                </Menu.Dropdown>
-              </Menu>
+            <div className="flex gap-16 menu" >
+              {category ? (
+                category.map((item) => (
+                  <Menu key={item.id}>
+                    <Menu.Target>
+                      <p className="text-custum--text-black uppercase cursor-pointer flex">
+                        {item.name}
+                        <span>
+                          <img src="/images/down_icon.svg" alt="" />
+                        </span>
+                      </p>
+                    </Menu.Target>
+                    <Menu.Dropdown >
 
-              <Menu>
-                <Menu.Target>
-                  <p className="text-costumBlack uppercase cursor-pointer flex ">
-                    Motors
-                    <span>
-                      <img src="/images/down_icon.svg" alt="" />
-                    </span>
-                  </p>
-                </Menu.Target>
-                <Menu.Dropdown>
-                  <MenuHeader />
-                </Menu.Dropdown>
-              </Menu>
-              <p className="text-costum--text-black">ELECTRONICS</p>
-              <p className="text-costum--text-black">OFFICE EQUIPMENT</p>
+                      <MenuHeader item={item}/>
+
+                    </Menu.Dropdown>
+                  </Menu>
+                ))
+              ) : (<h1>HEllo</h1>)}
+
+
+
             </div>
             <div className="flex gap-8">
               <Link href="/">
@@ -183,18 +211,12 @@ const Header = () => {
                   <div className="relative mx-auto">
                     <img src="/images/compare_icon.svg" alt="" />
 
-                    <Badge
-                      size="sm"
-                      color="orange"
-                      className="absolute -top-2.5 -right-2.5"
-                      circle
-                    >
+                    <Badge size="sm" color='orange' className='absolute -top-2.5 -right-2.5' circle>
                       3
                     </Badge>
+
                   </div>
-                  <p className="text-costum-blue text-sm font-bold uppercase mt-2">
-                    compare
-                  </p>
+                  <p className="text-costum-blue text-sm font-bold uppercase mt-2">compare</p>
                 </div>
               </Link>
               <Link href="/favorites">
@@ -202,18 +224,12 @@ const Header = () => {
                   <div className="relative mx-auto">
                     <img src="/images/star_icon.svg" alt="" />
 
-                    <Badge
-                      size="sm"
-                      color="orange"
-                      className="absolute -top-2.5 -right-2.5"
-                      circle
-                    >
+                    <Badge size="sm" color='orange' className='absolute -top-2.5 -right-2.5' circle>
                       12
                     </Badge>
+
                   </div>
-                  <p className="text-costum-blue text-sm font-bold uppercase mt-2">
-                    favorites
-                  </p>
+                  <p className="text-costum-blue text-sm font-bold uppercase mt-2">favorites</p>
                 </div>
               </Link>
               <Link href="/cart">
@@ -221,18 +237,12 @@ const Header = () => {
                   <div className="relative mx-auto">
                     <img src="/images/cart_icon.svg" alt="" />
 
-                    <Badge
-                      size="sm"
-                      color="orange"
-                      className="absolute -top-2.5 -right-2.5"
-                      circle
-                    >
+                    <Badge size="sm" color='orange' className='absolute -top-2.5 -right-2.5' circle>
                       12
                     </Badge>
+
                   </div>
-                  <p className="text-costum-blue text-sm font-bold uppercase mt-2">
-                    cart
-                  </p>
+                  <p className="text-costum-blue text-sm font-bold uppercase mt-2">cart</p>
                 </div>
               </Link>
             </div>
@@ -241,413 +251,66 @@ const Header = () => {
       </div>
       <Drawer opened={opened} onClose={close}>
         <div className="bg-white">
-          <Accordion defaultValue="Apples" className="mb-2">
-            <Accordion.Item value="1">
-              <Accordion.Control>
-                <p className="text-custum--text-black uppercase cursor-pointer flex">
-                  Home & Garden
-                </p>
-              </Accordion.Control>
-              <Accordion.Panel>
-                <Accordion defaultValue="Apple">
-                  <Accordion.Item value="1_1">
-                    <Accordion.Control>
-                      <div className="flex gap-2 items-center mb-2">
-                        <img src="/images/menu_img1.svg" alt="" />
-                        <p className="text-base text-costum-blue font-medium">
-                          Kitchen
-                        </p>
-                      </div>
-                    </Accordion.Control>
-                    <Accordion.Panel>
-                      <div className="flex flex-col ">
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Kitchen, Dining & Bar
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Small kitchen Appliances
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Kitchen Tools and Gadgets
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Cookware
-                        </a>
-                      </div>
-                    </Accordion.Panel>
-                  </Accordion.Item>
-                  <Accordion.Item value="1_2">
-                    <Accordion.Control>
-                      <div className="flex gap-2 items-center mb-2">
-                        <img src="/images/menu_img1.svg" alt="" />
-                        <p className="text-base text-costum-blue font-medium">
-                          Kitchen
-                        </p>
-                      </div>
-                    </Accordion.Control>
-                    <Accordion.Panel>
-                      <div className="flex flex-col ">
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Kitchen, Dining & Bar
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Small kitchen Appliances
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Kitchen Tools and Gadgets
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Cookware
-                        </a>
-                      </div>
-                    </Accordion.Panel>
-                  </Accordion.Item>
-                  <Accordion.Item value="1_3">
-                    <Accordion.Control>
-                      <div className="flex gap-2 items-center mb-2">
-                        <img src="/images/menu_img1.svg" alt="" />
-                        <p className="text-base text-costum-blue font-medium">
-                          Kitchen
-                        </p>
-                      </div>
-                    </Accordion.Control>
-                    <Accordion.Panel>
-                      <div className="flex flex-col ">
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Kitchen, Dining & Bar
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Small kitchen Appliances
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Kitchen Tools and Gadgets
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Cookware
-                        </a>
-                      </div>
-                    </Accordion.Panel>
-                  </Accordion.Item>
-                </Accordion>
-              </Accordion.Panel>
-            </Accordion.Item>
-            <Accordion.Item value="2">
-              <Accordion.Control>
-                <p className="text-custum--text-black uppercase cursor-pointer flex">
-                  Motors
-                </p>
-              </Accordion.Control>
-              <Accordion.Panel>
-                <Accordion defaultValue="Apple">
-                  <Accordion.Item value="2_1">
-                    <Accordion.Control>
-                      <div className="flex gap-2 items-center mb-2">
-                        <img src="/images/menu_img1.svg" alt="" />
-                        <p className="text-base text-costum-blue font-medium">
-                          Kitchen
-                        </p>
-                      </div>
-                    </Accordion.Control>
-                    <Accordion.Panel>
-                      <div className="flex flex-col ">
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Kitchen, Dining & Bar
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Small kitchen Appliances
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Kitchen Tools and Gadgets
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Cookware
-                        </a>
-                      </div>
-                    </Accordion.Panel>
-                  </Accordion.Item>
-                  <Accordion.Item value="2_2">
-                    <Accordion.Control>
-                      <div className="flex gap-2 items-center mb-2">
-                        <img src="/images/menu_img1.svg" alt="" />
-                        <p className="text-base text-costum-blue font-medium">
-                          Kitchen
-                        </p>
-                      </div>
-                    </Accordion.Control>
-                    <Accordion.Panel>
-                      <div className="flex flex-col ">
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Kitchen, Dining & Bar
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Small kitchen Appliances
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Kitchen Tools and Gadgets
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Cookware
-                        </a>
-                      </div>
-                    </Accordion.Panel>
-                  </Accordion.Item>
-                  <Accordion.Item value="2_3">
-                    <Accordion.Control>
-                      <div className="flex gap-2 items-center mb-2">
-                        <img src="/images/menu_img1.svg" alt="" />
-                        <p className="text-base text-costum-blue font-medium">
-                          Kitchen
-                        </p>
-                      </div>
-                    </Accordion.Control>
-                    <Accordion.Panel>
-                      <div className="flex flex-col ">
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Kitchen, Dining & Bar
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Small kitchen Appliances
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Kitchen Tools and Gadgets
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Cookware
-                        </a>
-                      </div>
-                    </Accordion.Panel>
-                  </Accordion.Item>
-                </Accordion>
-              </Accordion.Panel>
-            </Accordion.Item>
-            <Accordion.Item value="3">
-              <Accordion.Control>
-                <p className="text-custum--text-black uppercase cursor-pointer flex">
-                  Electronics
-                </p>
-              </Accordion.Control>
-              <Accordion.Panel>
-                <Accordion defaultValue="Apple">
-                  <Accordion.Item value="3_1">
-                    <Accordion.Control>
-                      <div className="flex gap-2 items-center mb-2">
-                        <img src="/images/menu_img1.svg" alt="" />
-                        <p className="text-base text-costum-blue font-medium">
-                          Kitchen
-                        </p>
-                      </div>
-                    </Accordion.Control>
-                    <Accordion.Panel>
-                      <div className="flex flex-col ">
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Kitchen, Dining & Bar
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Small kitchen Appliances
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Kitchen Tools and Gadgets
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Cookware
-                        </a>
-                      </div>
-                    </Accordion.Panel>
-                  </Accordion.Item>
-                  <Accordion.Item value="3_2">
-                    <Accordion.Control>
-                      <div className="flex gap-2 items-center mb-2">
-                        <img src="/images/menu_img1.svg" alt="" />
-                        <p className="text-base text-costum-blue font-medium">
-                          Kitchen
-                        </p>
-                      </div>
-                    </Accordion.Control>
-                    <Accordion.Panel>
-                      <div className="flex flex-col ">
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Kitchen, Dining & Bar
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Small kitchen Appliances
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Kitchen Tools and Gadgets
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Cookware
-                        </a>
-                      </div>
-                    </Accordion.Panel>
-                  </Accordion.Item>
-                  <Accordion.Item value="3_3">
-                    <Accordion.Control>
-                      <div className="flex gap-2 items-center mb-2">
-                        <img src="/images/menu_img1.svg" alt="" />
-                        <p className="text-base text-costum-blue font-medium">
-                          Kitchen
-                        </p>
-                      </div>
-                    </Accordion.Control>
-                    <Accordion.Panel>
-                      <div className="flex flex-col ">
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Kitchen, Dining & Bar
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Small kitchen Appliances
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Kitchen Tools and Gadgets
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Cookware
-                        </a>
-                      </div>
-                    </Accordion.Panel>
-                  </Accordion.Item>
-                </Accordion>
-              </Accordion.Panel>
-            </Accordion.Item>
-            <Accordion.Item value="4">
-              <Accordion.Control>
-                <p className="text-custum--text-black uppercase cursor-pointer flex">
-                  Office Equiment
-                </p>
-              </Accordion.Control>
-              <Accordion.Panel>
-                <Accordion defaultValue="Apple">
-                  <Accordion.Item value="4_1">
-                    <Accordion.Control>
-                      <div className="flex gap-2 items-center mb-2">
-                        <img src="/images/menu_img1.svg" alt="" />
-                        <p className="text-base text-costum-blue font-medium">
-                          Kitchen
-                        </p>
-                      </div>
-                    </Accordion.Control>
-                    <Accordion.Panel>
-                      <div className="flex flex-col ">
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Kitchen, Dining & Bar
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Small kitchen Appliances
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Kitchen Tools and Gadgets
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Cookware
-                        </a>
-                      </div>
-                    </Accordion.Panel>
-                  </Accordion.Item>
-                  <Accordion.Item value="4_2">
-                    <Accordion.Control>
-                      <div className="flex gap-2 items-center mb-2">
-                        <img src="/images/menu_img1.svg" alt="" />
-                        <p className="text-base text-costum-blue font-medium">
-                          Kitchen
-                        </p>
-                      </div>
-                    </Accordion.Control>
-                    <Accordion.Panel>
-                      <div className="flex flex-col ">
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Kitchen, Dining & Bar
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Small kitchen Appliances
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Kitchen Tools and Gadgets
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Cookware
-                        </a>
-                      </div>
-                    </Accordion.Panel>
-                  </Accordion.Item>
-                  <Accordion.Item value="4_3">
-                    <Accordion.Control>
-                      <div className="flex gap-2 items-center mb-2">
-                        <img src="/images/menu_img1.svg" alt="" />
-                        <p className="text-base text-costum-blue font-medium">
-                          Kitchen
-                        </p>
-                      </div>
-                    </Accordion.Control>
-                    <Accordion.Panel>
-                      <div className="flex flex-col ">
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Kitchen, Dining & Bar
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Small kitchen Appliances
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Kitchen Tools and Gadgets
-                        </a>
-                        <a href="" className="text-base text-costumBlack mb-3">
-                          Cookware
-                        </a>
-                      </div>
-                    </Accordion.Panel>
-                  </Accordion.Item>
-                </Accordion>
-              </Accordion.Panel>
-            </Accordion.Item>
+          <Accordion defaultValue="Apples" className='mb-2'>
+            {category ? (category.map((item) => (
+              <Accordion.Item value={item.name} key={item.id}>
+                <Accordion.Control >
+                  <p className="text-custum--text-black uppercase cursor-pointer flex">{item.name}</p>
+                </Accordion.Control>
+                <Accordion.Panel>
+                  <Accordion >
+                    {item?.children.map((items) => (
+                      <Accordion.Item value={items.name} key={items.id}>
+                        <Accordion.Control>
+                          <div className="flex gap-2 items-center mb-2">
+                            <img src="/images/menu_img1.svg" alt="" />
+                            <p className="text-base text-costum-blue font-medium">{items.name}</p>
+                          </div>
+                        </Accordion.Control>
+                        <Accordion.Panel>
+                          <div className="flex flex-col ">
+                            {items?.children.map((itemm) => (
+                              <a href="" key={itemm.id} className="text-base text-costumBlack mb-3">
+                                {itemm.name}
+                              </a>
+                            ))}
+                          </div>
+                        </Accordion.Panel>
+                      </Accordion.Item>
+                    ))}
+                  </Accordion>
+                </Accordion.Panel>
+              </Accordion.Item >
+            ))) : (<h1>Hello</h1>)}
           </Accordion>
-          <a
-            href=""
-            className="text-base text-costum-blue font-medium py-3 px-4 w-full "
-          >
-            View all markets
-          </a>
+          <a href='' className="text-base text-costum-blue font-medium py-3 px-4 w-full ">View all markets</a>
 
-          <div className="border border-t border-b-0  border-costum-gray-500   mt-5">
-            <a
-              href=""
-              className="flex  gap-2 items-center  py-3 px-4 border-t-1 border-indigo-500"
-            >
+          <div className='border border-t border-b-0  border-costum-gray-500   mt-5'>
+            <a href='' className="flex  gap-2 items-center  py-3 px-4 border-t-1 border-indigo-500">
               <img src="/images/menu_img1.svg" alt="" />
               <p className="text-base text-costum-blue font-medium">Compare</p>
             </a>
           </div>
-          <div className="border border-t border-b-0 border-costum-gray-500   ">
-            <a
-              href=""
-              className="flex  gap-2 items-center  py-3 px-4 border-t-1 border-indigo-500"
-            >
+          <div className='border border-t border-b-0 border-costum-gray-500   '>
+            <a href='' className="flex  gap-2 items-center  py-3 px-4 border-t-1 border-indigo-500">
               <img src="/images/menu_img1.svg" alt="" />
-              <p className="text-base text-costum-blue font-medium">
-                Favorites
-              </p>
+              <p className="text-base text-costum-blue font-medium">Favorites</p>
             </a>
           </div>
-          <div className="border border-t border-b-0 border-costum-gray-500 ">
-            <a
-              href=""
-              className="flex  gap-2 items-center  py-3 px-4 border-t-1 border-indigo-500"
-            >
+          <div className='border border-t border-b-0 border-costum-gray-500 '>
+            <a href='' className="flex  gap-2 items-center  py-3 px-4 border-t-1 border-indigo-500">
               <img src="/images/menu_img1.svg" alt="" />
               <p className="text-base text-costum-blue font-medium">Masseges</p>
             </a>
           </div>
-          <div className="border border-t border-b-0 border-costum-gray-500 mb-5 ">
-            <a
-              href=""
-              className="flex  gap-2 items-center  py-3 px-4 border-t-1 border-indigo-500"
-            >
+          <div className='border border-t border-b-0 border-costum-gray-500 mb-5 '>
+            <a href='' className="flex  gap-2 items-center  py-3 px-4 border-t-1 border-indigo-500">
               <img src="/images/menu_img1.svg" alt="" />
-              <p className="text-base text-costum-blue font-medium">
-                +32 (0) 15 28 76 67
-              </p>
+              <p className="text-base text-costum-blue font-medium">+32 (0) 15 28 76 67</p>
             </a>
           </div>
-          <Accordion defaultValue="Apple" className="mb-5">
-            <Accordion.Item value="1_1">
+          <Accordion defaultValue='Apple' className='mb-5'>
+            <Accordion.Item value='1_1'>
               <Accordion.Control>
                 <div className="flex items-center">
                   <h1 className="text-sm text-costumBlack font-normal">
@@ -662,9 +325,10 @@ const Header = () => {
                 <p className="text-base">Uzbekistan</p>
                 <p className="text-base">Russia</p>
                 <p className="text-base">Amerika</p>
+
               </Accordion.Panel>
             </Accordion.Item>
-            <Accordion.Item value="1_2">
+            <Accordion.Item value='1_2'>
               <Accordion.Control>
                 <div className="flex items-center">
                   <h1 className="text-sm text-costumBlack font-normal">
@@ -679,32 +343,31 @@ const Header = () => {
                 <p className="text-base">English</p>
                 <p className="text-base">Russia</p>
                 <p className="text-base">Uzbek</p>
+
               </Accordion.Panel>
             </Accordion.Item>
-            <Accordion.Item value="1_3">
+            <Accordion.Item value='1_3'>
               <Accordion.Control>
                 <div className="flex items-center">
                   <h1 className="text-sm text-costumBlack font-normal">
                     Country:
                   </h1>
-                  <p className="text-sm text-costumBlack font-normal ml-2 bg-transparent outline-none">
-                    $
-                  </p>
+                  <p className="text-sm text-costumBlack font-normal ml-2 bg-transparent outline-none">$</p>
                 </div>
               </Accordion.Control>
               <Accordion.Panel>
                 <p className="text-base">UZS</p>
                 <p className="text-base">RUBL</p>
                 <p className="text-base">USD</p>
+
               </Accordion.Panel>
             </Accordion.Item>
           </Accordion>
 
-          <button className="bg-costum-blue w-full rounded-3xl text-white h-12 mb-5">
-            Quick Order Form
-          </button>
+          <button className="bg-costum-blue w-full rounded-3xl text-white h-12 mb-5">Quick Order Form</button>
         </div>
       </Drawer>
+
     </div>
   )
 }

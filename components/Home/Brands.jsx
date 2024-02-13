@@ -57,7 +57,7 @@ function Brands() {
           >
             {data.map((item) => (
               <Carousel.Slide key={item.id}>
-                <img src={item?.logo || "/images/brand_img1.svg"} alt="" />
+                <img src={item.logo || "/images/brand_img1.svg"} alt="" />
               </Carousel.Slide>
             ))}
           </Carousel>
