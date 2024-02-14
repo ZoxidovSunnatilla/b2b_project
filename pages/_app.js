@@ -4,9 +4,11 @@ import "@mantine/dates/styles.css"
 import { MantineProvider } from "@mantine/core"
 import Footer from "../components/footer"
 import Header from "../components/header"
-import "@mantine/carousel/styles.css"
+import "@mantine/carousel/styles.css";
+import { appWithTranslation } from "next-i18next";
 
-export default function App({ Component, pageProps }) {
+
+function App({ Component, pageProps }) {
   return (
     <MantineProvider
       theme={{
@@ -35,3 +37,4 @@ export default function App({ Component, pageProps }) {
     </MantineProvider>
   )
 }
+export default appWithTranslation(App)
