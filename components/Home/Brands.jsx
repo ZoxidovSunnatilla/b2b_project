@@ -55,7 +55,7 @@ function Brands() {
             previousControlIcon={brand_prev_icon}
             slidesToScroll={3}
           >
-            {data.map((item) => (
+            {data?.map((item) => (
               <Carousel.Slide key={item.id}>
                 <img src={item.logo || "/images/brand_img1.svg"} alt="" />
               </Carousel.Slide>

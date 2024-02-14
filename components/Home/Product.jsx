@@ -44,13 +44,13 @@ const Product = () => {
                 loop
                 align="start"
             >
-                {data.map((item) => (
+                {data?.map((item) => (
                     <Carousel.Slide key={item.id}>
                         <div className="md:w-auto w-44 min-h-72 rounded-lg">
                             <Link href="/product">
                                 <div className="relative">
                                     {item.images ? <img
-                                        src={item.images[0]}
+                                        src={item?.images[0].link}
                                         alt=""
                                         className="w-full h-[238px]"
                                     /> : <img

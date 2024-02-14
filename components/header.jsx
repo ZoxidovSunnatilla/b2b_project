@@ -5,6 +5,10 @@ import MenuHeader from "./Menu"
 import SearchMenu from "./SearchMenu"
 import Link from "next/link"
 import { requests } from "@/src/services/request"
+import { useTranslation } from "next-i18next"
+import { useRouter } from "next/router"
+
+
 
 const Header = () => {
   const [opened, { open, close }] = useDisclosure(false)
@@ -14,7 +18,10 @@ const Header = () => {
   const [language, setLanguage] = useState([])
   const [currency, setCurrency] = useState([])
   const [category, setCategory] = useState([])
-
+  const { t } = useTranslation()
+  const router = useRouter()
+  const languages = [{ code: "en" }, { code: "ru" }, { code: "uz" }]
+  
 
 
   useEffect(() => {
@@ -40,6 +47,12 @@ const Header = () => {
   const handleChangeCurrency = (value) => {
     setCurrency(value);
   };
+  const changeLanguage = async (lang) => {
+   
+    router.push(router.asPath, router.asPath, { locale: lang })
+    //  Cookies.set("NEXT_LOCALE", lang, { expires: 3 })
+    // save lang to cookie
+  }
   return (
 
     <div className="  " >
@@ -71,13 +84,16 @@ const Header = () => {
                 Language:
               </h1>
               <Select
-                placeholder="English"
-                onChange={(e) => handleChangeLanguage(language)}
+                // onChange={(e) => handleChangeLanguage(language)}
+                onClick={() => changeLanguage(languages.code)}
+                
+                placeholder={router?.locale}
+                // onClick={() => changeLanguage(languages.code)}
                 nothingFound="No options"
                 rightSection={icon}
-                data={language?.map((item) => ({
-                  value: String(item.id),
-                  label: String(item.name),
+                data={languages?.map((item) => ({
+                  value: String(item.code),
+                  label: String(item.code),
                 }))}
               />
 
@@ -119,7 +135,7 @@ const Header = () => {
                 href=""
                 className=" text-sm text-costumBlack font-normal "
               >
-                Message
+                {t("about")}
               </a>
             </div>
             <div className="rotate-60 h-7 bg-costumBlack w-0.5"></div>
