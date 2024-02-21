@@ -1,0 +1,13 @@
+{
+    "favoritesTextTitle": "Sevimlilar (10 ta mahsulot)",
+    "favoritesTextSubTitle": "Mahsulotlarni olib tashlash",
+    "favoritesTextPrint": "Sahifani chop etish",
+    "favoritesButtonText": "Savatga barcha sevimlilarga qo'shing",
+    "favoritesButtonDeleteText": "Elementni o'chirish",
+    "favoritesTableOne": "Mahsulot nomi",
+    "favoritesTableTwo": "Miqdori",
+    "favoritesTableThree": "Mavjudligi",
+    "favoritesTableFour": "Narxi aniq",
+    "favoritesTableFive": "Narxi yalpi"
+    
+}

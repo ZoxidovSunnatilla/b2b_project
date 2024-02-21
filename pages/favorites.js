@@ -1,10 +1,13 @@
 import React from 'react';
 import { Breadcrumbs, Table, Select } from '@mantine/core';
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next"
 
 
 const FavoritesPage = () => {
     const icon = <img src='/images/down_icon_select.svg' alt='' />
-
+    const { t } = useTranslation("common", "favorites")
+    
     return (
         <div id="favorites">
             <div className="container mx-auto">
@@ -23,20 +26,20 @@ const FavoritesPage = () => {
                 </Breadcrumbs>
 
                 <div className="md:flex block justify-between items-center md:mb-10 mb-4">
-                    <p className="md:text-4xl mb-4 md:mb-0 text-3xl font-bold">Favorites (10 products)</p>
+                    <p className="md:text-4xl mb-4 md:mb-0 text-3xl font-bold">{t("favorites:favoritesTextTitle")}</p>
                     <div className="flex items-center">
                         <img src="/images/cart_delete_icon.svg" alt="" />
-                        <p className="text-base text-[#434447]">Remove Product</p>
+                        <p className="text-base text-[#434447]">{t("favorites:favoritesTextSubTitle")}</p>
                     </div>
                 </div>
                 <div className="md:flex block md:mb-10 mb-6 justify-between">
                     <div className="flex items-center mb-4 md:mb-0">
                         <img src="/images/print.svg" alt="" />
-                        <p className="text-base text-[#434447]">Print page</p>
+                        <p className="text-base text-[#434447]">{t("favorites:favoritesTextPrint")}</p>
                     </div>
                     <div className="flex gap-4">
                         <button className="bg-costum-blue rounded-full w-72 h-12 text-white ">
-                            Add to all favorites to cart
+                            {t("favorites:favoritesButtonText")}
                         </button>
                         <img src="/images/social.svg" alt="" />
 
@@ -47,23 +50,23 @@ const FavoritesPage = () => {
                         <Table.Thead>
                             <Table.Tr>
                                 <Table.Th>
-                                    <p className="text-costumBlack ml-8">Product Name</p>
+                                    <p className="text-costumBlack ml-8">{t("favorites:favoritesTableOne")}</p>
 
                                 </Table.Th>
                                 <Table.Th>
-                                    <p className="text-costumBlack">Quantity</p>
+                                    <p className="text-costumBlack">{t("favorites:favoritesTableTwo")}</p>
 
                                 </Table.Th>
                                 <Table.Th>
-                                    <p className="text-costumBlack ">Availability</p>
+                                    <p className="text-costumBlack ">{t("favorites:favoritesTableThree")}</p>
 
                                 </Table.Th>
                                 <Table.Th>
-                                    <p className="text-costumBlack">Price net</p>
+                                    <p className="text-costumBlack">{t("favorites:favoritesTableFour")}</p>
 
                                 </Table.Th>
                                 <Table.Th>
-                                    <p className="text-costumBlack">Price gross</p>
+                                    <p className="text-costumBlack">{t("favorites:favoritesTableFive")}</p>
 
                                 </Table.Th>
                             </Table.Tr>
@@ -367,3 +370,12 @@ const FavoritesPage = () => {
 }
 
 export default FavoritesPage
+
+export async function getStaticProps({ locale }) {
+    return {
+      props: {
+        ...(await serverSideTranslations(locale, ["common", "favorites"])),
+      },
+    }
+  }
+  

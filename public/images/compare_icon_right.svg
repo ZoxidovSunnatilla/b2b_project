@@ -1,0 +1,13 @@
+<svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="button with icon only">
+<rect id="outline / background" x="0.5" y="0.5" width="43" height="43" rx="7.5" stroke="#1071FF"/>
+<g id="keyboard_arrow_right" clip-path="url(#clip0_2205_53990)">
+<path id="Vector" d="M18.5901 26.59L23.1701 22L18.5901 17.41L20.0001 16L26.0001 22L20.0001 28L18.5901 26.59Z" fill="#1071FF"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_2205_53990">
+<rect width="24" height="24" fill="white" transform="translate(10 10)"/>
+</clipPath>
+</defs>
+</svg>
