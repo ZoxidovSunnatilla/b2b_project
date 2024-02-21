@@ -3,9 +3,12 @@ import { Select, Input } from "@mantine/core"
 import Link from "next/link"
 import Brands from "./Brands"
 import Product from "./Product"
+import { useTranslation } from "next-i18next"
+
 
 const Home = () => {
-
+  const { t } = useTranslation()
+  
   return (
     <div>
       <div className="container mx-auto w-full mt-8 md:mt-10">
@@ -18,11 +21,11 @@ const Home = () => {
             <img src="/images/advertising.svg" alt="" />
             <h1 className="text-white md:text-7xl text-5xl font-bold">-20%</h1>
             <p className="text-white text-center text-4xl mb-4 md:mb-0 md:text-5xl">
-              on dairy products
+              {t("discountText")}
             </p>
           </div>
           <button className="text-costum-blue text-base h-12 w-40 bg-white rounded-3xl">
-            Check offer
+            {t("discountButtonText")}
           </button>
         </div>
       </div>
@@ -30,11 +33,11 @@ const Home = () => {
         <div id="categories">
           <div className="flex justify-center md:justify-between mb-8 w-full">
             <p className="text-costumBlack font-bold   text-2xl md:text-3xl ">
-              Recommended Categories
+              {t("categoriTitleText")}
             </p>
             <div className=" md:flex hidden w-49 item-center gap-1 h-6">
               <p className="text-costum-blue text-base font-medium">
-                Show all categories
+              {t("categoriSubTitle")}
               </p>
               <img src="/images/arrow_forward.svg" alt="" />
             </div>
@@ -67,7 +70,7 @@ const Home = () => {
           </div>
           <div className="flex w-49 item-center gap-1 w-full mb-8  justify-center h-6 md:hidden mx-auto ">
             <p className="text-costum-blue text-base font-medium ">
-              Show all recomended categories
+              {t("categoriSubTitle")}
             </p>
             <img src="/images/arrow_forward.svg" alt="" />
           </div>
@@ -75,11 +78,11 @@ const Home = () => {
         <div id="hints">
           <div className="flex justify-center md:justify-between mb-8 w-full">
             <p className="text-costumBlack font-bold md:text-[28px]  text-2xl">
-              Hints for you
+              {t("hintsTitleText")}
             </p>
             <div className="md:flex hidden item-center gap-1 h-6">
               <p className="text-costum-blue text-base font-medium">
-                Show all hints
+              {t("hintsSubTitle")}
               </p>
               <img src="/images/arrow_forward.svg" alt="" />
             </div>
@@ -160,7 +163,7 @@ const Home = () => {
           </div>
           <div className="flex w-49 item-center gap-1 w-full mb-8  justify-center h-6 md:hidden mx-auto ">
             <p className="text-costum-blue text-base font-medium ">
-              Show all hints
+              {t("hintsSubTitle")}
             </p>
             <img src="/images/arrow_forward.svg" alt="" />
           </div>
@@ -173,23 +176,22 @@ const Home = () => {
               className="w-full h-full"
             />
           </div>
-          <div className="md:w-auto w-full rounded-lg bg-costum-blue h-full md:pl-16 px-6 py-10 md:py-[75px]">
+          <div className="md:w-auto w-full rounded-lg bg-costum-blue h-full md:pl-16 px-6 py-10 md:py">
             <p className="text-white font-bold mb-4 text-[28px]">
-              Buy this bundle and save 100K!
+              {t("advertisingTextOne")}
             </p>
-            <p className="text-white text-base mb-8 font-normal text-xl">
-              Longer sentence, for just two lines <br /> and it could be very
-              very long
+            <p className="text-white text-base w-[344px] mb-8 font-normal text-xl">
+              {t("advertisingTextTwo")}
             </p>
             <button className="bg-white  text-costum-blue font-bold py-2.5 px-8 rounded-full">
-              Buy this bundle
+              {t("advertisingButtonText")}
             </button>
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 w-full md:gap-5 gap-3 mb-8 flex-wrap md:mb-20">
           <div className="md:w-auto w-full h-auto md:min-h-56 flex rounded-lg">
             <div className="w-2/4 h-full bg-costum-orange rounded-l-lg flex items-center pl-8 md:pl-10">
-              <p className="text-white font-bold text-xl ">New tool kits!</p>
+              <p className="text-white font-bold w-[156px] text-xl ">{t("advertisingBlogOne")}</p>
             </div>
             <div className="w-2/4 rounded-r-lg">
               <img src="/images/kits_img.svg" alt="" className="w-full" />
@@ -197,7 +199,7 @@ const Home = () => {
           </div>
           <div className="md:w-auto w-full h-auto md:min-h-56 flex rounded-lg">
             <div className="w-2/4 h-full bg-costum-orange rounded-l-lg flex items-center pl-8 md:pl-10">
-              <p className="text-white font-bold text-xl ">New tool kits!</p>
+              <p className="text-white font-bold text-xl w-[156px] ">{t("advertisingBlogTwo")}</p>
             </div>
             <div className="w-2/4 h-full rounded-r-lg">
               <img src="/images/kits_img.svg" alt="" className="w-full " />
@@ -205,8 +207,8 @@ const Home = () => {
           </div>
           <div className="md:w-auto w-full  h-auto md:min-h-56 flex rounded-lg">
             <div className="w-2/4 h-full bg-costum-orange rounded-l-lg flex items-center pl-8 md:pl-10">
-              <p className="text-white font-bold text-xl ">
-                New Iphone <br /> now available!
+              <p className="text-white font-bold text-xl w-[156px]">
+                {t("advertisingBlogThree")}
               </p>
             </div>
             <div className="w-2/4 rounded-r-lg">
@@ -220,15 +222,13 @@ const Home = () => {
           <div className="flex justify-between flex-wrap py-8 md:py-10">
             <div className="w-full md:w-2/4 md:mb-0 mb-6 text-center md:text-left flex flex-col items-center md:block">
               <p className="font-bold text-costumBlack md:my-10 mb-6 text-[28px] md:text-[36px]">
-                DPD delivery already available!
+                {t("dpdTextOne")}
               </p>
-              <p className="text-base font-medium text-costumBlack mb-6 md:mb-10">
-                Choose DPD for speed, ease and convenience. <br /> Track your
-                parcel in real time. This will help you plan <br /> your work
-                while waiting for the parcel.
+              <p className="text-base font-medium md:w-[408px] w-full text-costumBlack mb-6 md:mb-10">
+                {t("dpdTextTwo")}
               </p>
               <div className="mb-3 md:mb-0 rounded-3xl bg-costum-blue w-36 flex items-center justify-center h-12 text-white font-bold">
-                Show more
+                {t("dpdButtonText")}
               </div>
             </div>
             <div className="md:w-2/4 w-full flex justify-end">
@@ -240,11 +240,11 @@ const Home = () => {
       <div className="container mx-auto w-full">
         <div className="flex justify-center md:justify-between mb-6 md:mb-8 w-full">
           <p className="text-costumBlack font-bold  text-2xl md:text-[28px] ">
-            Events for you
+            {t("eventTitleText")}
           </p>
           <div className="md:flex hidden w-49 item-center gap-1 h-6">
             <p className="text-costum-blue text-base font-medium">
-              Show all events
+              {t("eventSubTitle")}
             </p>
             <img src="/images/arrow_forward.svg" alt="" />
           </div>

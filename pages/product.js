@@ -10,9 +10,16 @@ import {
   Select,
 } from "@mantine/core"
 import { Carousel } from '@mantine/carousel';
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
+
 
 const ProductPage = () => {
   const icon = <img src="/images/down_icon_select.svg" alt="" />
+  const { t } = useTranslation("common", "product")
+
+  
 
   return (
     <div>
@@ -166,25 +173,25 @@ const ProductPage = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-10 md:mb-28">
           <div className="flex items-center justify-center bg-costum-gray flex-col h-24 w-auto rounded-lg">
             <img src="/images/credit_payment.svg" alt="" className="mb-3" />
-            <p className="text-sm text-costum-text-black">Safety payment</p>
+            <p className="text-sm text-costum-text-black">{t("product:productBoxOne")}</p>
           </div>
           <div className="flex items-center justify-center bg-costum-gray flex-col h-24 w-auto rounded-lg">
-            <img src="/images/credit_payment.svg" alt="" className="mb-3" />
-            <p className="text-sm text-costum-text-black">Safety payment</p>
+            <img src="/images/location_on.svg" alt="" className="mb-3" />
+            <p className="text-sm text-costum-text-black">{t("product:productBoxTwo")}</p>
           </div>
           <div className="flex items-center justify-center bg-costum-gray flex-col h-24 w-auto rounded-lg">
-            <img src="/images/credit_payment.svg" alt="" className="mb-3" />
-            <p className="text-sm text-costum-text-black">Safety payment</p>
+            <img src="/images/local_shipping.svg" alt="" className="mb-3" />
+            <p className="text-sm text-costum-text-black">{t("product:productBoxThree")}</p>
           </div>
           <div className="flex items-center justify-center bg-costum-gray flex-col h-24 w-auto rounded-lg">
-            <img src="/images/credit_payment.svg" alt="" className="mb-3" />
-            <p className="text-sm text-costum-text-black">Safety payment</p>
+            <img src="/images/info.svg" alt="" className="mb-3" />
+            <p className="text-sm text-costum-text-black">{t("product:productBoxFour")}</p>
           </div>
         </div>
 
         <div id="card" className="mb-20">
           <p className="text-2xl md:text-3xl font-bold text-costum-text-black mb-10">
-            Frequently bought together
+            {t("product:productTogetherTitleText")}
           </p>
           <div className="flex  gap-3 md:flex-nowrap flex-wrap">
             <div className="md:w-3/5 w-full md:flex-nowrap flex-wrap bg-star flex justify-between gap-3 p-4 border border-costum-blue border-solid rounded-lg">
@@ -308,14 +315,14 @@ const ProductPage = () => {
         <div id="tabs" className="md:flex hidden">
           <Tabs color="#1071FF" variant="pills" defaultValue="Description">
             <Tabs.List>
-              <Tabs.Tab value="Description">Description</Tabs.Tab>
-              <Tabs.Tab value="Technical Details">Technical Details</Tabs.Tab>
-              <Tabs.Tab value="Attachments">Attachments</Tabs.Tab>
+              <Tabs.Tab value="Description">{t("product:productTabOne")}</Tabs.Tab>
+              <Tabs.Tab value="Technical Details">{t("product:productTabTwo")}</Tabs.Tab>
+              <Tabs.Tab value="Attachments">{t("product:productTabThree")}</Tabs.Tab>
               <Tabs.Tab value="Shipping & Payments">
-                Shipping & Payments
+                {t("product:productTabFour")}
               </Tabs.Tab>
-              <Tabs.Tab value="Reviews">Reviews (0)</Tabs.Tab>
-              <Tabs.Tab value="Ask about product">Ask about product</Tabs.Tab>
+              <Tabs.Tab value="Reviews">{t("product:productTabFive")}</Tabs.Tab>
+              <Tabs.Tab value="Ask about product">{t("product:productTabSix")}</Tabs.Tab>
             </Tabs.List>
             <div className="tabs w-full bg-star p-6">
               <Tabs.Panel value="Description">
@@ -850,7 +857,7 @@ const ProductPage = () => {
             <Accordion.Item value="1_1">
               <Accordion.Control>
                 <p className="text-sm text-costum-text-black font-normal ml-2 bg-transparent outline-none">
-                  Description
+                  {t("product:productTabOne")}
                 </p>
               </Accordion.Control>
               <Accordion.Panel>
@@ -901,7 +908,7 @@ const ProductPage = () => {
             <Accordion.Item value="1_2">
               <Accordion.Control>
                 <p className="text-sm text-costum-text-black font-normal ml-2 bg-transparent outline-none">
-                  Technical Details
+                  {t("product:productTabTwo")}
                 </p>
               </Accordion.Control>
               <Accordion.Panel>
@@ -1040,7 +1047,7 @@ const ProductPage = () => {
             <Accordion.Item value="1_3">
               <Accordion.Control>
                 <p className="text-sm text-costum-text-black font-normal ml-2 bg-transparent outline-none">
-                  Attachments
+                  {t("product:productTabThree")}
                 </p>
               </Accordion.Control>
               <Accordion.Panel>
@@ -1086,7 +1093,7 @@ const ProductPage = () => {
             <Accordion.Item value="1_4">
               <Accordion.Control>
                 <p className="text-sm text-costum-text-black font-normal ml-2 bg-transparent outline-none">
-                  Shipping & Payments
+                  {t("product:productTabFour")}
                 </p>
               </Accordion.Control>
               <Accordion.Panel>
@@ -1098,7 +1105,7 @@ const ProductPage = () => {
             <Accordion.Item value="1_5">
               <Accordion.Control>
                 <p className="text-sm text-costum-text-black font-normal ml-2 bg-transparent outline-none">
-                  Reviews (18)
+                  {t("product:productTabFive")}
                 </p>
               </Accordion.Control>
               <Accordion.Panel>
@@ -1275,7 +1282,7 @@ const ProductPage = () => {
             <Accordion.Item value="1_6">
               <Accordion.Control>
                 <p className="text-sm text-costum-text-black font-normal ml-2 bg-transparent outline-none">
-                  Ask about product
+                  {t("product:productTabSix")}
                 </p>
               </Accordion.Control>
               <Accordion.Panel>
@@ -1313,11 +1320,11 @@ const ProductPage = () => {
         <div id="products" className="mb-20">
           <div className="flex justify-center md:justify-between  mb-8 w-full">
             <p className="text-costumBlack font-bold text-2xl md:text-[28px] ">
-              Recomended products
+              {t("product:featuredTextTitle")}
             </p>
             <div className="md:flex hidden w-49 item-center gap-1 h-6">
               <p className="text-costum-blue text-base font-medium">
-                Show all recomended products
+                {t("product:featuredTextSubTitle")}
               </p>
               <img src="/images/arrow_forward.svg" alt="" />
             </div>
@@ -1578,7 +1585,7 @@ const ProductPage = () => {
           </div>
           <div className="flex w-49 item-center gap-1 w-full mb-8  justify-center h-6 md:hidden mx-auto ">
             <p className="text-costum-blue text-base font-medium ">
-              Show all recomended products
+              {t("product:featuredTextSubTitle")}
             </p>
             <img src="/images/arrow_forward.svg" alt="" />
           </div>
@@ -1586,12 +1593,12 @@ const ProductPage = () => {
         <div id="products" className="mb-20">
           <div className="flex justify-center md:justify-between  mb-8 w-full">
             <p className="text-costumBlack font-bold text-2xl md:text-[28px] ">
-              Recomended products
+              {t("product:replacementTextTitle")}
             </p>
 
             <div className="md:flex hidden w-49 item-center gap-1 h-6">
               <p className="text-costum-blue text-base font-medium">
-                Show all recomended products
+                {t("product:replacementTextSubTitle")}
               </p>
               <img src="/images/arrow_forward.svg" alt="" />
             </div>
@@ -1852,7 +1859,7 @@ const ProductPage = () => {
           </div>
           <div className="flex w-49 item-center gap-1 w-full mb-8  justify-center h-6 md:hidden mx-auto ">
             <p className="text-costum-blue text-base font-medium ">
-              Show all recomended products
+              {t("product:replacementTextSubTitle")}
             </p>
             <img src="/images/arrow_forward.svg" alt="" />
           </div>
@@ -1860,12 +1867,12 @@ const ProductPage = () => {
         <div id="products" className="mb-20">
           <div className="flex justify-center md:justify-between  mb-8 w-full">
             <p className="text-costumBlack font-bold text-2xl md:text-[28px] ">
-              Recomended products
+              {t("product:seriesTextTitle")}
             </p>
 
             <div className="md:flex hidden w-49 item-center gap-1 h-6">
               <p className="text-costum-blue text-base font-medium">
-                Show all recomended products
+                {t("product:seriesTextSubTitle")}
               </p>
               <img src="/images/arrow_forward.svg" alt="" />
             </div>
@@ -2126,7 +2133,7 @@ const ProductPage = () => {
           </div>
           <div className="flex w-49 item-center gap-1 w-full mb-8  justify-center h-6 md:hidden mx-auto ">
             <p className="text-costum-blue text-base font-medium ">
-              Show all recomended products
+              {t("product:seriesTextSubTitle")}
             </p>
             <img src="/images/arrow_forward.svg" alt="" />
           </div>
@@ -2134,12 +2141,12 @@ const ProductPage = () => {
         <div id="products" className="mb-20">
           <div className="flex justify-center md:justify-between  mb-8 w-full">
             <p className="text-costumBlack font-bold text-2xl md:text-[28px] ">
-              Recomended products
+              {t("product:similarTextTitle")}
             </p>
 
             <div className="md:flex hidden w-49 item-center gap-1 h-6">
               <p className="text-costum-blue text-base font-medium">
-                Show all recomended products
+                {t("product:similarTextSubTitle")}
               </p>
               <img src="/images/arrow_forward.svg" alt="" />
             </div>
@@ -2400,7 +2407,7 @@ const ProductPage = () => {
           </div>
           <div className="flex w-49 item-center gap-1 w-full mb-8  justify-center h-6 md:hidden mx-auto ">
             <p className="text-costum-blue text-base font-medium ">
-              Show all recomended products
+              {t("product:similarTextSubTitle")}
             </p>
             <img src="/images/arrow_forward.svg" alt="" />
           </div>
@@ -2408,12 +2415,12 @@ const ProductPage = () => {
         <div id="products" className="mb-20">
           <div className="flex justify-center md:justify-between  mb-8 w-full">
             <p className="text-costumBlack font-bold text-2xl md:text-[28px] ">
-              Recomended products
+              {t("product:relatedTextTitle")}
             </p>
 
             <div className="md:flex hidden w-49 item-center gap-1 h-6">
               <p className="text-costum-blue text-base font-medium">
-                Show all recomended products
+                {t("product:relatedTextSubTitle")}
               </p>
               <img src="/images/arrow_forward.svg" alt="" />
             </div>
@@ -2674,7 +2681,7 @@ const ProductPage = () => {
           </div>
           <div className="flex w-49 item-center gap-1 w-full mb-8  justify-center h-6 md:hidden mx-auto ">
             <p className="text-costum-blue text-base font-medium ">
-              Show all recomended products
+            {t("product:relatedTextSubTitle")}
             </p>
             <img src="/images/arrow_forward.svg" alt="" />
           </div>
@@ -2685,3 +2692,11 @@ const ProductPage = () => {
 }
 
 export default ProductPage
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common", "product"])),
+    },
+  }
+}

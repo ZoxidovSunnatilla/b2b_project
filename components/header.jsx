@@ -8,6 +8,7 @@ import { requests } from "@/src/services/request"
 import { useTranslation } from "next-i18next"
 import { useRouter } from "next/router"
 
+
 const Header = () => {
   const [opened, { open, close }] = useDisclosure(false)
   const search_icon = <img src="/images/search.svg" />
@@ -57,7 +58,8 @@ const Header = () => {
         >
           <div className="w-auto flex  items-center gap-4 ">
             <div className="flex items-center">
-              <h1 className="text-sm text-costumBlack font-normal">Country:</h1>
+                
+              <h1 className="text-sm text-costumBlack font-normal">{t("countryText")}:</h1>
 
               <Select
                 placeholder="Uzbekistan"
@@ -72,7 +74,7 @@ const Header = () => {
             </div>
             <div className="flex items-center">
               <h1 className="text-sm text-costumBlack font-normal">
-                Language:
+              {t("languageText")}:
               </h1>
               <Select
                 onChange={(e) => changeLanguage(e)}
@@ -87,7 +89,7 @@ const Header = () => {
             </div>
             <div className="flex items-center">
               <h1 className="text-sm text-costumBlack font-normal">
-                Currency:
+              {t("currencyText")}:
               </h1>
               <Select
                 placeholder="Dollar"
@@ -123,7 +125,7 @@ const Header = () => {
                 </Badge>
               </div>
               <a href="" className=" text-sm text-costumBlack font-normal ">
-                {t("about")}
+                {t("messageText")}
               </a>
             </div>
             <div className="rotate-60 h-7 bg-costumBlack w-0.5"></div>
@@ -131,7 +133,7 @@ const Header = () => {
             <div className="flex gap-1 items-center">
               <img src="/images/user.svg" alt="" />
               <h1 className="text-sm text-costumBlack font-normal">
-                Username:
+              {t("userNameText")}:
               </h1>
               <Select
                 placeholder="Surname"
@@ -171,7 +173,7 @@ const Header = () => {
             <Menu classNames=" w-full ">
               <Menu.Target>
                 <Input
-                  placeholder="Search by product or SKU"
+                  placeholder={t("headerInputText")}
                   leftSection={search_icon}
                   size="md"
                   radius="md"
@@ -183,7 +185,7 @@ const Header = () => {
             </Menu>
           </label>
           <button className="h-12 w-[198px] bg-costum-blue rounded-full text-white text-base hidden md:block">
-            Quick Order Form
+            {t("headerButtonText")}
           </button>
         </div>
       </div>
@@ -208,7 +210,7 @@ const Header = () => {
                   </Menu>
                 ))
               ) : (
-                <h1>HEllo</h1>
+                <h1>Hech nma yoq</h1>
               )}
             </div>
             <div className="flex gap-8">
@@ -227,7 +229,7 @@ const Header = () => {
                     </Badge>
                   </div>
                   <p className="text-costum-blue text-sm font-bold uppercase mt-2">
-                    compare
+                    {t("headerCompareText")}
                   </p>
                 </div>
               </Link>
@@ -246,7 +248,7 @@ const Header = () => {
                     </Badge>
                   </div>
                   <p className="text-costum-blue text-sm font-bold uppercase mt-2">
-                    favorites
+                  {t("headerFavoritesText")}
                   </p>
                 </div>
               </Link>
@@ -265,7 +267,8 @@ const Header = () => {
                     </Badge>
                   </div>
                   <p className="text-costum-blue text-sm font-bold uppercase mt-2">
-                    cart
+                   {t("headerCartText")}
+
                   </p>
                 </div>
               </Link>
@@ -342,7 +345,8 @@ const Header = () => {
             >
               <img src="/images/menu_img1.svg" alt="" />
               <p className="text-base text-costum-blue font-medium">
-                Favorites
+                {t("headerFavoritesText")}
+                
               </p>
             </a>
           </div>
@@ -352,7 +356,8 @@ const Header = () => {
               className="flex  gap-2 items-center  py-3 px-4 border-t-1 border-indigo-500"
             >
               <img src="/images/menu_img1.svg" alt="" />
-              <p className="text-base text-costum-blue font-medium">Masseges</p>
+                  
+              <p className="text-base text-costum-blue font-medium">{t("messageText")}</p>
             </a>
           </div>
           <div className="border border-t border-b-0 border-costum-gray-500 mb-5 ">
@@ -371,7 +376,7 @@ const Header = () => {
               <Accordion.Control>
                 <div className="flex items-center">
                   <h1 className="text-sm text-costumBlack font-normal">
-                    Country:
+                    {t("countryText")}:
                   </h1>
                   <p className="text-sm text-costumBlack font-normal ml-2 bg-transparent outline-none">
                     Uzbekistan
@@ -388,7 +393,7 @@ const Header = () => {
               <Accordion.Control>
                 <div className="flex items-center">
                   <h1 className="text-sm text-costumBlack font-normal">
-                    Language:
+                      {t("languageText")}:
                   </h1>
                   <p className="text-sm text-costumBlack font-normal ml-2 bg-transparent outline-none">
                     English
@@ -405,7 +410,7 @@ const Header = () => {
               <Accordion.Control>
                 <div className="flex items-center">
                   <h1 className="text-sm text-costumBlack font-normal">
-                    Country:
+                    {t("currencyText")}:
                   </h1>
                   <p className="text-sm text-costumBlack font-normal ml-2 bg-transparent outline-none">
                     $
@@ -421,7 +426,7 @@ const Header = () => {
           </Accordion>
 
           <button className="bg-costum-blue w-full rounded-3xl text-white h-12 mb-5">
-            Quick Order Form
+            {t("headerButtonText")}
           </button>
         </div>
       </Drawer>

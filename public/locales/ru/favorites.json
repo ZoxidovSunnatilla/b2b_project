@@ -1,0 +1,13 @@
+{
+    "favoritesTextTitle": "Избранное (10 товаров)",
+    "favoritesTextSubTitle": "Удалить продукты",
+    "favoritesTextPrint": "Распечатать страницу",
+    "favoritesButtonText": "Добавить во все избранное в корзину",
+    "favoritesButtonDeleteText": "Удалить пункт",
+    "favoritesTableOne": "наименование товара",
+    "favoritesTableTwo": "Количество",
+    "favoritesTableThree": "Доступность",
+    "favoritesTableFour": "Цена нетто",
+    "favoritesTableFive": "Цена брутто"
+    
+}

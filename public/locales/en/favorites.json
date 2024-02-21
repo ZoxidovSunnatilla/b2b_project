@@ -1,0 +1,13 @@
+{
+    "favoritesTextTitle": "Favorites (10 products)",
+    "favoritesTextSubTitle": "Remove Products",
+    "favoritesTextPrint": "Print Page",
+    "favoritesButtonText": "Add to all favorites to cart",
+    "favoritesButtonDeleteText": "Delete Item",
+    "favoritesTableOne": "Product Name",
+    "favoritesTableTwo": "Quantity",
+    "favoritesTableThree": "Availability",
+    "favoritesTableFour": "Price net",
+    "favoritesTableFive": "Price gross"
+    
+}

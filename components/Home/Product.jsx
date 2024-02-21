@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Carousel } from "@mantine/carousel"
 import { Select } from "@mantine/core"
 import { requests } from "@/src/services/request"
+import { useTranslation } from "next-i18next"
 
 import Link from "next/link"
 import ProductSkeleton from '../Skeleton/productSkeleton';
@@ -9,6 +10,8 @@ const icon = <img src="/images/down_icon_select.svg" alt="" />
 
 
 const Product = () => {
+  const { t } = useTranslation()
+    
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(false)
     useEffect(() => {
@@ -24,11 +27,11 @@ const Product = () => {
         <div id="products">
             <div className="flex justify-center md:justify-between  mb-8 w-full">
                 <p className="text-costumBlack font-bold text-2xl md:text-[28px] ">
-                    Recomended products
+                    {t("productTitleText")}
                 </p>
                 <div className="md:flex hidden w-49 item-center gap-1 h-6">
                     <p className="text-costum-blue text-base font-medium">
-                        Show all recomended products
+                        {t("productSubTitle")}
                     </p>
                     <img src="/images/arrow_forward.svg" alt="" />
                 </div>
@@ -44,7 +47,7 @@ const Product = () => {
                 loop
                 align="start"
             >
-                {data?.map((item) => (
+                {data ? (data?.map((item) => (
                     <Carousel.Slide key={item.id}>
                         <div className="md:w-auto w-44 min-h-72 rounded-lg">
                             <Link href="/product">
@@ -134,13 +137,13 @@ const Product = () => {
                             </div>
                         </div>
                     </Carousel.Slide>
-                ))}
+                ))) : (<h1>ERROR</h1>)}
             </Carousel>)}
 
 
             <div className="flex w-49 item-center gap-1 w-full mb-8  justify-center h-6 md:hidden mx-auto ">
                 <p className="text-costum-blue text-base font-medium ">
-                    Show all recomended products
+                    {t("productSubTitle")}
                 </p>
                 <img src="/images/arrow_forward.svg" alt="" />
             </div>
