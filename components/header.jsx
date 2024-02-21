@@ -46,8 +46,7 @@ const Header = () => {
   }
   const changeLanguage = (lang) => {
     router.push(router.asPath, router.asPath, { locale: lang })
-    //  Cookies.set("NEXT_LOCALE", lang, { expires: 3 })
-    // save lang to cookie
+
   }
   return (
     <div className="  ">
@@ -326,7 +325,7 @@ const Header = () => {
             href=""
             className="text-base text-costum-blue font-medium py-3 px-4 w-full "
           >
-            View all markets
+            {t("headerViewAll")}
           </a>
 
           <div className="border border-t border-b-0  border-costum-gray-500   mt-5">
@@ -335,7 +334,7 @@ const Header = () => {
               className="flex  gap-2 items-center  py-3 px-4 border-t-1 border-indigo-500"
             >
               <img src="/images/menu_img1.svg" alt="" />
-              <p className="text-base text-costum-blue font-medium">Compare</p>
+              <p className="text-base text-costum-blue font-medium">{t("headerCompareText")}</p>
             </a>
           </div>
           <div className="border border-t border-b-0 border-costum-gray-500   ">
