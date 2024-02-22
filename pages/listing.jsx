@@ -1,9 +1,14 @@
 import React, { useState } from 'react'
 import { Breadcrumbs, Checkbox, Accordion, RangeSlider, Drawer, Rating, ColorSwatch, Tabs, Select, Pagination, Menu } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
 
 const ListingPage = () => {
   const [opened, { open, close }] = useDisclosure(false);
+  const { t } = useTranslation("common", "listing")
+
 
 
   return (
@@ -16,14 +21,14 @@ const ListingPage = () => {
         <div className="flex  gap-5">
           <div className="md:w-1/5 md:block hidden" id="filter">
             <div className="py-10 px-6 bg-costum-gray mb-6" >
-              <p className="text-2xl text-costum-text-black mb-2">Subcategories</p>
-              <p className="text-sm font-semibold mb-4">back to <span className='text-costum-blue'>Category 1</span></p>
+              <p className="text-2xl text-costum-text-black mb-2">{t("listing:listingSubcategoryText")}</p>
+              <p className="text-sm font-semibold mb-4">{t("listing:listingSubcategoryOneTwoText")} <span className='text-costum-blue'>{t("listing:listingSubcategoryTwoTwoText")}</span></p>
               <div className="flex justify-between mb-2">
                 <div className="flex gap-2 items-center">
                   <Checkbox
                     defaultChecked
                   />
-                  <p className="text-costum-text-black">Subcategory 1</p>
+                  <p className="text-costum-text-black">{t("listing:subcategoryOneText")}</p>
                 </div>
                 <p className="text-costum-silver text-right" >139</p>
               </div>
@@ -32,7 +37,7 @@ const ListingPage = () => {
                   <Checkbox
                     defaultChecked
                   />
-                  <p className="text-costum-text-black">Subcategory 2</p>
+                  <p className="text-costum-text-black">{t("listing:subcategoryTwoText")}</p>
                 </div>
                 <p className="text-costum-silver text-right" >139</p>
               </div>
@@ -41,7 +46,7 @@ const ListingPage = () => {
                   <Checkbox
                     defaultChecked
                   />
-                  <p className="text-costum-text-black">Subcategory 3</p>
+                  <p className="text-costum-text-black">{t("listing:subcategoryThreeText")}</p>
                 </div>
                 <p className="text-costum-silver text-right" >139</p>
               </div>
@@ -50,7 +55,7 @@ const ListingPage = () => {
                   <Checkbox
                     defaultChecked
                   />
-                  <p className="text-costum-text-black">Subcategory 4</p>
+                  <p className="text-costum-text-black">{t("listing:subcategoryFourText")}</p>
                 </div>
                 <p className="text-costum-silver text-right" >139</p>
               </div>
@@ -59,30 +64,22 @@ const ListingPage = () => {
                   <Checkbox
                     defaultChecked
                   />
-                  <p className="text-costum-text-black">Subcategory 5</p>
+                  <p className="text-costum-text-black">{t("listing:subcategoryFiveText")}</p>
                 </div>
                 <p className="text-costum-silver text-right" >139</p>
               </div>
-              <div className="flex justify-between mb-2">
-                <div className="flex gap-2 items-center">
-                  <Checkbox
-                    defaultChecked
-                  />
-                  <p className="text-costum-text-black">Subcategory 6</p>
-                </div>
-                <p className="text-costum-silver text-right" >139</p>
-              </div>
+
             </div>
             <div className="py-10 px-6 bg-costum-gray">
-              <p className="text-2xl font-bold text-costumBlack">Filter</p>
-              <p className="text-costum-blue my-3 font-medium">Clear All</p>
+              <p className="text-2xl font-bold text-costumBlack">{t("listing:listingFiltersText")}</p>
+              <p className="text-costum-blue my-3 font-medium">{t("listing:listingClearText")}</p>
               <label className="relative block w-full mb-6 ">
                 <span className="absolute inset-y-0 left-0 flex items-center pl-2">
                   <img src="/images/search.svg" alt="" />
                 </span>
                 <input
                   className=" block bg-white w-full border  rounded-md h-12 pl-9 pr-3 shadow-sm focus:outline-none sm:text-sm"
-                  placeholder="Search by product or SKU"
+                  placeholder={t("listing:listingSearchText")}
                   type="text"
                   name="search"
                 />
@@ -91,7 +88,7 @@ const ListingPage = () => {
                 <Accordion.Item value='1_1'>
                   <Accordion.Control>
                     <p className="text-base text-[rgba(67, 68, 71, 1)] font-bold  bg-transparent outline-none">
-                      Filters Group
+                      {t("listing:listingFilterGroupOne")}
                     </p>
                   </Accordion.Control>
                   <Accordion.Panel>
@@ -100,7 +97,7 @@ const ListingPage = () => {
                         <Checkbox
 
                         />
-                        <p className="text-costum-text-black">Subcategory 1</p>
+                        <p className="text-costum-text-black">{t("listing:filterOneText")}</p>
                       </div>
                       <p className="text-costum-silver text-right" >139</p>
                     </div>
@@ -109,7 +106,7 @@ const ListingPage = () => {
                         <Checkbox
 
                         />
-                        <p className="text-costum-text-black">Subcategory 2</p>
+                        <p className="text-costum-text-black">{t("listing:filterTwoText")}</p>
                       </div>
                       <p className="text-costum-silver text-right" >139</p>
                     </div>
@@ -118,7 +115,7 @@ const ListingPage = () => {
                         <Checkbox
 
                         />
-                        <p className="text-costum-text-black">Subcategory 3</p>
+                        <p className="text-costum-text-black">{t("listing:filterThreeText")}</p>
                       </div>
                       <p className="text-costum-silver text-right" >139</p>
                     </div>
@@ -127,7 +124,7 @@ const ListingPage = () => {
                         <Checkbox
 
                         />
-                        <p className="text-costum-text-black">Subcategory 4</p>
+                        <p className="text-costum-text-black">{t("listing:filterFourText")}</p>
                       </div>
                       <p className="text-costum-silver text-right" >139</p>
                     </div>
@@ -136,27 +133,19 @@ const ListingPage = () => {
                         <Checkbox
 
                         />
-                        <p className="text-costum-text-black">Subcategory 5</p>
+                        <p className="text-costum-text-black">{t("listing:filterFiveText")}</p>
                       </div>
                       <p className="text-costum-silver text-right" >139</p>
                     </div>
-                    <div className="flex justify-between mb-2">
-                      <div className="flex gap-2 items-center">
-                        <Checkbox
 
-                        />
-                        <p className="text-costum-text-black">Subcategory 6</p>
-                      </div>
-                      <p className="text-costum-silver text-right" >139</p>
-                    </div>
-                    <a href='' className="text-costum-blue font-semibold">show more</a>
+                    <a href='' className="text-costum-blue font-semibold">{t("listing:filterShowMoreText")}</a>
 
                   </Accordion.Panel>
                 </Accordion.Item>
                 <Accordion.Item value='1_2'>
                   <Accordion.Control>
                     <p className="text-base text-[rgba(67, 68, 71, 1)] font-bold  bg-transparent outline-none">
-                      Filters Group
+                      {t("listing:listingFilterGroupRange")}
                     </p>
                   </Accordion.Control>
                   <Accordion.Panel>
@@ -164,14 +153,14 @@ const ListingPage = () => {
                     <div className="flex justify-between items-center mb-4">
                       <input
                         class=" block bg-white w-2/5 border pl-3  rounded-md h-12  shadow-sm focus:outline-none sm:text-sm"
-                        placeholder="From"
+                        placeholder={t("listing:listingFilterInputOne")}
                         type="text"
                         name="search"
                       />
                       <p className="border border-rgba(207, 210, 213, 1) w-3"></p>
                       <input
                         class=" block bg-white w-2/5 border pl-3  rounded-md h-12  shadow-sm focus:outline-none sm:text-sm"
-                        placeholder="To"
+                        placeholder={t("listing:listingFilterInputTwo")}
                         type="text"
                         name="search"
                       />
@@ -183,7 +172,7 @@ const ListingPage = () => {
                 <Accordion.Item value='1_3'>
                   <Accordion.Control>
                     <p className="text-base text-[rgba(67, 68, 71, 1)] font-bold  bg-transparent outline-none">
-                      Filters Group
+                      {t("listing:listingFilterGroupTwo")}
                     </p>
                   </Accordion.Control>
                   <Accordion.Panel>
@@ -192,7 +181,7 @@ const ListingPage = () => {
                         <Checkbox
 
                         />
-                        <p className="text-costum-text-black">Subcategory 1</p>
+                        <p className="text-costum-text-black">{t("listing:filterTwoSubcategoryTextOne")}</p>
                       </div>
                       <p className="text-costum-silver text-right" >139</p>
                     </div>
@@ -201,7 +190,7 @@ const ListingPage = () => {
                         <Checkbox
 
                         />
-                        <p className="text-costum-text-black">Subcategory 2</p>
+                        <p className="text-costum-text-black">{t("listing:filterTwoSubcategoryTextTwo")}</p>
                       </div>
                       <p className="text-costum-silver text-right" >139</p>
                     </div>
@@ -210,7 +199,7 @@ const ListingPage = () => {
                         <Checkbox
 
                         />
-                        <p className="text-costum-text-black">Subcategory 3</p>
+                        <p className="text-costum-text-black">{t("listing:filterTwoSubcategoryTextThree")}</p>
                       </div>
                       <p className="text-costum-silver text-right" >139</p>
                     </div>
@@ -219,7 +208,7 @@ const ListingPage = () => {
                         <Checkbox
 
                         />
-                        <p className="text-costum-text-black">Subcategory 4</p>
+                        <p className="text-costum-text-black">{t("listing:filterTwoSubcategoryTextFour")}</p>
                       </div>
                       <p className="text-costum-silver text-right" >139</p>
                     </div>
@@ -228,26 +217,17 @@ const ListingPage = () => {
                         <Checkbox
 
                         />
-                        <p className="text-costum-text-black">Subcategory 5</p>
+                        <p className="text-costum-text-black">{t("listing:filterTwoSubcategoryTextFive")}</p>
                       </div>
                       <p className="text-costum-silver text-right" >139</p>
                     </div>
-                    <div className="flex justify-between mb-2">
-                      <div className="flex gap-2 items-center">
-                        <Checkbox
-
-                        />
-                        <p className="text-costum-text-black">Subcategory 6</p>
-                      </div>
-                      <p className="text-costum-silver text-right" >139</p>
-                    </div>
-
+                 
                   </Accordion.Panel>
                 </Accordion.Item>
                 <Accordion.Item value='1_4'>
                   <Accordion.Control>
                     <p className="text-base text-[rgba(67, 68, 71, 1)] font-bold  bg-transparent outline-none">
-                      Filters Group
+                    {t("listing:listingFilterGroupThree")}
                     </p>
                   </Accordion.Control>
                   <Accordion.Panel>
@@ -257,7 +237,7 @@ const ListingPage = () => {
                       </span>
                       <input
                         className=" block bg-white w-full border  rounded-md h-12 pl-9 pr-3 shadow-sm focus:outline-none sm:text-sm"
-                        placeholder="Search by product or SKU"
+                        placeholder={t("listing:listingSearchText")}
                         type="text"
                         name="search"
                       />
@@ -268,7 +248,7 @@ const ListingPage = () => {
                         <Checkbox
 
                         />
-                        <p className="text-costum-text-black">Subcategory 3</p>
+                        <p className="text-costum-text-black">{t("listing:filterThreeSubcategoryTextOne")}</p>
                       </div>
                       <p className="text-costum-silver text-right" >139</p>
                     </div>
@@ -277,7 +257,7 @@ const ListingPage = () => {
                         <Checkbox
 
                         />
-                        <p className="text-costum-text-black">Subcategory 4</p>
+                        <p className="text-costum-text-black">{t("listing:filterThreeSubcategoryTextTwo")}</p>
                       </div>
                       <p className="text-costum-silver text-right" >139</p>
                     </div>
@@ -286,7 +266,7 @@ const ListingPage = () => {
                         <Checkbox
 
                         />
-                        <p className="text-costum-text-black">Subcategory 5</p>
+                        <p className="text-costum-text-black">{t("listing:filterThreeSubcategoryTextThree")}</p>
                       </div>
                       <p className="text-costum-silver text-right" >139</p>
                     </div>
@@ -295,7 +275,7 @@ const ListingPage = () => {
                         <Checkbox
 
                         />
-                        <p className="text-costum-text-black">Subcategory 6</p>
+                        <p className="text-costum-text-black">{t("listing:filterThreeSubcategoryTextFour")}</p>
                       </div>
                       <p className="text-costum-silver text-right" >139</p>
                     </div>
@@ -305,7 +285,7 @@ const ListingPage = () => {
                 <Accordion.Item value='1_5'>
                   <Accordion.Control>
                     <p className="text-base text-[rgba(67, 68, 71, 1)] font-bold  bg-transparent outline-none">
-                      Filters Group
+                    {t("listing:listingFilterGroupRating")}
                     </p>
                   </Accordion.Control>
                   <Accordion.Panel>
@@ -365,7 +345,7 @@ const ListingPage = () => {
                 <Accordion.Item value='1_6'>
                   <Accordion.Control>
                     <p className="text-base text-[rgba(67, 68, 71, 1)] font-bold  bg-transparent outline-none">
-                      Filters Group
+                    {t("listing:listingFilterGroupColor")}
                     </p>
                   </Accordion.Control>
                   <Accordion.Panel>
@@ -388,16 +368,16 @@ const ListingPage = () => {
             </div>
           </div>
           <div className="md:w-4/5 w-full">
-            <p className="text-4xl text-costum-text-black font-bold mb-4">Home & Garden</p>
-            <p className=" mb-10 md:mb-16">Single row angular contact bearings are capable of taking radial loads, as well as axial loads in one direction. They <br /> are able to transmit radial and axial forces simultaneously. These bearings are an excellent choice for high speed, <br /> low load applications. They have a low coefficient of friction and run an</p>
+            <p className="text-4xl text-costum-text-black font-bold mb-4">{t("listing:listigtTitleText")}</p>
+            <p className=" mb-10 md:mb-16">{t("listing:listingSubTitleText")}</p>
             <div className="bg-costum-blue hidden md:block py-4 px-8 my-10">
               <div className=" flex md:justify-between justify-center flex-col md:flex-row flex-wrap items-center">
                 <div className="flex gap-4 items-center flex-col md:flex-row flex-wrap items-center justify-center">
                   <img src="/images/advertising.svg" alt="" />
                   <h1 className="text-white md:text-7xl text-5xl font-bold">-20%</h1>
-                  <p className="text-white text-center text-4xl mb-4 md:mb-0 md:text-5xl">on dairy products</p>
+                  <p className="text-white text-center text-4xl mb-4 md:mb-0 md:text-5xl">{t("listing:listingBannerText")}</p>
                 </div>
-                <button className='text-costum-blue text-base h-12 w-40 bg-white rounded-3xl'>Check offer</button>
+                <button className='text-costum-blue text-base h-12 w-40 bg-white rounded-3xl'>{t("listing:listingBannerBtnText")}</button>
               </div>
 
             </div>
@@ -411,7 +391,7 @@ const ListingPage = () => {
                   <Tabs.Tab value="messages" className="filter_tabs">
                     <img src="/images/listing_icon2.svg" alt="" />
                   </Tabs.Tab>
-                  <p className="text-costumBlack text-base md:text-xl ml-0 md:ml-5 mt-2.5"><span className='font-bold'>120</span> items found</p>
+                  <p className="text-costumBlack text-base md:text-xl ml-0 md:ml-5 mt-2.5"><span className='font-bold'>120</span> {t("listing:listingProductText")}</p>
                 </div>
                 <div className="flex gap-2 items-center">
                   <Select
@@ -1105,9 +1085,9 @@ const ListingPage = () => {
       </div>
       <div id="products" className='mb-20'>
         <div className="flex justify-center md:justify-between  mb-8 w-full">
-          <p className="text-costum-text-black font-bold text-2xl md:text-3xl ">Recomended products</p>
+          <p className="text-costum-text-black font-bold text-2xl md:text-3xl ">{t("listing:listingProductTitle")}</p>
           <div className="md:flex hidden w-49 item-center gap-1 h-6">
-            <p className="text-costum-blue text-base font-medium">Show all recomended products</p>
+            <p className="text-costum-blue text-base font-medium">{t("listing:listingProductSubTitle")}</p>
             <img src="/images/arrow_forward.svg" alt="" />
           </div>
         </div>
@@ -1654,3 +1634,12 @@ const ListingPage = () => {
 }
 
 export default ListingPage
+
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common", "listing"])),
+    },
+  }
+}

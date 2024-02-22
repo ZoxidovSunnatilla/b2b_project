@@ -105,9 +105,9 @@ const Header = () => {
           <div className="w-auto flex relative space-between gap-4 items-center ">
             <div className="flex items-center gap-2">
               <img src="/images/phone.svg" alt="" />
-              <a href="" className=" text-sm text-costum-blue font-normal ">
+              <Link href="tel:" className=" text-sm text-costum-blue font-normal ">
                 +998 71 200 00 00
-              </a>
+              </Link>
             </div>
             <div className="rotate-60 h-7 bg-costumBlack w-0.5"></div>
             <div className="flex relative gap-2 items-center">
@@ -365,9 +365,9 @@ const Header = () => {
               className="flex  gap-2 items-center  py-3 px-4 border-t-1 border-indigo-500"
             >
               <img src="/images/menu_img1.svg" alt="" />
-              <p className="text-base text-costum-blue font-medium">
+              <Link href="tel:" className="text-base text-costum-blue font-medium">
                 +32 (0) 15 28 76 67
-              </p>
+              </Link>
             </a>
           </div>
           <Accordion defaultValue="Apple" className="mb-5">

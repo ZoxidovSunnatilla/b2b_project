@@ -110,7 +110,7 @@ const FavoritesPage = () => {
                                     <div className=" flex items-center gap-10">
                                         <p className="text-2xl font-bold text-costum-blue">$1400.00</p>
                                         <button className=" w-48 flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
-                                            Add to cart
+                                            {t("favorites:productMainBtnText")}
                                             <img src="/images/down-icon.svg" alt="" />
                                         </button>
                                     </div>
@@ -155,7 +155,7 @@ const FavoritesPage = () => {
                                     <div className=" flex items-center gap-10">
                                         <p className="text-2xl font-bold text-costum-blue">$1400.00</p>
                                         <button className=" w-48 flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
-                                            Add to cart
+                                        {t("favorites:productMainBtnText")}
                                             <img src="/images/down-icon.svg" alt="" />
                                         </button>
                                     </div>
@@ -199,7 +199,7 @@ const FavoritesPage = () => {
                                     <div className=" flex items-center gap-10">
                                         <p className="text-2xl font-bold text-costum-blue">$1400.00</p>
                                         <button className=" w-48 flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
-                                            Add to cart
+                                        {t("favorites:productMainBtnText")}
                                             <img src="/images/down-icon.svg" alt="" />
                                         </button>
                                     </div>
@@ -243,7 +243,7 @@ const FavoritesPage = () => {
                                     <div className=" flex items-center gap-10">
                                         <p className="text-2xl font-bold text-costum-blue">$1400.00</p>
                                         <button className=" w-48 flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
-                                            Add to cart
+                                        {t("favorites:productMainBtnText")}
                                             <img src="/images/down-icon.svg" alt="" />
                                         </button>
                                     </div>
@@ -268,7 +268,7 @@ const FavoritesPage = () => {
                                 <p className="text-xl text-costum-blue font-bold">$1223.00 gross</p>
                             </div>
                         </div>
-                        <div className="flex  gap-3 items-center mb-4 w-full ">
+                        <div className="flex  gap-3 items-center mb-3 w-full ">
                             <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 outline-none w-24 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                             <Select
                                 placeholder="Item 1"
@@ -276,9 +276,14 @@ const FavoritesPage = () => {
                                 data={['React', 'Angular', 'Vue', 'Svelte']}
                                 rightSection={icon}
                             />
+                           
                         </div>
+                        <button className=" mb-4 w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-full text-white bg-costum-blue">
+                                        {t("favorites:productMainBtnText")}
+                                            <img src="/images/down-icon.svg" alt="" />
+                            </button>
                         <div className="flex w-full justify-center">
-                            <p className="text-sm font-medium text-costum-silver underline">delete item</p>
+                            <p className="text-sm font-medium text-costum-silver underline">{t("favorites:favoritesButtonDeleteText")}</p>
                         </div>
                     </div>
                     <div className="block w-full py-6 px-4 bg-star mb-2">
@@ -304,8 +309,12 @@ const FavoritesPage = () => {
                                 <option value="value3">Значение 3</option>
                             </select>
                         </div>
+                        <button className=" mb-4 w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-full text-white bg-costum-blue">
+                                        {t("favorites:productMainBtnText")}
+                                            <img src="/images/down-icon.svg" alt="" />
+                            </button>
                         <div className="flex w-full justify-center">
-                            <p className="text-sm font-medium text-costum-silver underline">delete item</p>
+                            <p className="text-sm font-medium text-costum-silver underline">{t("favorites:favoritesButtonDeleteText")}</p>
                         </div>
                     </div>
                     <div className="block w-full py-6 px-4 bg-star mb-2">
@@ -331,8 +340,12 @@ const FavoritesPage = () => {
                                 <option value="value3">Значение 3</option>
                             </select>
                         </div>
+                        <button className=" mb-4 w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-full text-white bg-costum-blue">
+                                        {t("favorites:productMainBtnText")}
+                                            <img src="/images/down-icon.svg" alt="" />
+                            </button>
                         <div className="flex w-full justify-center">
-                            <p className="text-sm font-medium text-costum-silver underline">delete item</p>
+                            <p className="text-sm font-medium text-costum-silver underline">{t("favorites:favoritesButtonDeleteText")}</p>
                         </div>
                     </div>
                     <div className="block w-full py-6 px-4 bg-star">
@@ -358,8 +371,12 @@ const FavoritesPage = () => {
                                 <option value="value3">Значение 3</option>
                             </select>
                         </div>
+                        <button className=" mb-4 w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-full text-white bg-costum-blue">
+                                        {t("favorites:productMainBtnText")}
+                                            <img src="/images/down-icon.svg" alt="" />
+                            </button>
                         <div className="flex w-full justify-center">
-                            <p className="text-sm font-medium text-costum-silver underline">delete item</p>
+                            <p className="text-sm font-medium text-costum-silver underline">{t("favorites:favoritesButtonDeleteText")}</p>
                         </div>
                     </div>
                 </div>

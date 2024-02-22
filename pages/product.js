@@ -9,7 +9,6 @@ import {
   Rating,
   Select,
 } from "@mantine/core"
-import { Carousel } from '@mantine/carousel';
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
@@ -161,7 +160,7 @@ const ProductPage = () => {
 
               <div className="flex gap-3 justify-between">
                 <button className=" w-10/12 flex justify-center items-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
-                  Add to cart
+                  {t("product:productMainBtnText")}
                   <img src="/images/down-icon.svg" alt="" />
                 </button>
                 <img src="/images/share_img.svg" alt="" />

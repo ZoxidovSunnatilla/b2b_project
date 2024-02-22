@@ -8,6 +8,8 @@
     "favoritesTableTwo": "Количество",
     "favoritesTableThree": "Доступность",
     "favoritesTableFour": "Цена нетто",
-    "favoritesTableFive": "Цена брутто"
+    "favoritesTableFive": "Цена брутто",
+    "productMainBtnText": "Добавить в корзину"
+    
     
 }
