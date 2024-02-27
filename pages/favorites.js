@@ -27,18 +27,18 @@ const FavoritesPage = () => {
 
                 <div className="md:flex block justify-between items-center md:mb-10 mb-4">
                     <p className="md:text-4xl mb-4 md:mb-0 text-3xl font-bold">{t("favorites:favoritesTextTitle")}</p>
-                    <div className="flex items-center">
+                    <div className="flex items-center gap-1">
                         <img src="/images/cart_delete_icon.svg" alt="" />
                         <p className="text-base text-[#434447]">{t("favorites:favoritesTextSubTitle")}</p>
                     </div>
                 </div>
                 <div className="md:flex block md:mb-10 mb-6 justify-between">
-                    <div className="flex items-center mb-4 md:mb-0">
+                    <div className="flex items-center gap-1 mb-4 md:mb-0">
                         <img src="/images/print.svg" alt="" />
                         <p className="text-base text-[#434447]">{t("favorites:favoritesTextPrint")}</p>
                     </div>
                     <div className="flex gap-4">
-                        <button className="bg-costum-blue rounded-full w-72 h-12 text-white ">
+                        <button className="bg-costum-blue rounded-full w-max-content p-2 h-12 text-white ">
                             {t("favorites:favoritesButtonText")}
                         </button>
                         <img src="/images/social.svg" alt="" />

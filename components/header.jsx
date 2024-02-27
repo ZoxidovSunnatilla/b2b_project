@@ -57,7 +57,7 @@ const Header = () => {
         >
           <div className="w-auto flex  items-center gap-4 ">
             <div className="flex items-center">
-                
+
               <h1 className="text-sm text-costumBlack font-normal">{t("countryText")}:</h1>
 
               <Select
@@ -73,7 +73,7 @@ const Header = () => {
             </div>
             <div className="flex items-center">
               <h1 className="text-sm text-costumBlack font-normal">
-              {t("languageText")}:
+                {t("languageText")}:
               </h1>
               <Select
                 onChange={(e) => changeLanguage(e)}
@@ -88,7 +88,7 @@ const Header = () => {
             </div>
             <div className="flex items-center">
               <h1 className="text-sm text-costumBlack font-normal">
-              {t("currencyText")}:
+                {t("currencyText")}:
               </h1>
               <Select
                 placeholder="Dollar"
@@ -132,7 +132,7 @@ const Header = () => {
             <div className="flex gap-1 items-center">
               <img src="/images/user.svg" alt="" />
               <h1 className="text-sm text-costumBlack font-normal">
-              {t("userNameText")}:
+                {t("userNameText")}:
               </h1>
               <Select
                 placeholder="Surname"
@@ -213,7 +213,7 @@ const Header = () => {
               )}
             </div>
             <div className="flex gap-8">
-              <Link href="/">
+              <Link href="/compare">
                 <div className="w-max-content flex flex-col item-center">
                   <div className="relative mx-auto">
                     <img src="/images/compare_icon.svg" alt="" />
@@ -247,7 +247,7 @@ const Header = () => {
                     </Badge>
                   </div>
                   <p className="text-costum-blue text-sm font-bold uppercase mt-2">
-                  {t("headerFavoritesText")}
+                    {t("headerFavoritesText")}
                   </p>
                 </div>
               </Link>
@@ -266,7 +266,7 @@ const Header = () => {
                     </Badge>
                   </div>
                   <p className="text-costum-blue text-sm font-bold uppercase mt-2">
-                   {t("headerCartText")}
+                    {t("headerCartText")}
 
                   </p>
                 </div>
@@ -276,7 +276,7 @@ const Header = () => {
         </div>
       </div>
       <Drawer opened={opened} onClose={close}>
-        <div className="bg-white">
+        <div className="bg-white" id="mobile">
           <Accordion defaultValue="Apples" className="mb-2">
             {category ? (
               category.map((item) => (
@@ -329,35 +329,35 @@ const Header = () => {
           </a>
 
           <div className="border border-t border-b-0  border-costum-gray-500   mt-5">
-            <a
-              href=""
+            <Link
+              href="/compare"
               className="flex  gap-2 items-center  py-3 px-4 border-t-1 border-indigo-500"
             >
               <img src="/images/menu_img1.svg" alt="" />
               <p className="text-base text-costum-blue font-medium">{t("headerCompareText")}</p>
-            </a>
+            </Link>
           </div>
           <div className="border border-t border-b-0 border-costum-gray-500   ">
-            <a
-              href=""
+            <Link
+              href="/favorites"
               className="flex  gap-2 items-center  py-3 px-4 border-t-1 border-indigo-500"
             >
               <img src="/images/menu_img1.svg" alt="" />
               <p className="text-base text-costum-blue font-medium">
                 {t("headerFavoritesText")}
-                
+
               </p>
-            </a>
+            </Link>
           </div>
           <div className="border border-t border-b-0 border-costum-gray-500 ">
-            <a
+            <Link
               href=""
               className="flex  gap-2 items-center  py-3 px-4 border-t-1 border-indigo-500"
             >
               <img src="/images/menu_img1.svg" alt="" />
-                  
+
               <p className="text-base text-costum-blue font-medium">{t("messageText")}</p>
-            </a>
+            </Link>
           </div>
           <div className="border border-t border-b-0 border-costum-gray-500 mb-5 ">
             <a
@@ -370,59 +370,54 @@ const Header = () => {
               </Link>
             </a>
           </div>
-          <Accordion defaultValue="Apple" className="mb-5">
-            <Accordion.Item value="1_1">
-              <Accordion.Control>
-                <div className="flex items-center">
-                  <h1 className="text-sm text-costumBlack font-normal">
-                    {t("countryText")}:
-                  </h1>
-                  <p className="text-sm text-costumBlack font-normal ml-2 bg-transparent outline-none">
-                    Uzbekistan
-                  </p>
-                </div>
-              </Accordion.Control>
-              <Accordion.Panel>
-                <p className="text-base">Uzbekistan</p>
-                <p className="text-base">Russia</p>
-                <p className="text-base">Amerika</p>
-              </Accordion.Panel>
-            </Accordion.Item>
-            <Accordion.Item value="1_2">
-              <Accordion.Control>
-                <div className="flex items-center">
-                  <h1 className="text-sm text-costumBlack font-normal">
-                      {t("languageText")}:
-                  </h1>
-                  <p className="text-sm text-costumBlack font-normal ml-2 bg-transparent outline-none">
-                    English
-                  </p>
-                </div>
-              </Accordion.Control>
-              <Accordion.Panel>
-                <p className="text-base">English</p>
-                <p className="text-base">Russia</p>
-                <p className="text-base">Uzbek</p>
-              </Accordion.Panel>
-            </Accordion.Item>
-            <Accordion.Item value="1_3">
-              <Accordion.Control>
-                <div className="flex items-center">
-                  <h1 className="text-sm text-costumBlack font-normal">
-                    {t("currencyText")}:
-                  </h1>
-                  <p className="text-sm text-costumBlack font-normal ml-2 bg-transparent outline-none">
-                    $
-                  </p>
-                </div>
-              </Accordion.Control>
-              <Accordion.Panel>
-                <p className="text-base">UZS</p>
-                <p className="text-base">RUBL</p>
-                <p className="text-base">USD</p>
-              </Accordion.Panel>
-            </Accordion.Item>
-          </Accordion>
+          <div className="flex items-center w-full pl-[16px] border-b border-solid py-[12px]">
+            <h1 className="text-sm text-costumBlack font-normal">
+              {t("countryText")}:
+            </h1>
+            <Select
+              placeholder="Uzbekistan"
+              onChange={(e) => handleChangeCountry(country)}
+              nothingFound="No options"
+              rightSection={icon}
+              data={country?.map((item) => ({
+                value: String(item.id),
+                label: String(item.name),
+              }))}
+            />
+          </div>
+
+          <div className="flex items-center w-full pl-[16px] border-b border-solid py-[12px]">
+            <h1 className="text-sm text-costumBlack font-normal">
+              {t("languageText")}:
+            </h1>
+            <Select
+              onChange={(e) => changeLanguage(e)}
+              placeholder={router?.locale}
+              nothingFound="No options"
+              rightSection={icon}
+              data={languages?.map((item) => ({
+                value: String(item.code),
+                label: String(item.code),
+              }))}
+            />
+          </div>
+
+          <div className="flex items-center w-full pl-[16px] border-b border-solid py-[12px]">
+            <h1 className="text-sm text-costumBlack font-normal">
+              {t("currencyText")}:
+            </h1>
+            <Select
+              placeholder="Dollar"
+              onChange={(e) => handleChangeCurrency(currency)}
+              nothingFound="No options"
+              rightSection={icon}
+              data={currency?.map((item) => ({
+                value: String(item.id),
+                label: String(item.name),
+              }))}
+            />
+          </div>
+
 
           <button className="bg-costum-blue w-full rounded-3xl text-white h-12 mb-5">
             {t("headerButtonText")}

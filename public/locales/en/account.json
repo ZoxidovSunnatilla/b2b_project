@@ -1,0 +1,39 @@
+{
+    "accountTabOne": "Dashboard",
+    "accountTabTwo": "Quotes",
+    "accountTabThree": "Order History",
+    "accountTabFour": "Most Frequently Bought",
+    "accountTabFive": "Returns and Complaints",
+    "accountTabSix": "Account Data",
+    "accountTabSeven": "Company Data",
+    "accountTabAge": "Shipping Addresses",
+    "accountTabNine": "Store Credit",
+    "accountTabTen": "Roles and Permissions",
+    "accountTabEleven": "Users",
+    "accountTabTwelve": "Subscriptions and Privacy",
+    "accountTabThreeTextOne": "Order Number",
+    "accountTabThreeTextTwo": "Date",
+    "accountTabThreeTextThree": "User",
+    "accountTabThreeTextFour": "Status",
+    "accountTabThreeTextFive": "Total price",
+    "accountTabSixTextOne": "Account Information",
+    "accountTabSixTextTwo": "Name:",
+    "accountTabSixTextThree": "Surname:",
+    "accountTabSixTextFour": "Login/e-mail:",
+    "accountTabSixTextFive": "Phone",
+    "accountTabSixTextSix": "Password:",
+    "accountTabSixTextSeven": "change password",
+    "accountTabSixTextAge": "Account Default Settings",
+    "accountTabSixTextNine": "Courier selection",
+    "accountTabSixTextTen": "Form of sending the invoice",
+    "accountTabSixTextEleven": "Payment method",
+    "accountTabSixTextTwelve": "Shipping e-mail address",
+    "moreActions": "More actions",
+    "moreDetails": "More details"
+    
+    
+    
+    
+    
+    
+}

@@ -180,10 +180,10 @@ const Home = () => {
             <p className="text-white font-bold mb-4 text-[28px]">
               {t("advertisingTextOne")}
             </p>
-            <p className="text-white text-base w-[344px] mb-8 font-normal text-xl">
+            <p className="text-white text-base md:w-[344px] w-full mb-8 font-normal text-xl">
               {t("advertisingTextTwo")}
             </p>
-            <button className="bg-white md:w-[181px] w-[166px] text-costum-blue font-bold py-2.5 px-8 rounded-full">
+            <button className="bg-white md:w-max-content w-max-content text-costum-blue font-bold py-2.5 px-8 rounded-full">
               {t("advertisingButtonText")}
             </button>
           </div>
@@ -227,10 +227,10 @@ const Home = () => {
               <p className="text-base font-medium md:w-[408px] w-full text-costumBlack mb-6 md:mb-10">
                 {t("dpdTextTwo")}
               </p>
-              <div className="mb-3 md:mb-0 rounded-3xl bg-costum-blue w-36 flex items-center justify-center h-12 text-white font-bold">
+              <button className="mb-3 md:mb-0 rounded-3xl bg-costum-blue w-max-content p-2  flex items-center justify-center h-12 text-white font-bold">
                 {t("dpdButtonText")}
-              </div>
-            </div>
+              </button>
+            </div> 
             <div className="md:w-2/4 w-full flex justify-end">
               <img src="/images/dpd_img.svg" alt="" />
             </div>
