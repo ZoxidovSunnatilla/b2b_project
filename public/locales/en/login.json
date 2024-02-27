@@ -1,6 +1,6 @@
 {
-    "loginTitleText": " Welcome back! Log In",
+    "loginTitleText": "Welcome! Login",
     "loginLabelText": "Your favorite library",
-    "loginInputText": "Your favorite library",
+    "loginInputText": "Select value",
     "loginBtnText": "Login"
 }

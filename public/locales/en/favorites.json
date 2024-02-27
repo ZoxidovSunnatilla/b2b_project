@@ -8,6 +8,8 @@
     "favoritesTableTwo": "Quantity",
     "favoritesTableThree": "Availability",
     "favoritesTableFour": "Price net",
-    "favoritesTableFive": "Price gross"
+    "favoritesTableFive": "Price gross",
+    "productMainBtnText": "Add to cart"
+    
     
 }

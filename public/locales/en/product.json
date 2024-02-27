@@ -19,6 +19,7 @@
     "similarTextTitle": "Similar products",
     "similarTextSubTitle": "Show all recommended products",
     "relatedTextTitle": "Related products",
-    "relatedTextSubTitle": "Show all recommended products"
+    "relatedTextSubTitle": "Show all recommended products",
+    "productMainBtnText": "Add to cart"
     
 }

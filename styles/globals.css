@@ -270,6 +270,18 @@ body {
     padding-right: 10px;
 
   }
+  #cart .m-6c018570 {
+    background: #fff !important;
+    height: 48px !important;
+    width: 100% !important;
+    border-radius: 8px;
+    border: 1px solid #EAECEE !important;
+    display: flex;
+    align-items: center;
+}
+#cart .m-46b77525 {
+  width: 100% !important;
+}
   .favorites_table .m-46b77525 {
     width: 250px !important;
     height: 48px !important;
@@ -474,13 +486,21 @@ body {
   background-color: #ECECEC;
 }
 
-@media screen and (min-width: 1500px) and (max-width: 1920px) {
+@media screen and (min-width: 1700px) and (max-width: 1920px) {
   #menu {
     width: 1893px !important;
     margin: 0px auto;
   }
 }
-
+@media screen and (min-width: 1590px) and (max-width: 1700px) {
+  #menu {
+    width: 1593px !important;
+    margin: 0px auto;
+  }
+  .container{
+    width: 1420px;
+  }
+}
 @media screen and (min-width: 1440px) and (max-width: 1440px) {
   #menu {
     width: 1413px !important;
@@ -489,4 +509,54 @@ body {
     width: 100% !important;
   }
 }
-
+@media screen and (min-width: 2000px) and (max-width: 2600px) {
+  #menu {
+    width: 2533px !important;
+    margin: 0px auto;
+  }
+ 
+}
+#account .m-c3381914[data-active][data-active] {
+  background-color: transparent !important;
+  font-weight: bold;
+}
+#account .m-c3381914:hover {
+  background-color: transparent !important;
+  font-weight: bold;
+}
+#account .m-89d60db1[data-variant=pills]  {
+  width: 100% !important;
+}
+#account .m-b242d975 {
+  background-color: transparent !important;
+}
+#account_data .m-8fb7ebe7{
+  height: 48px !important;
+  border-radius: 8px !important;
+  border: 1px solid #EAECEE !important;
+  
+}
+#account_data .input_select{
+  width: 100%;
+  height: 48px;
+  border-radius: 8px;
+  background-color: #fff;
+  font-size: 14px;
+  border: 1px solid #EAECEE;
+  outline: none;
+  padding-left: 16px;
+}
+#account_data .input_select::placeholder{
+  color: #0C0C0C;
+}
+#tabs_mobile2 .m-4ba554d4 {
+  padding: 0px !important;
+  padding-top: 16px !important;
+}
+#mobile .m-46b77525 {
+  width: 80% !important;
+}
+#mobile .m-8fb7ebe7{
+  border: 0px !important;
+  padding-left: 10px !important;
+}
