@@ -6,7 +6,44 @@ import Footer from "../components/footer"
 import Header from "../components/header"
 import "@mantine/carousel/styles.css";
 import { appWithTranslation } from "next-i18next";
+import localFont from "next/font/local"
 
+
+
+const AcidGrotesk = localFont({
+  src: [
+    {
+      path: "../public/font/BasierCircle-Bold.eot",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../public/font/BasierCircle-Medium.eot",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/font/BasierCircle-Regular.eot",
+      weight: "normal",
+      style: "normal",
+    },
+    {
+      path: "../public/font/BasierSquare-Medium.eot",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/font/BasierSquare-Regular.eot",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/font/BasierSquare-Bold.eot",
+      weight: "bold",
+      style: "normal",
+    },
+  ],
+})
 
 function App({ Component, pageProps }) {
   return (
@@ -29,10 +66,12 @@ function App({ Component, pageProps }) {
         },
       }}
     >
-      <div className="mx-auto min-h-screen">
-        <Header />
-        <Component {...pageProps} />
-        <Footer />
+      <div  className={AcidGrotesk.className}>
+        <div className="mx-auto min-h-screen ">
+          <Header />
+          <Component {...pageProps} />
+          <Footer />
+        </div>
       </div>
     </MantineProvider>
   )
