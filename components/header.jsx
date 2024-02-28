@@ -19,7 +19,7 @@ const Header = () => {
   const [category, setCategory] = useState([])
   const { t } = useTranslation()
   const router = useRouter()
-  const languages = [{ code: "en" }, { code: "ru" }, { code: "uz" }]
+  const languages = [{ code: "English" }, { code: "Русский" }, { code: "O’zbekcha" }]
 
   useEffect(() => {
     getData()
@@ -80,6 +80,7 @@ const Header = () => {
                 placeholder={router?.locale}
                 nothingFound="No options"
                 rightSection={icon}
+                className="!w-12"
                 data={languages?.map((item) => ({
                   value: String(item.code),
                   label: String(item.code),
@@ -94,6 +95,7 @@ const Header = () => {
                 placeholder="Dollar"
                 onChange={(e) => handleChangeCurrency(currency)}
                 nothingFound="No options"
+                className="!w-12"
                 rightSection={icon}
                 data={currency?.map((item) => ({
                   value: String(item.id),
