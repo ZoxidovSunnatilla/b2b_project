@@ -19,7 +19,7 @@ const Header = () => {
   const [category, setCategory] = useState([])
   const { t } = useTranslation()
   const router = useRouter()
-  const languages = [{ code: "English" }, { code: "Русский" }, { code: "O’zbekcha" }]
+  const languages = [{ code: "en" }, { code: "ru" }, { code: "uz" }]
 
   useEffect(() => {
     getData()
@@ -95,7 +95,7 @@ const Header = () => {
                 placeholder="Dollar"
                 onChange={(e) => handleChangeCurrency(currency)}
                 nothingFound="No options"
-                className="!w-12"
+                className="!w-[75px]"
                 rightSection={icon}
                 data={currency?.map((item) => ({
                   value: String(item.id),
@@ -211,7 +211,8 @@ const Header = () => {
                   </Menu>
                 ))
               ) : (
-                <h1>Hech nma yoq</h1>
+                <>
+                </>
               )}
             </div>
             <div className="flex gap-8">
