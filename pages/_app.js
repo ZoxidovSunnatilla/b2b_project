@@ -4,11 +4,11 @@ import "@mantine/dates/styles.css"
 import { MantineProvider } from "@mantine/core"
 import Footer from "../components/footer"
 import Header from "../components/header"
-import "@mantine/carousel/styles.css";
-import { appWithTranslation } from "next-i18next";
+import "@mantine/carousel/styles.css"
+import { appWithTranslation } from "next-i18next"
 import localFont from "next/font/local"
-
-
+import Script from "next/script"
+import { useRouter } from "next/router"
 
 const AcidGrotesk = localFont({
   src: [
@@ -46,34 +46,45 @@ const AcidGrotesk = localFont({
 })
 
 function App({ Component, pageProps }) {
+  const router = useRouter()
   return (
-    <MantineProvider
-      theme={{
-        primaryColor: "bright-pink",
-        colors: {
-          "bright-pink": [
-            "#629CFF",
-            "#629CFF",
-            "#2580FF",
-            "#2580FF",
-            "#2580FF",
-            "#1071FF",
-            "#1071FF",
-            "#1071FF",
-            "#1071FF",
-            "#1071FF",
-          ],
-        },
-      }}
-    >
-      <div  className={AcidGrotesk.className}>
-        <div className="mx-auto min-h-screen ">
-          <Header />
-          <Component {...pageProps} />
-          <Footer />
+    <>
+      <Script src="/eimzo/e-imzo.js" />
+      <Script src="/eimzo/e-imzo-client.js" />
+      <MantineProvider
+        theme={{
+          primaryColor: "bright-pink",
+          colors: {
+            "bright-pink": [
+              "#629CFF",
+              "#629CFF",
+              "#2580FF",
+              "#2580FF",
+              "#2580FF",
+              "#1071FF",
+              "#1071FF",
+              "#1071FF",
+              "#1071FF",
+              "#1071FF",
+            ],
+          },
+        }}
+      >
+        <div className={AcidGrotesk.className}>
+          <div className="mx-auto min-h-screen ">
+            {router.pathname === "/login" ? (
+              <Component {...pageProps} />
+            ) : (
+              <>
+                <Header />
+                <Component {...pageProps} />
+                <Footer />
+              </>
+            )}
+          </div>
         </div>
-      </div>
-    </MantineProvider>
+      </MantineProvider>{" "}
+    </>
   )
 }
 export default appWithTranslation(App)
