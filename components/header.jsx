@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { Badge, Menu, Input, Drawer, Accordion, Select } from "@mantine/core"
+import { Badge, Menu, Input, Drawer, Accordion, Select, Modal } from "@mantine/core"
 import { useDisclosure } from "@mantine/hooks"
 import MenuHeader from "./Menu"
 import SearchMenu from "./SearchMenu"
@@ -11,6 +11,7 @@ import { useRouter } from "next/router"
 
 const Header = () => {
   const [opened, { open, close }] = useDisclosure(false)
+
   const search_icon = <img src="/images/search.svg" />
   const icon = <img src="/images/down_icon_select.svg" alt="" />
   const [country, setCounty] = useState([])
@@ -185,7 +186,7 @@ const Header = () => {
               </Menu.Dropdown>
             </Menu>
           </label>
-          <button className="h-12 w-[198px] bg-costum-blue rounded-full text-white text-base hidden md:block">
+          <button  className="h-12 w-[198px] bg-costum-blue rounded-full text-white text-base hidden md:block">
             {t("headerButtonText")}
           </button>
         </div>
@@ -427,6 +428,7 @@ const Header = () => {
           </button>
         </div>
       </Drawer>
+   
     </div>
   )
 }
