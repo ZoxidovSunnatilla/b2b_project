@@ -43,9 +43,7 @@ function Brands() {
         </div>
       </div>
 
-      {loading ? (
-        <BrandSkeleton />
-      ) : (
+      {data ? (
         <div className="w-full mb-4  md:mb-28 gap-2">
           <Carousel
             withIndicators
@@ -62,9 +60,12 @@ function Brands() {
               <Carousel.Slide key={item.id}>
                 <img src={item.logo || "/images/brand_img1.svg"} alt="" />
               </Carousel.Slide>
-            ))): (<h1 className="text-red">Error</h1>)}
+            ))): (<BrandSkeleton />)}
           </Carousel>
         </div>
+      ) : (
+        <BrandSkeleton />
+        
       )}
       <div className="flex w-49 item-center gap-1 w-full mb-8  justify-center h-6 md:hidden mx-auto ">
         <p className="text-costum-blue text-base font-medium ">

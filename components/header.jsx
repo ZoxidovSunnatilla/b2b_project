@@ -80,6 +80,7 @@ const Header = () => {
                 placeholder={router?.locale}
                 nothingFound="No options"
                 rightSection={icon}
+                className="!w-12"
                 data={languages?.map((item) => ({
                   value: String(item.code),
                   label: String(item.code),
@@ -94,6 +95,7 @@ const Header = () => {
                 placeholder="Dollar"
                 onChange={(e) => handleChangeCurrency(currency)}
                 nothingFound="No options"
+                className="!w-[75px]"
                 rightSection={icon}
                 data={currency?.map((item) => ({
                   value: String(item.id),
@@ -209,7 +211,8 @@ const Header = () => {
                   </Menu>
                 ))
               ) : (
-                <h1>Hech nma yoq</h1>
+                <>
+                </>
               )}
             </div>
             <div className="flex gap-8">
