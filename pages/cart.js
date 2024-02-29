@@ -29,7 +29,7 @@ const Cart = () => {
               <p className="md:text-xl text-base mb-2 font-bold">{t("cart:searchBlogTitle")}</p>
               <div className="flex w-full justify-between gap-3 md:gap-0 flex-wrap md:flex-row " id="cart">
                 <input
-                  class=" block bg-white w-full md:w-2/4 border  rounded-md h-12 pl-5 pr-3 shadow-sm focus:outline-none sm:text-sm"
+                  className=" block bg-white w-full md:w-2/4 border  rounded-md h-12 pl-5 pr-3 shadow-sm focus:outline-none sm:text-sm"
                   placeholder={t("cart:searchBlogInput")}
                   type="text"
                   name="search"
@@ -104,7 +104,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -136,7 +136,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -168,7 +168,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -200,7 +200,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -232,7 +232,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -264,7 +264,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -296,7 +296,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -342,7 +342,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -374,7 +374,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -406,7 +406,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -438,7 +438,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -470,7 +470,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -502,7 +502,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -534,7 +534,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -562,7 +562,7 @@ const Cart = () => {
                   <div className="bg-bg-voltiva p-4 mb-20 rounded-b-lg">
                     <div className="flex gap-3">
                       <input
-                        class=" block bg-white w-auto border  rounded-md h-12 pl-3 w-96 pr-3 shadow-sm focus:outline-none sm:text-sm"
+                        className=" block bg-white w-auto border  rounded-md h-12 pl-3 w-96 pr-3 shadow-sm focus:outline-none sm:text-sm"
                         placeholder={t("cart:cartPromoCode")}
                         type="text"
                       />
@@ -631,7 +631,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -663,7 +663,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -695,7 +695,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -727,7 +727,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -759,7 +759,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -791,7 +791,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -823,7 +823,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -869,7 +869,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -901,7 +901,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -933,7 +933,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -965,7 +965,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -997,7 +997,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -1029,7 +1029,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -1061,7 +1061,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -1089,7 +1089,7 @@ const Cart = () => {
                   <div className="bg-bg-voltiva p-4 mb-20 rounded-b-lg">
                     <div className="flex gap-3">
                       <input
-                        class=" block bg-white w-auto border  rounded-md h-12 pl-3 w-96 pr-3 shadow-sm focus:outline-none sm:text-sm"
+                        className=" block bg-white w-auto border  rounded-md h-12 pl-3 w-96 pr-3 shadow-sm focus:outline-none sm:text-sm"
                         placeholder={t("cart:cartPromoCode")}
                         type="text"
                       />
@@ -1158,7 +1158,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -1190,7 +1190,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -1222,7 +1222,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -1254,7 +1254,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -1286,7 +1286,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -1318,7 +1318,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -1350,7 +1350,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -1396,7 +1396,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -1428,7 +1428,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -1460,7 +1460,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -1492,7 +1492,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -1524,7 +1524,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -1556,7 +1556,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -1588,7 +1588,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -1616,7 +1616,7 @@ const Cart = () => {
                   <div className="bg-bg-voltiva p-4 mb-20 rounded-b-lg">
                     <div className="flex gap-3">
                       <input
-                        class=" block bg-white w-auto border  rounded-md h-12 pl-3 w-96 pr-3 shadow-sm focus:outline-none sm:text-sm"
+                        className=" block bg-white w-auto border  rounded-md h-12 pl-3 w-96 pr-3 shadow-sm focus:outline-none sm:text-sm"
                         placeholder={t("cart:cartPromoCode")}
                         type="text"
                       />
@@ -1686,7 +1686,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -1718,7 +1718,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -1750,7 +1750,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -1782,7 +1782,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -1814,7 +1814,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -1846,7 +1846,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -1878,7 +1878,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -1924,7 +1924,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -1956,7 +1956,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -1988,7 +1988,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -2020,7 +2020,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -2052,7 +2052,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -2084,7 +2084,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -2116,7 +2116,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -2144,7 +2144,7 @@ const Cart = () => {
                   <div className="bg-bg-voltiva p-4 mb-20 rounded-b-lg">
                     <div className="flex gap-3">
                       <input
-                        class=" block bg-white w-auto border  rounded-md h-12 pl-3 w-96 pr-3 shadow-sm focus:outline-none sm:text-sm"
+                        className=" block bg-white w-auto border  rounded-md h-12 pl-3 w-96 pr-3 shadow-sm focus:outline-none sm:text-sm"
                         placeholder={t("cart:cartPromoCode")}
                         type="text"
                       />
@@ -2213,7 +2213,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -2245,7 +2245,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -2277,7 +2277,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -2309,7 +2309,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -2341,7 +2341,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -2373,7 +2373,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -2405,7 +2405,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -2451,7 +2451,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -2483,7 +2483,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -2515,7 +2515,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -2547,7 +2547,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -2579,7 +2579,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -2611,7 +2611,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -2643,7 +2643,7 @@ const Cart = () => {
                                 <p className="text-xl text-costumBlack font-bold mb-2">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 <p className="text-sm text-[#3DB62A]">{t("cart:cartDelivery")} April 4th</p>
                                 <div className="flex  mt-4 gap-3 w-full  ">
-                                  <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                  <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0C0C0C] outline-none w-12 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                   <Select
                                     placeholder="Item"
                                     className='Select_product'
@@ -2671,7 +2671,7 @@ const Cart = () => {
                   <div className="bg-bg-voltiva p-4 mb-20 rounded-b-lg">
                     <div className="flex gap-3">
                       <input
-                        class=" block bg-white w-auto border  rounded-md h-12 pl-3 w-96 pr-3 shadow-sm focus:outline-none sm:text-sm"
+                        className=" block bg-white w-auto border  rounded-md h-12 pl-3 w-96 pr-3 shadow-sm focus:outline-none sm:text-sm"
                         placeholder={t("cart:cartPromoCode")}
                         type="text"
                       />
@@ -2838,7 +2838,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -2870,7 +2870,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -2902,7 +2902,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -2934,7 +2934,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -2966,7 +2966,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -3012,7 +3012,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -3044,7 +3044,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -3076,7 +3076,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -3108,7 +3108,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -3140,7 +3140,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -3162,7 +3162,7 @@ const Cart = () => {
                     <div className="bg-bg-voltiva p-4 mb-20">
                       <div className="flex gap-3">
                         <input
-                          class=" block bg-white w-auto border  rounded-md h-12 pl-3 w-96 pr-3 shadow-sm focus:outline-none sm:text-sm"
+                          className=" block bg-white w-auto border  rounded-md h-12 pl-3 w-96 pr-3 shadow-sm focus:outline-none sm:text-sm"
                           placeholder={t("cart:cartPromoCode")}
                           type="text"
                         />
@@ -3245,7 +3245,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -3277,7 +3277,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -3309,7 +3309,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -3341,7 +3341,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -3373,7 +3373,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -3419,7 +3419,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -3451,7 +3451,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -3483,7 +3483,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -3515,7 +3515,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -3547,7 +3547,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -3569,7 +3569,7 @@ const Cart = () => {
                     <div className="bg-bg-voltiva p-4 mb-20">
                       <div className="flex gap-3">
                         <input
-                          class=" block bg-white w-auto border  rounded-md h-12 pl-3 w-96 pr-3 shadow-sm focus:outline-none sm:text-sm"
+                          className=" block bg-white w-auto border  rounded-md h-12 pl-3 w-96 pr-3 shadow-sm focus:outline-none sm:text-sm"
                           placeholder={t("cart:cartPromoCode")}
                           type="text"
                         />
@@ -3652,7 +3652,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -3684,7 +3684,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -3716,7 +3716,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -3748,7 +3748,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -3780,7 +3780,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -3826,7 +3826,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -3858,7 +3858,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -3890,7 +3890,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -3922,7 +3922,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -3954,7 +3954,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -3976,7 +3976,7 @@ const Cart = () => {
                     <div className="bg-bg-voltiva p-4 mb-20">
                       <div className="flex gap-3">
                         <input
-                          class=" block bg-white w-auto border  rounded-md h-12 pl-3 w-96 pr-3 shadow-sm focus:outline-none sm:text-sm"
+                          className=" block bg-white w-auto border  rounded-md h-12 pl-3 w-96 pr-3 shadow-sm focus:outline-none sm:text-sm"
                           placeholder={t("cart:cartPromoCode")}
                           type="text"
                         />
@@ -4059,7 +4059,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -4091,7 +4091,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -4123,7 +4123,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -4155,7 +4155,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -4187,7 +4187,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -4233,7 +4233,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -4265,7 +4265,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -4297,7 +4297,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -4329,7 +4329,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -4361,7 +4361,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -4383,7 +4383,7 @@ const Cart = () => {
                     <div className="bg-bg-voltiva p-4 mb-20">
                       <div className="flex gap-3">
                         <input
-                          class=" block bg-white w-auto border  rounded-md h-12 pl-3 w-96 pr-3 shadow-sm focus:outline-none sm:text-sm"
+                          className=" block bg-white w-auto border  rounded-md h-12 pl-3 w-96 pr-3 shadow-sm focus:outline-none sm:text-sm"
                           placeholder={t("cart:cartPromoCode")}
                           type="text"
                         />
@@ -4466,7 +4466,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -4498,7 +4498,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -4530,7 +4530,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -4562,7 +4562,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -4594,7 +4594,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -4640,7 +4640,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -4672,7 +4672,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -4704,7 +4704,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -4736,7 +4736,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -4768,7 +4768,7 @@ const Cart = () => {
                                     <p className="text-xl  text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                   </div>
                                   <div className="flex  mt-2 mb-2 gap-3 w-full  ">
-                                    <input type="text" name="number" class=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
+                                    <input type="text" name="number" className=" px-3 py-2 h-12 text-center bg-white border shadow-sm border-slate-300 placeholder-[#0c0c0c] outline-none w-1/4 md:w-24 block  rounded-md sm:text-sm " placeholder="1" />
                                     <Select
                                       placeholder="Item"
                                       className='Select_product'
@@ -4790,7 +4790,7 @@ const Cart = () => {
                     <div className="bg-bg-voltiva p-4 mb-20">
                       <div className="flex gap-3">
                         <input
-                          class=" block bg-white w-auto border  rounded-md h-12 pl-3 w-96 pr-3 shadow-sm focus:outline-none sm:text-sm"
+                          className=" block bg-white w-auto border  rounded-md h-12 pl-3 w-96 pr-3 shadow-sm focus:outline-none sm:text-sm"
                           placeholder={t("cart:cartPromoCode")}
                           type="text"
                         />

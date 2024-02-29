@@ -1,5 +1,13 @@
 import React, { useEffect, useState } from "react"
-import { Badge, Menu, Input, Drawer, Accordion, Select } from "@mantine/core"
+import {
+  Badge,
+  Menu,
+  Input,
+  Drawer,
+  Accordion,
+  Select,
+  Modal,
+} from "@mantine/core"
 import { useDisclosure } from "@mantine/hooks"
 import MenuHeader from "./Menu"
 import SearchMenu from "./SearchMenu"
@@ -8,9 +16,9 @@ import { requests } from "@/src/services/request"
 import { useTranslation } from "next-i18next"
 import { useRouter } from "next/router"
 
-
 const Header = () => {
   const [opened, { open, close }] = useDisclosure(false)
+
   const search_icon = <img src="/images/search.svg" />
   const icon = <img src="/images/down_icon_select.svg" alt="" />
   const [country, setCounty] = useState([])
@@ -46,8 +54,8 @@ const Header = () => {
   }
   const changeLanguage = (lang) => {
     router.push(router.asPath, router.asPath, { locale: lang })
-
   }
+
   return (
     <div className="  ">
       <div className=" bg-costum-gray hidden md:flex">
@@ -57,13 +65,13 @@ const Header = () => {
         >
           <div className="w-auto flex  items-center gap-4 ">
             <div className="flex items-center">
-
-              <h1 className="text-sm text-costumBlack font-normal">{t("countryText")}:</h1>
+              <h1 className="text-sm text-costumBlack font-normal">
+                {t("countryText")}:
+              </h1>
 
               <Select
                 placeholder="Uzbekistan"
                 onChange={(e) => handleChangeCountry(country)}
-                nothingFound="No options"
                 rightSection={icon}
                 data={country?.map((item) => ({
                   value: String(item.id),
@@ -78,7 +86,6 @@ const Header = () => {
               <Select
                 onChange={(e) => changeLanguage(e)}
                 placeholder={router?.locale}
-                nothingFound="No options"
                 rightSection={icon}
                 className="!w-12"
                 data={languages?.map((item) => ({
@@ -94,7 +101,6 @@ const Header = () => {
               <Select
                 placeholder="Dollar"
                 onChange={(e) => handleChangeCurrency(currency)}
-                nothingFound="No options"
                 className="!w-[75px]"
                 rightSection={icon}
                 data={currency?.map((item) => ({
@@ -107,7 +113,10 @@ const Header = () => {
           <div className="w-auto flex relative space-between gap-4 items-center ">
             <div className="flex items-center gap-2">
               <img src="/images/phone.svg" alt="" />
-              <Link href="tel:" className=" text-sm text-costum-blue font-normal ">
+              <Link
+                href="tel:"
+                className=" text-sm text-costum-blue font-normal "
+              >
                 +998 71 200 00 00
               </Link>
             </div>
@@ -170,7 +179,7 @@ const Header = () => {
           <Link href="/">
             <img src="/images/ABUsell.svg" alt="" className="hidden md:flex" />
           </Link>
-          <label class="relative block w-full md:w-1/3 menu">
+          <label className="relative block w-full md:w-1/3 menu">
             <Menu classNames=" w-full ">
               <Menu.Target>
                 <Input
@@ -211,8 +220,7 @@ const Header = () => {
                   </Menu>
                 ))
               ) : (
-                <>
-                </>
+                <></>
               )}
             </div>
             <div className="flex gap-8">
@@ -270,7 +278,6 @@ const Header = () => {
                   </div>
                   <p className="text-costum-blue text-sm font-bold uppercase mt-2">
                     {t("headerCartText")}
-
                   </p>
                 </div>
               </Link>
@@ -337,7 +344,9 @@ const Header = () => {
               className="flex  gap-2 items-center  py-3 px-4 border-t-1 border-indigo-500"
             >
               <img src="/images/menu_img1.svg" alt="" />
-              <p className="text-base text-costum-blue font-medium">{t("headerCompareText")}</p>
+              <p className="text-base text-costum-blue font-medium">
+                {t("headerCompareText")}
+              </p>
             </Link>
           </div>
           <div className="border border-t border-b-0 border-costum-gray-500   ">
@@ -348,7 +357,6 @@ const Header = () => {
               <img src="/images/menu_img1.svg" alt="" />
               <p className="text-base text-costum-blue font-medium">
                 {t("headerFavoritesText")}
-
               </p>
             </Link>
           </div>
@@ -359,7 +367,9 @@ const Header = () => {
             >
               <img src="/images/menu_img1.svg" alt="" />
 
-              <p className="text-base text-costum-blue font-medium">{t("messageText")}</p>
+              <p className="text-base text-costum-blue font-medium">
+                {t("messageText")}
+              </p>
             </Link>
           </div>
           <div className="border border-t border-b-0 border-costum-gray-500 mb-5 ">
@@ -368,7 +378,10 @@ const Header = () => {
               className="flex  gap-2 items-center  py-3 px-4 border-t-1 border-indigo-500"
             >
               <img src="/images/menu_img1.svg" alt="" />
-              <Link href="tel:" className="text-base text-costum-blue font-medium">
+              <Link
+                href="tel:"
+                className="text-base text-costum-blue font-medium"
+              >
                 +32 (0) 15 28 76 67
               </Link>
             </a>
@@ -380,7 +393,6 @@ const Header = () => {
             <Select
               placeholder="Uzbekistan"
               onChange={(e) => handleChangeCountry(country)}
-              nothingFound="No options"
               rightSection={icon}
               data={country?.map((item) => ({
                 value: String(item.id),
@@ -396,7 +408,6 @@ const Header = () => {
             <Select
               onChange={(e) => changeLanguage(e)}
               placeholder={router?.locale}
-              nothingFound="No options"
               rightSection={icon}
               data={languages?.map((item) => ({
                 value: String(item.code),
@@ -412,7 +423,6 @@ const Header = () => {
             <Select
               placeholder="Dollar"
               onChange={(e) => handleChangeCurrency(currency)}
-              nothingFound="No options"
               rightSection={icon}
               data={currency?.map((item) => ({
                 value: String(item.id),
@@ -420,7 +430,6 @@ const Header = () => {
               }))}
             />
           </div>
-
 
           <button className="bg-costum-blue w-full rounded-3xl text-white h-12 mb-5">
             {t("headerButtonText")}
