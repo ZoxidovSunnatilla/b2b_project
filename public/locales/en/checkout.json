@@ -1,0 +1,80 @@
+{
+    "stepperTextOne": "Billing & Shipping Address",
+    "stepperTextTwo": "Shipping and Payment Method",
+    "stepperTextThree": "Order Summary",
+    "stepperTextFour": "Payment",
+    "stepOneBoxOneTextOne": "Billiing address",
+    "stepOneBoxOneTextTwo": "Company Name:",
+    "stepOneBoxOneTextThree": "TAX ID:",
+    "stepOneBoxOneTextFour": "Address:",
+    "stepOneBoxOneTextFive": "Phone:",
+    "stepOneBoxOneTextSix": "Use the same address for Shipping",
+    "stepOneBoxOneTextSeven": "Use the same address for All Carts",
+    "stepOneBoxTwoTextOne": "Shipping address",
+    "stepOneBoxTwoTextTwo": "Choose from saved addresses",
+    "stepOneBoxTwoTextThree": "Use the same address for All Carts",
+    "stepOneBoxTwoTextFour": "Remove new shippin address",
+    "stepOneBoxThreeTextOne": "Add New Shipping Address",
+    "stepOneBoxThreeTextTwo": "Address name",
+    "stepOneBoxThreeTextThree": "Name",
+    "stepOneBoxThreeTextFour": "Surname",
+    "stepOneBoxThreeTextFive": "E-mail",
+    "stepOneBoxThreeTextSix": "Phone",
+    "stepOneBoxThreeTextSeven": "Street",
+    "stepOneBoxThreeTextAge": "City",
+    "stepOneBoxThreeTextNine": "Postal code",
+    "stepOneBoxThreeTextTen": "State/province",
+    "stepOneBoxThreeTextEleven": "Country",
+    "stepOneBoxThreeTextTwelve": "Cancel",
+    "stepOneBoxThreeTextThirteen": "Save new shipping address",
+    "stepTwoBoxOneTextOne": "Shipping method",
+    "stepTwoBoxOneTextTwo": "Choose shipping method:",
+    "stepTwoBoxOneTextThree": "DHL", 
+    "stepTwoBoxOneTextFour": "Inpost",
+    "stepTwoBoxOneTextFive": "UPS",
+    "stepTwoBoxOneTextSix": "Use the same shipping method for all carts",
+    "stepTwoBoxOneTextSeven": "Choose delivery date",
+    "stepTwoBoxOneTextAge": "Use the same date for all carts",
+    "stepTwoBoxTwoTextOne": "Payment method",
+    "stepTwoBoxTwoTextTwo": "Choose payment method:",
+    "stepTwoBoxTwoTextThree": "Bank Transfer",
+    "stepTwoBoxTwoTextFour": "PayU",
+    "stepTwoBoxTwoTextFive": "Cash on deleviry",
+    "stepTwoBoxTwoTextSix": "Pay later", 
+    "stepTwoBoxTwoTextSeven": "Credit Balance (you have $50 to use)",
+    "stepTwoBoxTwoTextAge": "Use the same payment method for all carts",
+    "stepTwoBoxTwoBtnText": "Confirm",
+    "stepThreeBoxOneTextOne": "Billing Address:",
+    "stepThreeBoxOneTextTwo": "Shipping method:",
+    "stepThreeBoxOneTextThree": "Payment method:",
+    "stepThreeBoxOneTextFour": "Show products",
+    "stepThreeBoxOneTextFive": "Courier DHL",
+    "stepThreeBoxOneTextSix": "Cash on delivery",
+    "stepThreeBoxTwoTextOne": "Brand Name",
+    "stepThreeBoxTwoTextTwo": "items:",
+    "stepFourBoxOneTextOne": "Thank you for your order!",
+    "stepFourBoxOneTextTwo": "Order No.",
+    "stepFourBoxOneTextThree": "and",
+    "stepFourBoxOneTextFour": "We’ll email you an order confirmation with details and tracking info.",
+    "stepFourBoxOneTextFive": "Print receipt",
+    "stepFourBoxOneTextSix": "Your purchase",
+    "stepFourBoxOneTextAge": "You have successfuly placed the orders. You can check status of your orders by using our delivery status feature. You will receive an order confirmation e-mail with details of your order and a link to track its progress.",
+   
+    "stepFourBoxBtnTextOne": "Go to my account",
+    "stepFourBoxBtnTextTwo": "Continue shopping",
+    "stepFourBoxTwoTextOne": "Primary contacts for any questions",
+    "stepFourBoxTwoTextTwo": "Divanter Headquater",
+    "stepFourBoxTwoTextThree": "St. Dmowskiego 17, 53-534",
+    "stepFourBoxTwoTextFour": "Wroclaw, Poland"
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
