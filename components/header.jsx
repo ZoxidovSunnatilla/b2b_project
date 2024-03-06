@@ -15,6 +15,7 @@ import Link from "next/link"
 import { requests } from "@/src/services/request"
 import { useTranslation } from "next-i18next"
 import { useRouter } from "next/router"
+import QuickOrder from "./Home/QuickOrder"
 
 const Header = () => {
   const [opened, { open, close }] = useDisclosure(false)
@@ -194,9 +195,7 @@ const Header = () => {
               </Menu.Dropdown>
             </Menu>
           </label>
-          <button className="h-12 w-[198px] bg-costum-blue rounded-full text-white text-base hidden md:block">
-            {t("headerButtonText")}
-          </button>
+         <QuickOrder />
         </div>
       </div>
       <div className="bg-costum-gray hidden md:flex h-20 ">
