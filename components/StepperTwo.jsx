@@ -293,7 +293,7 @@ const StepperTwo = () => {
                                     <div className="w-auto h-[350px] overflow-y-scroll ">
                                         <div className="w-full bg-white rounded-lg mb-2 p-4 gap-1 flex">
                                             <img src="/images/chekoutProductImg.svg" alt="" />
-                                            <div className="flex justify-between w-full flex-col md:items-center md:gap-4 gap-2">
+                                            <div className="flex justify-between w-full md:flex-row flex-col md:items-center md:gap-4 gap-2">
                                                 <div className="text">
                                                     <p className="text-sm text-[#737B7D] md:mb-2 mb-1">{t("checkout:stepThreeBoxTwoTextOne")} | Part No. 234565</p>
                                                     <p className="md:text-xl text-base font-bold">AMBER DECOR Small Lamp 60W...</p>
@@ -307,7 +307,7 @@ const StepperTwo = () => {
                                         </div>
                                         <div className="w-full bg-white rounded-lg mb-2 p-4 gap-1 flex">
                                             <img src="/images/chekoutProductImg.svg" alt="" />
-                                            <div className="flex justify-between w-full flex-col md:items-center md:gap-4 gap-2">
+                                            <div className="flex justify-between w-full md:flex-row flex-col md:items-center md:gap-4 gap-2">
                                                 <div className="text">
                                                     <p className="text-sm text-[#737B7D] md:mb-2 mb-1">{t("checkout:stepThreeBoxTwoTextOne")} | Part No. 234565</p>
                                                     <p className="md:text-xl text-base font-bold">AMBER DECOR Small Lamp 60W...</p>
@@ -321,7 +321,7 @@ const StepperTwo = () => {
                                         </div>
                                         <div className="w-full bg-white rounded-lg mb-2 p-4 gap-1 flex">
                                             <img src="/images/chekoutProductImg.svg" alt="" />
-                                            <div className="flex justify-between w-full flex-col md:items-center md:gap-4 gap-2">
+                                            <div className="flex justify-between w-full md:flex-row flex-col md:items-center md:gap-4 gap-2">
                                                 <div className="text">
                                                     <p className="text-sm text-[#737B7D] md:mb-2 mb-1">{t("checkout:stepThreeBoxTwoTextOne")} | Part No. 234565</p>
                                                     <p className="md:text-xl text-base font-bold">AMBER DECOR Small Lamp 60W...</p>
@@ -335,7 +335,7 @@ const StepperTwo = () => {
                                         </div>
                                         <div className="w-full bg-white rounded-lg mb-2 p-4 gap-1 flex">
                                             <img src="/images/chekoutProductImg.svg" alt="" />
-                                            <div className="flex justify-between w-full flex-col md:items-center md:gap-4 gap-2">
+                                            <div className="flex justify-between w-full md:flex-row flex-col md:items-center md:gap-4 gap-2">
                                                 <div className="text">
                                                     <p className="text-sm text-[#737B7D] md:mb-2 mb-1">{t("checkout:stepThreeBoxTwoTextOne")} | Part No. 234565</p>
                                                     <p className="md:text-xl text-base font-bold">AMBER DECOR Small Lamp 60W...</p>
