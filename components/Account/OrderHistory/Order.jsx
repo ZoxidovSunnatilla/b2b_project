@@ -2,6 +2,7 @@ import React from 'react'
 import { useTranslation } from "next-i18next";
 import { Breadcrumbs, Table, Tabs } from '@mantine/core';
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import Link from 'next/link';
 
 const Order = () => {
     const { t } = useTranslation("common", "account")
@@ -56,7 +57,10 @@ const Order = () => {
                             <Table.Td>
                                 <div className=" flex items-center gap-[35px]">
                                     <p className="text-2xl font-bold text-costum-blue">$1400.00</p>
-                                    <img src="/images/more_horiz.svg" alt="" />
+                                    <Link href="/account/details">
+                                        <img src="/images/more_horiz.svg" alt="" />
+
+                                    </Link>
                                 </div>
                             </Table.Td>
                         </Table.Tr>
@@ -81,7 +85,10 @@ const Order = () => {
                             <Table.Td>
                                 <div className=" flex items-center gap-[35px]">
                                     <p className="text-2xl font-bold text-costum-blue">$1400.00</p>
-                                    <img src="/images/more_horiz.svg" alt="" />
+                                    <Link href="/account/details">
+                                        <img src="/images/more_horiz.svg" alt="" />
+
+                                    </Link>
                                 </div>
                             </Table.Td>
                         </Table.Tr>
@@ -106,7 +113,10 @@ const Order = () => {
                             <Table.Td>
                                 <div className=" flex items-center gap-[35px]">
                                     <p className="text-2xl font-bold text-costum-blue">$1400.00</p>
-                                    <img src="/images/more_horiz.svg" alt="" />
+                                    <Link href="/account/details">
+                                        <img src="/images/more_horiz.svg" alt="" />
+
+                                    </Link>
                                 </div>
                             </Table.Td>
                         </Table.Tr>
@@ -114,7 +124,7 @@ const Order = () => {
                 </Table>
             </div>
             <div className="table_mobile md:hidden block">
-            <div className="table w-full px-5 pb-3 mb-3 border-b border-solid border-[#EAECEE]">
+                <div className="table w-full px-5 pb-3 mb-3 border-b border-solid border-[#EAECEE]">
                     <p className="text-sm mb-2"> <span className='font-bold'>{t("account:accountTabThreeTextOne")} </span> 123456789</p>
                     <p className="text-sm mb-2"> <span className='font-bold'>{t("account:accountTabThreeTextTwo")} </span> 24.08.2021</p>
                     <p className="text-sm mb-2"> <span className='font-bold'>{t("account:accountTabThreeTextThree")} </span> Mark Venice</p>
@@ -133,10 +143,10 @@ const Order = () => {
                             <img src="/images/more_horiz_mobile.svg" alt="" />
                             <p className="text-sm font-medium">{t("account:moreActions")}</p>
                         </div>
-                        <div className="flex gap-1 items-center">
-                            <p className="text-sm font-medium">{t("account:moreDetails")}</p> 
+                        <Link href="/account/details" className="flex gap-1 items-center">
+                            <p className="text-sm font-medium">{t("account:moreDetails")}</p>
                             <img src="/images/down_icon_mobile.svg" alt="" />
-                        </div>
+                        </Link>
                     </div>
                 </div>
                 <div className="table w-full px-5 pb-3 mb-3 border-b border-solid border-[#EAECEE]">
@@ -158,10 +168,10 @@ const Order = () => {
                             <img src="/images/more_horiz_mobile.svg" alt="" />
                             <p className="text-sm font-medium">{t("account:moreActions")}</p>
                         </div>
-                        <div className="flex gap-1 items-center">
-                            <p className="text-sm font-medium">{t("account:moreDetails")}</p> 
+                        <Link href="/account/details" className="flex gap-1 items-center">
+                            <p className="text-sm font-medium">{t("account:moreDetails")}</p>
                             <img src="/images/down_icon_mobile.svg" alt="" />
-                        </div>
+                        </Link>
                     </div>
                 </div>
                 <div className="table w-full px-5 pb-3 mb-3 border-b border-solid border-[#EAECEE]">
@@ -183,10 +193,10 @@ const Order = () => {
                             <img src="/images/more_horiz_mobile.svg" alt="" />
                             <p className="text-sm font-medium">{t("account:moreActions")}</p>
                         </div>
-                        <div className="flex gap-1 items-center">
-                            <p className="text-sm font-medium">{t("account:moreDetails")}</p> 
+                        <Link href="/account/details" className="flex gap-1 items-center">
+                            <p className="text-sm font-medium">{t("account:moreDetails")}</p>
                             <img src="/images/down_icon_mobile.svg" alt="" />
-                        </div>
+                        </Link>
                     </div>
                 </div>
             </div>

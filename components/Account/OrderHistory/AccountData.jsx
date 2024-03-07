@@ -4,7 +4,7 @@ import { Select } from '@mantine/core';
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const AccountData = () => {
-    const { t } = useTranslation("common", "favorites")
+    const { t } = useTranslation("common", "account")
     const icon = <img src="/images/down_icon_select.svg" alt="" />
     
 
@@ -60,7 +60,7 @@ export default AccountData
 export async function getStaticProps({ locale }) {
     return {
         props: {
-            ...(await serverSideTranslations(locale, ["common", "cart"])),
+            ...(await serverSideTranslations(locale, ["common", "account"])),
         },
     }
 }
