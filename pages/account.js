@@ -2,7 +2,7 @@ import React from "react"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { Breadcrumbs, Table, Tabs, Accordion } from "@mantine/core"
-import Order from "../components/Account/OrderHistory/Orders"
+import Order from "../components/Account/OrderHistory/Order"
 import AccountData from "../components/Account/OrderHistory/AccountData"
 
 const AccountPage = () => {
