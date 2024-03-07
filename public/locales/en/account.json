@@ -29,7 +29,15 @@
     "accountTabSixTextEleven": "Payment method",
     "accountTabSixTextTwelve": "Shipping e-mail address",
     "moreActions": "More actions",
-    "moreDetails": "More details"
+    "moreDetails": "More details",
+    "accountTabAgeTextOne": "Address name",
+    "accountTabAgeTextTwo": "Street",
+    "accountTabAgeTextThree": "City",
+    "accountTabAgeTextFour": "Postal code",
+    "accountTabAgeTextFive": "Country",
+    "accountTabAgeBtnTextOne": "Find Shipping Address",
+    "accountTabAgeBtnTextTwo": "Add New Shipping Address",
+    "companyData": "Company Data"
     
     
     

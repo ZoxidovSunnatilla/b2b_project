@@ -29,5 +29,13 @@
     "accountTabSixTextEleven": "To'lov usuli",
     "accountTabSixTextTwelve": "Yetkazib berish elektron pochta manzili",
     "moreActions": "Ko'proq harakatlar",
-    "moreDetails": "Batafsil"
+    "moreDetails": "Batafsil",
+    "accountTabAgeTextOne": "Manzil",
+    "accountTabAgeTextTwo": "Ko'cha",
+    "accountTabAgeTextThree": "Shahar",
+    "accountTabAgeTextFour": "Pochta indeksi",
+    "accountTabAgeTextFive": "Mamlakat",
+    "accountTabAgeBtnTextOne": "Yetkazib berish manzilini toping",
+    "accountTabAgeBtnTextTwo": "Yangi yuk manzilini qo'shing",
+    "companyData": "Kompaniya ma'lumotlari"
 }

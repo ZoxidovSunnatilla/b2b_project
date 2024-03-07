@@ -29,7 +29,15 @@
     "accountTabSixTextEleven": "Способ оплаты",
     "accountTabSixTextTwelve": "Адрес электронной почты для доставки",
     "moreActions": "Больше действий",
-    "moreDetails": "Подробнее"
+    "moreDetails": "Подробнее",
+    "accountTabAgeTextOne": "Адрес",
+    "accountTabAgeTextTwo": "Улица",
+    "accountTabAgeTextThree": "Город",
+    "accountTabAgeTextFour": "Почтовый индекс",
+    "accountTabAgeTextFive": "Страна",
+    "accountTabAgeBtnTextOne": "Найти адрес доставки",
+    "accountTabAgeBtnTextTwo": "Добавить новый адрес доставки",
+    "companyData": "Данные компании"
     
     
     
