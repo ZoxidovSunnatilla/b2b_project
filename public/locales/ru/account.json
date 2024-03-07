@@ -37,7 +37,10 @@
     "accountTabAgeTextFive": "Страна",
     "accountTabAgeBtnTextOne": "Найти адрес доставки",
     "accountTabAgeBtnTextTwo": "Добавить новый адрес доставки",
-    "companyData": "Данные компании"
+    "companyData": "Данные компании",
+    "setDefault": "Установить по умолчанию",
+    "edit": "Редактировать",
+    "delete": "Удалить"
     
     
     

@@ -37,7 +37,10 @@
     "accountTabAgeTextFive": "Country",
     "accountTabAgeBtnTextOne": "Find Shipping Address",
     "accountTabAgeBtnTextTwo": "Add New Shipping Address",
-    "companyData": "Company Data"
+    "companyData": "Company Data",
+    "setDefault": "Set as default",
+    "edit": "Edit",
+    "delete": "Delete"
     
     
     
