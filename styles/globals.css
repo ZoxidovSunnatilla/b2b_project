@@ -2,6 +2,84 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Basier Circle";
+  src: url("../public/font/BasierCircle-Bold.eot");
+  src: local("Basier Circle Bold"), local("BasierCircle-Bold"),
+    url("../public/font/BasierCircle-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/font/BasierCircle-Bold.woff2") format("woff2"),
+    url("../public/font/BasierCircle-Bold.woff") format("woff"),
+    url("../public/font/BasierCircle-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Basier Circle";
+  src: url("../public/font/BasierCircle-Medium.eot");
+  src: local("Basier Circle Medium"), local("BasierCircle-Medium"),
+    url("../public/font/BasierCircle-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/font/BasierCircle-Medium.woff2") format("woff2"),
+    url("../public/font/BasierCircle-Medium.woff") format("woff"),
+    url("../public/font/BasierCircle-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Basier Circle";
+  src: url("../public/font/BasierCircle-Regular.eot");
+  src: local("Basier Circle Regular"), local("BasierCircle-Regular"),
+    url("../public/font/BasierCircle-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/font/BasierCircle-Regular.woff2") format("woff2"),
+    url("../public/font/BasierCircle-Regular.woff") format("woff"),
+    url("../public/font/BasierCircle-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Basier Square";
+  src: url("../public/font/BasierSquare-Medium.eot");
+  src: local("Basier Square Medium"), local("BasierSquare-Medium"),
+    url("../public/font/BasierSquare-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/font/BasierSquare-Medium.woff2") format("woff2"),
+    url("../public/font/BasierSquare-Medium.woff") format("woff"),
+    url("../public/font/BasierSquare-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Basier Square";
+  src: url("../public/font/BasierSquare-Regular.eot");
+  src: local("Basier Square Regular"), local("BasierSquare-Regular"),
+    url("../public/font/BasierSquare-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/font/BasierSquare-Regular.woff2") format("woff2"),
+    url("../public/font/BasierSquare-Regular.woff") format("woff"),
+    url("../public/font/BasierSquare-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Basier Square";
+  src: url("../public/font/BasierSquare-Bold.eot");
+  src: local("Basier Square Bold"), local("BasierSquare-Bold"),
+    url("../public/font/BasierSquare-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/font/BasierSquare-Bold.woff2") format("woff2"),
+    url("../public/font/BasierSquare-Bold.woff") format("woff"),
+    url("../public/font/BasierSquare-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
 * {
   padding: 0;
   margin: 0;
