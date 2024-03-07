@@ -149,7 +149,7 @@ const Header = () => {
               <Select
                 placeholder="Surname"
                 rightSection={icon}
-                data={["Surname", "LastName", "SurName"]}
+                data={["Login", "Account", "SurName"]}
               />
             </div>
           </div>
