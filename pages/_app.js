@@ -9,6 +9,9 @@ import { appWithTranslation } from "next-i18next"
 import localFont from "next/font/local"
 import Script from "next/script"
 import { useRouter } from "next/router"
+import { ReduxProvider } from "@/src/redux/provider"
+
+// import "./index.css"
 
 const AcidGrotesk = localFont({
   src: [
@@ -51,39 +54,41 @@ function App({ Component, pageProps }) {
     <>
       <Script src="/eimzo/e-imzo.js" />
       <Script src="/eimzo/e-imzo-client.js" />
-      <MantineProvider
-        theme={{
-          primaryColor: "bright-pink",
-          colors: {
-            "bright-pink": [
-              "#629CFF",
-              "#629CFF",
-              "#2580FF",
-              "#2580FF",
-              "#2580FF",
-              "#1071FF",
-              "#1071FF",
-              "#1071FF",
-              "#1071FF",
-              "#1071FF",
-            ],
-          },
-        }}
-      >
-        <div className={AcidGrotesk.className}>
-          <div className="mx-auto min-h-screen ">
-            {router.pathname === "/login" ? (
-              <Component {...pageProps} />
-            ) : (
-              <>
-                <Header />
+      <ReduxProvider>
+        <MantineProvider
+          theme={{
+            primaryColor: "bright-pink",
+            colors: {
+              "bright-pink": [
+                "#629CFF",
+                "#629CFF",
+                "#2580FF",
+                "#2580FF",
+                "#2580FF",
+                "#1071FF",
+                "#1071FF",
+                "#1071FF",
+                "#1071FF",
+                "#1071FF",
+              ],
+            },
+          }}
+        >
+          <div className={AcidGrotesk.className}>
+            <div className="mx-auto min-h-screen ">
+              {router.pathname === "/login" ? (
                 <Component {...pageProps} />
-                <Footer />
-              </>
-            )}
+              ) : (
+                <>
+                  <Header />
+                  <Component {...pageProps} />
+                  <Footer />
+                </>
+              )}
+            </div>
           </div>
-        </div>
-      </MantineProvider>{" "}
+        </MantineProvider>
+      </ReduxProvider>
     </>
   )
 }

@@ -1,14 +1,27 @@
-import React from "react"
+import React, { useState } from "react"
 import { Select } from "@mantine/core"
 import useLocalStorageState from "use-local-storage-state"
 import { useTranslation } from "next-i18next"
+import { useDispatch, useSelector } from "react-redux"
+import { logIn, logOut } from "@/src/redux/features/auth-slice"
+
 function Login() {
   const icon = <img src="/images/down_icon.svg" alt="" />
   const { t } = useTranslation("common", "login")
 
+  const [selected, setSelected] = useState()
+
+  const dispatch = useDispatch()
+  const user = useSelector((state) => state.authReducer)
+
   const [ecpKeys, setEcpKeys] = useLocalStorageState("ecpKeys", {
     defaultValue: [],
   })
+
+  const handleConfirm = () => {
+    dispatch(logIn(selected))
+  }
+  console.log(user)
   return (
     <div className=" login">
       <div
@@ -19,20 +32,25 @@ function Login() {
           <p className="md:text-3xl text-lg text-costumBlack font-bold text-center mb-6">
             Авторизоваться
           </p>
+          {/* <p>username: {username}</p> */}
           <div className=" w-full mx-auto mb-6">
             <Select
               label={"Выберите ЭЦП ключ"}
               placeholder={t("login:loginInputText")}
               size="xl"
               rightSection={icon}
+              onChange={(e) => setSelected(JSON.parse(e))}
               data={ecpKeys?.map((item) => ({
                 label: item.O,
-                value: item.TIN,
+                value: JSON.stringify(item),
               }))}
             />
           </div>
 
-          <button className="bg-costum-blue rounded-full font-medimum mb-6 text-white h-12 w-48 mx-auto">
+          <button
+            onClick={() => handleConfirm()}
+            className="bg-costum-blue rounded-full font-medimum mb-6 text-white h-12 w-48 mx-auto"
+          >
             {t("login:loginBtnText")}
           </button>
         </div>
