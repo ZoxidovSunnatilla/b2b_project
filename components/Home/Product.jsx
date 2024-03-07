@@ -22,7 +22,6 @@ const Product = () => {
     setData(res?.data)
     setLoading(false)
   }
-  console.log(data)
   return (
     <div id="products">
       <div className="flex justify-center md:justify-between  mb-8 w-full">
