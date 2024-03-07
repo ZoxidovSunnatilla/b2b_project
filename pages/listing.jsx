@@ -15,7 +15,7 @@ import {
 import { useDisclosure } from "@mantine/hooks"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import Product from "@/components/Home/Product"
+import Product from "@/src/components/Home/Product"
 
 const ListingPage = () => {
   const [opened, { open, close }] = useDisclosure(false)

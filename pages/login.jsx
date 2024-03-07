@@ -2,7 +2,7 @@ import React from "react"
 
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import EPSProvider from "@/src/hooks/EPSProvider"
-import Login from "@/components/Login"
+import Login from "@/src/components/Login"
 
 const LoginPage = () => {
   return (
