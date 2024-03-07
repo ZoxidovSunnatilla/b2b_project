@@ -4,6 +4,7 @@ import useLocalStorageState from "use-local-storage-state"
 import { useTranslation } from "next-i18next"
 import { useDispatch, useSelector } from "react-redux"
 import { logIn, logOut } from "@/src/redux/features/auth-slice"
+import putSignature from "@/src/utils/putSignature"
 
 function Login() {
   const icon = <img src="/images/down_icon.svg" alt="" />
@@ -19,9 +20,9 @@ function Login() {
   })
 
   const handleConfirm = () => {
-    dispatch(logIn(selected))
+    putSignature(selected)
+    // dispatch(logIn(selected))
   }
-  console.log(user)
   return (
     <div className=" login">
       <div
