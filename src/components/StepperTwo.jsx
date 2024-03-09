@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Stepper, Select, Input, Radio, Accordion } from '@mantine/core';
+import { Stepper, Select, Input, Radio, Accordion , Image } from '@mantine/core';
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from 'next/link';
@@ -7,7 +7,7 @@ import { DateInput } from '@mantine/dates';
 
 
 const StepperTwo = () => {
-    const icon = <img src="/images/down_icon_select.svg" alt="" />
+    const icon = <Image src="/images/down_icon_select.svg" alt="" />
     const [value, setValue] = useState(null);
     const [active, setActive] = useState(0);
     const { t } = useTranslation("common", "checkout")
@@ -16,14 +16,14 @@ const StepperTwo = () => {
             <Stepper
                 active={active}
                 onStepClick={setActive}
-                completedIcon={<img src="/images/stepper.svg" />}
+                completedIcon={<Image src="/images/stepper.svg" />}
             >
                 <Stepper.Step icon="1" label={t("checkout:stepperTextOne")}>
                     <div className="w-full mt-14" id="checkout">
                         <div className="flex justify-between flex-wrap">
                             <div className="md:w-2/5 w-full md:mb-0 mb-4">
                                 <div className="flex gap-2 mb-4 items-center">
-                                    <img src="/images/oneIcon.svg" alt="" />
+                                    <Image src="/images/oneIcon.svg" alt="" />
                                     <p className="md:text-2xl text-[18px] font-bold">{t("checkout:stepOneBoxOneTextOne")}</p>
                                 </div>
                                 <div className="w-full bg-star md:p-6 px-2 py-4 rounded mb-4">
@@ -59,7 +59,7 @@ const StepperTwo = () => {
                             </div>
                             <div className="md:w-2/5 w-full md:mb-0 mb-4">
                                 <div className="flex gap-2 mb-4 items-center">
-                                    <img src="/images/twoIcon.svg" alt="" />
+                                    <Image src="/images/twoIcon.svg" alt="" />
                                     <p className="md:text-2xl text-[18px] font-bold">{t("checkout:stepOneBoxTwoTextOne")}</p>
                                 </div>
                                 <p className="text-zinc-700 text-sm font-normal leading-normal mb-2 text-[#434447]">{t("checkout:stepOneBoxTwoTextTwo")}</p>
@@ -76,7 +76,7 @@ const StepperTwo = () => {
                                     </p>
                                 </div>
                                 <div className="flex gap-1">
-                                    <img src="/images/minusRemove.svg" alt="" />
+                                    <Image src="/images/minusRemove.svg" alt="" />
                                     <p className="text-medium text-costum-blue text-base">{t("checkout:stepOneBoxTwoTextFour")}</p>
                                 </div>
                             </div>
@@ -171,7 +171,7 @@ const StepperTwo = () => {
                         <div className="flex justify-between md:mb-[76px] mb-6 flex-wrap">
                             <div className="md:w-2/5 w-full">
                                 <div className="flex gap-2 mb-4">
-                                    <img src="/images/oneIcon.svg" alt="" />
+                                    <Image src="/images/oneIcon.svg" alt="" />
                                     <p className="md:text-2xl text-[18px] font-bold">{t("checkout:stepTwoBoxOneTextOne")}</p>
                                 </div>
                                 <p className="text-base mb-4">{t("checkout:stepTwoBoxOneTextTwo")}</p>
@@ -213,7 +213,7 @@ const StepperTwo = () => {
                             </div>
                             <div className="md:w-2/5 w-full">
                                 <div className="flex gap-2 mb-4">
-                                    <img src="/images/oneIcon.svg" alt="" />
+                                    <Image src="/images/oneIcon.svg" alt="" />
                                     <p className="md:text-2xl text-[18px] font-bold">{t("checkout:stepTwoBoxTwoTextOne")}</p>
                                 </div>
                                 <p className="text-base mb-4">{t("checkout:stepTwoBoxTwoTextTwo")}</p>
@@ -286,13 +286,13 @@ const StepperTwo = () => {
                                 <Accordion.Control>
                                     <div className="flex items-center gap-1">
                                         <p className="text-costum-blue">{t("checkout:stepThreeBoxOneTextFour")}</p>
-                                        <img src="/images/downIcon.svg" alt="" />
+                                        <Image src="/images/downIcon.svg" alt="" />
                                     </div>
                                 </Accordion.Control>
                                 <Accordion.Panel>
                                     <div className="w-auto h-[350px] overflow-y-scroll ">
                                         <div className="w-full bg-white rounded-lg mb-2 p-4 gap-1 flex">
-                                            <img src="/images/chekoutProductImg.svg" alt="" />
+                                            <Image src="/images/chekoutProductImg.svg" alt="" />
                                             <div className="flex justify-between w-full md:flex-row flex-col md:items-center md:gap-4 gap-2">
                                                 <div className="text">
                                                     <p className="text-sm text-[#737B7D] md:mb-2 mb-1">{t("checkout:stepThreeBoxTwoTextOne")} | Part No. 234565</p>
@@ -306,7 +306,7 @@ const StepperTwo = () => {
                                             </div>
                                         </div>
                                         <div className="w-full bg-white rounded-lg mb-2 p-4 gap-1 flex">
-                                            <img src="/images/chekoutProductImg.svg" alt="" />
+                                            <Image src="/images/chekoutProductImg.svg" alt="" />
                                             <div className="flex justify-between w-full md:flex-row flex-col md:items-center md:gap-4 gap-2">
                                                 <div className="text">
                                                     <p className="text-sm text-[#737B7D] md:mb-2 mb-1">{t("checkout:stepThreeBoxTwoTextOne")} | Part No. 234565</p>
@@ -320,7 +320,7 @@ const StepperTwo = () => {
                                             </div>
                                         </div>
                                         <div className="w-full bg-white rounded-lg mb-2 p-4 gap-1 flex">
-                                            <img src="/images/chekoutProductImg.svg" alt="" />
+                                            <Image src="/images/chekoutProductImg.svg" alt="" />
                                             <div className="flex justify-between w-full md:flex-row flex-col md:items-center md:gap-4 gap-2">
                                                 <div className="text">
                                                     <p className="text-sm text-[#737B7D] md:mb-2 mb-1">{t("checkout:stepThreeBoxTwoTextOne")} | Part No. 234565</p>
@@ -334,7 +334,7 @@ const StepperTwo = () => {
                                             </div>
                                         </div>
                                         <div className="w-full bg-white rounded-lg mb-2 p-4 gap-1 flex">
-                                            <img src="/images/chekoutProductImg.svg" alt="" />
+                                            <Image src="/images/chekoutProductImg.svg" alt="" />
                                             <div className="flex justify-between w-full md:flex-row flex-col md:items-center md:gap-4 gap-2">
                                                 <div className="text">
                                                     <p className="text-sm text-[#737B7D] md:mb-2 mb-1">{t("checkout:stepThreeBoxTwoTextOne")} | Part No. 234565</p>
@@ -360,12 +360,12 @@ const StepperTwo = () => {
                             <p className="text-white text-base mb-3">{t("checkout:stepFourBoxOneTextTwo")} <span className='font-bold'>#809320, #249320  {t("checkout:stepFourBoxOneTextThree")} #809320</span></p>
                             <p className="text-sm text-white md:mb-6 mb-5">{t("checkout:stepFourBoxOneTextFour")}</p>
                             <div className="flex items-center gap-1">
-                                <img src="/images/printCheckout.svg" alt="" />
+                                <Image src="/images/printCheckout.svg" alt="" />
                                 <p className="text-base text-white">{t("checkout:stepFourBoxOneTextFive")}</p>
                             </div>
                         </div>
                         <div className="w-auto">
-                            <img src="/images/cheoutImg.png" alt="" />
+                            <Image src="/images/cheoutImg.png" alt="" />
                         </div>
                     </div>
                     <div className="bg-[#F6F8FB] md:p-12 py-6 px-4 flex md:gap-[68px] flex-wrap ">

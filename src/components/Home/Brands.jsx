@@ -3,15 +3,16 @@ import { Carousel } from "@mantine/carousel"
 import { requests } from "@/src/services/request"
 import BrandSkeleton from "../Skeleton/brandSkeleton"
 import { useTranslation } from "next-i18next"
+import { Image } from '@mantine/core';
 
 const brand_next_icon = (
   <div className="w-10 md:w-14 flex items-center justify-center h-10 md:h-14 bg-[#E6EFFB] border-[#F6F8FB] rounded-lg">
-    <img src="/images/brand_carousel_right.svg" />
+    <Image src="/images/brand_carousel_right.svg" />
   </div>
 )
 const brand_prev_icon = (
   <div className="w-10 md:w-14 flex items-center justify-center h-10 md:h-14 bg-[#E6EFFB] border-[#F6F8FB] rounded-lg">
-    <img src="/images/brand_carousel_left.svg" />
+    <Image src="/images/brand_carousel_left.svg" />
   </div>
 )
 
@@ -39,7 +40,7 @@ function Brands() {
           <p className="text-costum-blue text-base font-medium ">
             {t("brandSubTitleText")}
           </p>
-          <img src="/images/arrow_forward.svg" alt="" />
+          <Image src="/images/arrow_forward.svg" alt="" />
         </div>
       </div>
 
@@ -58,7 +59,7 @@ function Brands() {
           >
             {data ? (data?.map((item) => (
               <Carousel.Slide key={item.id}>
-                <img src={item.logo || "/images/brand_img1.svg"} alt="" />
+                <Image src={item.logo || "/images/brand_img1.svg"} alt="" />
               </Carousel.Slide>
             ))): (<BrandSkeleton />)}
           </Carousel>
@@ -71,7 +72,7 @@ function Brands() {
         <p className="text-costum-blue text-base font-medium ">
           {t("brandSubTitleText")}
         </p>
-        <img src="/images/arrow_forward.svg" alt="" />
+        <Image src="/images/arrow_forward.svg" alt="" />
       </div>
     </div>
   )

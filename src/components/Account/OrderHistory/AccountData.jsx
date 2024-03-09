@@ -1,11 +1,11 @@
 import React from 'react'
 import { useTranslation } from "next-i18next";
-import { Select } from '@mantine/core';
+import { Select, Image } from '@mantine/core';
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const AccountData = () => {
     const { t } = useTranslation("common", "account")
-    const icon = <img src="/images/down_icon_select.svg" alt="" />
+    const icon = <Image src="/images/down_icon_select.svg" alt="" />
     
 
     return (
@@ -14,7 +14,7 @@ const AccountData = () => {
                 <div className=" bg-[#E6EFFB] rounded-lg p-6">
                     <div className="flex mb-8 justify-between">
                         <p className="text-xl font-bold"> {t("account:accountTabSixTextOne")}</p>
-                        <img src="/images/edit.svg" alt="" />
+                        <Image src="/images/edit.svg" alt="" />
                     </div>
                     <p className="text-base mb-5 text-normal">{t("account:accountTabSixTextTwo")} <span className='font-medium'>John</span></p>
                     <p className="text-base mb-5 text-normal">{t("account:accountTabSixTextThree")} <span className='font-medium'>Doe</span></p>

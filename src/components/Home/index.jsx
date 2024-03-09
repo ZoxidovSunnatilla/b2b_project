@@ -1,5 +1,5 @@
 import React from "react"
-import { Select, Input } from "@mantine/core"
+import { Select, Input, Image } from "@mantine/core"
 import Link from "next/link"
 import Brands from "./Brands"
 import Product from "./Product"
@@ -18,7 +18,7 @@ const Home = () => {
       <div className="bg-costum-blue py-4 my-20">
         <div className="container mx-auto flex md:justify-between justify-center flex-col md:flex-row flex-wrap items-center">
           <div className="flex gap-4 items-center flex-col md:flex-row flex-wrap items-center justify-center">
-            <img src="/images/advertising.svg" alt="" />
+            <Image src="/images/advertising.svg" alt="" />
             <h1 className="text-white md:text-7xl text-5xl font-bold">-20%</h1>
             <p className="text-white text-center text-4xl mb-4 md:mb-0 md:text-5xl">
               {t("discountText")}
@@ -39,30 +39,30 @@ const Home = () => {
               <p className="text-costum-blue text-base font-medium">
               {t("categoriSubTitle")}
               </p>
-              <img src="/images/arrow_forward.svg" alt="" />
+              <Image src="/images/arrow_forward.svg" alt="" />
             </div>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 w-full gap-3  md:gap-5 md:mb-20">
             <div className="md:w-auto w-44 md:min-h-72  rounded-lg">
-              <img src="/images/categorie_img.svg" alt="" className="w-full" />
+              <Image src="/images/categorie_img.svg" alt="" className="w-full" />
               <div className="w-full bg-costum-blue text-center min-h-16 text-base md:text-xl text-white font-bold rounded-b-lg flex items-center justify-center">
                 Electronics
               </div>
             </div>
             <div className="md:w-auto w-44 md:min-h-72  rounded-lg">
-              <img src="/images/categorie_img.svg" alt="" className="w-full" />
+              <Image src="/images/categorie_img.svg" alt="" className="w-full" />
               <div className="w-full bg-costum-blue text-center min-h-16 text-base md:text-xl text-white font-bold rounded-b-lg flex items-center justify-center">
                 Electronics
               </div>
             </div>
             <div className="md:w-auto w-44 md:min-h-72 rounded-lg">
-              <img src="/images/categorie_img.svg" alt="" className="w-full" />
+              <Image src="/images/categorie_img.svg" alt="" className="w-full" />
               <div className="w-full bg-costum-blue text-center min-h-16 text-base md:text-xl text-white font-bold rounded-b-lg flex items-center justify-center">
                 Electronics
               </div>
             </div>
             <div className="md:w-auto w-44 md:min-h-72 mb-5 rounded-lg">
-              <img src="/images/categorie_img.svg" alt="" className="w-full" />
+              <Image src="/images/categorie_img.svg" alt="" className="w-full" />
               <div className="w-full bg-costum-blue text-center min-h-16 text-base md:text-xl text-white font-bold rounded-b-lg flex items-center justify-center">
                 Electronics
               </div>
@@ -72,7 +72,7 @@ const Home = () => {
             <p className="text-costum-blue text-base font-medium ">
               {t("categoriSubTitle")}
             </p>
-            <img src="/images/arrow_forward.svg" alt="" />
+            <Image src="/images/arrow_forward.svg" alt="" />
           </div>
         </div>
         <div id="hints">
@@ -84,12 +84,12 @@ const Home = () => {
               <p className="text-costum-blue text-base font-medium">
               {t("hintsSubTitle")}
               </p>
-              <img src="/images/arrow_forward.svg" alt="" />
+              <Image src="/images/arrow_forward.svg" alt="" />
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 w-full md:gap-5  gap-1 md:mb-20">
             <div className="md:w-auto  w-full md:min-h-[382px] h-auto rounded-lg md:mb-0 mb-4">
-              <img src="/images/hints_img.svg" alt="" className="w-full" />
+              <Image src="/images/hints_img.svg" alt="" className="w-full" />
               <div className="w-full min-h-16  py-3 px-2 rounded-b-lg border-solid border border-costum-gray-500">
                 <p className="text-xl text-costumBlack font-bold mb-3.5">
                   How much does it cost to <br /> finish an apartment?
@@ -102,12 +102,12 @@ const Home = () => {
                   <p className="text-costum-blue text-base font-medium">
                     Read more
                   </p>
-                  <img src="/images/arrow_forward.svg" alt="" />
+                  <Image src="/images/arrow_forward.svg" alt="" />
                 </div>
               </div>
             </div>
             <div className="md:w-auto  w-full md:min-h-[382px] h-auto md:mb-0 mb-4 rounded-lg">
-              <img src="/images/hints_img.svg" alt="" className="w-full" />
+              <Image src="/images/hints_img.svg" alt="" className="w-full" />
               <div className="w-full min-h-16  py-3 px-2 rounded-b-lg border-solid border border-costum-gray-500">
                 <p className="text-xl text-costumBlack font-bold mb-3.5">
                   How much does it cost to <br /> finish an apartment?
@@ -120,12 +120,12 @@ const Home = () => {
                   <p className="text-costum-blue text-base font-medium">
                     Read more
                   </p>
-                  <img src="/images/arrow_forward.svg" alt="" />
+                  <Image src="/images/arrow_forward.svg" alt="" />
                 </div>
               </div>
             </div>
             <div className="md:w-auto  w-full md:min-h-[382px] h-auto md:mb-0 mb-4 rounded-lg">
-              <img src="/images/hints_img.svg" alt="" className="w-full" />
+              <Image src="/images/hints_img.svg" alt="" className="w-full" />
               <div className="w-full min-h-16  py-3 px-2 rounded-b-lg border-solid border border-costum-gray-500">
                 <p className="text-xl text-costumBlack font-bold mb-3.5">
                   How much does it cost to <br /> finish an apartment?
@@ -138,12 +138,12 @@ const Home = () => {
                   <p className="text-costum-blue text-base font-medium">
                     Read more
                   </p>
-                  <img src="/images/arrow_forward.svg" alt="" />
+                  <Image src="/images/arrow_forward.svg" alt="" />
                 </div>
               </div>
             </div>
             <div className="md:w-auto  w-full md:min-h-[382px] h-auto rounded-lg md:mb-0 mb-4">
-              <img src="/images/hints_img.svg" alt="" className="w-full" />
+              <Image src="/images/hints_img.svg" alt="" className="w-full" />
               <div className="w-full min-h-16  py-3 px-2 rounded-b-lg border-solid border border-costum-gray-500">
                 <p className="text-xl text-costumBlack font-bold mb-3.5">
                   How much does it cost to <br /> finish an apartment?
@@ -156,7 +156,7 @@ const Home = () => {
                   <p className="text-costum-blue text-base font-medium">
                     Read more
                   </p>
-                  <img src="/images/arrow_forward.svg" alt="" />
+                  <Image src="/images/arrow_forward.svg" alt="" />
                 </div>
               </div>
             </div>
@@ -165,12 +165,12 @@ const Home = () => {
             <p className="text-costum-blue text-base font-medium ">
               {t("hintsSubTitle")}
             </p>
-            <img src="/images/arrow_forward.svg" alt="" />
+            <Image src="/images/arrow_forward.svg" alt="" />
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 w-full md:gap-5 gap-3 h-auto mb-8 md:h-auto md:mb-[80px]">
           <div className="md:w-auto w-full rounded-lg h-full">
-            <img
+            <Image
               src="/images/img_reklama.svg"
               alt=""
               className="w-full h-full"
@@ -194,7 +194,7 @@ const Home = () => {
               <p className="text-white font-bold w-[156px] text-xl ">{t("advertisingBlogOne")}</p>
             </div>
             <div className="w-2/4 rounded-r-lg">
-              <img src="/images/kits_img.svg" alt="" className="w-full" />
+              <Image src="/images/kits_img.svg" alt="" className="w-full" />
             </div>
           </div>
           <div className="md:w-auto w-full h-auto md:min-h-56 flex rounded-lg">
@@ -202,7 +202,7 @@ const Home = () => {
               <p className="text-white font-bold text-xl w-[156px] ">{t("advertisingBlogTwo")}</p>
             </div>
             <div className="w-2/4 h-full rounded-r-lg">
-              <img src="/images/kits_img.svg" alt="" className="w-full " />
+              <Image src="/images/kits_img.svg" alt="" className="w-full " />
             </div>
           </div>
           <div className="md:w-auto w-full  h-auto md:min-h-56 flex rounded-lg">
@@ -212,7 +212,7 @@ const Home = () => {
               </p>
             </div>
             <div className="w-2/4 rounded-r-lg">
-              <img src="/images/kits_img.svg" alt="" className="w-full" />
+              <Image src="/images/kits_img.svg" alt="" className="w-full" />
             </div>
           </div>
         </div>
@@ -232,7 +232,7 @@ const Home = () => {
               </button>
             </div> 
             <div className="md:w-2/4 w-full flex justify-end">
-              <img src="/images/dpd_img.svg" alt="" />
+              <Image src="/images/dpd_img.svg" alt="" />
             </div>
           </div>
         </div>
@@ -246,12 +246,12 @@ const Home = () => {
             <p className="text-costum-blue text-base font-medium">
               {t("eventSubTitle")}
             </p>
-            <img src="/images/arrow_forward.svg" alt="" />
+            <Image src="/images/arrow_forward.svg" alt="" />
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-4 w-full gap-1 mb-8 md:gap-5 md:mb-20">
           <div className="md:w-auto md:min-h-[446px] h-auto mb-2 md:mb-0 w-full rounded-lg">
-            <img src="/images/hints_img.svg" alt="" className="w-full" />
+            <Image src="/images/hints_img.svg" alt="" className="w-full" />
             <div className="w-full min-h-16  py-4 px-2 rounded-b-lg border-solid border border-costum-gray-500">
               <p className="text-xl text-costumBlack font-bold mb-4">
                 How much does it cost to <br /> finish an apartment?
@@ -267,7 +267,7 @@ const Home = () => {
             </div>
           </div>
           <div className="md:w-auto md:min-h-[446px] h-auto mb-2 md:mb-0 w-full rounded-lg">
-            <img src="/images/hints_img.svg" alt="" className="w-full" />
+            <Image src="/images/hints_img.svg" alt="" className="w-full" />
             <div className="w-full min-h-16  py-4 px-2 rounded-b-lg border-solid border border-costum-gray-500">
               <p className="text-xl text-costumBlack font-bold mb-4">
                 How much does it cost to <br /> finish an apartment?
@@ -283,7 +283,7 @@ const Home = () => {
             </div>
           </div>
           <div className="md:w-auto md:min-h-[446px] h-auto mb-2 md:mb-0 w-full rounded-lg">
-            <img src="/images/hints_img.svg" alt="" className="w-full" />
+            <Image src="/images/hints_img.svg" alt="" className="w-full" />
             <div className="w-full min-h-16  py-4 px-2 rounded-b-lg border-solid border border-costum-gray-500">
               <p className="text-xl text-costumBlack font-bold mb-4">
                 How much does it cost to <br /> finish an apartment?
@@ -299,7 +299,7 @@ const Home = () => {
             </div>
           </div>
           <div className="md:w-auto md:min-h-[446px] h-auto mb-2 md:mb-0 w-full rounded-lg">
-            <img src="/images/hints_img.svg" alt="" className="w-full" />
+            <Image src="/images/hints_img.svg" alt="" className="w-full" />
             <div className="w-full min-h-16  py-4 px-2 rounded-b-lg border-solid border border-costum-gray-500">
               <p className="text-xl text-costumBlack font-bold mb-4">
                 How much does it cost to <br /> finish an apartment?

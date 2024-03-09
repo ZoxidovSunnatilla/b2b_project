@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { Breadcrumbs, Table, Tabs } from '@mantine/core';
+import { Breadcrumbs, Table, Tabs , Image } from '@mantine/core';
 
 const Details = () => {
     const { t } = useTranslation("common", "cart")
@@ -76,7 +76,7 @@ const Details = () => {
                             </Table.Td>
                             <Table.Td>
                                 <div className="flex gap-2">
-                                    <img src="/images/account_details.svg" alt="" />
+                                    <Image src="/images/account_details.svg" alt="" />
                                     <p className="text-base font-bold w-[156px]">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 </div>
 
@@ -99,7 +99,7 @@ const Details = () => {
                             </Table.Td>
                             <Table.Td>
                                 <div className="flex gap-2">
-                                    <img src="/images/account_details.svg" alt="" />
+                                    <Image src="/images/account_details.svg" alt="" />
                                     <p className="text-base font-bold w-[156px]">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 </div>
 
@@ -122,7 +122,7 @@ const Details = () => {
                             </Table.Td>
                             <Table.Td>
                                 <div className="flex gap-2">
-                                    <img src="/images/account_details.svg" alt="" />
+                                    <Image src="/images/account_details.svg" alt="" />
                                     <p className="text-base font-bold w-[156px]">AMBER DECOR Small Lamp 60W, E27 590</p>
                                 </div>
 

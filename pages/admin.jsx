@@ -2,19 +2,18 @@
 import React, { useState, useRef } from 'react';
 import { message, Popconfirm, } from 'antd';
 import { useTranslation } from "next-i18next";
-import { Modal, Table,  Menu } from '@mantine/core';
+import { Modal, Table,  Menu, Image } from '@mantine/core';
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useDisclosure } from '@mantine/hooks';
 const AdminCabinet = () => {
     const [opened, { open, close }] = useDisclosure(false);
-
+ 
     const [users, setUsers] = useState([
         { id: 1000, username: "valijon", password: "000", email: "vali@gmail.com", role: "user" },
         { id: 10002, username: "valijon", password: "000", email: "vali@gmail.com", role: "user" },
         { id: 10003, username: "valiasdsdajon", password: "000", email: "vali@gmail.com", role: "user" },
         { id: 10004, username: "valijon", password: "000", email: "vali@gmail.com", role: "user" },
         { id: 10005, username: "valdasdjon", password: "000", email: "vali@gmail.com", role: "user" }
-
     ])
     const { t } = useTranslation("common", "account")
 
@@ -23,6 +22,7 @@ const AdminCabinet = () => {
     const editNameRef = useRef()
     const editEmailRef = useRef()
     const editPasswordRef = useRef()
+   
     const deleteUser = (id) => {
         setUsers(prevState => prevState.filter(user => user.id !== id))
     }

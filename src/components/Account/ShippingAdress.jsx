@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTranslation } from "next-i18next";
-import { Breadcrumbs, Table, Tabs, Menu } from '@mantine/core';
+import { Breadcrumbs, Table, Tabs, Menu,Image } from '@mantine/core';
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const ShippingAdress = () => {
@@ -60,21 +60,21 @@ const ShippingAdress = () => {
                                     <p className="text-base">United States</p>
                                     <Menu>
                                         <Menu.Target>
-                                            <img src="/images/more_horiz.svg" alt="" />
+                                            <Image src="/images/more_horiz.svg" alt="" />
 
                                         </Menu.Target>
 
                                         <Menu.Dropdown>
                                             <div className="flex gap-1 p-2 items-center cursor-pointer hover:bg-star hover:text-costum-blue">
-                                                <img src="/images/swap_horiz.svg" alt="" />
+                                                <Image src="/images/swap_horiz.svg" alt="" />
                                                 <p className="text-sm font-normal">{t("account:setDefault")}</p>
                                             </div>
                                             <div className="flex gap-1 p-2 items-center cursor-pointer hover:bg-star hover:text-costum-blue">
-                                                <img src="/images/edit_address.svg" alt="" />
+                                                <Image src="/images/edit_address.svg" alt="" />
                                                 <p className="text-sm font-normal">{t("account:edit")}</p>
                                             </div>
                                             <div className="flex gap-1 p-2 items-center cursor-pointer hover:bg-star hover:text-costum-blue">
-                                                <img src="/images/delete_address.svg" alt="" />
+                                                <Image src="/images/delete_address.svg" alt="" />
 
                                                 <p className="text-sm font-normal ">{t("account:delete")}</p>
                                             </div>
@@ -104,21 +104,21 @@ const ShippingAdress = () => {
                                     <p className="text-base">United States</p>
                                     <Menu>
                                         <Menu.Target>
-                                            <img src="/images/more_horiz.svg" alt="" />
+                                            <Image src="/images/more_horiz.svg" alt="" />
 
                                         </Menu.Target>
 
                                         <Menu.Dropdown>
                                             <div className="flex gap-1 p-2 items-center cursor-pointer hover:bg-star hover:text-costum-blue">
-                                                <img src="/images/swap_horiz.svg" alt="" />
+                                                <Image src="/images/swap_horiz.svg" alt="" />
                                                 <p className="text-sm font-normal">{t("account:setDefault")}</p>
                                             </div>
                                             <div className="flex gap-1 p-2 items-center cursor-pointer hover:bg-star hover:text-costum-blue">
-                                                <img src="/images/edit_address.svg" alt="" />
+                                                <Image src="/images/edit_address.svg" alt="" />
                                                 <p className="text-sm font-normal">{t("account:edit")}</p>
                                             </div>
                                             <div className="flex gap-1 p-2 items-center cursor-pointer hover:bg-star hover:text-costum-blue">
-                                                <img src="/images/delete_address.svg" alt="" />
+                                                <Image src="/images/delete_address.svg" alt="" />
 
                                                 <p className="text-sm font-normal ">{t("account:delete")}</p>
                                             </div>
@@ -148,21 +148,21 @@ const ShippingAdress = () => {
                                     <p className="text-base">United States</p>
                                     <Menu>
                                         <Menu.Target>
-                                            <img src="/images/more_horiz.svg" alt="" />
+                                            <Image src="/images/more_horiz.svg" alt="" />
 
                                         </Menu.Target>
 
                                         <Menu.Dropdown>
                                             <div className="flex gap-1 p-2 items-center cursor-pointer hover:bg-star hover:text-costum-blue">
-                                                <img src="/images/swap_horiz.svg" alt="" />
+                                                <Image src="/images/swap_horiz.svg" alt="" />
                                                 <p className="text-sm font-normal">{t("account:setDefault")}</p>
                                             </div>
                                             <div className="flex gap-1 p-2 items-center cursor-pointer hover:bg-star hover:text-costum-blue">
-                                                <img src="/images/edit_address.svg" alt="" />
+                                                <Image src="/images/edit_address.svg" alt="" />
                                                 <p className="text-sm font-normal">{t("account:edit")}</p>
                                             </div>
                                             <div className="flex gap-1 p-2 items-center cursor-pointer hover:bg-star hover:text-costum-blue">
-                                                <img src="/images/delete_address.svg" alt="" />
+                                                <Image src="/images/delete_address.svg" alt="" />
 
                                                 <p className="text-sm font-normal ">{t("account:delete")}</p>
                                             </div>
@@ -186,7 +186,7 @@ const ShippingAdress = () => {
                         <Menu>
                             <Menu.Target>
                                 <div className="flex gap-1 items-center justifu-between">
-                                    <img src="/images/more_horiz_mobile.svg" alt="" />
+                                    <Image src="/images/more_horiz_mobile.svg" alt="" />
                                     <p className="text-sm font-medium">{t("account:moreActions")}</p>
                                 </div>
 
@@ -194,15 +194,15 @@ const ShippingAdress = () => {
 
                             <Menu.Dropdown>
                                 <div className="flex gap-1 p-2 items-center cursor-pointer hover:bg-star hover:text-costum-blue">
-                                    <img src="/images/swap_horiz.svg" alt="" />
+                                    <Image src="/images/swap_horiz.svg" alt="" />
                                     <p className="text-sm font-normal">{t("account:setDefault")}</p>
                                 </div>
                                 <div className="flex gap-1 p-2 items-center cursor-pointer hover:bg-star hover:text-costum-blue">
-                                    <img src="/images/edit_address.svg" alt="" />
+                                    <Image src="/images/edit_address.svg" alt="" />
                                     <p className="text-sm font-normal">{t("account:edit")}</p>
                                 </div>
                                 <div className="flex gap-1 p-2 items-center cursor-pointer hover:bg-star hover:text-costum-blue">
-                                    <img src="/images/delete_address.svg" alt="" />
+                                    <Image src="/images/delete_address.svg" alt="" />
 
                                     <p className="text-sm font-normal ">{t("account:delete")}</p>
                                 </div>
@@ -222,7 +222,7 @@ const ShippingAdress = () => {
                         <Menu>
                             <Menu.Target>
                                 <div className="flex gap-1 items-center justifu-between">
-                                    <img src="/images/more_horiz_mobile.svg" alt="" />
+                                    <Image src="/images/more_horiz_mobile.svg" alt="" />
                                     <p className="text-sm font-medium">{t("account:moreActions")}</p>
                                 </div>
 
@@ -230,15 +230,15 @@ const ShippingAdress = () => {
 
                             <Menu.Dropdown>
                                 <div className="flex gap-1 p-2 items-center cursor-pointer hover:bg-star hover:text-costum-blue">
-                                    <img src="/images/swap_horiz.svg" alt="" />
+                                    <Image src="/images/swap_horiz.svg" alt="" />
                                     <p className="text-sm font-normal">{t("account:setDefault")}</p>
                                 </div>
                                 <div className="flex gap-1 p-2 items-center cursor-pointer hover:bg-star hover:text-costum-blue">
-                                    <img src="/images/edit_address.svg" alt="" />
+                                    <Image src="/images/edit_address.svg" alt="" />
                                     <p className="text-sm font-normal">{t("account:edit")}</p>
                                 </div>
                                 <div className="flex gap-1 p-2 items-center cursor-pointer hover:bg-star hover:text-costum-blue">
-                                    <img src="/images/delete_address.svg" alt="" />
+                                    <Image src="/images/delete_address.svg" alt="" />
 
                                     <p className="text-sm font-normal ">{t("account:delete")}</p>
                                 </div>
@@ -257,7 +257,7 @@ const ShippingAdress = () => {
                         <Menu>
                             <Menu.Target>
                                 <div className="flex gap-1 items-center justifu-between">
-                                    <img src="/images/more_horiz_mobile.svg" alt="" />
+                                    <Image src="/images/more_horiz_mobile.svg" alt="" />
                                     <p className="text-sm font-medium">{t("account:moreActions")}</p>
                                 </div>
 
@@ -265,15 +265,15 @@ const ShippingAdress = () => {
 
                             <Menu.Dropdown>
                                 <div className="flex gap-1 p-2 items-center cursor-pointer hover:bg-star hover:text-costum-blue">
-                                    <img src="/images/swap_horiz.svg" alt="" />
+                                    <Image src="/images/swap_horiz.svg" alt="" />
                                     <p className="text-sm font-normal">{t("account:setDefault")}</p>
                                 </div>
                                 <div className="flex gap-1 p-2 items-center cursor-pointer hover:bg-star hover:text-costum-blue">
-                                    <img src="/images/edit_address.svg" alt="" />
+                                    <Image src="/images/edit_address.svg" alt="" />
                                     <p className="text-sm font-normal">{t("account:edit")}</p>
                                 </div>
                                 <div className="flex gap-1 p-2 items-center cursor-pointer hover:bg-star hover:text-costum-blue">
-                                    <img src="/images/delete_address.svg" alt="" />
+                                    <Image src="/images/delete_address.svg" alt="" />
 
                                     <p className="text-sm font-normal ">{t("account:delete")}</p>
                                 </div>

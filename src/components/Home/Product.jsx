@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react"
 import { Carousel } from "@mantine/carousel"
-import { Select } from "@mantine/core"
+import { Select, Image } from "@mantine/core"
 import { requests } from "@/src/services/request"
 import { useTranslation } from "next-i18next"
 
 import Link from "next/link"
 import ProductSkeleton from "../Skeleton/productSkeleton"
-const icon = <img src="/images/down_icon_select.svg" alt="" />
+const icon = <Image src="/images/down_icon_select.svg" alt="" />
 
 const Product = () => {
   const { t } = useTranslation()
@@ -32,14 +32,14 @@ const Product = () => {
           <p className="text-costum-blue text-base font-medium">
             {t("productSubTitle")}
           </p>
-          <img src="/images/arrow_forward.svg" alt="" />
+          <Image src="/images/arrow_forward.svg" alt="" />
         </div>
       </div>
       {loading ? (
         <ProductSkeleton />
       ) : (
         <Carousel
-          nextControlIcon={<img src="/images/productCarouselRight.svg" />}
+          nextControlIcon={<Image src="/images/productCarouselRight.svg" />}
           previousControlIcon=""
           height={612}
           slideSize={{ base: "50%", md: "308px" }}
@@ -54,13 +54,13 @@ const Product = () => {
                   <Link href="/product">
                     <div className="relative">
                       {item.images ? (
-                        <img
+                        <Image
                           src={item?.images[0].link}
                           alt=""
                           className="w-full h-[238px]"
                         />
                       ) : (
-                        <img
+                        <Image
                           src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/No_image_available_500_x_500.svg/240px-No_image_available_500_x_500.svg.png"
                           alt=""
                           className="w-full h-[238px]"
@@ -70,22 +70,22 @@ const Product = () => {
                         -{item.discount}%
                       </div>
                       <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2">
-                        <img src="/images/star.svg" alt="" />
+                        <Image src="/images/star.svg" alt="" />
                       </div>
                       <div className="absolute bottom-2 right-3">
-                        <img src="/images/share.svg" alt="" />
+                        <Image src="/images/share.svg" alt="" />
                       </div>
                       <div className="absolute bottom-10 right-3">
-                        <img src="/images/compare.svg" alt="" />
+                        <Image src="/images/compare.svg" alt="" />
                       </div>
                       {item.in_stock ? (
                         <div className="absolute bottom-2 left-2 flex gap-1 border border-solid border-costum-gray-300 p-1.5 rounded">
-                          <img src="/images/check.svg" alt="" />
+                          <Image src="/images/check.svg" alt="" />
                           <p className="text-costum-green">in stock</p>
                         </div>
                       ) : (
                         <div className="absolute bottom-2 left-2 flex gap-1 border border-solid border-costum-gray-300 p-1.5 rounded">
-                          <img src="/images/error_outline.svg" alt="" />
+                          <Image src="/images/error_outline.svg" alt="" />
                           <p className="text-[#F52F2F]">
                             {item.expected_delivery_date}
                           </p>
@@ -137,7 +137,7 @@ const Product = () => {
                     </div>
                     <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
                       {t("cardBtnText")}
-                      <img src="/images/down-icon.svg" alt="" />
+                      <Image src="/images/down-icon.svg" alt="" />
                     </button>
                   </div>
                 </div>
@@ -153,7 +153,7 @@ const Product = () => {
         <p className="text-costum-blue text-base font-medium ">
           {t("productSubTitle")}
         </p>
-        <img src="/images/arrow_forward.svg" alt="" />
+        <Image src="/images/arrow_forward.svg" alt="" />
       </div>
     </div>
   )

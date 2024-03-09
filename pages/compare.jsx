@@ -1,5 +1,5 @@
 import React from 'react'
-import { Breadcrumbs, Table, Select } from '@mantine/core';
+import { Breadcrumbs, Table, Select, Image } from '@mantine/core';
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next"
 
@@ -25,13 +25,13 @@ const ComparePage = () => {
       <div className="md:flex block justify-between items-center md:mb-10 mb-4">
         <p className="md:text-4xl mb-4 md:mb-0 text-[28px] font-bold">{t("compare:favoritesTextTitle")}</p>
         <div className="flex items-center">
-          <img src="/images/cart_delete_icon.svg" alt="" />
+          <Image src="/images/cart_delete_icon.svg" alt="" />
           <p className="text-base text-[#434447]">{t("compare:favoritesTextSubTitle")}</p>
         </div>
       </div>
       <div className="md:flex block md:mb-[65px] mb-6 justify-between items-center">
         <div className="flex items-center mb-4 md:mb-0 gap-2">
-          <img src="/images/print.svg" alt="" />
+          <Image src="/images/print.svg" alt="" />
           <p className="text-base text-[#434447]">{t("compare:favoritesTextPrint")}</p>
         </div>
         <div className="md:flex block gap-4">
@@ -39,15 +39,15 @@ const ComparePage = () => {
           <button className="md:w-[220px] w-full h-12 border border-2 border-[#1071FF] rounded-full">{t("compare:favoritesBtnTwo")}</button>
         </div>
         <div className="hidden md:flex gap-2 items-center">
-          <img src="/images/compare_icon_left.svg" alt="" />
-          <img src="/images/compare_icon_right.svg" alt="" />
+          <Image src="/images/compare_icon_left.svg" alt="" />
+          <Image src="/images/compare_icon_right.svg" alt="" />
         </div>
       </div>
       <div className="w-full md:flex hidden justify-between gap-5 md:mb-[100px]">
         <div className="w-[301px] bg-bg-voltiva ">
           <div className="flex w-full h-12 juctify-center items-center border-b ">
             <div className="flex justify-center items-center mx-auto gap-1">
-              <img src="/images/arrow_back.svg" alt="" />
+              <Image src="/images/arrow_back.svg" alt="" />
               <p className="text-sm font-base
               ">{t("compare:tabNext")}</p>
             </div>
@@ -106,14 +106,14 @@ const ComparePage = () => {
         <div className="w-[301px] bg-bg-voltiva ">
           <div className="flex w-full h-12 juctify-center items-center  ">
             <div className="mx-auto">
-              <img src="/images/delete.svg" alt="" />
+              <Image src="/images/delete.svg" alt="" />
             </div>
           </div>
           <div className="flex w-full h-[283px] relative bg-white juctify-center items-center  ">
             <div className="mx-auto  ">
-              <img src="/images/compareImg1.svg" alt="" />
+              <Image src="/images/compareImg1.svg" alt="" />
               <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-3.5 right-3.5">
-                <img src="/images/star.svg" alt="" />
+                <Image src="/images/star.svg" alt="" />
               </div>
             </div>
           </div>
@@ -166,14 +166,14 @@ const ComparePage = () => {
         <div className="w-[301px] bg-bg-voltiva ">
           <div className="flex w-full h-12 juctify-center items-center  ">
             <div className="mx-auto">
-              <img src="/images/delete.svg" alt="" />
+              <Image src="/images/delete.svg" alt="" />
             </div>
           </div>
           <div className="flex w-full h-[283px] relative bg-white juctify-center items-center  ">
             <div className="mx-auto  ">
-              <img src="/images/compareImg1.svg" alt="" />
+              <Image src="/images/compareImg1.svg" alt="" />
               <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-3.5 right-3.5">
-                <img src="/images/star.svg" alt="" />
+                <Image src="/images/star.svg" alt="" />
               </div>
             </div>
           </div>
@@ -226,14 +226,14 @@ const ComparePage = () => {
         <div className="w-[301px] bg-bg-voltiva ">
           <div className="flex w-full h-12 juctify-center items-center  ">
             <div className="mx-auto">
-              <img src="/images/delete.svg" alt="" />
+              <Image src="/images/delete.svg" alt="" />
             </div>
           </div>
           <div className="flex w-full h-[283px] relative bg-white juctify-center items-center  ">
             <div className="mx-auto  ">
-              <img src="/images/compareImg1.svg" alt="" />
+              <Image src="/images/compareImg1.svg" alt="" />
               <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-3.5 right-3.5">
-                <img src="/images/star.svg" alt="" />
+                <Image src="/images/star.svg" alt="" />
               </div>
             </div>
           </div>
@@ -288,14 +288,14 @@ const ComparePage = () => {
         <div className="w-[164px]">
           <div className="flex w-full h-12 bg-[#E6EFFB] juctify-center items-center  ">
             <div className="mx-auto">
-              <img src="/images/delete.svg" alt="" />
+              <Image src="/images/delete.svg" alt="" />
             </div>
           </div>
           <div className="flex w-full h-[154px] relative bg-white juctify-center items-center  ">
             <div className="mx-auto  ">
-              <img src="/images/compareImg_mobile.svg" alt="" />
+              <Image src="/images/compareImg_mobile.svg" alt="" />
               <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-3.5 right-3.5">
-                <img src="/images/star.svg" alt="" />
+                <Image src="/images/star.svg" alt="" />
               </div>
             </div>
           </div>
@@ -394,14 +394,14 @@ const ComparePage = () => {
         <div className="w-[164px]">
           <div className="flex w-full h-12 bg-[#E6EFFB] juctify-center items-center  ">
             <div className="mx-auto">
-              <img src="/images/delete.svg" alt="" />
+              <Image src="/images/delete.svg" alt="" />
             </div>
           </div>
           <div className="flex w-full h-[154px] relative bg-white juctify-center items-center  ">
             <div className="mx-auto  ">
-              <img src="/images/compareImg_mobile.svg" alt="" />
+              <Image src="/images/compareImg_mobile.svg" alt="" />
               <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-3.5 right-3.5">
-                <img src="/images/star.svg" alt="" />
+                <Image src="/images/star.svg" alt="" />
               </div>
             </div>
           </div>
@@ -500,14 +500,14 @@ const ComparePage = () => {
         <div className="w-[164px]">
           <div className="flex w-full h-12 bg-[#E6EFFB] juctify-center items-center  ">
             <div className="mx-auto">
-              <img src="/images/delete.svg" alt="" />
+              <Image src="/images/delete.svg" alt="" />
             </div>
           </div>
           <div className="flex w-full h-[154px] relative bg-white juctify-center items-center  ">
             <div className="mx-auto  ">
-              <img src="/images/compareImg_mobile.svg" alt="" />
+              <Image src="/images/compareImg_mobile.svg" alt="" />
               <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-3.5 right-3.5">
-                <img src="/images/star.svg" alt="" />
+                <Image src="/images/star.svg" alt="" />
               </div>
             </div>
           </div>
@@ -606,14 +606,14 @@ const ComparePage = () => {
         <div className="w-[164px]">
           <div className="flex w-full h-12 bg-[#E6EFFB] juctify-center items-center  ">
             <div className="mx-auto">
-              <img src="/images/delete.svg" alt="" />
+              <Image src="/images/delete.svg" alt="" />
             </div>
           </div>
           <div className="flex w-full h-[154px] relative bg-white juctify-center items-center  ">
             <div className="mx-auto  ">
-              <img src="/images/compareImg_mobile.svg" alt="" />
+              <Image src="/images/compareImg_mobile.svg" alt="" />
               <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-3.5 right-3.5">
-                <img src="/images/star.svg" alt="" />
+                <Image src="/images/star.svg" alt="" />
               </div>
             </div>
           </div>
@@ -712,14 +712,14 @@ const ComparePage = () => {
         <div className="w-[164px]">
           <div className="flex w-full h-12 bg-[#E6EFFB] juctify-center items-center  ">
             <div className="mx-auto">
-              <img src="/images/delete.svg" alt="" />
+              <Image src="/images/delete.svg" alt="" />
             </div>
           </div>
           <div className="flex w-full h-[154px] relative bg-white juctify-center items-center  ">
             <div className="mx-auto  ">
-              <img src="/images/compareImg_mobile.svg" alt="" />
+              <Image src="/images/compareImg_mobile.svg" alt="" />
               <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-3.5 right-3.5">
-                <img src="/images/star.svg" alt="" />
+                <Image src="/images/star.svg" alt="" />
               </div>
             </div>
           </div>

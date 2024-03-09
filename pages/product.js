@@ -8,13 +8,14 @@ import {
   Accordion,
   Rating,
   Select,
+  Image
 } from "@mantine/core"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import Card from "@/src/components/card"
 
 const ProductPage = () => {
-  const icon = <img src="/images/down_icon_select.svg" alt="" />
+  const icon = <Image src="/images/down_icon_select.svg" alt="" />
   const { t } = useTranslation("common", "product")
 
   return (
@@ -55,62 +56,62 @@ const ProductPage = () => {
           <div className="grid w-full grid-cols-1 md:grid-cols-2 mb-8 gap-5 md:gap-3">
             <div className="w-auto flex flex-wrap md:flex-nowrap md:gap-5 gap-2 h-auto md:h-[563px]">
               <div className="flex md:flex-col md:order-1 order-2  overflow-x-scroll no_scroll md:overflow-y-scroll gap-10 snap-none md:h-full">
-                <img
+                <Image
                   src="/images/productCarousel.svg"
                   className="w-[64px] md:w-[87px]"
                 />
-                <img
+                <Image
                   src="/images/productCarousel.svg"
                   className="w-[64px] md:w-[87px]"
                 />
-                <img
+                <Image
                   src="/images/productCarousel.svg"
                   className="w-[64px] md:w-[87px]"
                 />
-                <img
+                <Image
                   src="/images/productCarousel.svg"
                   className="w-[64px] md:w-[87px]"
                 />
-                <img
+                <Image
                   src="/images/productCarousel.svg"
                   className="w-[64px] md:w-[87px]"
                 />
-                <img
+                <Image
                   src="/images/productCarousel.svg"
                   className="w-[64px] md:w-[87px]"
                 />
-                <img
+                <Image
                   src="/images/productCarousel.svg"
                   className="w-[64px] md:w-[87px]"
                 />
-                <img
+                <Image
                   src="/images/productCarousel.svg"
                   className="w-[64px] md:w-[87px]"
                 />
-                <img
+                <Image
                   src="/images/productCarousel.svg"
                   className="w-[64px] md:w-[87px]"
                 />
-                <img
+                <Image
                   src="/images/productCarousel.svg"
                   className="w-[64px] md:w-[87px]"
                 />
-                <img
+                <Image
                   src="/images/productCarousel.svg"
                   className="w-[64px] md:w-[87px]"
                 />
-                <img
+                <Image
                   src="/images/productCarousel.svg"
                   className="w-[64px] md:w-[87px]"
                 />
               </div>
               <div className="relative h-[375px] md:h-full order-1 mb-4 md:mb-0">
-                <img src="/images/productImg.svg" />
+                <Image src="/images/productImg.svg" />
                 <div className="absolute top-5 left-0 bg-costum-orange p-1 text-sm  w-max text-white font-bold">
                   -30%
                 </div>
                 <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2">
-                  <img src="/images/star.svg" alt="" />
+                  <Image src="/images/star.svg" alt="" />
                 </div>
               </div>
             </div>
@@ -129,7 +130,7 @@ const ProductPage = () => {
                 </div>
               </div>
               <div className="flex gap-1 border mb-4 w-24 border-solid border-costum-gray-300 p-1.5 rounded">
-                <img src="/images/check.svg" alt="" />
+                <Image src="/images/check.svg" alt="" />
                 <p className="text-costum-green">in stock</p>
               </div>
               <div className="grid grid-cols-3">
@@ -198,35 +199,35 @@ const ProductPage = () => {
               <div className="flex gap-3 justify-between">
                 <button className=" w-10/12 flex justify-center items-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
                   {t("product:productMainBtnText")}
-                  <img src="/images/down-icon.svg" alt="" />
+                  <Image src="/images/down-icon.svg" alt="" />
                 </button>
-                <img src="/images/share_img.svg" alt="" />
-                <img src="/images/compare_img.svg" alt="" />
+                <Image src="/images/share_img.svg" alt="" />
+                <Image src="/images/compare_img.svg" alt="" />
               </div>
             </div>
           </div>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-10 md:mb-28">
           <div className="flex items-center justify-center bg-costum-gray flex-col h-24 w-auto rounded-lg">
-            <img src="/images/credit_payment.svg" alt="" className="mb-3" />
+            <Image src="/images/credit_payment.svg" alt="" className="mb-3" />
             <p className="text-sm text-costum-text-black">
               {t("product:productBoxOne")}
             </p>
           </div>
           <div className="flex items-center justify-center bg-costum-gray flex-col h-24 w-auto rounded-lg">
-            <img src="/images/location_on.svg" alt="" className="mb-3" />
+            <Image src="/images/location_on.svg" alt="" className="mb-3" />
             <p className="text-sm text-costum-text-black">
               {t("product:productBoxTwo")}
             </p>
           </div>
           <div className="flex items-center justify-center bg-costum-gray flex-col h-24 w-auto rounded-lg">
-            <img src="/images/local_shipping.svg" alt="" className="mb-3" />
+            <Image src="/images/local_shipping.svg" alt="" className="mb-3" />
             <p className="text-sm text-costum-text-black">
               {t("product:productBoxThree")}
             </p>
           </div>
           <div className="flex items-center justify-center bg-costum-gray flex-col h-24 w-auto rounded-lg">
-            <img src="/images/info.svg" alt="" className="mb-3" />
+            <Image src="/images/info.svg" alt="" className="mb-3" />
             <p className="text-sm text-costum-text-black">
               {t("product:productBoxFour")}
             </p>
@@ -242,22 +243,22 @@ const ProductPage = () => {
               <div className="w-full md:w-2/3 flex  gap-2">
                 <div className="w-auto h-auto  md:min-h-72 bg-white rounded-lg">
                   <div className="relative">
-                    <img
+                    <Image
                       src="/images/product_img.svg"
                       alt=""
                       className="w-full"
                     />
                     <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2">
-                      <img src="/images/star.svg" alt="" />
+                      <Image src="/images/star.svg" alt="" />
                     </div>
                     <div className="absolute bottom-2 right-3">
-                      <img src="/images/share.svg" alt="" />
+                      <Image src="/images/share.svg" alt="" />
                     </div>
                     <div className="absolute bottom-10 right-3">
-                      <img src="/images/compare.svg" alt="" />
+                      <Image src="/images/compare.svg" alt="" />
                     </div>
                     <div className="absolute bottom-2 left-2 flex gap-1 border border-solid border-costum-gray-300 p-1.5 rounded">
-                      <img src="/images/check.svg" alt="" />
+                      <Image src="/images/check.svg" alt="" />
                       <p className="text-costum-green">in stock</p>
                     </div>
                   </div>
@@ -272,22 +273,22 @@ const ProductPage = () => {
                 </div>
                 <div className="w-auto h-auto md:min-h-72 bg-white rounded-lg">
                   <div className="relative">
-                    <img
+                    <Image
                       src="/images/product_img.svg"
                       alt=""
                       className="w-full"
                     />
                     <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2">
-                      <img src="/images/star.svg" alt="" />
+                      <Image src="/images/star.svg" alt="" />
                     </div>
                     <div className="absolute bottom-2 right-3">
-                      <img src="/images/share.svg" alt="" />
+                      <Image src="/images/share.svg" alt="" />
                     </div>
                     <div className="absolute bottom-10 right-3">
-                      <img src="/images/compare.svg" alt="" />
+                      <Image src="/images/compare.svg" alt="" />
                     </div>
                     <div className="absolute bottom-2 left-2 flex gap-1 border border-solid border-costum-gray-300 p-1.5 rounded">
-                      <img src="/images/check.svg" alt="" />
+                      <Image src="/images/check.svg" alt="" />
                       <p className="text-costum-green">in stock</p>
                     </div>
                   </div>
@@ -314,7 +315,7 @@ const ProductPage = () => {
                 </div>
                 <button className=" w-full flex justify-center items-center mb-2 h-12 font-bold gap-2 text-base  rounded-full text-white bg-costum-blue">
                   Add to cart
-                  <img src="/images/down-icon.svg" alt="" />
+                  <Image src="/images/down-icon.svg" alt="" />
                 </button>
               </div>
             </div>
@@ -323,7 +324,7 @@ const ProductPage = () => {
                 Contact our Expert!
               </p>
               <div className="flex gap-2 mb-4">
-                <img
+                <Image
                   src="/images/avatar.svg"
                   alt=""
                   className="w-24 h-24 rounded-lg"
@@ -341,15 +342,15 @@ const ProductPage = () => {
                 </div>
               </div>
               <button className=" w-full flex justify-center items-center mb-2 h-12 font-bold gap-2 text-base  rounded-full text-white bg-costum-blue">
-                <img src="/images/videocam.svg" alt="" />
+                <Image src="/images/videocam.svg" alt="" />
                 Schedule a meeting
               </button>
               <button className=" w-full flex justify-center items-center mb-2 h-12 font-bold gap-2 text-base  rounded-full text-costum-blue bg-white">
-                <img src="/images/phone.svg" alt="" />
+                <Image src="/images/phone.svg" alt="" />
                 Call: +65 553 123 543
               </button>
               <button className=" w-full flex justify-center items-center mb-2 h-12 font-bold gap-2 text-base  rounded-full text-costum-blue bg-white">
-                <img src="/images/chat.svg" alt="" />
+                <Image src="/images/chat.svg" alt="" />
                 Chat
               </button>
             </div>
@@ -621,7 +622,7 @@ const ProductPage = () => {
                             nie ostatni zakup u Was.
                           </p>
                           <div className="flex gap-1">
-                            <img src="/images/attach_file.svg" alt="" />
+                            <Image src="/images/attach_file.svg" alt="" />
                             <p className="text-sm text-costum-text-black">
                               1 file Attached
                             </p>
@@ -633,13 +634,13 @@ const ProductPage = () => {
                           </p>
                           <div className="flex gap-3 ">
                             <div className="flex gap-1 justify-center">
-                              <img src="/images/icon_dislike.svg" alt="" />
+                              <Image src="/images/icon_dislike.svg" alt="" />
                               <p className="text-sm text-costum-text-black">
                                 5
                               </p>
                             </div>
                             <div className="flex gap-1 justify-center">
-                              <img src="/images/icon_likelike.svg" alt="" />
+                              <Image src="/images/icon_likelike.svg" alt="" />
                               <p className="text-sm text-costum-text-black">
                                 24
                               </p>
@@ -668,7 +669,7 @@ const ProductPage = () => {
                             nie ostatni zakup u Was.
                           </p>
                           <div className="flex gap-1">
-                            <img src="/images/attach_file.svg" alt="" />
+                            <Image src="/images/attach_file.svg" alt="" />
                             <p className="text-sm text-costum-text-black">
                               1 file Attached
                             </p>
@@ -680,13 +681,13 @@ const ProductPage = () => {
                           </p>
                           <div className="flex gap-3 ">
                             <div className="flex gap-1 justify-center">
-                              <img src="/images/icon_dislike.svg" alt="" />
+                              <Image src="/images/icon_dislike.svg" alt="" />
                               <p className="text-sm text-costum-text-black">
                                 5
                               </p>
                             </div>
                             <div className="flex gap-1 justify-center">
-                              <img src="/images/icon_likelike.svg" alt="" />
+                              <Image src="/images/icon_likelike.svg" alt="" />
                               <p className="text-sm text-costum-text-black">
                                 24
                               </p>
@@ -715,7 +716,7 @@ const ProductPage = () => {
                             nie ostatni zakup u Was.
                           </p>
                           <div className="flex gap-1">
-                            <img src="/images/attach_file.svg" alt="" />
+                            <Image src="/images/attach_file.svg" alt="" />
                             <p className="text-sm text-costum-text-black">
                               1 file Attached
                             </p>
@@ -727,13 +728,13 @@ const ProductPage = () => {
                           </p>
                           <div className="flex gap-3 ">
                             <div className="flex gap-1 justify-center">
-                              <img src="/images/icon_dislike.svg" alt="" />
+                              <Image src="/images/icon_dislike.svg" alt="" />
                               <p className="text-sm text-costum-text-black">
                                 5
                               </p>
                             </div>
                             <div className="flex gap-1 justify-center">
-                              <img src="/images/icon_likelike.svg" alt="" />
+                              <Image src="/images/icon_likelike.svg" alt="" />
                               <p className="text-sm text-costum-text-black">
                                 24
                               </p>
@@ -762,7 +763,7 @@ const ProductPage = () => {
                             nie ostatni zakup u Was.
                           </p>
                           <div className="flex gap-1">
-                            <img src="/images/attach_file.svg" alt="" />
+                            <Image src="/images/attach_file.svg" alt="" />
                             <p className="text-sm text-costum-text-black">
                               1 file Attached
                             </p>
@@ -774,13 +775,13 @@ const ProductPage = () => {
                           </p>
                           <div className="flex gap-3 ">
                             <div className="flex gap-1 justify-center">
-                              <img src="/images/icon_dislike.svg" alt="" />
+                              <Image src="/images/icon_dislike.svg" alt="" />
                               <p className="text-sm text-costum-text-black">
                                 5
                               </p>
                             </div>
                             <div className="flex gap-1 justify-center">
-                              <img src="/images/icon_likelike.svg" alt="" />
+                              <Image src="/images/icon_likelike.svg" alt="" />
                               <p className="text-sm text-costum-text-black">
                                 24
                               </p>
@@ -809,7 +810,7 @@ const ProductPage = () => {
                             nie ostatni zakup u Was.
                           </p>
                           <div className="flex gap-1">
-                            <img src="/images/attach_file.svg" alt="" />
+                            <Image src="/images/attach_file.svg" alt="" />
                             <p className="text-sm text-costum-text-black">
                               1 file Attached
                             </p>
@@ -821,13 +822,13 @@ const ProductPage = () => {
                           </p>
                           <div className="flex gap-3 ">
                             <div className="flex gap-1 justify-center">
-                              <img src="/images/icon_dislike.svg" alt="" />
+                              <Image src="/images/icon_dislike.svg" alt="" />
                               <p className="text-sm text-costum-text-black">
                                 5
                               </p>
                             </div>
                             <div className="flex gap-1 justify-center">
-                              <img src="/images/icon_likelike.svg" alt="" />
+                              <Image src="/images/icon_likelike.svg" alt="" />
                               <p className="text-sm text-costum-text-black">
                                 24
                               </p>
@@ -856,7 +857,7 @@ const ProductPage = () => {
                             nie ostatni zakup u Was.
                           </p>
                           <div className="flex gap-1">
-                            <img src="/images/attach_file.svg" alt="" />
+                            <Image src="/images/attach_file.svg" alt="" />
                             <p className="text-sm text-costum-text-black">
                               1 file Attached
                             </p>
@@ -868,13 +869,13 @@ const ProductPage = () => {
                           </p>
                           <div className="flex gap-3 ">
                             <div className="flex gap-1 justify-center">
-                              <img src="/images/icon_dislike.svg" alt="" />
+                              <Image src="/images/icon_dislike.svg" alt="" />
                               <p className="text-sm text-costum-text-black">
                                 5
                               </p>
                             </div>
                             <div className="flex gap-1 justify-center">
-                              <img src="/images/icon_likelike.svg" alt="" />
+                              <Image src="/images/icon_likelike.svg" alt="" />
                               <p className="text-sm text-costum-text-black">
                                 24
                               </p>
@@ -1196,7 +1197,7 @@ const ProductPage = () => {
                               pewno nie ostatni zakup u Was.
                             </p>
                             <div className="flex gap-1">
-                              <img src="/images/attach_file.svg" alt="" />
+                              <Image src="/images/attach_file.svg" alt="" />
                               <p className="text-sm text-costum-text-black">
                                 1 file Attached
                               </p>
@@ -1208,13 +1209,13 @@ const ProductPage = () => {
                             </p>
                             <div className="flex gap-3 ">
                               <div className="flex gap-1 justify-center">
-                                <img src="/images/icon_dislike.svg" alt="" />
+                                <Image src="/images/icon_dislike.svg" alt="" />
                                 <p className="text-sm text-costum-text-black">
                                   5
                                 </p>
                               </div>
                               <div className="flex gap-1 justify-center">
-                                <img src="/images/icon_likelike.svg" alt="" />
+                                <Image src="/images/icon_likelike.svg" alt="" />
                                 <p className="text-sm text-costum-text-black">
                                   24
                                 </p>
@@ -1243,7 +1244,7 @@ const ProductPage = () => {
                               pewno nie ostatni zakup u Was.
                             </p>
                             <div className="flex gap-1">
-                              <img src="/images/attach_file.svg" alt="" />
+                              <Image src="/images/attach_file.svg" alt="" />
                               <p className="text-sm text-costum-text-black">
                                 1 file Attached
                               </p>
@@ -1255,13 +1256,13 @@ const ProductPage = () => {
                             </p>
                             <div className="flex gap-3 ">
                               <div className="flex gap-1 justify-center">
-                                <img src="/images/icon_dislike.svg" alt="" />
+                                <Image src="/images/icon_dislike.svg" alt="" />
                                 <p className="text-sm text-costum-text-black">
                                   5
                                 </p>
                               </div>
                               <div className="flex gap-1 justify-center">
-                                <img src="/images/icon_likelike.svg" alt="" />
+                                <Image src="/images/icon_likelike.svg" alt="" />
                                 <p className="text-sm text-costum-text-black">
                                   24
                                 </p>
@@ -1290,7 +1291,7 @@ const ProductPage = () => {
                               pewno nie ostatni zakup u Was.
                             </p>
                             <div className="flex gap-1">
-                              <img src="/images/attach_file.svg" alt="" />
+                              <Image src="/images/attach_file.svg" alt="" />
                               <p className="text-sm text-costum-text-black">
                                 1 file Attached
                               </p>
@@ -1302,13 +1303,13 @@ const ProductPage = () => {
                             </p>
                             <div className="flex gap-3 ">
                               <div className="flex gap-1 justify-center">
-                                <img src="/images/icon_dislike.svg" alt="" />
+                                <Image src="/images/icon_dislike.svg" alt="" />
                                 <p className="text-sm text-costum-text-black">
                                   5
                                 </p>
                               </div>
                               <div className="flex gap-1 justify-center">
-                                <img src="/images/icon_likelike.svg" alt="" />
+                                <Image src="/images/icon_likelike.svg" alt="" />
                                 <p className="text-sm text-costum-text-black">
                                   24
                                 </p>
@@ -1349,7 +1350,7 @@ const ProductPage = () => {
       <div id="gift" className="bg-costum-blue py-8 mb-20">
         <div className="container mx-auto md:flex-nowrap flex-wrap flex gap-4 ">
           <div className="flex flex-wrap w-full justify-center md:jusctify-start md:w-2/4">
-            <img src="/images/gift.svg" alt="" />
+            <Image src="/images/gift.svg" alt="" />
             <div className="block mt-3 md:mt-0 md:ml-16">
               <p className="text-2xl md:text-4xl text-center md:text-left text-white font-bold mb-3">
                 Enjoy 10% OFF
@@ -1378,7 +1379,7 @@ const ProductPage = () => {
               <p className="text-costum-blue text-base font-medium">
                 {t("product:featuredTextSubTitle")}
               </p>
-              <img src="/images/arrow_forward.svg" alt="" />
+              <Image src="/images/arrow_forward.svg" alt="" />
             </div>
           </div>
           <Card />
@@ -1386,7 +1387,7 @@ const ProductPage = () => {
             <p className="text-costum-blue text-base font-medium ">
               {t("product:featuredTextSubTitle")}
             </p>
-            <img src="/images/arrow_forward.svg" alt="" />
+            <Image src="/images/arrow_forward.svg" alt="" />
           </div>
         </div>
         <div id="products" className="mb-20">
@@ -1399,7 +1400,7 @@ const ProductPage = () => {
               <p className="text-costum-blue text-base font-medium">
                 {t("product:replacementTextSubTitle")}
               </p>
-              <img src="/images/arrow_forward.svg" alt="" />
+              <Image src="/images/arrow_forward.svg" alt="" />
             </div>
           </div>
           <Card />
@@ -1407,7 +1408,7 @@ const ProductPage = () => {
             <p className="text-costum-blue text-base font-medium ">
               {t("product:replacementTextSubTitle")}
             </p>
-            <img src="/images/arrow_forward.svg" alt="" />
+            <Image src="/images/arrow_forward.svg" alt="" />
           </div>
         </div>
         <div id="products" className="mb-20">
@@ -1420,7 +1421,7 @@ const ProductPage = () => {
               <p className="text-costum-blue text-base font-medium">
                 {t("product:seriesTextSubTitle")}
               </p>
-              <img src="/images/arrow_forward.svg" alt="" />
+              <Image src="/images/arrow_forward.svg" alt="" />
             </div>
           </div>
           <Card />
@@ -1428,7 +1429,7 @@ const ProductPage = () => {
             <p className="text-costum-blue text-base font-medium ">
               {t("product:seriesTextSubTitle")}
             </p>
-            <img src="/images/arrow_forward.svg" alt="" />
+            <Image src="/images/arrow_forward.svg" alt="" />
           </div>
         </div>
         <div id="products" className="mb-20">
@@ -1441,7 +1442,7 @@ const ProductPage = () => {
               <p className="text-costum-blue text-base font-medium">
                 {t("product:similarTextSubTitle")}
               </p>
-              <img src="/images/arrow_forward.svg" alt="" />
+              <Image src="/images/arrow_forward.svg" alt="" />
             </div>
           </div>
           <Card />
@@ -1449,7 +1450,7 @@ const ProductPage = () => {
             <p className="text-costum-blue text-base font-medium ">
               {t("product:similarTextSubTitle")}
             </p>
-            <img src="/images/arrow_forward.svg" alt="" />
+            <Image src="/images/arrow_forward.svg" alt="" />
           </div>
         </div>
         <div id="products" className="mb-20">
@@ -1462,7 +1463,7 @@ const ProductPage = () => {
               <p className="text-costum-blue text-base font-medium">
                 {t("product:relatedTextSubTitle")}
               </p>
-              <img src="/images/arrow_forward.svg" alt="" />
+              <Image src="/images/arrow_forward.svg" alt="" />
             </div>
           </div>
           <Card />
@@ -1470,7 +1471,7 @@ const ProductPage = () => {
             <p className="text-costum-blue text-base font-medium ">
               {t("product:relatedTextSubTitle")}
             </p>
-            <img src="/images/arrow_forward.svg" alt="" />
+            <Image src="/images/arrow_forward.svg" alt="" />
           </div>
         </div>
       </div>

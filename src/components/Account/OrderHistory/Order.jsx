@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTranslation } from "next-i18next";
-import { Breadcrumbs, Table, Tabs } from '@mantine/core';
+import { Breadcrumbs, Table, Tabs , Image} from '@mantine/core';
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from 'next/link';
 
@@ -50,7 +50,7 @@ const Order = () => {
                             </Table.Td>
                             <Table.Td>
                                 <div className=" flex items-center gap-2">
-                                    <img src="/images/error_outline.svg" alt="" />
+                                    <Image src="/images/error_outline.svg" alt="" />
                                     <p className="text-base font-semibold text-[#7B61FF] ">TO AUTHORIZE </p>
                                 </div>
                             </Table.Td>
@@ -58,7 +58,7 @@ const Order = () => {
                                 <div className=" flex items-center gap-[35px]">
                                     <p className="text-2xl font-bold text-costum-blue">$1400.00</p>
                                     <Link href="/account/details">
-                                        <img src="/images/more_horiz.svg" alt="" />
+                                        <Image src="/images/more_horiz.svg" alt="" />
 
                                     </Link>
                                 </div>
@@ -78,7 +78,7 @@ const Order = () => {
                             </Table.Td>
                             <Table.Td>
                                 <div className=" flex items-center gap-2">
-                                    <img src="/images/error_outline.svg" alt="" />
+                                    <Image src="/images/error_outline.svg" alt="" />
                                     <p className="text-base font-semibold text-[#7B61FF] ">TO AUTHORIZE </p>
                                 </div>
                             </Table.Td>
@@ -86,7 +86,7 @@ const Order = () => {
                                 <div className=" flex items-center gap-[35px]">
                                     <p className="text-2xl font-bold text-costum-blue">$1400.00</p>
                                     <Link href="/account/details">
-                                        <img src="/images/more_horiz.svg" alt="" />
+                                        <Image src="/images/more_horiz.svg" alt="" />
 
                                     </Link>
                                 </div>
@@ -106,7 +106,7 @@ const Order = () => {
                             </Table.Td>
                             <Table.Td>
                                 <div className=" flex items-center gap-2">
-                                    <img src="/images/error_outline.svg" alt="" />
+                                    <Image src="/images/error_outline.svg" alt="" />
                                     <p className="text-base font-semibold text-[#7B61FF] ">TO AUTHORIZE </p>
                                 </div>
                             </Table.Td>
@@ -114,7 +114,7 @@ const Order = () => {
                                 <div className=" flex items-center gap-[35px]">
                                     <p className="text-2xl font-bold text-costum-blue">$1400.00</p>
                                     <Link href="/account/details">
-                                        <img src="/images/more_horiz.svg" alt="" />
+                                        <Image src="/images/more_horiz.svg" alt="" />
 
                                     </Link>
                                 </div>
@@ -133,19 +133,19 @@ const Order = () => {
                             {t("account:accountTabThreeTextFour")}
                         </p>
                         <div className=" flex items-center gap-1">
-                            <img src="/images/error_outline_mobile.svg" alt="" />
+                            <Image src="/images/error_outline_mobile.svg" alt="" />
                             <p className="text-sm font-semibold text-[#7B61FF] ">TO AUTHORIZE </p>
                         </div>
                     </div>
                     <p className="text-sm mb-2 text-[#1071FF] text-xl font-semibold"> <span className='font-bold text-black text-sm'>{t("account:accountTabThreeTextFive")} </span> $120.00</p>
                     <div className="flex w-full justify-between">
                         <div className="flex gap-1 items-center justifu-between">
-                            <img src="/images/more_horiz_mobile.svg" alt="" />
+                            <Image src="/images/more_horiz_mobile.svg" alt="" />
                             <p className="text-sm font-medium">{t("account:moreActions")}</p>
                         </div>
                         <Link href="/account/details" className="flex gap-1 items-center">
                             <p className="text-sm font-medium">{t("account:moreDetails")}</p>
-                            <img src="/images/down_icon_mobile.svg" alt="" />
+                            <Image src="/images/down_icon_mobile.svg" alt="" />
                         </Link>
                     </div>
                 </div>
@@ -158,19 +158,19 @@ const Order = () => {
                             {t("account:accountTabThreeTextFour")}
                         </p>
                         <div className=" flex items-center gap-1">
-                            <img src="/images/error_outline_mobile.svg" alt="" />
+                            <Image src="/images/error_outline_mobile.svg" alt="" />
                             <p className="text-sm font-semibold text-[#7B61FF] ">TO AUTHORIZE </p>
                         </div>
                     </div>
                     <p className="text-sm mb-2 text-[#1071FF] text-xl font-semibold"> <span className='font-bold text-black text-sm'>{t("account:accountTabThreeTextFive")} </span> $120.00</p>
                     <div className="flex w-full justify-between">
                         <div className="flex gap-1 items-center justifu-between">
-                            <img src="/images/more_horiz_mobile.svg" alt="" />
+                            <Image src="/images/more_horiz_mobile.svg" alt="" />
                             <p className="text-sm font-medium">{t("account:moreActions")}</p>
                         </div>
                         <Link href="/account/details" className="flex gap-1 items-center">
                             <p className="text-sm font-medium">{t("account:moreDetails")}</p>
-                            <img src="/images/down_icon_mobile.svg" alt="" />
+                            <Image src="/images/down_icon_mobile.svg" alt="" />
                         </Link>
                     </div>
                 </div>
@@ -183,19 +183,19 @@ const Order = () => {
                             {t("account:accountTabThreeTextFour")}
                         </p>
                         <div className=" flex items-center gap-1">
-                            <img src="/images/error_outline_mobile.svg" alt="" />
+                            <Image src="/images/error_outline_mobile.svg" alt="" />
                             <p className="text-sm font-semibold text-[#7B61FF] ">TO AUTHORIZE </p>
                         </div>
                     </div>
                     <p className="text-sm mb-2 text-[#1071FF] text-xl font-semibold"> <span className='font-bold text-black text-sm'>{t("account:accountTabThreeTextFive")} </span> $120.00</p>
                     <div className="flex w-full justify-between">
                         <div className="flex gap-1 items-center justifu-between">
-                            <img src="/images/more_horiz_mobile.svg" alt="" />
+                            <Image src="/images/more_horiz_mobile.svg" alt="" />
                             <p className="text-sm font-medium">{t("account:moreActions")}</p>
                         </div>
                         <Link href="/account/details" className="flex gap-1 items-center">
                             <p className="text-sm font-medium">{t("account:moreDetails")}</p>
-                            <img src="/images/down_icon_mobile.svg" alt="" />
+                            <Image src="/images/down_icon_mobile.svg" alt="" />
                         </Link>
                     </div>
                 </div>

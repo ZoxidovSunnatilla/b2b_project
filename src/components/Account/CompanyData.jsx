@@ -1,6 +1,7 @@
 import React from 'react'
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { Image } from '@mantine/core';
 
 const CompanyData = () => {
     const { t } = useTranslation("common", "checkout", "account")
@@ -12,7 +13,7 @@ const CompanyData = () => {
                 <div className="w-full bg-star md:p-6 px-2 py-4 rounded mb-4">
                     <div className="flex mb-8 justify-between w-full">
                         <p className="text-xl font-bold">{t("account:companyData")}</p>
-                        <img src="/images/editCompanyData.svg" alt="" />
+                        <Image src="/images/editCompanyData.svg" alt="" />
                     </div>
                     <div className="flex gap-2 mb-4 items-center">
                         <p className="text-base font-normal leading-6">{t("checkout:stepOneBoxOneTextTwo")}</p>
