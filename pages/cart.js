@@ -1,10 +1,10 @@
 import React from 'react';
-import { Breadcrumbs, Tabs, List, Checkbox, Input, Accordion, Rating, Select } from '@mantine/core';
+import { Breadcrumbs, Tabs, List, Checkbox, Input, Accordion, Rating, Select, Image } from '@mantine/core';
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const Cart = () => {
-  const icon = <img src='/images/down_icon_select.svg' alt='' />
+  const icon = <Image src='/images/down_icon_select.svg' alt='' />
   const { t } = useTranslation("common", "cart")
   return (
     <div id="cart">
@@ -72,12 +72,12 @@ const Cart = () => {
                     <div className="flex">
                       <div className="flex gap-2">
                         <p className="text-white font-bold text-base">{t("cart:cartTabOne")}</p>
-                        <img src="/images/edit_icon.svg" alt="" />
+                        <Image src="/images/edit_icon.svg" alt="" />
                       </div>
                       <p className="text-xs text-white ml-8 items-center flex font-medium">{t("cart:summarySupplierSubTitleText")}</p>
                     </div>
                     <div className="flex gap-2">
-                      <img src="/images/star_white.svg" alt="" />
+                      <Image src="/images/star_white.svg" alt="" />
                       <div className="text-white">{t("cart:cartOneSaveCart")}</div>
                     </div>
                   </div>
@@ -95,8 +95,8 @@ const Cart = () => {
                         <div className="bg-star p-2 h-[530px] overflow-y-scroll">
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -119,7 +119,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -127,8 +127,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -151,7 +151,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -159,8 +159,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -183,7 +183,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -191,8 +191,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -215,7 +215,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -223,8 +223,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -247,7 +247,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -255,8 +255,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -279,7 +279,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -287,8 +287,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -311,7 +311,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -333,8 +333,8 @@ const Cart = () => {
                       <div className="bg-star p-2 h-[530px] overflow-y-scroll">
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -357,7 +357,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -365,8 +365,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -389,7 +389,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -397,8 +397,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -421,7 +421,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -429,8 +429,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -453,7 +453,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -461,8 +461,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -485,7 +485,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -493,8 +493,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -517,7 +517,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -525,8 +525,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -549,7 +549,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -572,12 +572,12 @@ const Cart = () => {
                     <div className="flex justify-between">
                       <div className="block">
                         <div className="flex items-center gap-2 mb-4">
-                          <img src="/images/download_icon.svg" alt="" />
+                          <Image src="/images/download_icon.svg" alt="" />
                           <p className="text-base text-costum-blue font-medium ">{t("cart:cartDownloadCart")}</p>
                         </div>
 
                         <div className="flex items-center">
-                          <img src="/images/cart_delete_icon.svg" alt="" />
+                          <Image src="/images/cart_delete_icon.svg" alt="" />
                           <p className="text-base text-[#434447]">{t("cart:cartRemoveCart")}</p>
                         </div>
                       </div>
@@ -599,12 +599,12 @@ const Cart = () => {
                     <div className="flex">
                       <div className="flex gap-2">
                         <p className="text-white font-bold text-base">{t("cart:cartTabTwo")}</p>
-                        <img src="/images/edit_icon.svg" alt="" />
+                        <Image src="/images/edit_icon.svg" alt="" />
                       </div>
                       <p className="text-xs text-white ml-8 items-center flex font-medium">{t("cart:summarySupplierSubTitleText")}</p>
                     </div>
                     <div className="flex gap-2">
-                      <img src="/images/star_white.svg" alt="" />
+                      <Image src="/images/star_white.svg" alt="" />
                       <div className="text-white">{t("cart:cartOneSaveCart")}</div>
                     </div>
                   </div>
@@ -622,8 +622,8 @@ const Cart = () => {
                         <div className="bg-star p-2 h-[530px] overflow-y-scroll">
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -646,7 +646,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -654,8 +654,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -678,7 +678,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -686,8 +686,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -710,7 +710,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -718,8 +718,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -742,7 +742,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -750,8 +750,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -774,7 +774,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -782,8 +782,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -806,7 +806,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -814,8 +814,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -838,7 +838,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -860,8 +860,8 @@ const Cart = () => {
                       <div className="bg-star p-2 h-[530px] overflow-y-scroll">
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -884,7 +884,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -892,8 +892,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -916,7 +916,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -924,8 +924,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -948,7 +948,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -956,8 +956,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -980,7 +980,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -988,8 +988,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -1012,7 +1012,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -1020,8 +1020,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -1044,7 +1044,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -1052,8 +1052,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -1076,7 +1076,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -1099,12 +1099,12 @@ const Cart = () => {
                     <div className="flex justify-between">
                       <div className="block">
                         <div className="flex items-center gap-2 mb-4">
-                          <img src="/images/download_icon.svg" alt="" />
+                          <Image src="/images/download_icon.svg" alt="" />
                           <p className="text-base text-costum-blue font-medium ">{t("cart:cartDownloadCart")}</p>
                         </div>
 
                         <div className="flex items-center">
-                          <img src="/images/cart_delete_icon.svg" alt="" />
+                          <Image src="/images/cart_delete_icon.svg" alt="" />
                           <p className="text-base text-[#434447]">{t("cart:cartRemoveCart")}</p>
                         </div>
                       </div>
@@ -1126,12 +1126,12 @@ const Cart = () => {
                     <div className="flex">
                       <div className="flex gap-2">
                         <p className="text-white font-bold text-base">{t("cart:cartTabThree")}</p>
-                        <img src="/images/edit_icon.svg" alt="" />
+                        <Image src="/images/edit_icon.svg" alt="" />
                       </div>
                       <p className="text-xs text-white ml-8 items-center flex font-medium">{t("cart:summarySupplierSubTitleText")}</p>
                     </div>
                     <div className="flex gap-2">
-                      <img src="/images/star_white.svg" alt="" />
+                      <Image src="/images/star_white.svg" alt="" />
                       <div className="text-white">{t("cart:cartOneSaveCart")}</div>
                     </div>
                   </div>
@@ -1149,8 +1149,8 @@ const Cart = () => {
                         <div className="bg-star p-2 h-[530px] overflow-y-scroll">
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -1173,7 +1173,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -1181,8 +1181,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -1205,7 +1205,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -1213,8 +1213,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -1237,7 +1237,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -1245,8 +1245,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -1269,7 +1269,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -1277,8 +1277,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -1301,7 +1301,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -1309,8 +1309,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -1333,7 +1333,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -1341,8 +1341,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -1365,7 +1365,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -1387,8 +1387,8 @@ const Cart = () => {
                       <div className="bg-star p-2 h-[530px] overflow-y-scroll">
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -1411,7 +1411,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -1419,8 +1419,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -1443,7 +1443,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -1451,8 +1451,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -1475,7 +1475,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -1483,8 +1483,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -1507,7 +1507,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -1515,8 +1515,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -1539,7 +1539,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -1547,8 +1547,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -1571,7 +1571,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -1579,8 +1579,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -1603,7 +1603,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -1626,12 +1626,12 @@ const Cart = () => {
                     <div className="flex justify-between">
                       <div className="block">
                         <div className="flex items-center gap-2 mb-4">
-                          <img src="/images/download_icon.svg" alt="" />
+                          <Image src="/images/download_icon.svg" alt="" />
                           <p className="text-base text-costum-blue font-medium ">{t("cart:cartDownloadCart")}</p>
                         </div>
 
                         <div className="flex items-center">
-                          <img src="/images/cart_delete_icon.svg" alt="" />
+                          <Image src="/images/cart_delete_icon.svg" alt="" />
                           <p className="text-base text-[#434447]">{t("cart:cartRemoveCart")}</p>
                         </div>
                       </div>
@@ -1654,12 +1654,12 @@ const Cart = () => {
                     <div className="flex">
                       <div className="flex gap-2">
                         <p className="text-white font-bold text-base">{t("cart:cartTabFour")}</p>
-                        <img src="/images/edit_icon.svg" alt="" />
+                        <Image src="/images/edit_icon.svg" alt="" />
                       </div>
                       <p className="text-xs text-white ml-8 items-center flex font-medium">{t("cart:summarySupplierSubTitleText")}</p>
                     </div>
                     <div className="flex gap-2">
-                      <img src="/images/star_white.svg" alt="" />
+                      <Image src="/images/star_white.svg" alt="" />
                       <div className="text-white">{t("cart:cartOneSaveCart")}</div>
                     </div>
                   </div>
@@ -1677,8 +1677,8 @@ const Cart = () => {
                         <div className="bg-star p-2 h-[530px] overflow-y-scroll">
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -1701,7 +1701,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -1709,8 +1709,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -1733,7 +1733,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -1741,8 +1741,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -1765,7 +1765,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -1773,8 +1773,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -1797,7 +1797,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -1805,8 +1805,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -1829,7 +1829,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -1837,8 +1837,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -1861,7 +1861,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -1869,8 +1869,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -1893,7 +1893,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -1915,8 +1915,8 @@ const Cart = () => {
                       <div className="bg-star p-2 h-[530px] overflow-y-scroll">
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -1939,7 +1939,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -1947,8 +1947,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -1971,7 +1971,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -1979,8 +1979,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -2003,7 +2003,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -2011,8 +2011,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -2035,7 +2035,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -2043,8 +2043,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -2067,7 +2067,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -2075,8 +2075,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -2099,7 +2099,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -2107,8 +2107,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -2131,7 +2131,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -2154,12 +2154,12 @@ const Cart = () => {
                     <div className="flex justify-between">
                       <div className="block">
                         <div className="flex items-center gap-2 mb-4">
-                          <img src="/images/download_icon.svg" alt="" />
+                          <Image src="/images/download_icon.svg" alt="" />
                           <p className="text-base text-costum-blue font-medium ">{t("cart:cartDownloadCart")}</p>
                         </div>
 
                         <div className="flex items-center">
-                          <img src="/images/cart_delete_icon.svg" alt="" />
+                          <Image src="/images/cart_delete_icon.svg" alt="" />
                           <p className="text-base text-[#434447]">{t("cart:cartRemoveCart")}</p>
                         </div>
                       </div>
@@ -2181,12 +2181,12 @@ const Cart = () => {
                     <div className="flex">
                       <div className="flex gap-2">
                         <p className="text-white font-bold text-base">{t("cart:cartTabFive")}</p>
-                        <img src="/images/edit_icon.svg" alt="" />
+                        <Image src="/images/edit_icon.svg" alt="" />
                       </div>
                       <p className="text-xs text-white ml-8 items-center flex font-medium">{t("cart:summarySupplierSubTitleText")}</p>
                     </div>
                     <div className="flex gap-2">
-                      <img src="/images/star_white.svg" alt="" />
+                      <Image src="/images/star_white.svg" alt="" />
                       <div className="text-white">{t("cart:cartOneSaveCart")}</div>
                     </div>
                   </div>
@@ -2204,8 +2204,8 @@ const Cart = () => {
                         <div className="bg-star p-2 h-[530px] overflow-y-scroll">
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -2228,7 +2228,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -2236,8 +2236,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -2260,7 +2260,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -2268,8 +2268,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -2292,7 +2292,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -2300,8 +2300,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -2324,7 +2324,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -2332,8 +2332,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -2356,7 +2356,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -2364,8 +2364,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -2388,7 +2388,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -2396,8 +2396,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -2420,7 +2420,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -2442,8 +2442,8 @@ const Cart = () => {
                       <div className="bg-star p-2 h-[530px] overflow-y-scroll">
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -2466,7 +2466,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -2474,8 +2474,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -2498,7 +2498,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -2506,8 +2506,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -2530,7 +2530,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -2538,8 +2538,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -2562,7 +2562,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -2570,8 +2570,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -2594,7 +2594,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -2602,8 +2602,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -2626,7 +2626,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -2634,8 +2634,8 @@ const Cart = () => {
                           </div>
                           <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                             <div className="relative w-2/12">
-                              <img src="/images/cart_img.svg" alt="" />
-                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><img src="/images/star.svg" alt="" /></div>
+                              <Image src="/images/cart_img.svg" alt="" />
+                              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2"><Image src="/images/star.svg" alt="" /></div>
                             </div>
                             <div className="flex justify-between w-10/12">
                               <div className="block ml-1 mt-2">
@@ -2658,7 +2658,7 @@ const Cart = () => {
                                   <p className="text-2xl text-costum-blue font-semibold">$120.00 {t("cart:cartPriceGross")}</p>
                                 </div>
                                 <div className="flex items-center">
-                                  <img src="/images/cart_delete_icon.svg" alt="" />
+                                  <Image src="/images/cart_delete_icon.svg" alt="" />
                                   <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                 </div>
                               </div>
@@ -2681,12 +2681,12 @@ const Cart = () => {
                     <div className="flex justify-between">
                       <div className="block">
                         <div className="flex items-center gap-2 mb-4">
-                          <img src="/images/download_icon.svg" alt="" />
+                          <Image src="/images/download_icon.svg" alt="" />
                           <p className="text-base text-costum-blue font-medium ">{t("cart:cartDownloadCart")}</p>
                         </div>
 
                         <div className="flex items-center">
-                          <img src="/images/cart_delete_icon.svg" alt="" />
+                          <Image src="/images/cart_delete_icon.svg" alt="" />
                           <p className="text-base text-[#434447]">{t("cart:cartRemoveCart")}</p>
                         </div>
                       </div>
@@ -2708,12 +2708,12 @@ const Cart = () => {
                     <div className="flex">
                       <div className="flex gap-2">
                         <p className="text-white font-bold text-base">{t("cart:cartTabFive")}</p>
-                        <img src="/images/edit_icon.svg" alt="" />
+                        <Image src="/images/edit_icon.svg" alt="" />
                       </div>
                       <p className="text-xs text-white ml-8 items-center flex font-medium">{t("cart:summarySupplierSubTitleText")}</p>
                     </div>
                     <div className="flex gap-2">
-                      <img src="/images/star_white.svg" alt="" />
+                      <Image src="/images/star_white.svg" alt="" />
                       <div className="text-white">{t("cart:cartOneSaveCart")}</div>
                     </div>
                   </div>
@@ -2725,7 +2725,7 @@ const Cart = () => {
                   <div className="flex bg-star w-full justify-between rounded-lg mb-5 items-cetner p-5">
                     <div className="flex items-center">
                       <div className="flex items-center  gap-2">
-                        <img src="/images/shopping_cart.svg" alt="" />
+                        <Image src="/images/shopping_cart.svg" alt="" />
                         <p className="text-xl text-costum-blue font-bold">{t("cart:abandonedBoxTitle")}</p>
                       </div>
                       <p className="text-sm text-costumBlack ml-10 ">{t("cart:abandonedBoxText")}20</p>
@@ -2745,7 +2745,7 @@ const Cart = () => {
                   <div className="flex bg-star w-full justify-between rounded-lg mb-5 items-cetner p-5">
                     <div className="flex items-center">
                       <div className="flex items-center  gap-2">
-                        <img src="/images/shopping_cart.svg" alt="" />
+                        <Image src="/images/shopping_cart.svg" alt="" />
                         <p className="text-xl text-costum-blue font-bold">{t("cart:abandonedBoxTitle")}</p>
                       </div>
                       <p className="text-sm text-costumBlack ml-10 ">{t("cart:abandonedBoxText")}20</p>
@@ -2765,7 +2765,7 @@ const Cart = () => {
                   <div className="flex bg-star w-full justify-between rounded-lg mb-5 items-cetner p-5">
                     <div className="flex items-center">
                       <div className="flex items-center  gap-2">
-                        <img src="/images/shopping_cart.svg" alt="" />
+                        <Image src="/images/shopping_cart.svg" alt="" />
                         <p className="text-xl text-costum-blue font-bold">{t("cart:abandonedBoxTitle")}</p>
                       </div>
                       <p className="text-sm text-costumBlack ml-10 ">{t("cart:abandonedBoxText")}20</p>
@@ -2800,12 +2800,12 @@ const Cart = () => {
                       <div className="flex">
                         <div className="flex gap-2">
                           <p className="text-white font-bold text-[13px]">{t("cart:cartTabOne")}</p>
-                          <img src="/images/edit_icon.svg" alt="" />
+                          <Image src="/images/edit_icon.svg" alt="" />
                         </div>
                         <p className="text-[13px] text-white ml-4 items-center flex font-medium">{t("cart:summarySupplierSubTitleText")}</p>
                       </div>
                       <div className="flex gap-2">
-                        <img src="/images/star_white.svg" alt="" />
+                        <Image src="/images/star_white.svg" alt="" />
                         <div className="text-white text-[13px]">{t("cart:cartOneSaveCart")}</div>
                       </div>
                     </div>
@@ -2823,7 +2823,7 @@ const Cart = () => {
                           <div className="bg-star p-2 h-[530px] overflow-y-scroll">
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -2847,7 +2847,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -2855,7 +2855,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -2879,7 +2879,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -2887,7 +2887,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -2911,7 +2911,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -2919,7 +2919,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -2943,7 +2943,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -2951,7 +2951,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -2975,7 +2975,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -2997,7 +2997,7 @@ const Cart = () => {
                         <div className="bg-star p-2 h-[530px] overflow-y-scroll">
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -3021,7 +3021,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -3029,7 +3029,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -3053,7 +3053,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -3061,7 +3061,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -3085,7 +3085,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -3093,7 +3093,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -3117,7 +3117,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -3125,7 +3125,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -3149,7 +3149,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -3172,12 +3172,12 @@ const Cart = () => {
                       <div className="block">
                         <div className="block">
                           <div className="flex items-center gap-2">
-                            <img src="/images/download_icon.svg" alt="" />
+                            <Image src="/images/download_icon.svg" alt="" />
                             <p className="text-sm  text-costum-blue font-medium mb-3">{t("cart:cartDownloadCart")}</p>
                           </div>
 
                           <div className="flex items-center">
-                            <img src="/images/cart_delete_icon.svg" alt="" />
+                            <Image src="/images/cart_delete_icon.svg" alt="" />
                             <p className="text-sm font-medium  text-[#434447]">{t("cart:cartRemoveCart")}</p>
                           </div>
                         </div>
@@ -3207,12 +3207,12 @@ const Cart = () => {
                       <div className="flex">
                         <div className="flex gap-2">
                           <p className="text-white font-bold text-[13px]">{t("cart:cartTabTwo")}</p>
-                          <img src="/images/edit_icon.svg" alt="" />
+                          <Image src="/images/edit_icon.svg" alt="" />
                         </div>
                         <p className="text-[13px] text-white ml-4 items-center flex font-medium">{t("cart:summarySupplierSubTitleText")}</p>
                       </div>
                       <div className="flex gap-2">
-                        <img src="/images/star_white.svg" alt="" />
+                        <Image src="/images/star_white.svg" alt="" />
                         <div className="text-white text-[13px]">{t("cart:cartOneSaveCart")}</div>
                       </div>
                     </div>
@@ -3230,7 +3230,7 @@ const Cart = () => {
                           <div className="bg-star p-2 h-[530px] overflow-y-scroll">
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -3254,7 +3254,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -3262,7 +3262,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -3286,7 +3286,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -3294,7 +3294,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -3318,7 +3318,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -3326,7 +3326,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -3350,7 +3350,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -3358,7 +3358,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -3382,7 +3382,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -3404,7 +3404,7 @@ const Cart = () => {
                         <div className="bg-star p-2 h-[530px] overflow-y-scroll">
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -3428,7 +3428,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -3436,7 +3436,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -3460,7 +3460,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -3468,7 +3468,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -3492,7 +3492,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -3500,7 +3500,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -3524,7 +3524,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -3532,7 +3532,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -3556,7 +3556,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -3579,12 +3579,12 @@ const Cart = () => {
                       <div className="block">
                         <div className="block">
                           <div className="flex items-center gap-2">
-                            <img src="/images/download_icon.svg" alt="" />
+                            <Image src="/images/download_icon.svg" alt="" />
                             <p className="text-sm  text-costum-blue font-medium mb-3">{t("cart:cartDownloadCart")}</p>
                           </div>
 
                           <div className="flex items-center">
-                            <img src="/images/cart_delete_icon.svg" alt="" />
+                            <Image src="/images/cart_delete_icon.svg" alt="" />
                             <p className="text-sm font-medium  text-[#434447]">{t("cart:cartRemoveCart")}</p>
                           </div>
                         </div>
@@ -3614,12 +3614,12 @@ const Cart = () => {
                       <div className="flex">
                         <div className="flex gap-2">
                           <p className="text-white font-bold text-[13px]">{t("cart:cartTabThree")}</p>
-                          <img src="/images/edit_icon.svg" alt="" />
+                          <Image src="/images/edit_icon.svg" alt="" />
                         </div>
                         <p className="text-[13px] text-white ml-4 items-center flex font-medium">{t("cart:summarySupplierSubTitleText")}</p>
                       </div>
                       <div className="flex gap-2">
-                        <img src="/images/star_white.svg" alt="" />
+                        <Image src="/images/star_white.svg" alt="" />
                         <div className="text-white text-[13px]">{t("cart:cartOneSaveCart")}</div>
                       </div>
                     </div>
@@ -3637,7 +3637,7 @@ const Cart = () => {
                           <div className="bg-star p-2 h-[530px] overflow-y-scroll">
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -3661,7 +3661,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -3669,7 +3669,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -3693,7 +3693,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -3701,7 +3701,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -3725,7 +3725,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -3733,7 +3733,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -3757,7 +3757,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -3765,7 +3765,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -3789,7 +3789,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -3811,7 +3811,7 @@ const Cart = () => {
                         <div className="bg-star p-2 h-[530px] overflow-y-scroll">
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -3835,7 +3835,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -3843,7 +3843,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -3867,7 +3867,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -3875,7 +3875,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -3899,7 +3899,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -3907,7 +3907,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -3931,7 +3931,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -3939,7 +3939,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -3963,7 +3963,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -3986,12 +3986,12 @@ const Cart = () => {
                       <div className="block">
                         <div className="block">
                           <div className="flex items-center gap-2">
-                            <img src="/images/download_icon.svg" alt="" />
+                            <Image src="/images/download_icon.svg" alt="" />
                             <p className="text-sm  text-costum-blue font-medium mb-3">{t("cart:cartDownloadCart")}</p>
                           </div>
 
                           <div className="flex items-center">
-                            <img src="/images/cart_delete_icon.svg" alt="" />
+                            <Image src="/images/cart_delete_icon.svg" alt="" />
                             <p className="text-sm font-medium  text-[#434447]">{t("cart:cartRemoveCart")}</p>
                           </div>
                         </div>
@@ -4021,12 +4021,12 @@ const Cart = () => {
                       <div className="flex">
                         <div className="flex gap-2">
                           <p className="text-white font-bold text-[13px]">{t("cart:cartTabFour")}</p>
-                          <img src="/images/edit_icon.svg" alt="" />
+                          <Image src="/images/edit_icon.svg" alt="" />
                         </div>
                         <p className="text-[13px] text-white ml-4 items-center flex font-medium">{t("cart:summarySupplierSubTitleText")}</p>
                       </div>
                       <div className="flex gap-2">
-                        <img src="/images/star_white.svg" alt="" />
+                        <Image src="/images/star_white.svg" alt="" />
                         <div className="text-white text-[13px]">{t("cart:cartOneSaveCart")}</div>
                       </div>
                     </div>
@@ -4044,7 +4044,7 @@ const Cart = () => {
                           <div className="bg-star p-2 h-[530px] overflow-y-scroll">
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -4068,7 +4068,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -4076,7 +4076,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -4100,7 +4100,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -4108,7 +4108,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -4132,7 +4132,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -4140,7 +4140,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -4164,7 +4164,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -4172,7 +4172,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -4196,7 +4196,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -4218,7 +4218,7 @@ const Cart = () => {
                         <div className="bg-star p-2 h-[530px] overflow-y-scroll">
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -4242,7 +4242,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -4250,7 +4250,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -4274,7 +4274,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -4282,7 +4282,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -4306,7 +4306,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -4314,7 +4314,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -4338,7 +4338,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -4346,7 +4346,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -4370,7 +4370,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -4393,12 +4393,12 @@ const Cart = () => {
                       <div className="block">
                         <div className="block">
                           <div className="flex items-center gap-2">
-                            <img src="/images/download_icon.svg" alt="" />
+                            <Image src="/images/download_icon.svg" alt="" />
                             <p className="text-sm  text-costum-blue font-medium mb-3">{t("cart:cartDownloadCart")}</p>
                           </div>
 
                           <div className="flex items-center">
-                            <img src="/images/cart_delete_icon.svg" alt="" />
+                            <Image src="/images/cart_delete_icon.svg" alt="" />
                             <p className="text-sm font-medium  text-[#434447]">{t("cart:cartRemoveCart")}</p>
                           </div>
                         </div>
@@ -4428,12 +4428,12 @@ const Cart = () => {
                       <div className="flex">
                         <div className="flex gap-2">
                           <p className="text-white font-bold text-[13px]">{t("cart:cartTabFive")}</p>
-                          <img src="/images/edit_icon.svg" alt="" />
+                          <Image src="/images/edit_icon.svg" alt="" />
                         </div>
                         <p className="text-[13px] text-white ml-4 items-center flex font-medium">{t("cart:summarySupplierSubTitleText")}</p>
                       </div>
                       <div className="flex gap-2">
-                        <img src="/images/star_white.svg" alt="" />
+                        <Image src="/images/star_white.svg" alt="" />
                         <div className="text-white text-[13px]">{t("cart:cartOneSaveCart")}</div>
                       </div>
                     </div>
@@ -4451,7 +4451,7 @@ const Cart = () => {
                           <div className="bg-star p-2 h-[530px] overflow-y-scroll">
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -4475,7 +4475,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -4483,7 +4483,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -4507,7 +4507,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -4515,7 +4515,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -4539,7 +4539,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -4547,7 +4547,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -4571,7 +4571,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -4579,7 +4579,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -4603,7 +4603,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -4625,7 +4625,7 @@ const Cart = () => {
                         <div className="bg-star p-2 h-[530px] overflow-y-scroll">
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -4649,7 +4649,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -4657,7 +4657,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -4681,7 +4681,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -4689,7 +4689,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -4713,7 +4713,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -4721,7 +4721,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -4745,7 +4745,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -4753,7 +4753,7 @@ const Cart = () => {
                             </div>
                             <div className="bg-white w-full flex px-4 mb-2 py-2 rounded-lg">
                               <div className="relative w-3/12">
-                                <img src="/images/cart_img.svg" alt="" />
+                                <Image src="/images/cart_img.svg" alt="" />
                               </div>
                               <div className="flex justify-between flex-col   w-full">
                                 <div className="block ml-1 mt-2">
@@ -4777,7 +4777,7 @@ const Cart = () => {
                                     />
                                   </div>
                                   <div className="flex items-center">
-                                    <img src="/images/cart_delete_icon.svg" alt="" />
+                                    <Image src="/images/cart_delete_icon.svg" alt="" />
                                     <p className="text-base text-[#434447]">{t("cart:cartRemoveProduct")}</p>
                                   </div>
                                 </div>
@@ -4800,12 +4800,12 @@ const Cart = () => {
                       <div className="block">
                         <div className="block">
                           <div className="flex items-center gap-2">
-                            <img src="/images/download_icon.svg" alt="" />
+                            <Image src="/images/download_icon.svg" alt="" />
                             <p className="text-sm  text-costum-blue font-medium mb-3">{t("cart:cartDownloadCart")}</p>
                           </div>
 
                           <div className="flex items-center">
-                            <img src="/images/cart_delete_icon.svg" alt="" />
+                            <Image src="/images/cart_delete_icon.svg" alt="" />
                             <p className="text-sm font-medium  text-[#434447]">{t("cart:cartRemoveCart")}</p>
                           </div>
                         </div>
@@ -4832,12 +4832,12 @@ const Cart = () => {
                       <div className="flex">
                         <div className="flex gap-2">
                           <p className="text-white font-bold text-[13px]">{t("cart:cartTabFive")}</p>
-                          <img src="/images/edit_icon.svg" alt="" />
+                          <Image src="/images/edit_icon.svg" alt="" />
                         </div>
                         <p className="text-[13px] text-white ml-4 items-center flex font-medium">{t("cart:summarySupplierSubTitleText")}</p>
                       </div>
                       <div className="flex gap-2">
-                        <img src="/images/star_white.svg" alt="" />
+                        <Image src="/images/star_white.svg" alt="" />
                         <div className="text-white text-[13px]">{t("cart:cartOneSaveCart")}</div>
                       </div>
                     </div>
@@ -4849,7 +4849,7 @@ const Cart = () => {
                     <div className="block bg-star w-full  rounded-lg mb-5 items-cetner p-5">
                       <div className="flex justify-between mb-2 flex-wrap w-full">
                         <div className="flex items-center  gap-2">
-                          <img src="/images/shopping_cart.svg" alt="" />
+                          <Image src="/images/shopping_cart.svg" alt="" />
                           <p className="text-base text-costum-blue font-bold">{t("cart:abandonedBoxTitle")}</p>
                         </div>
                         <p className="text-sm text-costumBlack ml-10 ">{t("cart:abandonedBoxText")}20</p>
@@ -4869,7 +4869,7 @@ const Cart = () => {
                     <div className="block bg-star w-full  rounded-lg mb-5 items-cetner p-5">
                       <div className="flex justify-between mb-2 flex-wrap w-full">
                         <div className="flex items-center  gap-2">
-                          <img src="/images/shopping_cart.svg" alt="" />
+                          <Image src="/images/shopping_cart.svg" alt="" />
                           <p className="text-base text-costum-blue font-bold">{t("cart:abandonedBoxTitle")}</p>
                         </div>
                         <p className="text-sm text-costumBlack ml-10 ">{t("cart:abandonedBoxText")}20</p>
@@ -4889,7 +4889,7 @@ const Cart = () => {
                     <div className="block bg-star w-full  rounded-lg mb-5 items-cetner p-5">
                       <div className="flex justify-between mb-2 flex-wrap w-full">
                         <div className="flex items-center  gap-2">
-                          <img src="/images/shopping_cart.svg" alt="" />
+                          <Image src="/images/shopping_cart.svg" alt="" />
                           <p className="text-base text-costum-blue font-bold">{t("cart:abandonedBoxTitle")}</p>
                         </div>
                         <p className="text-sm text-costumBlack ml-10 ">{t("cart:abandonedBoxText")}20</p>
@@ -4967,16 +4967,16 @@ const Cart = () => {
 
 
             <div className="flex gap-2 items-center mb-2">
-              <img src="/images/credit_card.svg" alt="" />
+              <Image src="/images/credit_card.svg" alt="" />
               <p className="text-sm text-[#434447]">{t("cart:summaryPaymentText")}</p>
             </div>
             <div className="flex gap-2 items-center mb-2">
-              <img src="/images/credit_card.svg" alt="" />
+              <Image src="/images/credit_card.svg" alt="" />
               <p className="text-sm text-[#434447]">{t("cart:summaryLocationText")}</p>
             </div>
 
             <div className="flex items-center gap-2 ">
-              <img src="/images/credit_card.svg" alt="" />
+              <Image src="/images/credit_card.svg" alt="" />
               <p className="text-sm text-[#434447]">{t("cart:summaryFreeText")}</p>
             </div>
 

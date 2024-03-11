@@ -1,5 +1,5 @@
 import React from "react"
-import { Accordion } from "@mantine/core"
+import { Accordion, Image } from "@mantine/core"
 import { useTranslation } from "next-i18next"
 
 const Footer = () => {
@@ -247,22 +247,22 @@ const Footer = () => {
         </div>
         <div className="flex justify-center  gap-2 md:mb-0 mb-3 md:justify-between flex-wrap w-full h-20 py-1 items-center">
           <div className="flex gap-1 md:w-auto w-full items-center md:justify-start justify-center md:order-1 order-2">
-            <img src="/images/copyright.svg" alt="" />
+            <Image src="/images/copyright.svg" alt="" />
             <p className="text-silver text-base">{t("footerBottomText")}</p>
           </div>
           <div className="w-full md:w-1/4 order-1 md:order-2 flex gap-3 md:flex-row flex-col md:justify-between justify-center items-center">
             <div className="flex gap-3 w-full justify-center">
               <a href="">
-                <img src="/images/facebook.svg" alt="" />
+                <Image src="/images/facebook.svg" alt="" />
               </a>
               <a href="">
-                <img src="/images/instagram.svg" alt="" />
+                <Image src="/images/instagram.svg" alt="" />
               </a>
               <a href="">
-                <img src="/images/youtube.svg" alt="" />
+                <Image src="/images/youtube.svg" alt="" />
               </a>
             </div>
-            <img src="/images/ABUsell.svg" alt="" />
+            <Image src="/images/ABUsell.svg" alt="" />
           </div>
         </div>
       </div>

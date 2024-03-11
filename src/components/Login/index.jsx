@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Select } from "@mantine/core"
+import { Select, Image } from "@mantine/core"
 import useLocalStorageState from "use-local-storage-state"
 import { useTranslation } from "next-i18next"
 import { useDispatch, useSelector } from "react-redux"
@@ -7,7 +7,7 @@ import { logIn, logOut } from "@/src/redux/features/auth-slice"
 import putSignature from "@/src/utils/putSignature"
 
 function Login() {
-  const icon = <img src="/images/down_icon.svg" alt="" />
+  const icon = <Image src="/images/down_icon.svg" alt="" />
   const { t } = useTranslation("common", "login")
 
   const [selected, setSelected] = useState()

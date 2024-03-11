@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Image } from '@mantine/core';
 const SearchMenu = () => {
     return (
         <div className="">
@@ -96,7 +96,7 @@ const SearchMenu = () => {
                             <p className="text-costum-blue text-base font-medium ">
                                 Views all markets
                             </p>
-                            <img src="/images/arrow_forward.svg" alt="" />
+                            <Image src="/images/arrow_forward.svg" alt="" />
                         </div>
 
                     </div>
@@ -107,12 +107,12 @@ const SearchMenu = () => {
                             <p className="text-costum-blue text-base font-medium ">
                                 Views all markets
                             </p>
-                            <img src="/images/arrow_forward.svg" alt="" />
+                            <Image src="/images/arrow_forward.svg" alt="" />
                         </div>
                         </div>
                         <div className="cart mb-3">
                             <div className="flex border border-solid gap-2 border-[#E6EFFB] rounded-lg p-2">
-                                <img src="/images/search_menu_img.svg" alt="" />
+                                <Image src="/images/search_menu_img.svg" alt="" />
                                 <div className="block ">
                                     <p className="text-costum-silver text-sm">Brand Name | Part No. 234565</p>
                                     <p className="text-costumBlack text-base font-bold">AMBER DECOR 60W, E27 590</p>
@@ -123,7 +123,7 @@ const SearchMenu = () => {
                         </div>
                         <div className="cart mb-3">
                             <div className="flex border border-solid gap-2 border-[#E6EFFB] rounded-lg p-2">
-                                <img src="/images/search_menu_img.svg" alt="" />
+                                <Image src="/images/search_menu_img.svg" alt="" />
                                 <div className="block ">
                                     <p className="text-costum-silver text-sm">Brand Name | Part No. 234565</p>
                                     <p className="text-costumBlack text-base font-bold">AMBER DECOR 60W, E27 590</p>
@@ -134,7 +134,7 @@ const SearchMenu = () => {
                         </div>
                         <div className="cart mb-3">
                             <div className="flex border border-solid gap-2 border-[#E6EFFB] rounded-lg p-2">
-                                <img src="/images/search_menu_img.svg" alt="" />
+                                <Image src="/images/search_menu_img.svg" alt="" />
                                 <div className="block ">
                                     <p className="text-costum-silver text-sm">Brand Name | Part No. 234565</p>
                                     <p className="text-costumBlack text-base font-bold">AMBER DECOR 60W, E27 590</p>
@@ -145,7 +145,7 @@ const SearchMenu = () => {
                         </div>
                         <div className="cart mb-3">
                             <div className="flex border border-solid gap-2 border-[#E6EFFB] rounded-lg p-2">
-                                <img src="/images/search_menu_img.svg" alt="" />
+                                <Image src="/images/search_menu_img.svg" alt="" />
                                 <div className="block ">
                                     <p className="text-costum-silver text-sm">Brand Name | Part No. 234565</p>
                                     <p className="text-costumBlack text-base font-bold">AMBER DECOR 60W, E27 590</p>
@@ -156,7 +156,7 @@ const SearchMenu = () => {
                         </div>
                         <div className="cart mb-3">
                             <div className="flex border border-solid gap-2 border-[#E6EFFB] rounded-lg p-2">
-                                <img src="/images/search_menu_img.svg" alt="" />
+                                <Image src="/images/search_menu_img.svg" alt="" />
                                 <div className="block ">
                                     <p className="text-costum-silver text-sm">Brand Name | Part No. 234565</p>
                                     <p className="text-costumBlack text-base font-bold">AMBER DECOR 60W, E27 590</p>
@@ -265,7 +265,7 @@ const SearchMenu = () => {
                             <p className="text-costum-blue text-base font-medium ">
                                 Views all markets
                             </p>
-                            <img src="/images/arrow_forward.svg" alt="" />
+                            <Image src="/images/arrow_forward.svg" alt="" />
                         </div>
 
                     </div>
@@ -273,7 +273,7 @@ const SearchMenu = () => {
 
                         <div className="cart mb-3">
                             <div className="flex border border-solid gap-2 border-[#E6EFFB] rounded-lg p-2">
-                                <img src="/images/search_menu_img.svg" alt="" />
+                                <Image src="/images/search_menu_img.svg" alt="" />
                                 <div className="block ">
                                     <p className="text-costum-silver text-sm">Brand Name | Part No. 234565</p>
                                     <p className="text-costumBlack text-base font-bold">AMBER DECOR 60W, E27 590</p>
@@ -284,7 +284,7 @@ const SearchMenu = () => {
                         </div>
                         <div className="cart mb-3">
                             <div className="flex border border-solid gap-2 border-[#E6EFFB] rounded-lg p-2">
-                                <img src="/images/search_menu_img.svg" alt="" />
+                                <Image src="/images/search_menu_img.svg" alt="" />
                                 <div className="block ">
                                     <p className="text-costum-silver text-sm">Brand Name | Part No. 234565</p>
                                     <p className="text-costumBlack text-base font-bold">AMBER DECOR 60W, E27 590</p>
@@ -295,7 +295,7 @@ const SearchMenu = () => {
                         </div>
                         <div className="cart mb-3">
                             <div className="flex border border-solid gap-2 border-[#E6EFFB] rounded-lg p-2">
-                                <img src="/images/search_menu_img.svg" alt="" />
+                                <Image src="/images/search_menu_img.svg" alt="" />
                                 <div className="block ">
                                     <p className="text-costum-silver text-sm">Brand Name | Part No. 234565</p>
                                     <p className="text-costumBlack text-base font-bold">AMBER DECOR 60W, E27 590</p>
@@ -306,7 +306,7 @@ const SearchMenu = () => {
                         </div>
                         <div className="cart mb-3">
                             <div className="flex border border-solid gap-2 border-[#E6EFFB] rounded-lg p-2">
-                                <img src="/images/search_menu_img.svg" alt="" />
+                                <Image src="/images/search_menu_img.svg" alt="" />
                                 <div className="block ">
                                     <p className="text-costum-silver text-sm">Brand Name | Part No. 234565</p>
                                     <p className="text-costumBlack text-base font-bold">AMBER DECOR 60W, E27 590</p>
@@ -317,7 +317,7 @@ const SearchMenu = () => {
                         </div>
                         <div className="cart mb-3">
                             <div className="flex border border-solid gap-2 border-[#E6EFFB] rounded-lg p-2">
-                                <img src="/images/search_menu_img.svg" alt="" />
+                                <Image src="/images/search_menu_img.svg" alt="" />
                                 <div className="block ">
                                     <p className="text-costum-silver text-sm">Brand Name | Part No. 234565</p>
                                     <p className="text-costumBlack text-base font-bold">AMBER DECOR 60W, E27 590</p>

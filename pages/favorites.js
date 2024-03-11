@@ -1,11 +1,11 @@
 import React from 'react';
-import { Breadcrumbs, Table, Select } from '@mantine/core';
+import { Breadcrumbs, Table, Select, Image } from '@mantine/core';
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next"
 
 
 const FavoritesPage = () => {
-    const icon = <img src='/images/down_icon_select.svg' alt='' />
+    const icon = <Image src='/images/down_icon_select.svg' alt='' />
     const { t } = useTranslation("common", "favorites")
     
     return (
@@ -28,20 +28,20 @@ const FavoritesPage = () => {
                 <div className="md:flex block justify-between items-center md:mb-10 mb-4">
                     <p className="md:text-4xl mb-4 md:mb-0 text-3xl font-bold">{t("favorites:favoritesTextTitle")}</p>
                     <div className="flex items-center gap-1">
-                        <img src="/images/cart_delete_icon.svg" alt="" />
+                        <Image src="/images/cart_delete_icon.svg" alt="" />
                         <p className="text-base text-[#434447]">{t("favorites:favoritesTextSubTitle")}</p>
                     </div>
                 </div>
                 <div className="md:flex block md:mb-10 mb-6 justify-between">
                     <div className="flex items-center gap-1 mb-4 md:mb-0">
-                        <img src="/images/print.svg" alt="" />
+                        <Image src="/images/print.svg" alt="" />
                         <p className="text-base text-[#434447]">{t("favorites:favoritesTextPrint")}</p>
                     </div>
                     <div className="flex gap-4">
                         <button className="bg-costum-blue rounded-full w-max-content p-2 h-12 text-white ">
                             {t("favorites:favoritesButtonText")}
                         </button>
-                        <img src="/images/social.svg" alt="" />
+                        <Image src="/images/social.svg" alt="" />
 
                     </div>
                 </div>
@@ -75,9 +75,9 @@ const FavoritesPage = () => {
                             <Table.Tr >
                                 <Table.Td>
                                     <div className=" py-4 flex items-center gap-2">
-                                        <img src="/images/cart_delete_icon.svg" alt="" />
+                                        <Image src="/images/cart_delete_icon.svg" alt="" />
                                         <div className="flex items-center gap-2">
-                                            <img src="/images/favorites_img.svg" alt="" />
+                                            <Image src="/images/favorites_img.svg" alt="" />
                                             <p className="text-base font-bold w-40">Sched-Pol Atla pentagonal acrylic shower gray</p>
                                         </div>
                                     </div>
@@ -96,7 +96,7 @@ const FavoritesPage = () => {
                                 <Table.Td>
                                     <div className="  flex flex-col justify-center  ">
                                         <div className=" w-24 flex gap-1 border border-solid border-costum-gray-300 p-1.5 rounded">
-                                            <img src="/images/check.svg" alt="" />
+                                            <Image src="/images/check.svg" alt="" />
                                             <p className="text-costum-green">in stock</p>
                                         </div>
                                     </div>
@@ -111,7 +111,7 @@ const FavoritesPage = () => {
                                         <p className="text-2xl font-bold text-costum-blue">$1400.00</p>
                                         <button className=" w-48 flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
                                             {t("favorites:productMainBtnText")}
-                                            <img src="/images/down-icon.svg" alt="" />
+                                            <Image src="/images/down-icon.svg" alt="" />
                                         </button>
                                     </div>
                                 </Table.Td>
@@ -119,9 +119,9 @@ const FavoritesPage = () => {
                             <Table.Tr >
                                 <Table.Td>
                                     <div className=" py-4 flex items-center gap-2">
-                                        <img src="/images/cart_delete_icon.svg" alt="" />
+                                        <Image src="/images/cart_delete_icon.svg" alt="" />
                                         <div className="flex items-center gap-2">
-                                            <img src="/images/favorites_img.svg" alt="" />
+                                            <Image src="/images/favorites_img.svg" alt="" />
                                             <p className="text-base font-bold w-40">Sched-Pol Atla pentagonal acrylic shower gray</p>
                                         </div>
                                     </div>
@@ -141,7 +141,7 @@ const FavoritesPage = () => {
                                 <Table.Td>
                                     <div className="  flex flex-col justify-center  ">
                                         <div className=" w-24 flex gap-1 border border-solid border-costum-gray-300 p-1.5 rounded">
-                                            <img src="/images/check.svg" alt="" />
+                                            <Image src="/images/check.svg" alt="" />
                                             <p className="text-costum-green">in stock</p>
                                         </div>
                                     </div>
@@ -156,7 +156,7 @@ const FavoritesPage = () => {
                                         <p className="text-2xl font-bold text-costum-blue">$1400.00</p>
                                         <button className=" w-48 flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
                                         {t("favorites:productMainBtnText")}
-                                            <img src="/images/down-icon.svg" alt="" />
+                                            <Image src="/images/down-icon.svg" alt="" />
                                         </button>
                                     </div>
                                 </Table.Td>
@@ -164,9 +164,9 @@ const FavoritesPage = () => {
                             <Table.Tr >
                                 <Table.Td>
                                     <div className=" py-4 flex items-center gap-2">
-                                        <img src="/images/cart_delete_icon.svg" alt="" />
+                                        <Image src="/images/cart_delete_icon.svg" alt="" />
                                         <div className="flex items-center gap-2">
-                                            <img src="/images/favorites_img.svg" alt="" />
+                                            <Image src="/images/favorites_img.svg" alt="" />
                                             <p className="text-base font-bold w-40">Sched-Pol Atla pentagonal acrylic shower gray</p>
                                         </div>
                                     </div>
@@ -185,7 +185,7 @@ const FavoritesPage = () => {
                                 <Table.Td>
                                     <div className="  flex flex-col justify-center  ">
                                         <div className=" w-24 flex gap-1 border border-solid border-costum-gray-300 p-1.5 rounded">
-                                            <img src="/images/check.svg" alt="" />
+                                            <Image src="/images/check.svg" alt="" />
                                             <p className="text-costum-green">in stock</p>
                                         </div>
                                     </div>
@@ -200,7 +200,7 @@ const FavoritesPage = () => {
                                         <p className="text-2xl font-bold text-costum-blue">$1400.00</p>
                                         <button className=" w-48 flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
                                         {t("favorites:productMainBtnText")}
-                                            <img src="/images/down-icon.svg" alt="" />
+                                            <Image src="/images/down-icon.svg" alt="" />
                                         </button>
                                     </div>
                                 </Table.Td>
@@ -208,9 +208,9 @@ const FavoritesPage = () => {
                             <Table.Tr >
                                 <Table.Td>
                                     <div className=" py-4 flex items-center gap-2">
-                                        <img src="/images/cart_delete_icon.svg" alt="" />
+                                        <Image src="/images/cart_delete_icon.svg" alt="" />
                                         <div className="flex items-center gap-2">
-                                            <img src="/images/favorites_img.svg" alt="" />
+                                            <Image src="/images/favorites_img.svg" alt="" />
                                             <p className="text-base font-bold w-40">Sched-Pol Atla pentagonal acrylic shower gray</p>
                                         </div>
                                     </div>
@@ -229,7 +229,7 @@ const FavoritesPage = () => {
                                 <Table.Td>
                                     <div className="  flex flex-col justify-center  ">
                                         <div className=" w-24 flex gap-1 border border-solid border-costum-gray-300 p-1.5 rounded">
-                                            <img src="/images/check.svg" alt="" />
+                                            <Image src="/images/check.svg" alt="" />
                                             <p className="text-costum-green">in stock</p>
                                         </div>
                                     </div>
@@ -244,7 +244,7 @@ const FavoritesPage = () => {
                                         <p className="text-2xl font-bold text-costum-blue">$1400.00</p>
                                         <button className=" w-48 flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
                                         {t("favorites:productMainBtnText")}
-                                            <img src="/images/down-icon.svg" alt="" />
+                                            <Image src="/images/down-icon.svg" alt="" />
                                         </button>
                                     </div>
                                 </Table.Td>
@@ -255,12 +255,12 @@ const FavoritesPage = () => {
                 <div id="table_mobile" className='md:hidden block favorites_table'>
                     <div className="block w-full py-6 px-4 bg-star mb-2">
                         <div className="flex gap-2 mb-3">
-                            <img src="/images/favorites_img1.svg" alt="" />
+                            <Image src="/images/favorites_img1.svg" alt="" />
                             <div className="block">
                                 <p className="text-sm font-bold text-costumBlack mb-2">Sched-Pol Atla pentagonal acrylic shower tray</p>
                                 <div className="bg-white w-24  flex flex-col justify-center mb-2 ">
                                     <div className="  flex gap-1  p-1 rounded">
-                                        <img src="/images/check.svg" alt="" />
+                                        <Image src="/images/check.svg" alt="" />
                                         <p className="text-costum-green">in stock</p>
                                     </div>
                                 </div>
@@ -280,7 +280,7 @@ const FavoritesPage = () => {
                         </div>
                         <button className=" mb-4 w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-full text-white bg-costum-blue">
                                         {t("favorites:productMainBtnText")}
-                                            <img src="/images/down-icon.svg" alt="" />
+                                            <Image src="/images/down-icon.svg" alt="" />
                             </button>
                         <div className="flex w-full justify-center">
                             <p className="text-sm font-medium text-costum-silver underline">{t("favorites:favoritesButtonDeleteText")}</p>
@@ -288,12 +288,12 @@ const FavoritesPage = () => {
                     </div>
                     <div className="block w-full py-6 px-4 bg-star mb-2">
                         <div className="flex gap-2 mb-3">
-                            <img src="/images/favorites_img1.svg" alt="" />
+                            <Image src="/images/favorites_img1.svg" alt="" />
                             <div className="block">
                                 <p className="text-sm font-bold text-costumBlack mb-2">Sched-Pol Atla pentagonal acrylic shower tray</p>
                                 <div className="bg-white w-24  flex flex-col justify-center mb-2 ">
                                     <div className="  flex gap-1  p-1 rounded">
-                                        <img src="/images/check.svg" alt="" />
+                                        <Image src="/images/check.svg" alt="" />
                                         <p className="text-costum-green">in stock</p>
                                     </div>
                                 </div>
@@ -311,7 +311,7 @@ const FavoritesPage = () => {
                         </div>
                         <button className=" mb-4 w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-full text-white bg-costum-blue">
                                         {t("favorites:productMainBtnText")}
-                                            <img src="/images/down-icon.svg" alt="" />
+                                            <Image src="/images/down-icon.svg" alt="" />
                             </button>
                         <div className="flex w-full justify-center">
                             <p className="text-sm font-medium text-costum-silver underline">{t("favorites:favoritesButtonDeleteText")}</p>
@@ -319,12 +319,12 @@ const FavoritesPage = () => {
                     </div>
                     <div className="block w-full py-6 px-4 bg-star mb-2">
                         <div className="flex gap-2 mb-3">
-                            <img src="/images/favorites_img1.svg" alt="" />
+                            <Image src="/images/favorites_img1.svg" alt="" />
                             <div className="block">
                                 <p className="text-sm font-bold text-costumBlack mb-2">Sched-Pol Atla pentagonal acrylic shower tray</p>
                                 <div className="bg-white w-24  flex flex-col justify-center mb-2 ">
                                     <div className="  flex gap-1  p-1 rounded">
-                                        <img src="/images/check.svg" alt="" />
+                                        <Image src="/images/check.svg" alt="" />
                                         <p className="text-costum-green">in stock</p>
                                     </div>
                                 </div>
@@ -342,7 +342,7 @@ const FavoritesPage = () => {
                         </div>
                         <button className=" mb-4 w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-full text-white bg-costum-blue">
                                         {t("favorites:productMainBtnText")}
-                                            <img src="/images/down-icon.svg" alt="" />
+                                            <Image src="/images/down-icon.svg" alt="" />
                             </button>
                         <div className="flex w-full justify-center">
                             <p className="text-sm font-medium text-costum-silver underline">{t("favorites:favoritesButtonDeleteText")}</p>
@@ -350,12 +350,12 @@ const FavoritesPage = () => {
                     </div>
                     <div className="block w-full py-6 px-4 bg-star">
                         <div className="flex gap-2 mb-3">
-                            <img src="/images/favorites_img1.svg" alt="" />
+                            <Image src="/images/favorites_img1.svg" alt="" />
                             <div className="block">
                                 <p className="text-sm font-bold text-costumBlack mb-2">Sched-Pol Atla pentagonal acrylic shower tray</p>
                                 <div className="bg-white w-24  flex flex-col justify-center mb-2 ">
                                     <div className="  flex gap-1  p-1 rounded">
-                                        <img src="/images/check.svg" alt="" />
+                                        <Image src="/images/check.svg" alt="" />
                                         <p className="text-costum-green">in stock</p>
                                     </div>
                                 </div>
@@ -373,7 +373,7 @@ const FavoritesPage = () => {
                         </div>
                         <button className=" mb-4 w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-full text-white bg-costum-blue">
                                         {t("favorites:productMainBtnText")}
-                                            <img src="/images/down-icon.svg" alt="" />
+                                            <Image src="/images/down-icon.svg" alt="" />
                             </button>
                         <div className="flex w-full justify-center">
                             <p className="text-sm font-medium text-costum-silver underline">{t("favorites:favoritesButtonDeleteText")}</p>

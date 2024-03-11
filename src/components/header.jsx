@@ -7,6 +7,7 @@ import {
   Accordion,
   Select,
   Modal,
+  Image
 } from "@mantine/core"
 import { useDisclosure } from "@mantine/hooks"
 import MenuHeader from "./Menu"
@@ -20,8 +21,8 @@ import QuickOrder from "./Home/QuickOrder"
 const Header = () => {
   const [opened, { open, close }] = useDisclosure(false)
 
-  const search_icon = <img src="/images/search.svg" />
-  const icon = <img src="/images/down_icon_select.svg" alt="" />
+  const search_icon = <Image src="/images/search.svg" />
+  const icon = <Image src="/images/down_icon_select.svg" alt="" />
   const [country, setCounty] = useState([])
   const [language, setLanguage] = useState([])
   const [currency, setCurrency] = useState([])
@@ -113,7 +114,7 @@ const Header = () => {
           </div>
           <div className="w-auto flex relative space-between gap-4 items-center ">
             <div className="flex items-center gap-2">
-              <img src="/images/phone.svg" alt="" />
+              <Image src="/images/phone.svg" alt="" />
               <Link
                 href="tel:"
                 className=" text-sm text-costum-blue font-normal "
@@ -124,7 +125,7 @@ const Header = () => {
             <div className="rotate-60 h-7 bg-costumBlack w-0.5"></div>
             <div className="flex relative gap-2 items-center">
               <div className="relative">
-                <img src="/images/envelope.svg" alt="" />
+                <Image src="/images/envelope.svg" alt="" />
 
                 <Badge
                   size="sm"
@@ -142,7 +143,7 @@ const Header = () => {
             <div className="rotate-60 h-7 bg-costumBlack w-0.5"></div>
 
             <div className="flex gap-1 items-center">
-              <img src="/images/user.svg" alt="" />
+              <Image src="/images/user.svg" alt="" />
               <h1 className="text-sm text-costumBlack font-normal">
                 {t("userNameText")}:
               </h1>
@@ -158,12 +159,12 @@ const Header = () => {
       <div className="container mx-auto py-5 md:hidden flex justify-between">
         <Link href="/">
           <div className="nav" onClick={open}>
-            <img src="/images/navbar.svg" alt="" />
+            <Image src="/images/navbar.svg" alt="" />
           </div>
         </Link>
-        <img src="/images/logo_mobile.svg" alt="" />
+        <Image src="/images/logo_mobile.svg" alt="" />
         <div className="relative">
-          <img src="/images/cart.svg" alt="" className="mr-2" />
+          <Image src="/images/cart.svg" alt="" className="mr-2" />
 
           <Badge
             size="sm"
@@ -178,7 +179,7 @@ const Header = () => {
       <div className="container px-4 md:px-0 mx-auto bg-costum-gray md:bg-white">
         <div className="h-20 flex justify-between  items-center">
           <Link href="/">
-            <img src="/images/ABUsell.svg" alt="" className="hidden md:flex" />
+            <Image src="/images/ABUsell.svg" alt="" className="hidden md:flex" />
           </Link>
           <label className="relative block w-full md:w-1/3 menu">
             <Menu classNames=" w-full ">
@@ -209,7 +210,7 @@ const Header = () => {
                       <p className="text-custum--text-black uppercase cursor-pointer flex">
                         {item.name}
                         <span>
-                          <img src="/images/down_icon.svg" alt="" />
+                          <Image src="/images/down_icon.svg" alt="" />
                         </span>
                       </p>
                     </Menu.Target>
@@ -226,7 +227,7 @@ const Header = () => {
               <Link href="/compare">
                 <div className="w-max-content flex flex-col item-center">
                   <div className="relative mx-auto">
-                    <img src="/images/compare_icon.svg" alt="" />
+                    <Image src="/images/compare_icon.svg" alt="" />
 
                     <Badge
                       size="sm"
@@ -245,7 +246,7 @@ const Header = () => {
               <Link href="/favorites">
                 <div className="w-max-content flex flex-col item-center">
                   <div className="relative mx-auto">
-                    <img src="/images/star_icon.svg" alt="" />
+                    <Image src="/images/star_icon.svg" alt="" />
 
                     <Badge
                       size="sm"
@@ -264,7 +265,7 @@ const Header = () => {
               <Link href="/cart">
                 <div className="w-max-content flex flex-col item-center">
                   <div className="relative mx-auto">
-                    <img src="/images/cart_icon.svg" alt="" />
+                    <Image src="/images/cart_icon.svg" alt="" />
 
                     <Badge
                       size="sm"
@@ -301,7 +302,7 @@ const Header = () => {
                         <Accordion.Item value={items.name} key={items.id}>
                           <Accordion.Control>
                             <div className="flex gap-2 items-center mb-2">
-                              <img src="/images/menu_img1.svg" alt="" />
+                              <Image src="/images/menu_img1.svg" alt="" />
                               <p className="text-base text-costum-blue font-medium">
                                 {items.name}
                               </p>
@@ -342,7 +343,7 @@ const Header = () => {
               href="/compare"
               className="flex  gap-2 items-center  py-3 px-4 border-t-1 border-indigo-500"
             >
-              <img src="/images/menu_img1.svg" alt="" />
+              <Image src="/images/menu_img1.svg" alt="" />
               <p className="text-base text-costum-blue font-medium">
                 {t("headerCompareText")}
               </p>
@@ -353,7 +354,7 @@ const Header = () => {
               href="/favorites"
               className="flex  gap-2 items-center  py-3 px-4 border-t-1 border-indigo-500"
             >
-              <img src="/images/menu_img1.svg" alt="" />
+              <Image src="/images/menu_img1.svg" alt="" />
               <p className="text-base text-costum-blue font-medium">
                 {t("headerFavoritesText")}
               </p>
@@ -364,7 +365,7 @@ const Header = () => {
               href=""
               className="flex  gap-2 items-center  py-3 px-4 border-t-1 border-indigo-500"
             >
-              <img src="/images/menu_img1.svg" alt="" />
+              <Image src="/images/menu_img1.svg" alt="" />
 
               <p className="text-base text-costum-blue font-medium">
                 {t("messageText")}
@@ -376,7 +377,7 @@ const Header = () => {
               href=""
               className="flex  gap-2 items-center  py-3 px-4 border-t-1 border-indigo-500"
             >
-              <img src="/images/menu_img1.svg" alt="" />
+              <Image src="/images/menu_img1.svg" alt="" />
               <Link
                 href="tel:"
                 className="text-base text-costum-blue font-medium"

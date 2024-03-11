@@ -1,13 +1,13 @@
 import React from 'react'
 import { useDisclosure } from '@mantine/hooks';
-import { Input, Modal, Table, Select } from '@mantine/core';
+import { Input, Modal, Table, Select , Image } from '@mantine/core';
 import { useTranslation } from "next-i18next"
 
 
 const QuickOrder = () => {
     const [opened, { open, close }] = useDisclosure(false);
     const { t } = useTranslation()
-    const icon = <img src="/images/down_icon_select.svg" alt="" />
+    const icon = <Image src="/images/down_icon_select.svg" alt="" />
 
     return (
         <div>
@@ -343,7 +343,7 @@ const QuickOrder = () => {
                         </div>
                         <button className="md:w-[176px] w-full mb-2 flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-full text-white bg-costum-blue">
                             {t("cardBtnText")}
-                            <img src="/images/down-icon.svg" alt="" />
+                            <Image src="/images/down-icon.svg" alt="" />
                         </button>
                         <button className="md:w-[176px] w-full mb-2 flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-full text-costum-blue bg-white">
                             {t("cardGetQuoteBtnText")}
@@ -357,7 +357,7 @@ const QuickOrder = () => {
                         <p className="text-center text-base mb-4">Here you can upload your own file XLS, XLSX or CSV and add products to cart.</p>
                         <button className="rounded-full bg-costum-blue mb-4 text-white font-medium h-12 py-4 px-8 text-center flex justify-center items-center mx-auto">Upload your file</button>
                         <div className="flex gap-2 items-center mx-auto">
-                            <img src="/images/download.svg" alt="" />
+                            <Image src="/images/download.svg" alt="" />
                             <p className="text-costum-blue font-medium">Download your sample file</p>
                         </div>
                     </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { requests } from "@/src/services/request"
-
+import { Image } from '@mantine/core';
 
 const menu = ({ item }) => {
     const { id, name, slug, children } = item;
@@ -14,7 +14,7 @@ const menu = ({ item }) => {
                         {children?.map((items) => (
                             <div className="" key={items.id}>
                                 <div className="flex gap-2 items-center mb-2" key={items.id}>
-                                    <img src="/images/menu_img1.svg" alt="" />
+                                    <Image src="/images/menu_img1.svg" alt="" />
                                     <p className="text-base text-costum-blue font-medium">{items.name}</p>
                                 </div>
                                 <div className="flex flex-col mb-5">
@@ -35,7 +35,7 @@ const menu = ({ item }) => {
                             <p className="text-costum-blue text-base font-medium ">
                                 Views all markets
                             </p>
-                            <img src="/images/arrow_forward.svg" alt="" />
+                            <Image src="/images/arrow_forward.svg" alt="" />
                         </div>
                     </div>
                 
@@ -74,7 +74,7 @@ const menu = ({ item }) => {
                         </div>
                         <div className="cart mb-3">
                             <div className="flex px-6 py-4 border border-solid gap-2 border-costum-blue rounded-3xl">
-                                <img src="/images/menu_product_img.svg" alt="" />
+                                <Image src="/images/menu_product_img.svg" alt="" />
                                 <p className="text-base text-costumBlack">
                                     ELECTRICAL Grill Mastergrill <br /> SUP412{" "}
                                     <span className="text-costum-orange text-sm">-30%</span>
@@ -83,7 +83,7 @@ const menu = ({ item }) => {
                         </div>
                         <div className="cart mb-3">
                             <div className="flex px-6 py-4 border border-solid gap-2 border-costum-blue rounded-3xl">
-                                <img src="/images/menu_product_img.svg" alt="" />
+                                <Image src="/images/menu_product_img.svg" alt="" />
                                 <p className="text-base text-costumBlack">
                                     ELECTRICAL Grill Mastergrill <br /> SUP412{" "}
                                     <span className="text-costum-orange text-sm">-30%</span>
@@ -92,7 +92,7 @@ const menu = ({ item }) => {
                         </div>
                         <div className="cart mb-3">
                             <div className="flex px-6 py-4 border border-solid gap-2 border-costum-blue rounded-3xl">
-                                <img src="/images/menu_product_img.svg" alt="" />
+                                <Image src="/images/menu_product_img.svg" alt="" />
                                 <p className="text-base text-costumBlack">
                                     ELECTRICAL Grill Mastergrill <br /> SUP412{" "}
                                     <span className="text-costum-orange text-sm">-30%</span>
@@ -101,7 +101,7 @@ const menu = ({ item }) => {
                         </div>
                         <div className="cart mb-3">
                             <div className="flex px-6 py-4 border border-solid gap-2 border-costum-blue rounded-3xl">
-                                <img src="/images/menu_product_img.svg" alt="" />
+                                <Image src="/images/menu_product_img.svg" alt="" />
                                 <p className="text-base text-costumBlack">
                                     ELECTRICAL Grill Mastergrill <br /> SUP412{" "}
                                     <span className="text-costum-orange text-sm">-30%</span>
@@ -110,7 +110,7 @@ const menu = ({ item }) => {
                         </div>
                         <div className="cart mb-3">
                             <div className="flex px-6 py-4 border border-solid gap-2 border-costum-blue rounded-3xl">
-                                <img src="/images/menu_product_img.svg" alt="" />
+                                <Image src="/images/menu_product_img.svg" alt="" />
                                 <p className="text-base text-costumBlack">
                                     ELECTRICAL Grill Mastergrill <br /> SUP412{" "}
                                     <span className="text-costum-orange text-sm">-30%</span>

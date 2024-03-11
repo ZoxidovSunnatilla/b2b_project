@@ -1,12 +1,14 @@
 import React from "react"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { Breadcrumbs, Table, Tabs, Accordion } from "@mantine/core"
+import { Breadcrumbs, Table, Tabs, Accordion, Image } from "@mantine/core"
 import Order from "../src/components/Account/OrderHistory/Order"
 import AccountData from "../src/components/Account/OrderHistory/AccountData"
+import CompanyData from "../src/components/Account/CompanyData"
+import ShippingAdress from "@/src/components/Account/ShippingAdress"
 
 const AccountPage = () => {
-  const { t } = useTranslation("common", "account")
+  const { t } = useTranslation("common", "account", "checkout")
 
   return (
     <div>
@@ -115,7 +117,12 @@ const AccountPage = () => {
             <Tabs.Panel value="account">
               <AccountData />
             </Tabs.Panel>
-
+            <Tabs.Panel value="data">
+              <CompanyData />
+            </Tabs.Panel>
+            <Tabs.Panel value="shipping">
+              <ShippingAdress />
+            </Tabs.Panel>
             <Tabs.Panel value="settings">Settings tab content</Tabs.Panel>
           </Tabs>
         </div>
@@ -188,7 +195,7 @@ const AccountPage = () => {
                 </p>
               </Accordion.Control>
               <Accordion.Panel>
-                <div className="bg-white w-full "></div>
+                <CompanyData />
               </Accordion.Panel>
             </Accordion.Item>
             <Accordion.Item value="1_8">
@@ -198,7 +205,7 @@ const AccountPage = () => {
                 </p>
               </Accordion.Control>
               <Accordion.Panel>
-                <div className="bg-white w-full "></div>
+                <ShippingAdress />
               </Accordion.Panel>
             </Accordion.Item>
             <Accordion.Item value="1_9">
@@ -245,7 +252,7 @@ export default AccountPage
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["common", "account"])),
+      ...(await serverSideTranslations(locale, ["common", "account" , "checkout"])),
     },
   }
 }

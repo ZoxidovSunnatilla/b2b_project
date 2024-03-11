@@ -11,6 +11,7 @@ import {
   Select,
   Pagination,
   Menu,
+  Image
 } from "@mantine/core"
 import { useDisclosure } from "@mantine/hooks"
 import { useTranslation } from "next-i18next"
@@ -99,7 +100,7 @@ const ListingPage = () => {
               </p>
               <label className="relative block w-full mb-6 ">
                 <span className="absolute inset-y-0 left-0 flex items-center pl-2">
-                  <img src="/images/search.svg" alt="" />
+                  <Image src="/images/search.svg" alt="" />
                 </span>
                 <input
                   className=" block bg-white w-full border  rounded-md h-12 pl-9 pr-3 shadow-sm focus:outline-none sm:text-sm"
@@ -262,7 +263,7 @@ const ListingPage = () => {
                   <Accordion.Panel>
                     <label className="relative block w-full mb-6 ">
                       <span className="absolute inset-y-0 left-0 flex items-center pl-2">
-                        <img src="/images/search.svg" alt="" />
+                        <Image src="/images/search.svg" alt="" />
                       </span>
                       <input
                         className=" block bg-white w-full border  rounded-md h-12 pl-9 pr-3 shadow-sm focus:outline-none sm:text-sm"
@@ -388,7 +389,7 @@ const ListingPage = () => {
             <div className="bg-costum-blue hidden md:block py-4 px-8 my-10">
               <div className=" flex md:justify-between justify-center flex-col md:flex-row flex-wrap items-center">
                 <div className="flex gap-4 items-center flex-col md:flex-row flex-wrap items-center justify-center">
-                  <img src="/images/advertising.svg" alt="" />
+                  <Image src="/images/advertising.svg" alt="" />
                   <h1 className="text-white md:text-7xl text-5xl font-bold">
                     -20%
                   </h1>
@@ -415,10 +416,10 @@ const ListingPage = () => {
               <Tabs.List className="w-full tabss">
                 <div className="w-auto flex items-center gap-2">
                   <Tabs.Tab value="gallery" className="filter_tabs">
-                    <img src="/images/listing_icon.svg" alt="" />
+                    <Image src="/images/listing_icon.svg" alt="" />
                   </Tabs.Tab>
                   <Tabs.Tab value="messages" className="filter_tabs">
-                    <img src="/images/listing_icon2.svg" alt="" />
+                    <Image src="/images/listing_icon2.svg" alt="" />
                   </Tabs.Tab>
                   <p className="text-costumBlack text-base md:text-xl ml-0 md:ml-5 mt-2.5">
                     <span className="font-bold">120</span>{" "}
@@ -448,7 +449,7 @@ const ListingPage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-5 w-full">
                   <div className="md:w-auto  min-h-72 rounded-lg">
                     <div className="relative">
-                      <img
+                      <Image
                         src="/images/product_img.svg"
                         alt=""
                         className="w-full"
@@ -457,16 +458,16 @@ const ListingPage = () => {
                         -30%
                       </div>
                       <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2">
-                        <img src="/images/star.svg" alt="" />
+                        <Image src="/images/star.svg" alt="" />
                       </div>
                       <div className="absolute bottom-2 right-3">
-                        <img src="/images/share.svg" alt="" />
+                        <Image src="/images/share.svg" alt="" />
                       </div>
                       <div className="absolute bottom-10 right-3">
-                        <img src="/images/compare.svg" alt="" />
+                        <Image src="/images/compare.svg" alt="" />
                       </div>
                       <div className="absolute bottom-2 left-2 flex gap-1 border border-solid border-costum-gray-300 p-1.5 rounded">
-                        <img src="/images/check.svg" alt="" />
+                        <Image src="/images/check.svg" alt="" />
                         <p className="text-costum-green">in stock</p>
                       </div>
                     </div>
@@ -512,13 +513,13 @@ const ListingPage = () => {
 
                       <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
                         Add to cart
-                        <img src="/images/down-icon.svg" alt="" />
+                        <Image src="/images/down-icon.svg" alt="" />
                       </button>
                     </div>
                   </div>
                   <div className="md:w-auto  min-h-72 rounded-lg">
                     <div className="relative">
-                      <img
+                      <Image
                         src="/images/product_img.svg"
                         alt=""
                         className="w-full"
@@ -527,16 +528,16 @@ const ListingPage = () => {
                         -30%
                       </div>
                       <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2">
-                        <img src="/images/star.svg" alt="" />
+                        <Image src="/images/star.svg" alt="" />
                       </div>
                       <div className="absolute bottom-2 right-3">
-                        <img src="/images/share.svg" alt="" />
+                        <Image src="/images/share.svg" alt="" />
                       </div>
                       <div className="absolute bottom-10 right-3">
-                        <img src="/images/compare.svg" alt="" />
+                        <Image src="/images/compare.svg" alt="" />
                       </div>
                       <div className="absolute bottom-2 left-2 flex gap-1 border border-solid border-costum-gray-300 p-1.5 rounded">
-                        <img src="/images/check.svg" alt="" />
+                        <Image src="/images/check.svg" alt="" />
                         <p className="text-costum-green">in stock</p>
                       </div>
                     </div>
@@ -582,13 +583,13 @@ const ListingPage = () => {
 
                       <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
                         Add to cart
-                        <img src="/images/down-icon.svg" alt="" />
+                        <Image src="/images/down-icon.svg" alt="" />
                       </button>
                     </div>
                   </div>
                   <div className="md:w-auto  min-h-72 rounded-lg">
                     <div className="relative">
-                      <img
+                      <Image
                         src="/images/product_img.svg"
                         alt=""
                         className="w-full"
@@ -597,16 +598,16 @@ const ListingPage = () => {
                         -30%
                       </div>
                       <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2">
-                        <img src="/images/star.svg" alt="" />
+                        <Image src="/images/star.svg" alt="" />
                       </div>
                       <div className="absolute bottom-2 right-3">
-                        <img src="/images/share.svg" alt="" />
+                        <Image src="/images/share.svg" alt="" />
                       </div>
                       <div className="absolute bottom-10 right-3">
-                        <img src="/images/compare.svg" alt="" />
+                        <Image src="/images/compare.svg" alt="" />
                       </div>
                       <div className="absolute bottom-2 left-2 flex gap-1 border border-solid border-costum-gray-300 p-1.5 rounded">
-                        <img src="/images/check.svg" alt="" />
+                        <Image src="/images/check.svg" alt="" />
                         <p className="text-costum-green">in stock</p>
                       </div>
                     </div>
@@ -652,13 +653,13 @@ const ListingPage = () => {
 
                       <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
                         Add to cart
-                        <img src="/images/down-icon.svg" alt="" />
+                        <Image src="/images/down-icon.svg" alt="" />
                       </button>
                     </div>
                   </div>
                   <div className="md:w-auto  min-h-72 rounded-lg">
                     <div className="relative">
-                      <img
+                      <Image
                         src="/images/product_img.svg"
                         alt=""
                         className="w-full"
@@ -667,16 +668,16 @@ const ListingPage = () => {
                         -30%
                       </div>
                       <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2">
-                        <img src="/images/star.svg" alt="" />
+                        <Image src="/images/star.svg" alt="" />
                       </div>
                       <div className="absolute bottom-2 right-3">
-                        <img src="/images/share.svg" alt="" />
+                        <Image src="/images/share.svg" alt="" />
                       </div>
                       <div className="absolute bottom-10 right-3">
-                        <img src="/images/compare.svg" alt="" />
+                        <Image src="/images/compare.svg" alt="" />
                       </div>
                       <div className="absolute bottom-2 left-2 flex gap-1 border border-solid border-costum-gray-300 p-1.5 rounded">
-                        <img src="/images/check.svg" alt="" />
+                        <Image src="/images/check.svg" alt="" />
                         <p className="text-costum-green">in stock</p>
                       </div>
                     </div>
@@ -722,13 +723,13 @@ const ListingPage = () => {
 
                       <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
                         Add to cart
-                        <img src="/images/down-icon.svg" alt="" />
+                        <Image src="/images/down-icon.svg" alt="" />
                       </button>
                     </div>
                   </div>
                   <div className="md:w-auto  min-h-72 rounded-lg">
                     <div className="relative">
-                      <img
+                      <Image
                         src="/images/product_img.svg"
                         alt=""
                         className="w-full"
@@ -737,16 +738,16 @@ const ListingPage = () => {
                         -30%
                       </div>
                       <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2">
-                        <img src="/images/star.svg" alt="" />
+                        <Image src="/images/star.svg" alt="" />
                       </div>
                       <div className="absolute bottom-2 right-3">
-                        <img src="/images/share.svg" alt="" />
+                        <Image src="/images/share.svg" alt="" />
                       </div>
                       <div className="absolute bottom-10 right-3">
-                        <img src="/images/compare.svg" alt="" />
+                        <Image src="/images/compare.svg" alt="" />
                       </div>
                       <div className="absolute bottom-2 left-2 flex gap-1 border border-solid border-costum-gray-300 p-1.5 rounded">
-                        <img src="/images/check.svg" alt="" />
+                        <Image src="/images/check.svg" alt="" />
                         <p className="text-costum-green">in stock</p>
                       </div>
                     </div>
@@ -792,13 +793,13 @@ const ListingPage = () => {
 
                       <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
                         Add to cart
-                        <img src="/images/down-icon.svg" alt="" />
+                        <Image src="/images/down-icon.svg" alt="" />
                       </button>
                     </div>
                   </div>
                   <div className="md:w-auto  min-h-72 rounded-lg">
                     <div className="relative">
-                      <img
+                      <Image
                         src="/images/product_img.svg"
                         alt=""
                         className="w-full"
@@ -807,16 +808,16 @@ const ListingPage = () => {
                         -30%
                       </div>
                       <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2">
-                        <img src="/images/star.svg" alt="" />
+                        <Image src="/images/star.svg" alt="" />
                       </div>
                       <div className="absolute bottom-2 right-3">
-                        <img src="/images/share.svg" alt="" />
+                        <Image src="/images/share.svg" alt="" />
                       </div>
                       <div className="absolute bottom-10 right-3">
-                        <img src="/images/compare.svg" alt="" />
+                        <Image src="/images/compare.svg" alt="" />
                       </div>
                       <div className="absolute bottom-2 left-2 flex gap-1 border border-solid border-costum-gray-300 p-1.5 rounded">
-                        <img src="/images/check.svg" alt="" />
+                        <Image src="/images/check.svg" alt="" />
                         <p className="text-costum-green">in stock</p>
                       </div>
                     </div>
@@ -862,13 +863,13 @@ const ListingPage = () => {
 
                       <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
                         Add to cart
-                        <img src="/images/down-icon.svg" alt="" />
+                        <Image src="/images/down-icon.svg" alt="" />
                       </button>
                     </div>
                   </div>
                   <div className="md:w-auto  min-h-72 rounded-lg">
                     <div className="relative">
-                      <img
+                      <Image
                         src="/images/product_img.svg"
                         alt=""
                         className="w-full"
@@ -877,16 +878,16 @@ const ListingPage = () => {
                         -30%
                       </div>
                       <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2">
-                        <img src="/images/star.svg" alt="" />
+                        <Image src="/images/star.svg" alt="" />
                       </div>
                       <div className="absolute bottom-2 right-3">
-                        <img src="/images/share.svg" alt="" />
+                        <Image src="/images/share.svg" alt="" />
                       </div>
                       <div className="absolute bottom-10 right-3">
-                        <img src="/images/compare.svg" alt="" />
+                        <Image src="/images/compare.svg" alt="" />
                       </div>
                       <div className="absolute bottom-2 left-2 flex gap-1 border border-solid border-costum-gray-300 p-1.5 rounded">
-                        <img src="/images/check.svg" alt="" />
+                        <Image src="/images/check.svg" alt="" />
                         <p className="text-costum-green">in stock</p>
                       </div>
                     </div>
@@ -932,13 +933,13 @@ const ListingPage = () => {
 
                       <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
                         Add to cart
-                        <img src="/images/down-icon.svg" alt="" />
+                        <Image src="/images/down-icon.svg" alt="" />
                       </button>
                     </div>
                   </div>
                   <div className="md:w-auto  min-h-72 rounded-lg">
                     <div className="relative">
-                      <img
+                      <Image
                         src="/images/product_img.svg"
                         alt=""
                         className="w-full"
@@ -947,16 +948,16 @@ const ListingPage = () => {
                         -30%
                       </div>
                       <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2">
-                        <img src="/images/star.svg" alt="" />
+                        <Image src="/images/star.svg" alt="" />
                       </div>
                       <div className="absolute bottom-2 right-3">
-                        <img src="/images/share.svg" alt="" />
+                        <Image src="/images/share.svg" alt="" />
                       </div>
                       <div className="absolute bottom-10 right-3">
-                        <img src="/images/compare.svg" alt="" />
+                        <Image src="/images/compare.svg" alt="" />
                       </div>
                       <div className="absolute bottom-2 left-2 flex gap-1 border border-solid border-costum-gray-300 p-1.5 rounded">
-                        <img src="/images/check.svg" alt="" />
+                        <Image src="/images/check.svg" alt="" />
                         <p className="text-costum-green">in stock</p>
                       </div>
                     </div>
@@ -1002,7 +1003,7 @@ const ListingPage = () => {
 
                       <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
                         Add to cart
-                        <img src="/images/down-icon.svg" alt="" />
+                        <Image src="/images/down-icon.svg" alt="" />
                       </button>
                     </div>
                   </div>
@@ -1014,7 +1015,7 @@ const ListingPage = () => {
                   <div className="w-3/5   ">
                     <div className="border-r border-b border-costum-gray-100 border-solid flex">
                       <div className="relative">
-                        <img
+                        <Image
                           src="/images/product_img.svg"
                           alt=""
                           className="w-full"
@@ -1023,11 +1024,11 @@ const ListingPage = () => {
                           -30%
                         </div>
                         <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2">
-                          <img src="/images/star.svg" alt="" />
+                          <Image src="/images/star.svg" alt="" />
                         </div>
 
                         <div className="absolute bottom-2 left-2 flex gap-1 border border-solid border-costum-gray-300  p-1.5 rounded">
-                          <img src="/images/check.svg" alt="" />
+                          <Image src="/images/check.svg" alt="" />
                           <p className="text-costum-green">in stock</p>
                         </div>
                       </div>
@@ -1058,7 +1059,7 @@ const ListingPage = () => {
                           <p className="text-custumBlack text-sm items-center mt-5 mb-5 font-bold cursor-pointer flex">
                             Technical details
                             <span>
-                              <img src="/images/down_icon.svg" alt="" />
+                              <Image src="/images/down_icon.svg" alt="" />
                             </span>
                           </p>
                         </Menu.Target>
@@ -1071,7 +1072,7 @@ const ListingPage = () => {
                           <p className="text-custumBlack text-sm items-center mt-5 mb-5 font-bold cursor-pointer flex">
                             Attachments
                             <span>
-                              <img src="/images/down_icon.svg" alt="" />
+                              <Image src="/images/down_icon.svg" alt="" />
                             </span>
                           </p>
                         </Menu.Target>
@@ -1081,8 +1082,8 @@ const ListingPage = () => {
                   </div>
                   <div className="flex flex-col justify-between items-end p-2.5 w-2/5">
                     <div className="flex gap-3 justify-end pt-4 pr-4">
-                      <img src="/images/compare.svg" alt="" />
-                      <img src="/images/share.svg" alt="" />
+                      <Image src="/images/compare.svg" alt="" />
+                      <Image src="/images/share.svg" alt="" />
                     </div>
                     <div className="mx-5 w-3/4 ">
                       <div className="md:flex block w-full md:items-center gap-2 mb-3">
@@ -1114,7 +1115,7 @@ const ListingPage = () => {
                       </div>
                       <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
                         Add to cart
-                        <img src="/images/down-icon.svg" alt="" />
+                        <Image src="/images/down-icon.svg" alt="" />
                       </button>
                     </div>
                   </div>
@@ -1123,7 +1124,7 @@ const ListingPage = () => {
                   <div className="w-3/5   ">
                     <div className="border-r border-b border-costum-gray-100 border-solid flex">
                       <div className="relative">
-                        <img
+                        <Image
                           src="/images/product_img.svg"
                           alt=""
                           className="w-full"
@@ -1132,11 +1133,11 @@ const ListingPage = () => {
                           -30%
                         </div>
                         <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2">
-                          <img src="/images/star.svg" alt="" />
+                          <Image src="/images/star.svg" alt="" />
                         </div>
 
                         <div className="absolute bottom-2 left-2 flex gap-1 border border-solid border-costum-gray-300  p-1.5 rounded">
-                          <img src="/images/check.svg" alt="" />
+                          <Image src="/images/check.svg" alt="" />
                           <p className="text-costum-green">in stock</p>
                         </div>
                       </div>
@@ -1167,7 +1168,7 @@ const ListingPage = () => {
                           <p className="text-custumBlack text-sm items-center mt-5 mb-5 font-bold cursor-pointer flex">
                             Technical details
                             <span>
-                              <img src="/images/down_icon.svg" alt="" />
+                              <Image src="/images/down_icon.svg" alt="" />
                             </span>
                           </p>
                         </Menu.Target>
@@ -1180,7 +1181,7 @@ const ListingPage = () => {
                           <p className="text-custumBlack text-sm items-center mt-5 mb-5 font-bold cursor-pointer flex">
                             Attachments
                             <span>
-                              <img src="/images/down_icon.svg" alt="" />
+                              <Image src="/images/down_icon.svg" alt="" />
                             </span>
                           </p>
                         </Menu.Target>
@@ -1190,8 +1191,8 @@ const ListingPage = () => {
                   </div>
                   <div className="flex flex-col justify-between items-end p-2.5 w-2/5">
                     <div className="flex gap-3 justify-end pt-4 pr-4">
-                      <img src="/images/compare.svg" alt="" />
-                      <img src="/images/share.svg" alt="" />
+                      <Image src="/images/compare.svg" alt="" />
+                      <Image src="/images/share.svg" alt="" />
                     </div>
                     <div className="mx-5 w-3/4 ">
                       <div className="md:flex block w-full md:items-center gap-2 mb-3">
@@ -1223,7 +1224,7 @@ const ListingPage = () => {
                       </div>
                       <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
                         Add to cart
-                        <img src="/images/down-icon.svg" alt="" />
+                        <Image src="/images/down-icon.svg" alt="" />
                       </button>
                     </div>
                   </div>
@@ -1232,7 +1233,7 @@ const ListingPage = () => {
                   <div className="w-3/5   ">
                     <div className="border-r border-b border-costum-gray-100 border-solid flex">
                       <div className="relative">
-                        <img
+                        <Image
                           src="/images/product_img.svg"
                           alt=""
                           className="w-full"
@@ -1241,11 +1242,11 @@ const ListingPage = () => {
                           -30%
                         </div>
                         <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2">
-                          <img src="/images/star.svg" alt="" />
+                          <Image src="/images/star.svg" alt="" />
                         </div>
 
                         <div className="absolute bottom-2 left-2 flex gap-1 border border-solid border-costum-gray-300  p-1.5 rounded">
-                          <img src="/images/check.svg" alt="" />
+                          <Image src="/images/check.svg" alt="" />
                           <p className="text-costum-green">in stock</p>
                         </div>
                       </div>
@@ -1276,7 +1277,7 @@ const ListingPage = () => {
                           <p className="text-custumBlack text-sm items-center mt-5 mb-5 font-bold cursor-pointer flex">
                             Technical details
                             <span>
-                              <img src="/images/down_icon.svg" alt="" />
+                              <Image src="/images/down_icon.svg" alt="" />
                             </span>
                           </p>
                         </Menu.Target>
@@ -1289,7 +1290,7 @@ const ListingPage = () => {
                           <p className="text-custumBlack text-sm items-center mt-5 mb-5 font-bold cursor-pointer flex">
                             Attachments
                             <span>
-                              <img src="/images/down_icon.svg" alt="" />
+                              <Image src="/images/down_icon.svg" alt="" />
                             </span>
                           </p>
                         </Menu.Target>
@@ -1299,8 +1300,8 @@ const ListingPage = () => {
                   </div>
                   <div className="flex flex-col justify-between items-end p-2.5 w-2/5">
                     <div className="flex gap-3 justify-end pt-4 pr-4">
-                      <img src="/images/compare.svg" alt="" />
-                      <img src="/images/share.svg" alt="" />
+                      <Image src="/images/compare.svg" alt="" />
+                      <Image src="/images/share.svg" alt="" />
                     </div>
                     <div className="mx-5 w-3/4 ">
                       <div className="md:flex block w-full md:items-center gap-2 mb-3">
@@ -1332,7 +1333,7 @@ const ListingPage = () => {
                       </div>
                       <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
                         Add to cart
-                        <img src="/images/down-icon.svg" alt="" />
+                        <Image src="/images/down-icon.svg" alt="" />
                       </button>
                     </div>
                   </div>
@@ -1341,7 +1342,7 @@ const ListingPage = () => {
                   <div className="w-3/5   ">
                     <div className="border-r border-b border-costum-gray-100 border-solid flex">
                       <div className="relative">
-                        <img
+                        <Image
                           src="/images/product_img.svg"
                           alt=""
                           className="w-full"
@@ -1350,11 +1351,11 @@ const ListingPage = () => {
                           -30%
                         </div>
                         <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2">
-                          <img src="/images/star.svg" alt="" />
+                          <Image src="/images/star.svg" alt="" />
                         </div>
 
                         <div className="absolute bottom-2 left-2 flex gap-1 border border-solid border-costum-gray-300  p-1.5 rounded">
-                          <img src="/images/check.svg" alt="" />
+                          <Image src="/images/check.svg" alt="" />
                           <p className="text-costum-green">in stock</p>
                         </div>
                       </div>
@@ -1385,7 +1386,7 @@ const ListingPage = () => {
                           <p className="text-custumBlack text-sm items-center mt-5 mb-5 font-bold cursor-pointer flex">
                             Technical details
                             <span>
-                              <img src="/images/down_icon.svg" alt="" />
+                              <Image src="/images/down_icon.svg" alt="" />
                             </span>
                           </p>
                         </Menu.Target>
@@ -1398,7 +1399,7 @@ const ListingPage = () => {
                           <p className="text-custumBlack text-sm items-center mt-5 mb-5 font-bold cursor-pointer flex">
                             Attachments
                             <span>
-                              <img src="/images/down_icon.svg" alt="" />
+                              <Image src="/images/down_icon.svg" alt="" />
                             </span>
                           </p>
                         </Menu.Target>
@@ -1408,8 +1409,8 @@ const ListingPage = () => {
                   </div>
                   <div className="flex flex-col justify-between items-end p-2.5 w-2/5">
                     <div className="flex gap-3 justify-end pt-4 pr-4">
-                      <img src="/images/compare.svg" alt="" />
-                      <img src="/images/share.svg" alt="" />
+                      <Image src="/images/compare.svg" alt="" />
+                      <Image src="/images/share.svg" alt="" />
                     </div>
                     <div className="mx-5 w-3/4 ">
                       <div className="md:flex block w-full md:items-center gap-2 mb-3">
@@ -1441,7 +1442,7 @@ const ListingPage = () => {
                       </div>
                       <button className=" w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
                         Add to cart
-                        <img src="/images/down-icon.svg" alt="" />
+                        <Image src="/images/down-icon.svg" alt="" />
                       </button>
                     </div>
                   </div>
@@ -1463,7 +1464,7 @@ const ListingPage = () => {
           <p className="text-costum-blue my-3 font-medium">Clear All</p>
           <label className="relative block w-full mb-6 ">
             <span className="absolute inset-y-0 left-0 flex items-center pl-2">
-              <img src="/images/search.svg" alt="" />
+              <Image src="/images/search.svg" alt="" />
             </span>
             <input
               className=" block bg-white w-full border  rounded-md h-12 pl-9 pr-3 shadow-sm focus:outline-none sm:text-sm"
@@ -1665,7 +1666,7 @@ const ListingPage = () => {
               <Accordion.Panel>
                 <label className="relative block w-full mb-6 ">
                   <span className="absolute inset-y-0 left-0 flex items-center pl-2">
-                    <img src="/images/search.svg" alt="" />
+                    <Image src="/images/search.svg" alt="" />
                   </span>
                   <input
                     className=" block bg-white w-full border  rounded-md h-12 pl-9 pr-3 shadow-sm focus:outline-none sm:text-sm"

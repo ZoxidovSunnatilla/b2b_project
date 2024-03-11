@@ -9,6 +9,7 @@ import { appWithTranslation } from "next-i18next"
 import localFont from "next/font/local"
 import Script from "next/script"
 import { useRouter } from "next/router"
+
 import { ReduxProvider } from "@/src/redux/provider"
 
 // import "./index.css"

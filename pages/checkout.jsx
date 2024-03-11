@@ -1,12 +1,12 @@
 import React, { useState } from "react"
-import { Stepper, Select, Input } from "@mantine/core"
+import { Stepper, Select, Input, Image } from "@mantine/core"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import Link from "next/link"
 import StepperTwo from "@/src/components/StepperTwo"
 
 const Checkout = () => {
-  const icon = <img src="/images/down_icon_select.svg" alt="" />
+  const icon = <Image src="/images/down_icon_select.svg" alt="" />
   const [active, setActive] = useState(0)
   const { t } = useTranslation("common", "checkout")
   return <StepperTwo />
