@@ -12,7 +12,7 @@ import {
 } from "@mantine/core"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import Card from "@/src/components/card"
+import Card from "../src/components/Item"
 
 const ProductPage = () => {
   const icon = <Image src="/images/down_icon_select.svg" alt="" />
