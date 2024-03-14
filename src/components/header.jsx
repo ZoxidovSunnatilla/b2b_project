@@ -35,15 +35,15 @@ const Header = () => {
     getData()
   }, [])
   const getData = async () => {
-    const res = await requests.Country.getList(1, 10)
-    const res2 = await requests.Language.getList(1, 10)
-    const res3 = await requests.Currency.getList(1, 10)
-    const res4 = await requests.Category.getList(1, 10)
+    // const res = await requests.Country.getList(1, 10)
+    // const res2 = await requests.Language.getList(1, 10)
+    // const res3 = await requests.Currency.getList(1, 10)
+    // const res4 = await requests.Category.getList(1, 10)
 
-    setCurrency(res3?.data)
-    setLanguage(res2?.data)
-    setCounty(res?.data)
-    setCategory(res4?.data)
+    // setCurrency(res3?.data)
+    // setLanguage(res2?.data)
+    // setCounty(res?.data)
+    // setCategory(res4?.data)
   }
   const handleChangeCountry = (value) => {
     setCounty(value)
