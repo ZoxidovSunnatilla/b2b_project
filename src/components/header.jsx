@@ -7,7 +7,10 @@ import {
   Accordion,
   Select,
   Modal,
-  Image
+  Image,
+  Combobox,
+  useCombobox ,
+  InputBase
 } from "@mantine/core"
 import { useDisclosure } from "@mantine/hooks"
 import MenuHeader from "./Menu"
@@ -30,7 +33,11 @@ const Header = () => {
   const { t } = useTranslation()
   const router = useRouter()
   const languages = [{ code: "en" }, { code: "ru" }, { code: "uz" }]
+  const combobox = useCombobox({
+    onDropdownClose: () => combobox.resetSelectedOption(),
+  });
 
+  const [value, setValue] = useState(null);
   useEffect(() => {
     getData()
   }, [])
@@ -142,17 +149,58 @@ const Header = () => {
             </div>
             <div className="rotate-60 h-7 bg-costumBlack w-0.5"></div>
 
-            <div className="flex gap-1 items-center">
+            <div className="flex gap-1 items-center" id="combobox">
               <Image src="/images/user.svg" alt="" />
               <h1 className="text-sm text-costumBlack font-normal">
                 {t("userNameText")}:
               </h1>
-              <Select
+              {/* <Select
                 placeholder="Surname"
                 rightSection={icon}
                 data={["Login", "Account", "SurName"]}
-              />
+              /> */}
+              <Combobox
+                store={combobox}
+                onOptionSubmit={(val) => {
+                  setValue(val);
+                  combobox.closeDropdown();
+                }}
+              >
+                <Combobox.Target>
+                  <InputBase
+                    component="button"
+                    type="button"
+                    pointer
+                    rightSection={icon}
+                    rightSectionPointerEvents="none"
+                    onClick={() => combobox.toggleDropdown()}
+                  >
+                    {value || <Input.Placeholder>Surname</Input.Placeholder>}
+                  </InputBase>
+                </Combobox.Target>
+
+                <Combobox.Dropdown>
+                  <Combobox.Options>
+                    <Link href="/login" >
+                      <Combobox.Option >
+                        <p className="text-base">Login</p>
+                      </Combobox.Option>
+                    </Link>
+                    <Link href="">
+                      <Combobox.Option >
+                        <p className="text-base">Surname</p>
+                      </Combobox.Option>
+                    </Link>
+                    <Link href="">
+                      <Combobox.Option >
+                        <p className="text-base">Name</p>
+                      </Combobox.Option>
+                    </Link>
+                  </Combobox.Options>
+                </Combobox.Dropdown>
+              </Combobox>
             </div>
+
           </div>
         </div>
       </div>
@@ -196,7 +244,7 @@ const Header = () => {
               </Menu.Dropdown>
             </Menu>
           </label>
-         <QuickOrder />
+          <QuickOrder />
         </div>
       </div>
       <div className="bg-costum-gray hidden md:flex h-20 ">

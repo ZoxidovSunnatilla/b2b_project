@@ -183,12 +183,12 @@ const Product = () => {
                   </div>
                   {item.in_stock ? (
                     <div className="absolute bottom-2 left-2 flex gap-1 border border-solid border-costum-gray-300 p-1.5 rounded">
-                      <Image src="/images/check.svg" alt="" />
+                      <img src="/images/check.svg" alt="" />
                       <p className="text-costum-green">in stock</p>
                     </div>
                   ) : (
                     <div className="absolute bottom-2 left-2 flex gap-1 border border-solid border-costum-gray-300 p-1.5 rounded">
-                      <Image src="/images/error_outline.svg" alt="" />
+                      <img src="/images/error_outline.svg" alt="" />
                       <p className="text-[#F52F2F]">
                         {item.expected_delivery_date}
                       </p>
@@ -221,7 +221,7 @@ const Product = () => {
                     net
                   </p>
                   <p className="text-costum-orange text-sm md:text-base line-through">
-                    $55.00 net
+                    $55.00 
                   </p>
                 </div>
                 <div className="flex mb-2 w-full  justify-between">

@@ -203,7 +203,13 @@ body {
   height: 100% !important;
   outline: none !important;
 }
-
+#combobox .m-8fb7ebe7{
+  justify-content: left !important;
+}
+#combobox .m-88bacfd0 {
+  color: #000 !important;
+  justify-content: left !important;
+}
 .favorites_table .m-8fb7ebe7::placeholder {
   color: #0c0c0c !important;
 }

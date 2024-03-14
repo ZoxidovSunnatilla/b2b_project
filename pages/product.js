@@ -130,7 +130,7 @@ const ProductPage = () => {
                 </div>
               </div>
               <div className="flex gap-1 border mb-4 w-24 border-solid border-costum-gray-300 p-1.5 rounded">
-                <Image src="/images/check.svg" alt="" />
+                <img src="/images/check.svg" alt="" />
                 <p className="text-costum-green">in stock</p>
               </div>
               <div className="grid grid-cols-3">
@@ -209,25 +209,25 @@ const ProductPage = () => {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-10 md:mb-28">
           <div className="flex items-center justify-center bg-costum-gray flex-col h-24 w-auto rounded-lg">
-            <Image src="/images/credit_payment.svg" alt="" className="mb-3" />
+            <img src="/images/credit_payment.svg" alt="" className="mb-3" />
             <p className="text-sm text-costum-text-black">
               {t("product:productBoxOne")}
             </p>
           </div>
           <div className="flex items-center justify-center bg-costum-gray flex-col h-24 w-auto rounded-lg">
-            <Image src="/images/location_on.svg" alt="" className="mb-3" />
+            <img src="/images/location_on.svg" alt="" className="mb-3" />
             <p className="text-sm text-costum-text-black">
               {t("product:productBoxTwo")}
             </p>
           </div>
           <div className="flex items-center justify-center bg-costum-gray flex-col h-24 w-auto rounded-lg">
-            <Image src="/images/local_shipping.svg" alt="" className="mb-3" />
+            <img src="/images/local_shipping.svg" alt="" className="mb-3" />
             <p className="text-sm text-costum-text-black">
               {t("product:productBoxThree")}
             </p>
           </div>
           <div className="flex items-center justify-center bg-costum-gray flex-col h-24 w-auto rounded-lg">
-            <Image src="/images/info.svg" alt="" className="mb-3" />
+            <img src="/images/info.svg" alt="" className="mb-3" />
             <p className="text-sm text-costum-text-black">
               {t("product:productBoxFour")}
             </p>
