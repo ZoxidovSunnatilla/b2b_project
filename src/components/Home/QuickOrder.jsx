@@ -215,6 +215,18 @@ const QuickOrder = () => {
                                 </Table.Tr>
                             </Table.Tbody>
                         </Table>
+                        <div className="flex gap-4 mt-10">
+                        <button className="md:w-[240px] w-full mb-2 flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-full text-white bg-costum-blue">
+                            {t("cardBtnText")}
+                            <Image src="/images/down-icon.svg" alt="" />
+                        </button>
+                        <button className="md:w-[176px] w-full mb-2 flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-full text-costum-blue bg-white">
+                            {t("cardGetQuoteBtnText")}
+                        </button>
+                        <button className="md:w-[176px] w-full mb-2 flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-full text-white bg-[#FF4E00]">
+                            {t("cardCreateOrderBtnText")}
+                        </button>
+                        </div>
                     </div>
                     <div className="w-full block md:hidden mb-4">
                         <div className="block border-b mb-6 border-solid border-[#FFFFFF]">

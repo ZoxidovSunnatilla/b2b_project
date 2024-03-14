@@ -64,6 +64,20 @@
   "footerBoxFourTextSeven": "Cookie-fayllar",
   "footerBoxFourTextAge": "Shaxsiy ma'lumotlar so'rovi",
   "footerBottomText": "2023 ABUsell",
-  "cardBtnText": "Savatchaga qo'shish"
+  "cardBtnText": "Savatchaga qo'shish",
+  "quickOrderOne": "Element #",
+  "quickOrderTwo": "Miqdor",
+  "quickOrderThree": "Birlik",
+  "quickOrderFour": "Narxi",
+  "quickOrderFive": "SKU yoki mahsulot nomini kiriting",
+  "quickOrderSix": "Miqdori",
+  "quickOrderSeven": "Birlik",
+  "quickOrderAge": "mavjud emas",
+  "quickOrderNine": "Buyurtmangizni yuklang",
+  "quickOrderTen": "Bu yerda siz o'zingizning XLS, XLSX yoki CSV faylingizni yuklashingiz va mahsulotlarni savatga qo'shishingiz mumkin.",
+  "quickOrderEleven": "Faylingizni yuklang",
+  "quickOrderTwelvy": "Namuna faylingizni yuklab oling",
+  "cardGetQuoteBtnText": "Iqtibos olish",
+  "cardCreateOrderBtnText": "Buyurtma yaratish"
   
 }
