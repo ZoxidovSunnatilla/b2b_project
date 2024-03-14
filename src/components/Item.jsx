@@ -173,7 +173,7 @@ const Item = () => {
                   </div>
                   {item.in_stock ? (
                     <div className="absolute bottom-2 left-2 flex gap-1 border border-solid border-costum-gray-300 p-1.5 rounded">
-                      <Image src="/images/check.svg" alt="" />
+                      <img src="/images/check.svg" alt="" />
                       <p className="text-costum-green">in stock</p>
                     </div>
                   ) : (
