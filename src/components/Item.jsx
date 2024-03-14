@@ -5,10 +5,10 @@ import { requests } from "@/src/services/request"
 import { useTranslation } from "next-i18next"
 
 import Link from "next/link"
-import ProductSkeleton from "../Skeleton/productSkeleton"
+import ProductSkeleton from "./Skeleton/productSkeleton.jsx"
 const icon = <Image src="/images/down_icon_select.svg" alt="" />
 
-const Product = () => {
+const Item = () => {
   const { t } = useTranslation()
 
   const [data, setData] = useState([])
@@ -24,17 +24,7 @@ const Product = () => {
   }
   return (
     <div id="products">
-      <div className="flex justify-center md:justify-between  mb-8 w-full">
-        <p className="text-costumBlack font-bold text-2xl md:text-[28px] ">
-          {t("productTitleText")}
-        </p>
-        <div className="md:flex hidden w-49 item-center gap-1 h-6">
-          <p className="text-costum-blue text-base font-medium">
-            {t("productSubTitle")}
-          </p>
-          <Image src="/images/arrow_forward.svg" alt="" />
-        </div>
-      </div>
+     
       {/* {loading ? (
         <ProductSkeleton />
       ) : (
@@ -250,14 +240,9 @@ const Product = () => {
       ) : (<ProductSkeleton />)}
 
 
-      <div className="flex w-49 item-center gap-1 w-full mb-8  justify-center h-6 md:hidden mx-auto ">
-        <p className="text-costum-blue text-base font-medium ">
-          {t("productSubTitle")}
-        </p>
-        <Image src="/images/arrow_forward.svg" alt="" />
-      </div>
+     
     </div>
   )
 }
 
-export default Product
+export default Item
