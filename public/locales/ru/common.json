@@ -64,6 +64,20 @@
   "footerBoxFourTextSeven": "Cookies",
   "footerBoxFourTextAge": "Запрос персональных данных",
   "footerBottomText": "2023 ABUsell",
-  "cardBtnText": "Добавить в корзину"
+  "cardBtnText": "Добавить в корзину",
+  "quickOrderOne": "Элемент #",
+  "quickOrderTwo": "Кол-во",
+  "quickOrderThree": "Единица",
+  "quickOrderFour": "Цена",
+  "quickOrderFive": "Введите артикул или название продукта",
+  "quickOrderSix": "Количество",
+  "quickOrderSeven": "Единица",
+  "quickOrderAge": "недоступен",
+  "quickOrderNine": "Загрузите свой заказ",
+  "quickOrderTen": "Здесь вы можете загрузить свой собственный файл XLS, XLSX или CSV и добавить товары в корзину.",
+  "quickOrderEleven": "Загрузите свой файл",
+  "quickOrderTwelvy": "Загрузите образец файла",
+  "cardGetQuoteBtnText": "Получить цену",
+  "cardCreateOrderBtnText": "Создать заказ"
   
 }

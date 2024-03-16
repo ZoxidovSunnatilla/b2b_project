@@ -1,14 +1,32 @@
-import React from 'react'
+import React, { useState, useRef } from 'react'
 import { useDisclosure } from '@mantine/hooks';
-import { Input, Modal, Table, Select , Image } from '@mantine/core';
+import { Input, Modal, Table, Select, Image } from '@mantine/core';
 import { useTranslation } from "next-i18next"
 
 
 const QuickOrder = () => {
     const [opened, { open, close }] = useDisclosure(false);
     const { t } = useTranslation()
+    const [order, setOrder] = useState([{item: "element", qty: "1", unit: "React", price: "$45.00"}])
+    const addNameRef = useRef()
+    const addEmailRef = useRef()
+    const addPasswordRef = useRef()
+    const addPriceRef = useRef()
+    
     const icon = <Image src="/images/down_icon_select.svg" alt="" />
-
+    console.log(order);
+    
+    const [slowTransitionOpened, setSlowTransitionOpened] = useState(false);
+    const handleAdd = () => {
+        const user = {
+                item: addNameRef.current.value,
+                qty: addEmailRef.current.value,
+                unit: addPasswordRef.current.value,
+                price: addPriceRef.current.value
+            }
+        setOrder(prev => [...prev, user]);
+        
+    }
     return (
         <div>
             <Modal opened={opened} onClose={close} title="Quick order form" size="100%">
@@ -24,7 +42,7 @@ const QuickOrder = () => {
                                 </Table.Tr>
                             </Table.Thead>
                             <Table.Tbody>
-                                <Table.Tr >
+                                {/* <Table.Tr >
                                     <Table.Td id="input1">
                                         <Input
                                             placeholder={t("quickOrderFive")}
@@ -212,9 +230,50 @@ const QuickOrder = () => {
                                     <Table.Td id="input4">
                                         <p className="text-price">{t("quickOrderAge")} </p>
                                     </Table.Td>
-                                </Table.Tr>
+                                </Table.Tr> */}
+                                { order?.length > 0 ? (order?.map((items) => {
+                                    return(    <Table.Tr  key={items.id}>
+                                   <Table.Td id="input1">
+                                       <Input
+                                           placeholder={items.item}
+                                           size="md"
+                                           radius="md"
+                                       />
+                                   </Table.Td>
+                                   <Table.Td id="input2">
+                                       <Input
+                                           placeholder={items.qty}
+                                           size="md"
+                                           radius="md"
+                                       />
+                                   </Table.Td>
+                                   <Table.Td id="input3">
+                                       <Select
+                                           placeholder={items.unit}
+                                           className="Select_product"
+                                           data={["React", "Angular", "Vue", "Svelte"]}
+                                           rightSection={icon}
+                                       />
+                                   </Table.Td>
+                                   <Table.Td id="input4">
+                                       <p className="text-price">{items.price}</p>
+                                   </Table.Td>
+                               </Table.Tr> 
+                                )})) : (<h1>error</h1>) }
                             </Table.Tbody>
                         </Table>
+                        <div className="flex gap-4 mt-10">
+                            <button className="md:w-[240px] w-full mb-2 flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-full text-white bg-costum-blue">
+                                {t("cardBtnText")}
+                                <Image src="/images/down-icon.svg" alt="" />
+                            </button>
+                            <button className="md:w-[176px] w-full mb-2 flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-full text-costum-blue bg-white">
+                                {t("cardGetQuoteBtnText")}
+                            </button>
+                            <button onClick={() => setSlowTransitionOpened(true)} variant="default" className="md:w-[190px] w-full mb-2 flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-full text-white bg-[#FF4E00]">
+                                {t("cardCreateOrderBtnText")}
+                            </button>
+                        </div>
                     </div>
                     <div className="w-full block md:hidden mb-4">
                         <div className="block border-b mb-6 border-solid border-[#FFFFFF]">
@@ -398,7 +457,27 @@ const QuickOrder = () => {
             <button onClick={open} className="h-12 w-[198px] bg-costum-blue rounded-full text-white text-base hidden md:block">
                 {t("headerButtonText")}
             </button>
+
+            <Modal
+                opened={slowTransitionOpened}
+                onClose={() => setSlowTransitionOpened(false)}
+                transitionProps={{ transition: 'rotate-left' }}
+            >
+                    <Input className='mb-2' ref={addNameRef} />
+                    <Input className='mb-2' ref={addEmailRef}/>
+                    <Select
+                        placeholder={t("quickOrderSeven")}
+                        className="Select_product mb-2"
+                        data={["React", "Angular", "Vue", "Svelte"]}
+                        rightSection={icon}
+                        ref={addPasswordRef}
+                    />
+                    <Input ref={addPriceRef}/>
+                    <button onClick={handleAdd} onDoubleClick={() => setSlowTransitionOpened(false)}>dasdsa</button>
+
+            </Modal>
         </div>
+
     )
 }
 

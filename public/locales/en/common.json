@@ -76,5 +76,7 @@
   "quickOrderNine": "Upload your order",
   "quickOrderTen": "Here you can upload your own file XLS, XLSX or CSV and add products to cart.",
   "quickOrderEleven": "Upload your file",
-  "quickOrderTwelvy": "Download your sample file"
+  "quickOrderTwelvy": "Download your sample file",
+  "cardGetQuoteBtnText": "Get Quote",
+  "cardCreateOrderBtnText": "Create Order"
 }
