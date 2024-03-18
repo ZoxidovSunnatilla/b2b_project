@@ -1,38 +1,42 @@
 import React, { useState, useRef } from 'react'
 import { useDisclosure } from '@mantine/hooks';
 import { Input, Modal, Table, Select, Image } from '@mantine/core';
-import { useTranslation } from "next-i18next"
+import { useTranslation } from "next-i18next";
+import { v4 as uuidv4 } from 'uuid';
+
 
 
 const QuickOrder = () => {
     const [opened, { open, close }] = useDisclosure(false);
     const { t } = useTranslation()
-    const [order, setOrder] = useState([{ item: "element", qty: "1", unit: "React", price: "45.00" }])
-    const [order2, setOrder2] = useState([{ item: "element", qty: "1", unit: "React", price: "45.00" }])
-
-    const addNameRef = useRef()
-    const addEmailRef = useRef()
-    const addPasswordRef = useRef()
-    const addNameRef2 = useRef()
-    const addEmailRef2 = useRef()
-    const addPasswordRef2 = useRef()
+    const [order, setOrder] = useState([{id: 1, item: "element", qty: "1", unit: "React", price: "45.00" }])
+    const [order2, setOrder2] = useState([{ id: 1, item: "element", qty: "1", unit: "React", price: "45.00" }])
+    const [item, setItem] = useState()
+    const [qty, setQty] = useState()
+    const [unit, setUnit] = useState()
+    const [item2, setItem2] = useState()
+    const [qty2, setQty2] = useState()
+    const [unit2, setUnit2] = useState()
+ 
     const icon = <Image src="/images/down_icon_select.svg" alt="" />
     console.log(order);
 
     const handleAdd = () => {
         const user = {
-            item: addNameRef.current.value,
-            qty: addEmailRef.current.value,
-            unit: addPasswordRef.current.value,
+            id: uuidv4(),
+            item: item,
+            qty: qty,
+            unit: unit,
         }
         setOrder(prev => [...prev, user]);
 
     }
     const handleAdd2 = () => {
         const user = {
-            item: addNameRef.current.value,
-            qty: addEmailRef.current.value,
-            unit: addPasswordRef.current.value,
+            id: uuidv4(),
+            item: item,
+            qty: qty,
+            unit: unit,
         }
         setOrder2(prev => [...prev, user]);
 
@@ -56,7 +60,7 @@ const QuickOrder = () => {
                                     <Table.Td id="input1">
                                         <Input
                                             placeholder={t("quickOrderFive")}
-                                            ref={addNameRef}
+                                            onChange={(e) => setItem(e.target.value)}
                                             size="md"
                                             radius="md"
                                         />
@@ -64,7 +68,7 @@ const QuickOrder = () => {
                                     <Table.Td id="input2">
                                         <Input
                                             placeholder={t("quickOrderSix")}
-                                            ref={addEmailRef}
+                                            onChange={(e) => setQty(e.target.value)}
                                             size="md"
                                             radius="md"
                                         />
@@ -75,7 +79,7 @@ const QuickOrder = () => {
                                             className="Select_product"
                                             data={["React", "Angular", "Vue", "Svelte"]}
                                             rightSection={icon}
-                                            ref={addPasswordRef}
+                                            onChange={setUnit}
                                         />
                                     </Table.Td>
                                     <Table.Td id="input4">
@@ -91,6 +95,8 @@ const QuickOrder = () => {
                                                 placeholder={items.item}
                                                 size="md"
                                                 radius="md"
+                                                onChange={(e) => setItem(e.target.value)}
+
                                             />
                                         </Table.Td>
                                         <Table.Td id="input2">
@@ -98,6 +104,9 @@ const QuickOrder = () => {
                                                 placeholder={items.qty}
                                                 size="md"
                                                 radius="md"
+                                                onChange={(e) => setQty(e.target.value)}
+
+                                                
                                             />
 
                                         </Table.Td>
@@ -106,6 +115,10 @@ const QuickOrder = () => {
                                                 placeholder={items.unit}
                                                 className="Select_product"
                                                 data={["React", "Angular", "Vue", "Svelte"]}
+                                                onChange={setUnit}
+
+
+                                                
                                                 rightSection={icon}
                                             />
 
@@ -142,7 +155,8 @@ const QuickOrder = () => {
                                     placeholder={t("quickOrderFive")}
                                     size="md"
                                     radius="md"
-                                    ref={addNameRef2}
+                                    onChange={(e) => setItem2(e.target.value)}
+                                    
 
                                 />
                             </div>
@@ -152,7 +166,8 @@ const QuickOrder = () => {
                                     placeholder={t("quickOrderSix")}
                                     size="md"
                                     radius="md"
-                                    ref={addEmailRef2}
+                                    onChange={(e) => setQty2(e.target.value)}
+
 
                                 />
                             </div>
@@ -163,7 +178,7 @@ const QuickOrder = () => {
                                     className="Select_product"
                                     data={["React", "Angular", "Vue", "Svelte"]}
                                     rightSection={icon}
-                                    ref={addPasswordRef2}
+                                    onChange={setUnit2}
 
                                 />
                             </div>
@@ -184,6 +199,7 @@ const QuickOrder = () => {
                                                 placeholder={items.item}
                                                 size="md"
                                                 radius="md"
+                                                onChange={(e) => setItem2(e.target.value)}
 
 
                                             />
@@ -195,6 +211,7 @@ const QuickOrder = () => {
                                                 placeholder={items.qty}
                                                 size="md"
                                                 radius="md"
+                                                onChange={(e) => setQty2(e.target.value)}
 
                                             />
 
@@ -206,7 +223,7 @@ const QuickOrder = () => {
                                                 className="Select_product"
                                                 data={["React", "Angular", "Vue", "Svelte"]}
                                                 rightSection={icon}
-
+                                                onChange={setUnit2}
                                             />
 
                                         </div>
