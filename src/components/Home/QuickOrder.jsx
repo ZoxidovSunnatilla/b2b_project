@@ -7,25 +7,35 @@ import { useTranslation } from "next-i18next"
 const QuickOrder = () => {
     const [opened, { open, close }] = useDisclosure(false);
     const { t } = useTranslation()
-    const [order, setOrder] = useState([{item: "element", qty: "1", unit: "React", price: "$45.00"}])
+    const [order, setOrder] = useState([{ item: "element", qty: "1", unit: "React", price: "45.00" }])
+    const [order2, setOrder2] = useState([{ item: "element", qty: "1", unit: "React", price: "45.00" }])
+
     const addNameRef = useRef()
     const addEmailRef = useRef()
     const addPasswordRef = useRef()
-    const addPriceRef = useRef()
-    
+    const addNameRef2 = useRef()
+    const addEmailRef2 = useRef()
+    const addPasswordRef2 = useRef()
     const icon = <Image src="/images/down_icon_select.svg" alt="" />
     console.log(order);
-    
-    const [slowTransitionOpened, setSlowTransitionOpened] = useState(false);
+
     const handleAdd = () => {
         const user = {
-                item: addNameRef.current.value,
-                qty: addEmailRef.current.value,
-                unit: addPasswordRef.current.value,
-                price: addPriceRef.current.value
-            }
+            item: addNameRef.current.value,
+            qty: addEmailRef.current.value,
+            unit: addPasswordRef.current.value,
+        }
         setOrder(prev => [...prev, user]);
-        
+
+    }
+    const handleAdd2 = () => {
+        const user = {
+            item: addNameRef.current.value,
+            qty: addEmailRef.current.value,
+            unit: addPasswordRef.current.value,
+        }
+        setOrder2(prev => [...prev, user]);
+
     }
     return (
         <div>
@@ -42,37 +52,11 @@ const QuickOrder = () => {
                                 </Table.Tr>
                             </Table.Thead>
                             <Table.Tbody>
-                                {/* <Table.Tr >
-                                    <Table.Td id="input1">
-                                        <Input
-                                            placeholder={t("quickOrderFive")}
-                                            size="md"
-                                            radius="md"
-                                        />
-                                    </Table.Td>
-                                    <Table.Td id="input2">
-                                        <Input
-                                            placeholder={t("quickOrderSix")}
-                                            size="md"
-                                            radius="md"
-                                        />
-                                    </Table.Td>
-                                    <Table.Td id="input3">
-                                        <Select
-                                            placeholder={t("quickOrderSeven")}
-                                            className="Select_product"
-                                            data={["React", "Angular", "Vue", "Svelte"]}
-                                            rightSection={icon}
-                                        />
-                                    </Table.Td>
-                                    <Table.Td id="input4">
-                                        <p className="text-price">$45.00 </p>
-                                    </Table.Td>
-                                </Table.Tr>
                                 <Table.Tr >
                                     <Table.Td id="input1">
                                         <Input
                                             placeholder={t("quickOrderFive")}
+                                            ref={addNameRef}
                                             size="md"
                                             radius="md"
                                         />
@@ -80,6 +64,7 @@ const QuickOrder = () => {
                                     <Table.Td id="input2">
                                         <Input
                                             placeholder={t("quickOrderSix")}
+                                            ref={addEmailRef}
                                             size="md"
                                             radius="md"
                                         />
@@ -90,177 +75,51 @@ const QuickOrder = () => {
                                             className="Select_product"
                                             data={["React", "Angular", "Vue", "Svelte"]}
                                             rightSection={icon}
+                                            ref={addPasswordRef}
                                         />
                                     </Table.Td>
                                     <Table.Td id="input4">
-                                        <p className="text-price">$45.00 </p>
+                                        <p className="text-price">$45.00</p>
+
                                     </Table.Td>
                                 </Table.Tr>
-                                <Table.Tr >
-                                    <Table.Td id="input1">
-                                        <Input
-                                            placeholder={t("quickOrderFive")}
-                                            size="md"
-                                            radius="md"
-                                        />
-                                    </Table.Td>
-                                    <Table.Td id="input2">
-                                        <Input
-                                            placeholder={t("quickOrderSix")}
-                                            size="md"
-                                            radius="md"
-                                        />
-                                    </Table.Td>
-                                    <Table.Td id="input3">
-                                        <Select
-                                            placeholder={t("quickOrderSeven")}
-                                            className="Select_product"
-                                            data={["React", "Angular", "Vue", "Svelte"]}
-                                            rightSection={icon}
-                                        />
-                                    </Table.Td>
-                                    <Table.Td id="input4">
-                                        <p className="text-price">{t("quickOrderAge")} </p>
-                                    </Table.Td>
-                                </Table.Tr>
-                                <Table.Tr >
-                                    <Table.Td id="input1">
-                                        <Input
-                                            placeholder={t("quickOrderFive")}
-                                            size="md"
-                                            radius="md"
-                                        />
-                                    </Table.Td>
-                                    <Table.Td id="input2">
-                                        <Input
-                                            placeholder={t("quickOrderSix")}
-                                            size="md"
-                                            radius="md"
-                                        />
-                                    </Table.Td>
-                                    <Table.Td id="input3">
-                                        <Select
-                                            placeholder={t("quickOrderSeven")}
-                                            className="Select_product"
-                                            data={["React", "Angular", "Vue", "Svelte"]}
-                                            rightSection={icon}
-                                        />
-                                    </Table.Td>
-                                    <Table.Td id="input4">
-                                        <p className="text-price">{t("quickOrderAge")} </p>
-                                    </Table.Td>
-                                </Table.Tr>
-                                <Table.Tr >
-                                    <Table.Td id="input1">
-                                        <Input
-                                            placeholder={t("quickOrderFive")}
-                                            size="md"
-                                            radius="md"
-                                        />
-                                    </Table.Td>
-                                    <Table.Td id="input2">
-                                        <Input
-                                            placeholder={t("quickOrderSix")}
-                                            size="md"
-                                            radius="md"
-                                        />
-                                    </Table.Td>
-                                    <Table.Td id="input3">
-                                        <Select
-                                            placeholder={t("quickOrderSeven")}
-                                            className="Select_product"
-                                            data={["React", "Angular", "Vue", "Svelte"]}
-                                            rightSection={icon}
-                                        />
-                                    </Table.Td>
-                                    <Table.Td id="input4">
-                                        <p className="text-price">{t("quickOrderAge")} </p>
-                                    </Table.Td>
-                                </Table.Tr>
-                                <Table.Tr >
-                                    <Table.Td id="input1">
-                                        <Input
-                                            placeholder={t("quickOrderFive")}
-                                            size="md"
-                                            radius="md"
-                                        />
-                                    </Table.Td>
-                                    <Table.Td id="input2">
-                                        <Input
-                                            placeholder={t("quickOrderSix")}
-                                            size="md"
-                                            radius="md"
-                                        />
-                                    </Table.Td>
-                                    <Table.Td id="input3">
-                                        <Select
-                                            placeholder={t("quickOrderSeven")}
-                                            className="Select_product"
-                                            data={["React", "Angular", "Vue", "Svelte"]}
-                                            rightSection={icon}
-                                        />
-                                    </Table.Td>
-                                    <Table.Td id="input4">
-                                        <p className="text-price">{t("quickOrderAge")} </p>
-                                    </Table.Td>
-                                </Table.Tr>
-                                <Table.Tr >
-                                    <Table.Td id="input1">
-                                        <Input
-                                            placeholder={t("quickOrderFive")}
-                                            size="md"
-                                            radius="md"
-                                        />
-                                    </Table.Td>
-                                    <Table.Td id="input2">
-                                        <Input
-                                            placeholder={t("quickOrderSix")}
-                                            size="md"
-                                            radius="md"
-                                        />
-                                    </Table.Td>
-                                    <Table.Td id="input3">
-                                        <Select
-                                            placeholder={t("quickOrderSeven")}
-                                            className="Select_product"
-                                            data={["React", "Angular", "Vue", "Svelte"]}
-                                            rightSection={icon}
-                                        />
-                                    </Table.Td>
-                                    <Table.Td id="input4">
-                                        <p className="text-price">{t("quickOrderAge")} </p>
-                                    </Table.Td>
-                                </Table.Tr> */}
-                                { order?.length > 0 ? (order?.map((items) => {
-                                    return(    <Table.Tr  key={items.id}>
-                                   <Table.Td id="input1">
-                                       <Input
-                                           placeholder={items.item}
-                                           size="md"
-                                           radius="md"
-                                       />
-                                   </Table.Td>
-                                   <Table.Td id="input2">
-                                       <Input
-                                           placeholder={items.qty}
-                                           size="md"
-                                           radius="md"
-                                       />
-                                   </Table.Td>
-                                   <Table.Td id="input3">
-                                       <Select
-                                           placeholder={items.unit}
-                                           className="Select_product"
-                                           data={["React", "Angular", "Vue", "Svelte"]}
-                                           rightSection={icon}
-                                       />
-                                   </Table.Td>
-                                   <Table.Td id="input4">
-                                       <p className="text-price">{items.price}</p>
-                                   </Table.Td>
-                               </Table.Tr> 
-                                )})) : (<h1>error</h1>) }
+
+                                {order?.length > 0 ? (order?.map((items) => {
+                                    return (<Table.Tr key={items.id}>
+                                        <Table.Td id="input1">
+                                            <Input
+                                                placeholder={items.item}
+                                                size="md"
+                                                radius="md"
+                                            />
+                                        </Table.Td>
+                                        <Table.Td id="input2">
+                                            <Input
+                                                placeholder={items.qty}
+                                                size="md"
+                                                radius="md"
+                                            />
+
+                                        </Table.Td>
+                                        <Table.Td id="input3">
+                                            <Select
+                                                placeholder={items.unit}
+                                                className="Select_product"
+                                                data={["React", "Angular", "Vue", "Svelte"]}
+                                                rightSection={icon}
+                                            />
+
+                                        </Table.Td>
+                                        <Table.Td id="input4">
+                                            <p className="text-price">$45.00</p>
+
+                                        </Table.Td>
+                                    </Table.Tr>
+                                    )
+                                })) : (<h1>error</h1>)}
                             </Table.Tbody>
+                            <button onClick={handleAdd} className='md:w-[176px] mt-4 w-full mb-2 flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-full text-white bg-costum-blue'>Add item</button>
+
                         </Table>
                         <div className="flex gap-4 mt-10">
                             <button className="md:w-[240px] w-full mb-2 flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-full text-white bg-costum-blue">
@@ -276,13 +135,15 @@ const QuickOrder = () => {
                         </div>
                     </div>
                     <div className="w-full block md:hidden mb-4">
-                        <div className="block border-b mb-6 border-solid border-[#FFFFFF]">
+                        <div className="block  mb-4 ">
                             <div id="input1" className='mb-2'>
                                 <p className="text-sm text-[#434447] mb-1">{t("quickOrderOne")}</p>
                                 <Input
                                     placeholder={t("quickOrderFive")}
                                     size="md"
                                     radius="md"
+                                    ref={addNameRef2}
+
                                 />
                             </div>
                             <div id="input2" className='mb-2'>
@@ -291,6 +152,8 @@ const QuickOrder = () => {
                                     placeholder={t("quickOrderSix")}
                                     size="md"
                                     radius="md"
+                                    ref={addEmailRef2}
+
                                 />
                             </div>
                             <div id="input3" className='mb-4'>
@@ -300,137 +163,62 @@ const QuickOrder = () => {
                                     className="Select_product"
                                     data={["React", "Angular", "Vue", "Svelte"]}
                                     rightSection={icon}
+                                    ref={addPasswordRef2}
+
                                 />
                             </div>
                             <div id="input4" className='mb-4'>
                                 <p className="text-sm text-[#434447] mb-1">{t("quickOrderFour")}</p>
                                 <p className="text-price">$45.00</p>
+                                
                             </div>
                         </div>
-                        <div className="block border-b mb-6 border-solid border-[#FFFFFF]">
-                            <div id="input1" className='mb-2'>
-                                <p className="text-sm text-[#434447] mb-1">{t("quickOrderOne")}</p>
-                                <Input
-                                    placeholder={t("quickOrderFive")}
-                                    size="md"
-                                    radius="md"
-                                />
-                            </div>
-                            <div id="input2" className='mb-2'>
-                                <p className="text-sm text-[#434447] mb-1">{t("quickOrderTwo")}</p>
-                                <Input
-                                    placeholder={t("quickOrderSix")}
-                                    size="md"
-                                    radius="md"
-                                />
-                            </div>
-                            <div id="input3" className='mb-4'>
-                                <p className="text-sm text-[#434447] mb-1">{t("quickOrderThree")}</p>
-                                <Select
-                                    placeholder={t("quickOrderSeven")}
-                                    className="Select_product"
-                                    data={["React", "Angular", "Vue", "Svelte"]}
-                                    rightSection={icon}
-                                />
-                            </div>
-                            <div id="input4" className='mb-4'>
-                                <p className="text-sm text-[#434447] mb-1">{t("quickOrderFour")}</p>
-                                <p className="text-price">$45.00</p>
-                            </div>
-                        </div>
-                        <div className="block border-b mb-6 border-solid border-[#FFFFFF]">
-                            <div id="input1" className='mb-2'>
-                                <p className="text-sm text-[#434447] mb-1">{t("quickOrderOne")}</p>
-                                <Input
-                                    placeholder={t("quickOrderFive")}
-                                    size="md"
-                                    radius="md"
-                                />
-                            </div>
-                            <div id="input2" className='mb-2'>
-                                <p className="text-sm text-[#434447] mb-1">{t("quickOrderTwo")}</p>
-                                <Input
-                                    placeholder={t("quickOrderSix")}
-                                    size="md"
-                                    radius="md"
-                                />
-                            </div>
-                            <div id="input3" className='mb-4'>
-                                <p className="text-sm text-[#434447] mb-1">{t("quickOrderThree")}</p>
-                                <Select
-                                    placeholder={t("quickOrderSeven")}
-                                    className="Select_product"
-                                    data={["React", "Angular", "Vue", "Svelte"]}
-                                    rightSection={icon}
-                                />
-                            </div>
-                            <div id="input4" className='mb-4'>
-                                <p className="text-sm text-[#434447] mb-1">{t("quickOrderFour")}</p>
-                                <p className="text-price">{t("quickOrderAge")}</p>
-                            </div>
-                        </div>
-                        <div className="block border-b mb-6 border-solid border-[#FFFFFF]">
-                            <div id="input1" className='mb-2'>
-                                <p className="text-sm text-[#434447] mb-1">{t("quickOrderOne")}</p>
-                                <Input
-                                    placeholder={t("quickOrderFive")}
-                                    size="md"
-                                    radius="md"
-                                />
-                            </div>
-                            <div id="input2" className='mb-2'>
-                                <p className="text-sm text-[#434447] mb-1">{t("quickOrderTwo")}</p>
-                                <Input
-                                    placeholder={t("quickOrderSix")}
-                                    size="md"
-                                    radius="md"
-                                />
-                            </div>
-                            <div id="input3" className='mb-4'>
-                                <p className="text-sm text-[#434447] mb-1">{t("quickOrderThree")}</p>
-                                <Select
-                                    placeholder={t("quickOrderSeven")}
-                                    className="Select_product"
-                                    data={["React", "Angular", "Vue", "Svelte"]}
-                                    rightSection={icon}
-                                />
-                            </div>
-                            <div id="input4" className='mb-4'>
-                                <p className="text-sm text-[#434447] mb-1">{t("quickOrderFour")}</p>
-                                <p className="text-price">{t("quickOrderAge")}</p>
-                            </div>
-                        </div>
-                        <div className="block border-b mb-6 border-solid border-[#FFFFFF]">
-                            <div id="input1" className='mb-2'>
-                                <p className="text-sm text-[#434447] mb-1">{t("quickOrderOne")}</p>
-                                <Input
-                                    placeholder={t("quickOrderFive")}
-                                    size="md"
-                                    radius="md"
-                                />
-                            </div>
-                            <div id="input2" className='mb-2'>
-                                <p className="text-sm text-[#434447] mb-1">{t("quickOrderTwo")}</p>
-                                <Input
-                                    placeholder={t("quickOrderSix")}
-                                    size="md"
-                                    radius="md"
-                                />
-                            </div>
-                            <div id="input3" className='mb-4'>
-                                <p className="text-sm text-[#434447] mb-1">{t("quickOrderThree")}</p>
-                                <Select
-                                    placeholder={t("quickOrderSeven")}
-                                    className="Select_product"
-                                    data={["React", "Angular", "Vue", "Svelte"]}
-                                    rightSection={icon}
-                                />
-                            </div>
-                            <div id="input4" className='mb-4'>
-                                <p className="text-sm text-[#434447] mb-1">{t("quickOrderFour")}</p>
-                                <p className="text-price">{t("quickOrderAge")}</p>
-                            </div>
-                        </div>
+                        <button onClick={handleAdd2} className='w-full mb-4 w-full mb-2 flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-full text-white bg-costum-blue'>Add item</button>
+                        {
+                            order2?.length > 0 ? (order2?.map((items) => {
+                                return (
+                                    <div className="block border-b mb-6 border-solid border-[#FFFFFF]" key={items.id}>
+                                        <div id="input1" className='mb-2'>
+                                            <p className="text-sm text-[#434447] mb-1">{t("quickOrderOne")}</p>
+                                            <Input
+                                                placeholder={items.item}
+                                                size="md"
+                                                radius="md"
+
+
+                                            />
+
+                                        </div>
+                                        <div id="input2" className='mb-2'>
+                                            <p className="text-sm text-[#434447] mb-1">{t("quickOrderTwo")}</p>
+                                            <Input
+                                                placeholder={items.qty}
+                                                size="md"
+                                                radius="md"
+
+                                            />
+
+                                        </div>
+                                        <div id="input3" className='mb-4'>
+                                            <p className="text-sm text-[#434447] mb-1">{t("quickOrderThree")}</p>
+                                            <Select
+                                                placeholder={items.unit}
+                                                className="Select_product"
+                                                data={["React", "Angular", "Vue", "Svelte"]}
+                                                rightSection={icon}
+
+                                            />
+
+                                        </div>
+                                        <div id="input4" className='mb-4'>
+                                            <p className="text-sm text-[#434447] mb-1">{t("quickOrderFour")}</p>
+                                            <p className="text-price">$45.00</p>
+                                        </div>
+                                    </div>
+                                )
+                            })) : (<h1>error</h1>)
+                        }
+
                         <button className="md:w-[176px] w-full mb-2 flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-full text-white bg-costum-blue">
                             {t("cardBtnText")}
                             <Image src="/images/down-icon.svg" alt="" />
@@ -458,24 +246,7 @@ const QuickOrder = () => {
                 {t("headerButtonText")}
             </button>
 
-            <Modal
-                opened={slowTransitionOpened}
-                onClose={() => setSlowTransitionOpened(false)}
-                transitionProps={{ transition: 'rotate-left' }}
-            >
-                    <Input className='mb-2' ref={addNameRef} />
-                    <Input className='mb-2' ref={addEmailRef}/>
-                    <Select
-                        placeholder={t("quickOrderSeven")}
-                        className="Select_product mb-2"
-                        data={["React", "Angular", "Vue", "Svelte"]}
-                        rightSection={icon}
-                        ref={addPasswordRef}
-                    />
-                    <Input ref={addPriceRef}/>
-                    <button onClick={handleAdd} onDoubleClick={() => setSlowTransitionOpened(false)}>dasdsa</button>
 
-            </Modal>
         </div>
 
     )
