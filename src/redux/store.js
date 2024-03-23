@@ -10,11 +10,12 @@ import {
   REGISTER,
 } from "redux-persist"
 import storage from "redux-persist/lib/storage"
-
 import authReducer from "./features/auth-slice"
+import cardList from "./features/card-list"
 
 const rootReducer = combineReducers({
   authReducer,
+  cardList,
 })
 
 const persistConfig = {

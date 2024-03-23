@@ -19,6 +19,7 @@ export const auth = createSlice({
     togleModerator: (state) => {
       state.user.isAuth = !state.user.isAuth
     },
+    
   },
 })
 
