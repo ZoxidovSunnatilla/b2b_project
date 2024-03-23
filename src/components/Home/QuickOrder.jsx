@@ -1,25 +1,32 @@
 import React, { useState, useRef } from 'react'
 import { useDisclosure } from '@mantine/hooks';
+import { useParams } from 'react-router-dom';
 import { Input, Modal, Table, Select, Image } from '@mantine/core';
 import { useTranslation } from "next-i18next";
+import { useDispatch, useSelector } from "react-redux"
+import { addCard, deleteCard,editCard } from '@/src/redux/features/card-list';
 import { v4 as uuidv4 } from 'uuid';
 
 
 
 const QuickOrder = () => {
+    const dispatch = useDispatch();
+    const params = useParams();
+
     const [opened, { open, close }] = useDisclosure(false);
     const { t } = useTranslation()
-    const [order, setOrder] = useState([{id: 1, item: "element", qty: "1", unit: "React", price: "45.00" }])
-    const [order2, setOrder2] = useState([{ id: 1, item: "element", qty: "1", unit: "React", price: "45.00" }])
     const [item, setItem] = useState()
     const [qty, setQty] = useState()
     const [unit, setUnit] = useState()
-    const [item2, setItem2] = useState()
-    const [qty2, setQty2] = useState()
-    const [unit2, setUnit2] = useState()
- 
+    const [itemEdit, setItemEdit] = useState()
+    const [qtyEdit, setQtyEdit] = useState()
+    const [unitEdit, setUnitEdit] = useState()
     const icon = <Image src="/images/down_icon_select.svg" alt="" />
-    console.log(order);
+
+  
+    const handleRemoveCard = (id) => {
+      dispatch(deleteCard({ id }));
+    }
 
     const handleAdd = () => {
         const user = {
@@ -28,8 +35,18 @@ const QuickOrder = () => {
             qty: qty,
             unit: unit,
         }
-        setOrder(prev => [...prev, user]);
-
+        
+        dispatch(addCard(user))
+        // setOrder(prev => [...prev, user]);
+    }
+    const handleEditCard = () => {
+        const editCards = {
+            id: params.id,
+            item: itemEdit,
+            qty: qtyEdit,
+            unit: unitEdit,
+        }
+        dispatch(editCard(editCards));
     }
     const handleAdd2 = () => {
         const user = {
@@ -38,9 +55,14 @@ const QuickOrder = () => {
             qty: qty,
             unit: unit,
         }
-        setOrder2(prev => [...prev, user]);
+        
+        dispatch(addCard(user))
 
     }
+    const card = useSelector((state) => state.cardList)
+    console.log(card);
+    
+    
     return (
         <div>
             <Modal opened={opened} onClose={close} title="Quick order form" size="100%">
@@ -88,37 +110,37 @@ const QuickOrder = () => {
                                     </Table.Td>
                                 </Table.Tr>
 
-                                {order?.length > 0 ? (order?.map((items) => {
-                                    return (<Table.Tr key={items.id}>
+                                {card?.length > 0 ? (card?.map((items) => {
+                                    return (<Table.Tr key={items?.id}>
                                         <Table.Td id="input1">
                                             <Input
-                                                placeholder={items.item}
+                                                placeholder={items?.item}
                                                 size="md"
                                                 radius="md"
-                                                onChange={(e) => setItem(e.target.value)}
+                                                onChange={(e) => setItemEdit(e.target.value)}
 
                                             />
                                         </Table.Td>
                                         <Table.Td id="input2">
                                             <Input
-                                                placeholder={items.qty}
+                                                placeholder={items?.qty}
                                                 size="md"
                                                 radius="md"
-                                                onChange={(e) => setQty(e.target.value)}
+                                                onChange={(e) => setItemEdit(e.target.value)}
 
-                                                
+
                                             />
 
                                         </Table.Td>
                                         <Table.Td id="input3">
                                             <Select
-                                                placeholder={items.unit}
+                                                placeholder={items?.unit}
                                                 className="Select_product"
                                                 data={["React", "Angular", "Vue", "Svelte"]}
-                                                onChange={setUnit}
+                                                onChange={setItemEdit}
 
 
-                                                
+
                                                 rightSection={icon}
                                             />
 
@@ -126,6 +148,12 @@ const QuickOrder = () => {
                                         <Table.Td id="input4">
                                             <p className="text-price">$45.00</p>
 
+                                        </Table.Td>
+                                        <Table.Td>
+                                            <div className="flex gap-2">
+                                            <button className='w-8 h-8 flex rounded flex items-center justify-center bg-red-500 ' onClick={() => handleRemoveCard(items?.id)}><img src='/images/deleteWhite.svg' /></button>
+                                            <button className='w-8 h-8 flex rounded flex items-center justify-center bg-yellow-500 ' onClick={handleEditCard}><img src='/images/editWhite.svg' /></button>
+                                            </div>
                                         </Table.Td>
                                     </Table.Tr>
                                     )
@@ -155,8 +183,8 @@ const QuickOrder = () => {
                                     placeholder={t("quickOrderFive")}
                                     size="md"
                                     radius="md"
-                                    onChange={(e) => setItem2(e.target.value)}
-                                    
+                                    onChange={(e) => setItem(e.target.value)}
+
 
                                 />
                             </div>
@@ -166,7 +194,7 @@ const QuickOrder = () => {
                                     placeholder={t("quickOrderSix")}
                                     size="md"
                                     radius="md"
-                                    onChange={(e) => setQty2(e.target.value)}
+                                    onChange={(e) => setQty(e.target.value)}
 
 
                                 />
@@ -178,28 +206,28 @@ const QuickOrder = () => {
                                     className="Select_product"
                                     data={["React", "Angular", "Vue", "Svelte"]}
                                     rightSection={icon}
-                                    onChange={setUnit2}
+                                    onChange={setUnit}
 
                                 />
                             </div>
                             <div id="input4" className='mb-4'>
                                 <p className="text-sm text-[#434447] mb-1">{t("quickOrderFour")}</p>
                                 <p className="text-price">$45.00</p>
-                                
+
                             </div>
                         </div>
                         <button onClick={handleAdd2} className='w-full mb-4 w-full mb-2 flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-full text-white bg-costum-blue'>Add item</button>
                         {
-                            order2?.length > 0 ? (order2?.map((items) => {
+                            card?.length > 0 ? (card?.map((items) => {
                                 return (
-                                    <div className="block border-b mb-6 border-solid border-[#FFFFFF]" key={items.id}>
+                                    <div className="block border-b mb-6 border-solid border-[#FFFFFF]" key={items?.id}>
                                         <div id="input1" className='mb-2'>
                                             <p className="text-sm text-[#434447] mb-1">{t("quickOrderOne")}</p>
                                             <Input
-                                                placeholder={items.item}
+                                                placeholder={items?.item}
                                                 size="md"
                                                 radius="md"
-                                                onChange={(e) => setItem2(e.target.value)}
+                                                onChange={(e) => setItem(e.target.value)}
 
 
                                             />
@@ -208,10 +236,10 @@ const QuickOrder = () => {
                                         <div id="input2" className='mb-2'>
                                             <p className="text-sm text-[#434447] mb-1">{t("quickOrderTwo")}</p>
                                             <Input
-                                                placeholder={items.qty}
+                                                placeholder={items?.qty}
                                                 size="md"
                                                 radius="md"
-                                                onChange={(e) => setQty2(e.target.value)}
+                                                onChange={(e) => setQty(e.target.value)}
 
                                             />
 
@@ -219,11 +247,11 @@ const QuickOrder = () => {
                                         <div id="input3" className='mb-4'>
                                             <p className="text-sm text-[#434447] mb-1">{t("quickOrderThree")}</p>
                                             <Select
-                                                placeholder={items.unit}
+                                                placeholder={items?.unit}
                                                 className="Select_product"
                                                 data={["React", "Angular", "Vue", "Svelte"]}
                                                 rightSection={icon}
-                                                onChange={setUnit2}
+                                                onChange={setUnit}
                                             />
 
                                         </div>
