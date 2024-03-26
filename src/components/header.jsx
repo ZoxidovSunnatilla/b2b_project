@@ -20,10 +20,12 @@ import { requests } from "@/src/services/request"
 import { useTranslation } from "next-i18next"
 import { useRouter } from "next/router"
 import QuickOrder from "./Home/QuickOrder"
+import { useSelector } from "react-redux"
 
 const Header = () => {
+  const products = useSelector((state) => state.cart.products);
+  console.log(products);
   const [opened, { open, close }] = useDisclosure(false)
-
   const search_icon = <Image src="/images/search.svg" />
   const icon = <Image src="/images/down_icon_select.svg" alt="" />
   const [country, setCounty] = useState([])
@@ -321,7 +323,7 @@ const Header = () => {
                       className="absolute -top-2.5 -right-2.5"
                       circle
                     >
-                      12
+                      {products?.length > 0 ? products?.length : 0}
                     </Badge>
                   </div>
                   <p className="text-costum-blue text-sm font-bold uppercase mt-2">
