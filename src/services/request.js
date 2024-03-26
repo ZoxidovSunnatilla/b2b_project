@@ -32,18 +32,18 @@ request.interceptors.response.use(
   (response) => response.data,
   async (error) => {
     if (error?.response?.status === 401) {
-      notifications.show({
-        message: error?.response?.data?.message,
-        color: "red",
-      })
+      // notifications.show({
+      //   message: error?.response?.data?.message || "error",
+      //   color: "red",
+      // })
     } else {
-      notifications.show({
-        message:
-          error?.response?.data?.message ||
-          error?.response?.data?.error ||
-          "failed",
-        color: "red",
-      })
+      // notifications.show({
+      //   message:
+      //     error?.response?.data?.message ||
+      //     error?.response?.data?.error ||
+      //     "failed",
+      //   color: "red",
+      // })
     }
   }
 )
