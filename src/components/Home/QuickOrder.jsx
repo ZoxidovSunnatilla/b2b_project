@@ -37,7 +37,6 @@ const QuickOrder = () => {
         }
         
         dispatch(addCard(user))
-        // setOrder(prev => [...prev, user]);
     }
     const handleEditCard = () => {
         const editCards = {
