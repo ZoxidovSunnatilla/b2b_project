@@ -4,7 +4,7 @@ import { Select, Image } from "@mantine/core"
 import { requests } from "@/src/services/request"
 import { useTranslation } from "next-i18next";
 import { useDispatch } from "react-redux"
-import { addToCart } from "@/src/redux/features/cart";
+import { addToCart } from "@/src/redux/features/cart";  
 import Link from "next/link"
 import ProductSkeleton from "../Skeleton/productSkeleton"
 const icon = <Image src="/images/down_icon_select.svg" alt="" />

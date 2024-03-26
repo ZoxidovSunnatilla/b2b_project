@@ -113,7 +113,8 @@ const QuickOrder = () => {
                                     return (<Table.Tr key={items?.id}>
                                         <Table.Td id="input1">
                                             <Input
-                                                placeholder={items?.item}
+                                                placeholder={t("quickOrderFive")}
+                                                value={items?.item}
                                                 size="md"
                                                 radius="md"
                                                 onChange={(e) => setItemEdit(e.target.value)}
@@ -122,8 +123,9 @@ const QuickOrder = () => {
                                         </Table.Td>
                                         <Table.Td id="input2">
                                             <Input
-                                                placeholder={items?.qty}
+                                                placeholder={t("quickOrderSix")}
                                                 size="md"
+                                                value={items?.qty}
                                                 radius="md"
                                                 onChange={(e) => setItemEdit(e.target.value)}
 
@@ -133,7 +135,8 @@ const QuickOrder = () => {
                                         </Table.Td>
                                         <Table.Td id="input3">
                                             <Select
-                                                placeholder={items?.unit}
+                                                placeholder={t("quickOrderSeven")}
+                                                value={items?.unit}
                                                 className="Select_product"
                                                 data={["React", "Angular", "Vue", "Svelte"]}
                                                 onChange={setItemEdit}
@@ -151,12 +154,12 @@ const QuickOrder = () => {
                                         <Table.Td>
                                             <div className="flex gap-2">
                                             <button className='w-8 h-8 flex rounded flex items-center justify-center bg-red-500 ' onClick={() => handleRemoveCard(items?.id)}><img src='/images/deleteWhite.svg' /></button>
-                                            <button className='w-8 h-8 flex rounded flex items-center justify-center bg-yellow-500 ' onClick={handleEditCard}><img src='/images/editWhite.svg' /></button>
+                                            
                                             </div>
                                         </Table.Td>
                                     </Table.Tr>
                                     )
-                                })) : (<h1>error</h1>)}
+                                })) : (<h1></h1>)}
                             </Table.Tbody>
                             <button onClick={handleAdd} className='md:w-[176px] mt-4 w-full mb-2 flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-full text-white bg-costum-blue'>Add item</button>
 
@@ -223,7 +226,8 @@ const QuickOrder = () => {
                                         <div id="input1" className='mb-2'>
                                             <p className="text-sm text-[#434447] mb-1">{t("quickOrderOne")}</p>
                                             <Input
-                                                placeholder={items?.item}
+                                                placeholder={t("quickOrderFive")}
+                                                value={items?.item}
                                                 size="md"
                                                 radius="md"
                                                 onChange={(e) => setItem(e.target.value)}
@@ -235,7 +239,8 @@ const QuickOrder = () => {
                                         <div id="input2" className='mb-2'>
                                             <p className="text-sm text-[#434447] mb-1">{t("quickOrderTwo")}</p>
                                             <Input
-                                                placeholder={items?.qty}
+                                                placeholder={t("quickOrderSix")}
+                                                value={items?.qty}
                                                 size="md"
                                                 radius="md"
                                                 onChange={(e) => setQty(e.target.value)}
@@ -246,7 +251,8 @@ const QuickOrder = () => {
                                         <div id="input3" className='mb-4'>
                                             <p className="text-sm text-[#434447] mb-1">{t("quickOrderThree")}</p>
                                             <Select
-                                                placeholder={items?.unit}
+                                                placeholder={t("quickOrderSeven")}
+                                                value={items?.unit}
                                                 className="Select_product"
                                                 data={["React", "Angular", "Vue", "Svelte"]}
                                                 rightSection={icon}
@@ -260,7 +266,7 @@ const QuickOrder = () => {
                                         </div>
                                     </div>
                                 )
-                            })) : (<h1>error</h1>)
+                            })) : (<h1></h1>)
                         }
 
                         <button className="md:w-[176px] w-full mb-2 flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-full text-white bg-costum-blue">
