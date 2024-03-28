@@ -1,11 +1,64 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Breadcrumbs, Table, Select, Image } from '@mantine/core';
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next"
+import { useDispatch, useSelector } from "react-redux"
 
 const ComparePage = () => {
   const { t } = useTranslation("common", "compare")
-
+  const compare = useSelector((state) => state.compare.compareProd)
+  
+  const [values, setValues] = useState([
+    {
+      id: 1,
+      images: [
+        {
+          link: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/No_image_available_500_x_500.svg/240px-No_image_available_500_x_500.svg.png",
+        },
+        { link: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/No_image_available_500_x_500.svg/240px-No_image_available_500_x_500.svg.png" },
+        {
+          link: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/No_image_available_500_x_500.svg/240px-No_image_available_500_x_500.svg.png",
+        },
+        {
+          link: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/No_image_available_500_x_500.svg/240px-No_image_available_500_x_500.svg.png",
+        },
+        {
+          link: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/No_image_available_500_x_500.svg/240px-No_image_available_500_x_500.svg.png",
+        },
+      ],
+      discount: "50",
+      in_stock: true,
+      brand: { name: "dsadas" },
+      name: "sadasda",
+      price: "500$",
+      attributes: [
+        { name: "size", value: "sadasd" },
+        { name: "size", value: "sadasd" },
+      ],
+    },
+    {
+      id: 2,
+      images: [
+        {
+          link: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/No_image_available_500_x_500.svg/240px-No_image_available_500_x_500.svg.png",
+        },
+        { link: "s" },
+        {
+          link: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/No_image_available_500_x_500.svg/240px-No_image_available_500_x_500.svg.png",
+        },
+      ],
+      discount: "30",
+      in_stock: true,
+      brand: { name: "dsadas" },
+      name: "sadasda",
+      price: "500$",
+      attributes: [
+        { name: "size", value: "sadasd" },
+        { name: "size", value: "sadasd" },
+      ],
+    },
+  ])
+ 
   return (
     <div className='container mx-auto'>
       <Breadcrumbs className='mt-8 mb-10 breadcumbs' >
@@ -44,6 +97,7 @@ const ComparePage = () => {
         </div>
       </div>
       <div className="w-full md:flex hidden justify-between gap-5 md:mb-[100px]">
+       
         <div className="w-[301px] bg-bg-voltiva ">
           <div className="flex w-full h-12 juctify-center items-center border-b ">
             <div className="flex justify-center items-center mx-auto gap-1">
@@ -103,7 +157,8 @@ const ComparePage = () => {
             </div>
           </div>
         </div>
-        <div className="w-[301px] bg-bg-voltiva ">
+        {compare ? (compare.map((item) => {
+          return  <div className="w-[301px] bg-bg-voltiva " key={item._id}>
           <div className="flex w-full h-12 juctify-center items-center  ">
             <div className="mx-auto">
               <Image src="/images/delete.svg" alt="" />
@@ -119,12 +174,12 @@ const ComparePage = () => {
           </div>
           <div className="flex w-full h-[88px] juctify-center items-center border-b ">
             <div className="pl-[32px]">
-              <p className="text-sm font-normal mb-0 text-left">AMBER DECOR Small Lamp</p>
+              <p className="text-sm font-normal mb-0 text-left">{item.name}</p>
             </div>
           </div>
           <div className="flex w-full h-[88px] juctify-center items-center border-b ">
             <div className="pl-[32px]">
-              <p className="text-x; font-normal">$20</p>
+              <p className="text-x; font-normal">{item.price}</p>
             </div>
           </div>
           <div className="flex w-full h-[569px] juctify-center  border-b ">
@@ -163,129 +218,14 @@ const ComparePage = () => {
             </div>
           </div>
         </div>
-        <div className="w-[301px] bg-bg-voltiva ">
-          <div className="flex w-full h-12 juctify-center items-center  ">
-            <div className="mx-auto">
-              <Image src="/images/delete.svg" alt="" />
-            </div>
-          </div>
-          <div className="flex w-full h-[283px] relative bg-white juctify-center items-center  ">
-            <div className="mx-auto  ">
-              <Image src="/images/compareImg1.svg" alt="" />
-              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-3.5 right-3.5">
-                <Image src="/images/star.svg" alt="" />
-              </div>
-            </div>
-          </div>
-          <div className="flex w-full h-[88px] juctify-center items-center border-b ">
-            <div className="pl-[32px]">
-              <p className="text-sm font-normal mb-0 text-left">AMBER DECOR Small Lamp</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[88px] juctify-center items-center border-b ">
-            <div className="pl-[32px]">
-              <p className="text-x; font-normal">$20</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[569px] juctify-center  border-b ">
-            <div className="p-[32px]">
-              <p className="text-sm font-normal">Lighting spaces with LED bulbs is a solution that is not only good for the environment, but also financially beneficial. Therefore, the model presented here is recommended for use in every apartment, house and public utility premises. Not only does this bulb take less power, it is also more durable and more durable than typical traditional models. It is more resistant to mechanical damage and shocks, thanks to which it will illuminate the space longer. Importantly, these bulbs do not need to be warmed up to glow fully. This product does not flash when it is lit. In our store you will get LED bulbs in the entire range of models that will perfectly match your home or premises.</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[88px] juctify-center items-center border-b ">
-            <div className="pl-[32px]">
-              <p className="text-sm font-normal">E14</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[88px] juctify-center items-center border-b ">
-            <div className="pl-[32px]">
-              <p className="text-sm font-normal">Candle</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[88px] juctify-center items-center border-b ">
-            <div className="pl-[32px]">
-              <p className="text-sm font-normal">4W</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[88px] juctify-center items-center border-b ">
-            <div className="pl-[32px]">
-              <p className="text-sm font-normal">450 lm</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[88px] juctify-center items-center border-b ">
-            <div className="pl-[32px]">
-              <p className="text-sm font-normal">warm light</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[88px] juctify-center items-center border-b ">
-            <div className="pl-[32px]">
-              <p className="text-sm font-normal">Value</p>
-            </div>
-          </div>
-        </div>
-        <div className="w-[301px] bg-bg-voltiva ">
-          <div className="flex w-full h-12 juctify-center items-center  ">
-            <div className="mx-auto">
-              <Image src="/images/delete.svg" alt="" />
-            </div>
-          </div>
-          <div className="flex w-full h-[283px] relative bg-white juctify-center items-center  ">
-            <div className="mx-auto  ">
-              <Image src="/images/compareImg1.svg" alt="" />
-              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-3.5 right-3.5">
-                <Image src="/images/star.svg" alt="" />
-              </div>
-            </div>
-          </div>
-          <div className="flex w-full h-[88px] juctify-center items-center border-b ">
-            <div className="pl-[32px]">
-              <p className="text-sm font-normal mb-0 text-left">AMBER DECOR Small Lamp</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[88px] juctify-center items-center border-b ">
-            <div className="pl-[32px]">
-              <p className="text-x; font-normal">$20</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[569px] juctify-center  border-b ">
-            <div className="p-[32px]">
-              <p className="text-sm font-normal">Lighting spaces with LED bulbs is a solution that is not only good for the environment, but also financially beneficial. Therefore, the model presented here is recommended for use in every apartment, house and public utility premises. Not only does this bulb take less power, it is also more durable and more durable than typical traditional models. It is more resistant to mechanical damage and shocks, thanks to which it will illuminate the space longer. Importantly, these bulbs do not need to be warmed up to glow fully. This product does not flash when it is lit. In our store you will get LED bulbs in the entire range of models that will perfectly match your home or premises.</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[88px] juctify-center items-center border-b ">
-            <div className="pl-[32px]">
-              <p className="text-sm font-normal">E14</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[88px] juctify-center items-center border-b ">
-            <div className="pl-[32px]">
-              <p className="text-sm font-normal">Candle</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[88px] juctify-center items-center border-b ">
-            <div className="pl-[32px]">
-              <p className="text-sm font-normal">4W</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[88px] juctify-center items-center border-b ">
-            <div className="pl-[32px]">
-              <p className="text-sm font-normal">450 lm</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[88px] juctify-center items-center border-b ">
-            <div className="pl-[32px]">
-              <p className="text-sm font-normal">warm light</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[88px] juctify-center items-center border-b ">
-            <div className="pl-[32px]">
-              <p className="text-sm font-normal">Value</p>
-            </div>
-          </div>
-        </div>
+        })) : (<h1>dsa</h1>)}
+    
+      
+     
       </div>
       <div className="flex md:hidden overflow-x-scroll">
-        <div className="w-[164px]">
+        {compare ? (compare.map((item) => {
+          return   <div className="w-[164px]" key={item.id}>
           <div className="flex w-full h-12 bg-[#E6EFFB] juctify-center items-center  ">
             <div className="mx-auto">
               <Image src="/images/delete.svg" alt="" />
@@ -306,7 +246,7 @@ const ComparePage = () => {
           </div>
           <div className="flex w-full h-[80px] bg-[#F6F8FB] juctify-center items-center  ">
             <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">AMBER DECOR Small Lamp</p>
+              <p className="text-sm font-normal mb-0 text-center">{item.name}</p>
             </div>
           </div>
           <div className="flex w-full h-[40px] bg-[#E6EFFB] juctify-center items-center  ">
@@ -316,7 +256,7 @@ const ComparePage = () => {
           </div>
           <div className="flex w-full h-[63px] bg-[#F6F8FB] juctify-center items-center  ">
             <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">$20</p>
+              <p className="text-sm font-normal mb-0 text-center">{item.price}</p>
             </div>
           </div>
           <div className="flex w-full h-[40px] bg-[#E6EFFB] juctify-center items-center  ">
@@ -391,430 +331,8 @@ const ComparePage = () => {
           </div>
           
         </div>
-        <div className="w-[164px]">
-          <div className="flex w-full h-12 bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <Image src="/images/delete.svg" alt="" />
-            </div>
-          </div>
-          <div className="flex w-full h-[154px] relative bg-white juctify-center items-center  ">
-            <div className="mx-auto  ">
-              <Image src="/images/compareImg_mobile.svg" alt="" />
-              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-3.5 right-3.5">
-                <Image src="/images/star.svg" alt="" />
-              </div>
-            </div>
-          </div>
-          <div className="flex w-full h-[40px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Name</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[80px] bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">AMBER DECOR Small Lamp</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[40px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Price</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[63px] bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">$20</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[40px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Description</p>
-            </div>
-          </div>
-          <div className="flex w-full h-auto bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="p-4">
-              <p className="text-sm font-normal mb-0 text-center">Lighting spaces with LED bulbs is a solution that is not only good for the environment, but also financially beneficial. Therefore, the model presented here is recommended for use in every apartment, house and public utility premises. Not only does this bulb take less power, it is also more durable and more durable than typical traditional models. It is more resistant to mechanical damage and shocks, thanks to which it will illuminate the space longer. Importantly, these bulbs do not need to be warmed up to glow fully. This product does not flash when it is lit. In our store you will get LED bulbs in the entire range of models that will perfectly match your home or premises.</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[40px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Bulb thread type</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[56px] bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">E14</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[40px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Bulb shape</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[56px] bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Candle</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[64px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Maximum bulb power</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[56px] bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">4W</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[40px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Luminous flux</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[56px] bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">450 Lm</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[64px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">The color of the light</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[56px] bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">warm light</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[40px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Parameter</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[56px] bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Value</p>
-            </div>
-          </div>
-          
-        </div>
-        <div className="w-[164px]">
-          <div className="flex w-full h-12 bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <Image src="/images/delete.svg" alt="" />
-            </div>
-          </div>
-          <div className="flex w-full h-[154px] relative bg-white juctify-center items-center  ">
-            <div className="mx-auto  ">
-              <Image src="/images/compareImg_mobile.svg" alt="" />
-              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-3.5 right-3.5">
-                <Image src="/images/star.svg" alt="" />
-              </div>
-            </div>
-          </div>
-          <div className="flex w-full h-[40px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Name</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[80px] bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">AMBER DECOR Small Lamp</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[40px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Price</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[63px] bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">$20</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[40px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Description</p>
-            </div>
-          </div>
-          <div className="flex w-full h-auto bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="p-4">
-              <p className="text-sm font-normal mb-0 text-center">Lighting spaces with LED bulbs is a solution that is not only good for the environment, but also financially beneficial. Therefore, the model presented here is recommended for use in every apartment, house and public utility premises. Not only does this bulb take less power, it is also more durable and more durable than typical traditional models. It is more resistant to mechanical damage and shocks, thanks to which it will illuminate the space longer. Importantly, these bulbs do not need to be warmed up to glow fully. This product does not flash when it is lit. In our store you will get LED bulbs in the entire range of models that will perfectly match your home or premises.</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[40px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Bulb thread type</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[56px] bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">E14</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[40px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Bulb shape</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[56px] bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Candle</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[64px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Maximum bulb power</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[56px] bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">4W</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[40px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Luminous flux</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[56px] bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">450 Lm</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[64px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">The color of the light</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[56px] bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">warm light</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[40px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Parameter</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[56px] bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Value</p>
-            </div>
-          </div>
-          
-        </div>
-        <div className="w-[164px]">
-          <div className="flex w-full h-12 bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <Image src="/images/delete.svg" alt="" />
-            </div>
-          </div>
-          <div className="flex w-full h-[154px] relative bg-white juctify-center items-center  ">
-            <div className="mx-auto  ">
-              <Image src="/images/compareImg_mobile.svg" alt="" />
-              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-3.5 right-3.5">
-                <Image src="/images/star.svg" alt="" />
-              </div>
-            </div>
-          </div>
-          <div className="flex w-full h-[40px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Name</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[80px] bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">AMBER DECOR Small Lamp</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[40px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Price</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[63px] bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">$20</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[40px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Description</p>
-            </div>
-          </div>
-          <div className="flex w-full h-auto bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="p-4">
-              <p className="text-sm font-normal mb-0 text-center">Lighting spaces with LED bulbs is a solution that is not only good for the environment, but also financially beneficial. Therefore, the model presented here is recommended for use in every apartment, house and public utility premises. Not only does this bulb take less power, it is also more durable and more durable than typical traditional models. It is more resistant to mechanical damage and shocks, thanks to which it will illuminate the space longer. Importantly, these bulbs do not need to be warmed up to glow fully. This product does not flash when it is lit. In our store you will get LED bulbs in the entire range of models that will perfectly match your home or premises.</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[40px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Bulb thread type</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[56px] bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">E14</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[40px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Bulb shape</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[56px] bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Candle</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[64px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Maximum bulb power</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[56px] bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">4W</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[40px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Luminous flux</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[56px] bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">450 Lm</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[64px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">The color of the light</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[56px] bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">warm light</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[40px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Parameter</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[56px] bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Value</p>
-            </div>
-          </div>
-          
-        </div>
-        <div className="w-[164px]">
-          <div className="flex w-full h-12 bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <Image src="/images/delete.svg" alt="" />
-            </div>
-          </div>
-          <div className="flex w-full h-[154px] relative bg-white juctify-center items-center  ">
-            <div className="mx-auto  ">
-              <Image src="/images/compareImg_mobile.svg" alt="" />
-              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-3.5 right-3.5">
-                <Image src="/images/star.svg" alt="" />
-              </div>
-            </div>
-          </div>
-          <div className="flex w-full h-[40px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Name</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[80px] bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">AMBER DECOR Small Lamp</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[40px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Price</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[63px] bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">$20</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[40px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Description</p>
-            </div>
-          </div>
-          <div className="flex w-full h-auto bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="p-4">
-              <p className="text-sm font-normal mb-0 text-center">Lighting spaces with LED bulbs is a solution that is not only good for the environment, but also financially beneficial. Therefore, the model presented here is recommended for use in every apartment, house and public utility premises. Not only does this bulb take less power, it is also more durable and more durable than typical traditional models. It is more resistant to mechanical damage and shocks, thanks to which it will illuminate the space longer. Importantly, these bulbs do not need to be warmed up to glow fully. This product does not flash when it is lit. In our store you will get LED bulbs in the entire range of models that will perfectly match your home or premises.</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[40px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Bulb thread type</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[56px] bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">E14</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[40px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Bulb shape</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[56px] bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Candle</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[64px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Maximum bulb power</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[56px] bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">4W</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[40px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Luminous flux</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[56px] bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">450 Lm</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[64px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">The color of the light</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[56px] bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">warm light</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[40px] bg-[#E6EFFB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Parameter</p>
-            </div>
-          </div>
-          <div className="flex w-full h-[56px] bg-[#F6F8FB] juctify-center items-center  ">
-            <div className="mx-auto">
-              <p className="text-sm font-normal mb-0 text-center">Value</p>
-            </div>
-          </div>
-          
-        </div>
+        })) : (<h1>ssad</h1>)}
+       
 
       </div>
     </div>

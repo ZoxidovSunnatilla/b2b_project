@@ -78,5 +78,6 @@
   "quickOrderEleven": "Upload your file",
   "quickOrderTwelvy": "Download your sample file",
   "cardGetQuoteBtnText": "Get Quote",
-  "cardCreateOrderBtnText": "Create Order"
+  "cardCreateOrderBtnText": "Create Order",
+  "cartBtnTextTranslate": "In the basket"
 }

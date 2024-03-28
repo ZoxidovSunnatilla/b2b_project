@@ -78,6 +78,7 @@
   "quickOrderEleven": "Загрузите свой файл",
   "quickOrderTwelvy": "Загрузите образец файла",
   "cardGetQuoteBtnText": "Получить цену",
-  "cardCreateOrderBtnText": "Создать заказ"
+  "cardCreateOrderBtnText": "Создать заказ",
+  "cartBtnTextTranslate": "В корзине"
   
 }

@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 import {
   Breadcrumbs,
   Tabs,
@@ -13,11 +13,86 @@ import {
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import Card from "../src/components/Item"
+import {  useSelector, useDispatch } from "react-redux"
+import { addToCart } from "../src/redux/features/cart"
 
 const ProductPage = () => {
   const icon = <Image src="/images/down_icon_select.svg" alt="" />
+  const singleProduct = useSelector((state) => state.singleProd.products)
+  const cartProducts = useSelector((state) => state.cart.products)
+  const [tempId, setTempId] = useState()
   const { t } = useTranslation("common", "product")
-
+  const hasCart = () => {
+    return cartProducts?.filter((el) => el._id === tempId?.id)?.length > 0
+      ? true
+      : false
+  }
+  const dispatch = useDispatch()
+  console.log(tempId, "--");
+  const handleAddToCart = (item) => {
+    const product = {
+      _id: item.id,
+      name: item.name,
+      quantity: 1,
+      image: item.images,
+      in_stock: item.in_stock,
+      discount: item.discount,
+      price: item.price,
+      attributes: item.attributes,
+      brand: item.brand,
+    }
+    dispatch(addToCart(product))
+  }
+  // const [values, setValues] = useState([
+  //   {
+  //     id: 1,
+  //     images: [
+  //       {
+  //         link: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/No_image_available_500_x_500.svg/240px-No_image_available_500_x_500.svg.png",
+  //       },
+  //       { link: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/No_image_available_500_x_500.svg/240px-No_image_available_500_x_500.svg.png" },
+  //       {
+  //         link: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/No_image_available_500_x_500.svg/240px-No_image_available_500_x_500.svg.png",
+  //       },
+  //       {
+  //         link: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/No_image_available_500_x_500.svg/240px-No_image_available_500_x_500.svg.png",
+  //       },
+  //       {
+  //         link: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/No_image_available_500_x_500.svg/240px-No_image_available_500_x_500.svg.png",
+  //       },
+  //     ],
+  //     discount: "50",
+  //     in_stock: true,
+  //     brand: { name: "dsadas" },
+  //     name: "sadasda",
+  //     price: "500$",
+  //     attributes: [
+  //       { name: "size", value: "sadasd" },
+  //       { name: "size", value: "sadasd" },
+  //     ],
+  //   },
+  //   {
+  //     id: 2,
+  //     images: [
+  //       {
+  //         link: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/No_image_available_500_x_500.svg/240px-No_image_available_500_x_500.svg.png",
+  //       },
+  //       { link: "s" },
+  //       {
+  //         link: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/No_image_available_500_x_500.svg/240px-No_image_available_500_x_500.svg.png",
+  //       },
+  //     ],
+  //     discount: "30",
+  //     in_stock: true,
+  //     brand: { name: "dsadas" },
+  //     name: "sadasda",
+  //     price: "500$",
+  //     attributes: [
+  //       { name: "size", value: "sadasd" },
+  //       { name: "size", value: "sadasd" },
+  //     ],
+  //   },
+  // ])
   return (
     <div>
       <div className="container mx-auto mb-20">
@@ -53,7 +128,8 @@ const ProductPage = () => {
           </a>
         </Breadcrumbs>
         <div id="wrapper">
-          <div className="grid w-full grid-cols-1 md:grid-cols-2 mb-8 gap-5 md:gap-3">
+          {singleProduct ? (singleProduct?.map((item) => {
+            return  <div className="grid w-full grid-cols-1 md:grid-cols-2 mb-8 gap-5 md:gap-3" key={item?._id} onFocus={() => setTempId(item)}>
             <div className="w-auto flex flex-wrap md:flex-nowrap md:gap-5 gap-2 h-auto md:h-[563px]">
               <div className="flex md:flex-col md:order-1 order-2  overflow-x-scroll no_scroll md:overflow-y-scroll gap-10 snap-none md:h-full">
                 <Image
@@ -108,7 +184,7 @@ const ProductPage = () => {
               <div className="relative h-[375px] md:h-full order-1 mb-4 md:mb-0">
                 <Image src="/images/productImg.svg" />
                 <div className="absolute top-5 left-0 bg-costum-orange p-1 text-sm  w-max text-white font-bold">
-                  -30%
+                  -{item.discount}%
                 </div>
                 <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2">
                   <Image src="/images/star.svg" alt="" />
@@ -117,10 +193,10 @@ const ProductPage = () => {
             </div>
             <div className="w-auto">
               <p className="text-2xl md:text-3xl text-costum-text-black font-bold mb-5">
-                Product name for maximum two text lines title could be very long
+                {item.name}
               </p>
               <p className="text-lg text-costum-silver mb-4">
-                Omnires | Part No. 2123532
+                {item.brand.name}
               </p>
               <div className="flex gap-2 mb-4 h-6 items-center">
                 <Rating defaultValue={2} />
@@ -129,10 +205,17 @@ const ProductPage = () => {
                   <p className="text-costum-text-black">(24)</p>
                 </div>
               </div>
-              <div className="flex gap-1 border mb-4 w-24 border-solid border-costum-gray-300 p-1.5 rounded">
+              {item.in_stock ? (
+              <div className="w-[100px] flex gap-1 border border-solid border-costum-gray-300 p-1.5 rounded">
                 <img src="/images/check.svg" alt="" />
                 <p className="text-costum-green">in stock</p>
               </div>
+              ) : (
+                <div className="w-[100px] flex gap-1 border border-solid border-costum-gray-300 p-1.5 rounded">
+                  <img src="/images/error_outline.svg" alt="" />
+                  <p className="text-[#F52F2F]">{item.expected_delivery_date}</p>
+                </div>
+              )}
               <div className="grid grid-cols-3">
                 <p className="text-costum-silver tex-sm">Quantity</p>
                 <p className="text-costum-silver tex-sm">Discount</p>
@@ -166,7 +249,7 @@ const ProductPage = () => {
               <div className="flex w-full items-center w-full justify-start md:justify-end gap-2 mb-5">
                 <p className="text-costum-blue font-bold text-sm md:text-base">
                   your price{" "}
-                  <span className="text-2xl mx-1 font-bold">$45.00</span>net
+                  <span className="text-2xl mx-1 font-bold">{item.price}</span>net
                 </p>
                 <p className="text-costum-orange text-sm md:text-base line-through">
                   $55.00 net
@@ -197,15 +280,24 @@ const ProductPage = () => {
               </div>
 
               <div className="flex gap-3 justify-between">
-                <button className=" w-10/12 flex justify-center items-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl text-white bg-costum-blue">
-                  {t("product:productMainBtnText")}
-                  <Image src="/images/down-icon.svg" alt="" />
-                </button>
+              <button
+                onClick={() => handleAddToCart(item)}
+                className={`w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl  ${
+                  hasCart()
+                    ? "text-costum-blue bg-white border border-costum-blue"
+                    : "text-white bg-costum-blue"
+                }`}
+              >
+                {hasCart() ? "Savatchada" : t("cardBtnText")}
+                <Image src="/images/down-icon.svg" alt="" />
+              </button>
                 <Image src="/images/share_img.svg" alt="" />
                 <Image src="/images/compare_img.svg" alt="" />
               </div>
             </div>
           </div>
+          })) : (<h1>d</h1>)}
+          
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-10 md:mb-28">
           <div className="flex items-center justify-center bg-costum-gray flex-col h-24 w-auto rounded-lg">

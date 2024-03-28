@@ -9,8 +9,8 @@ import { appWithTranslation } from "next-i18next"
 import localFont from "next/font/local"
 import Script from "next/script"
 import { useRouter } from "next/router"
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { Notifications } from "@mantine/notifications"
+import "@mantine/notifications/styles.css"
 import { ReduxProvider } from "@/src/redux/provider"
 
 // import "./index.css"
@@ -89,6 +89,7 @@ function App({ Component, pageProps }) {
               )}
             </div>
           </div>
+          <Notifications position="top-right" />
         </MantineProvider>
       </ReduxProvider>
     </>

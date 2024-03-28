@@ -9,8 +9,8 @@ import {
   Modal,
   Image,
   Combobox,
-  useCombobox ,
-  InputBase
+  useCombobox,
+  InputBase,
 } from "@mantine/core"
 import { useDisclosure } from "@mantine/hooks"
 import MenuHeader from "./Menu"
@@ -23,8 +23,11 @@ import QuickOrder from "./Home/QuickOrder"
 import { useSelector } from "react-redux"
 
 const Header = () => {
-  const products = useSelector((state) => state.cart.products);
-  console.log(products);
+  const products = useSelector((state) => state.cart.products)
+  const favorites = useSelector((state) => state.favorites.favoritProd)
+  const compare = useSelector((state) => state.compare.compareProd)
+
+
   const [opened, { open, close }] = useDisclosure(false)
   const search_icon = <Image src="/images/search.svg" />
   const icon = <Image src="/images/down_icon_select.svg" alt="" />
@@ -37,9 +40,9 @@ const Header = () => {
   const languages = [{ code: "en" }, { code: "ru" }, { code: "uz" }]
   const combobox = useCombobox({
     onDropdownClose: () => combobox.resetSelectedOption(),
-  });
+  })
 
-  const [value, setValue] = useState(null);
+  const [value, setValue] = useState(null)
   useEffect(() => {
     getData()
   }, [])
@@ -48,7 +51,6 @@ const Header = () => {
     // const res2 = await requests.Language.getList(1, 10)
     // const res3 = await requests.Currency.getList(1, 10)
     // const res4 = await requests.Category.getList(1, 10)
-
     // setCurrency(res3?.data)
     // setLanguage(res2?.data)
     // setCounty(res?.data)
@@ -164,8 +166,8 @@ const Header = () => {
               <Combobox
                 store={combobox}
                 onOptionSubmit={(val) => {
-                  setValue(val);
-                  combobox.closeDropdown();
+                  setValue(val)
+                  combobox.closeDropdown()
                 }}
               >
                 <Combobox.Target>
@@ -183,18 +185,18 @@ const Header = () => {
 
                 <Combobox.Dropdown>
                   <Combobox.Options>
-                    <Link href="/login" >
-                      <Combobox.Option >
+                    <Link href="/login">
+                      <Combobox.Option>
                         <p className="text-base">Login</p>
                       </Combobox.Option>
                     </Link>
                     <Link href="">
-                      <Combobox.Option >
+                      <Combobox.Option>
                         <p className="text-base">Surname</p>
                       </Combobox.Option>
                     </Link>
                     <Link href="">
-                      <Combobox.Option >
+                      <Combobox.Option>
                         <p className="text-base">Name</p>
                       </Combobox.Option>
                     </Link>
@@ -202,7 +204,6 @@ const Header = () => {
                 </Combobox.Dropdown>
               </Combobox>
             </div>
-
           </div>
         </div>
       </div>
@@ -216,20 +217,27 @@ const Header = () => {
         <div className="relative">
           <Image src="/images/cart.svg" alt="" className="mr-2" />
 
-          <Badge
-            size="sm"
-            color="orange"
-            className="absolute -top-2 right-0.5"
-            circle
-          >
-            12
-          </Badge>
+         
+          {products?.length > 0 && (
+            <Badge
+              size="sm"
+              color="orange"
+              className="absolute -top-2 right-0.5"
+              circle
+            >
+              {products?.length}
+            </Badge>
+          )}
         </div>
       </div>
       <div className="container px-4 md:px-0 mx-auto bg-costum-gray md:bg-white">
         <div className="h-20 flex justify-between  items-center">
           <Link href="/">
-            <Image src="/images/ABUsell.svg" alt="" className="hidden md:flex" />
+            <Image
+              src="/images/ABUsell.svg"
+              alt=""
+              className="hidden md:flex"
+            />
           </Link>
           <label className="relative block w-full md:w-1/3 menu">
             <Menu classNames=" w-full ">
@@ -279,14 +287,16 @@ const Header = () => {
                   <div className="relative mx-auto">
                     <Image src="/images/compare_icon.svg" alt="" />
 
-                    <Badge
-                      size="sm"
-                      color="orange"
-                      className="absolute -top-2.5 -right-2.5"
-                      circle
-                    >
-                      3
-                    </Badge>
+                    {compare?.length > 0 && (
+                      <Badge
+                        size="sm"
+                        color="orange"
+                        className="absolute -top-2.5 -right-2.5"
+                        circle
+                      >
+                        {compare?.length}
+                      </Badge>
+                    )}
                   </div>
                   <p className="text-costum-blue text-sm font-bold uppercase mt-2">
                     {t("headerCompareText")}
@@ -298,14 +308,16 @@ const Header = () => {
                   <div className="relative mx-auto">
                     <Image src="/images/star_icon.svg" alt="" />
 
-                    <Badge
-                      size="sm"
-                      color="orange"
-                      className="absolute -top-2.5 -right-2.5"
-                      circle
-                    >
-                      12
-                    </Badge>
+                    {favorites?.length > 0 && (
+                      <Badge
+                        size="sm"
+                        color="orange"
+                        className="absolute -top-2.5 -right-2.5"
+                        circle
+                      >
+                        {favorites?.length}
+                      </Badge>
+                    )}
                   </div>
                   <p className="text-costum-blue text-sm font-bold uppercase mt-2">
                     {t("headerFavoritesText")}
@@ -317,14 +329,16 @@ const Header = () => {
                   <div className="relative mx-auto">
                     <Image src="/images/cart_icon.svg" alt="" />
 
-                    <Badge
-                      size="sm"
-                      color="orange"
-                      className="absolute -top-2.5 -right-2.5"
-                      circle
-                    >
-                      {products?.length > 0 ? products?.length : 0}
-                    </Badge>
+                    {products?.length > 0 && (
+                      <Badge
+                        size="sm"
+                        color="orange"
+                        className="absolute -top-2.5 -right-2.5"
+                        circle
+                      >
+                        {products?.length}
+                      </Badge>
+                    )}
                   </div>
                   <p className="text-costum-blue text-sm font-bold uppercase mt-2">
                     {t("headerCartText")}
