@@ -24,6 +24,10 @@ import { useSelector } from "react-redux"
 
 const Header = () => {
   const products = useSelector((state) => state.cart.products)
+  const favorites = useSelector((state) => state.favorites.favoritProd)
+  const compare = useSelector((state) => state.compare.compareProd)
+
+
   const [opened, { open, close }] = useDisclosure(false)
   const search_icon = <Image src="/images/search.svg" />
   const icon = <Image src="/images/down_icon_select.svg" alt="" />
@@ -213,14 +217,17 @@ const Header = () => {
         <div className="relative">
           <Image src="/images/cart.svg" alt="" className="mr-2" />
 
-          <Badge
-            size="sm"
-            color="orange"
-            className="absolute -top-2 right-0.5"
-            circle
-          >
-            12
-          </Badge>
+         
+          {products?.length > 0 && (
+            <Badge
+              size="sm"
+              color="orange"
+              className="absolute -top-2 right-0.5"
+              circle
+            >
+              {products?.length}
+            </Badge>
+          )}
         </div>
       </div>
       <div className="container px-4 md:px-0 mx-auto bg-costum-gray md:bg-white">
@@ -280,14 +287,16 @@ const Header = () => {
                   <div className="relative mx-auto">
                     <Image src="/images/compare_icon.svg" alt="" />
 
-                    <Badge
-                      size="sm"
-                      color="orange"
-                      className="absolute -top-2.5 -right-2.5"
-                      circle
-                    >
-                      3
-                    </Badge>
+                    {compare?.length > 0 && (
+                      <Badge
+                        size="sm"
+                        color="orange"
+                        className="absolute -top-2.5 -right-2.5"
+                        circle
+                      >
+                        {compare?.length}
+                      </Badge>
+                    )}
                   </div>
                   <p className="text-costum-blue text-sm font-bold uppercase mt-2">
                     {t("headerCompareText")}
@@ -299,14 +308,16 @@ const Header = () => {
                   <div className="relative mx-auto">
                     <Image src="/images/star_icon.svg" alt="" />
 
-                    <Badge
-                      size="sm"
-                      color="orange"
-                      className="absolute -top-2.5 -right-2.5"
-                      circle
-                    >
-                      12
-                    </Badge>
+                    {favorites?.length > 0 && (
+                      <Badge
+                        size="sm"
+                        color="orange"
+                        className="absolute -top-2.5 -right-2.5"
+                        circle
+                      >
+                        {favorites?.length}
+                      </Badge>
+                    )}
                   </div>
                   <p className="text-costum-blue text-sm font-bold uppercase mt-2">
                     {t("headerFavoritesText")}

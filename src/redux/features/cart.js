@@ -2,6 +2,8 @@ import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
   products: [],
+  singleProducts: [],
+  
 }
 
 export const cart = createSlice({
@@ -18,6 +20,12 @@ export const cart = createSlice({
         state.products?.push(action.payload)
       }
       // Dispatch a success toast
+    },
+    singleProduct: (state,action) => {
+      const item = state.singleProducts?.find(
+        (item) => item._id === action.payload._id
+      )
+      state.singleProducts?.push(action.payload)
     },
     increaseQuantity: (state, action) => {
       const item = state.products.find(

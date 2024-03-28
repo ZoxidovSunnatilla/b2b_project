@@ -13,12 +13,20 @@ import storage from "redux-persist/lib/storage"
 import authReducer from "./features/auth-slice"
 import cardList from "./features/card-list"
 import cart from "./features/cart"
+import singleProd from "./features/singleProduct"
+import favorites from "./features/favorites"
+import compare from "./features/compare"
+
+
 
 
 const rootReducer = combineReducers({
   authReducer,
   cardList,
-  cart
+  cart,
+  singleProd,
+  favorites,
+  compare
 })
 
 const persistConfig = {

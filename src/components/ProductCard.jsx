@@ -4,13 +4,16 @@ import React from "react"
 import { useTranslation } from "next-i18next"
 import { useDispatch, useSelector } from "react-redux"
 import { addToCart } from "../redux/features/cart"
+import { singleProduct } from "../redux/features/singleProduct"
+import { addToCompare } from "../redux/features/compare"
+
+
 
 const icon = <Image src="/images/down_icon_select.svg" alt="" />
 
 function ProductCard({ item }) {
   const { t } = useTranslation()
   const dispatch = useDispatch()
-
   const cartProducts = useSelector((state) => state.cart.products)
   const handleAddToCart = (item) => {
     const product = {
@@ -26,14 +29,41 @@ function ProductCard({ item }) {
     }
     dispatch(addToCart(product))
   }
+  const handleAddToFavorites = (item) => {
+    const product = {
+      _id: item.id,
+      name: item.name,
+      quantity: 1,
+      image: item.images,
+      in_stock: item.in_stock,
+      discount: item.discount,
+      price: item.price,
+      attributes: item.attributes,
+      brand: item.brand,
+    }
+    dispatch(addToFavorites(product))
+  }
+  const handleAddToCompare = (item) => {
+    const product = {
+      _id: item.id,
+      name: item.name,
+      quantity: 1,
+      image: item.images,
+      in_stock: item.in_stock,
+      discount: item.discount,
+      price: item.price,
+      attributes: item.attributes,
+      brand: item.brand,
+    }
+    dispatch(addToCompare(product))
+  }
   const hasCart = () => {
     return cartProducts?.filter((el) => el._id === item.id)?.length > 0
       ? true
       : false
   }
   return (
-    <div className="md:w-auto w-44 min-h-72 rounded-lg">
-      <Link href="/product">
+    <div className="md:w-auto w-44 min-h-72 rounded-lg" onClick={() => dispatch(singleProduct(item))}>
         <div className="relative">
           {item.images ? (
             <Image
@@ -51,13 +81,13 @@ function ProductCard({ item }) {
           <div className="absolute top-5 left-0 bg-costum-orange p-1 text-sm  w-max text-white font-bold">
             -{item.discount}%
           </div>
-          <div className="w-8 h-8 rounded-full flex justify-center items-center bg-star absolute top-2 right-2">
+          <div className="w-8 h-8 rounded-full flex absolute justify-center z-50 items-center bg-star absolute top-2 right-2" onClick={() => handleAddToFavorites(item)}>
             <Image src="/images/star.svg" alt="" />
           </div>
           <div className="absolute bottom-2 right-3">
             <Image src="/images/share.svg" alt="" />
           </div>
-          <div className="absolute bottom-10 right-3">
+          <div className="absolute bottom-10 right-3" onClick={() => handleAddToCompare(item)}>
             <Image src="/images/compare.svg" alt="" />
           </div>
           {item.in_stock ? (
@@ -72,11 +102,14 @@ function ProductCard({ item }) {
             </div>
           )}
         </div>
-      </Link>
+      
       <p className="text-silver text-sm md:text-base pt-2 px-2">
         {item?.brand?.name}
       </p>
+      
       <div className="w-full min-h-16 py-2 px-2 rounded-b-lg border-t-0 border border-costum-gray border-solid">
+      <Link href="/product">
+        
         <p className="md:text-xl text-base text-costumBlack font-bold mb-3.5">
           {item.name}
         </p>
@@ -98,6 +131,8 @@ function ProductCard({ item }) {
             $55.00
           </p>
         </div>
+      </Link>
+        
         <div className="flex mb-2 w-full  justify-between">
           <input
             type="text"
@@ -112,6 +147,7 @@ function ProductCard({ item }) {
             rightSection={icon}
           />
         </div>
+        
         <button
           onClick={() => handleAddToCart(item)}
           className={`w-full flex justify-center gap-2 md:text-base text-sm py-2 px-6 rounded-3xl  ${
@@ -120,7 +156,7 @@ function ProductCard({ item }) {
               : "text-white bg-costum-blue"
           }`}
         >
-          {hasCart() ? "Savatchada" : t("cardBtnText")}
+          {hasCart() ? t("cartBtnTextTranslate") : t("cardBtnText")}
           <Image src="/images/down-icon.svg" alt="" />
         </button>
       </div>
