@@ -8,56 +8,6 @@ const ComparePage = () => {
   const { t } = useTranslation("common", "compare")
   const compare = useSelector((state) => state.compare.compareProd)
   
-  const [values, setValues] = useState([
-    {
-      id: 1,
-      images: [
-        {
-          link: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/No_image_available_500_x_500.svg/240px-No_image_available_500_x_500.svg.png",
-        },
-        { link: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/No_image_available_500_x_500.svg/240px-No_image_available_500_x_500.svg.png" },
-        {
-          link: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/No_image_available_500_x_500.svg/240px-No_image_available_500_x_500.svg.png",
-        },
-        {
-          link: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/No_image_available_500_x_500.svg/240px-No_image_available_500_x_500.svg.png",
-        },
-        {
-          link: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/No_image_available_500_x_500.svg/240px-No_image_available_500_x_500.svg.png",
-        },
-      ],
-      discount: "50",
-      in_stock: true,
-      brand: { name: "dsadas" },
-      name: "sadasda",
-      price: "500$",
-      attributes: [
-        { name: "size", value: "sadasd" },
-        { name: "size", value: "sadasd" },
-      ],
-    },
-    {
-      id: 2,
-      images: [
-        {
-          link: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/No_image_available_500_x_500.svg/240px-No_image_available_500_x_500.svg.png",
-        },
-        { link: "s" },
-        {
-          link: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/No_image_available_500_x_500.svg/240px-No_image_available_500_x_500.svg.png",
-        },
-      ],
-      discount: "30",
-      in_stock: true,
-      brand: { name: "dsadas" },
-      name: "sadasda",
-      price: "500$",
-      attributes: [
-        { name: "size", value: "sadasd" },
-        { name: "size", value: "sadasd" },
-      ],
-    },
-  ])
  
   return (
     <div className='container mx-auto'>
@@ -96,7 +46,7 @@ const ComparePage = () => {
           <Image src="/images/compare_icon_right.svg" alt="" />
         </div>
       </div>
-      <div className="w-full md:flex hidden justify-between gap-5 md:mb-[100px]">
+      <div className="w-full md:flex hidden justify-start gap-5 md:mb-[100px]">
        
         <div className="w-[301px] bg-bg-voltiva ">
           <div className="flex w-full h-12 juctify-center items-center border-b ">

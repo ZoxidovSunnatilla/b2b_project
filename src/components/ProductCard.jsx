@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from "react-redux"
 import { addToCart } from "../redux/features/cart"
 import { singleProduct } from "../redux/features/singleProduct"
 import { addToCompare } from "../redux/features/compare"
+import { addToFavorites } from "../redux/features/favorites"
+
 
 
 
